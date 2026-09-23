@@ -4,7 +4,7 @@
 proposer un coup de main, demander de l'aide ou donner un objet, gratuitement ou contre
 une petite rémunération.
 
-> Projet de fin d'année. Site en ligne : https://lennyhrng.github.io/Voisina/
+> Projet TPA / PAE réalisé seul par Lenny Harnischberg au CPNV (Centre professionnel du Nord vaudois). Site en ligne : https://lennyhrng.github.io/Voisina/
 
 ---
 
@@ -15,14 +15,16 @@ une petite rémunération.
 | **Recherche** | Recherche plein texte, filtres (type, catégorie, canton, rémunération, urgent, profils vérifiés), tri, pagination, **distance autour de moi** (géolocalisation ou NPA/localité) |
 | **Carte** | Fond de carte officiel **swisstopo**, regroupement automatique des annonces, « Rechercher dans cette zone » |
 | **Annonces** | Page détaillée avec lien partageable, photos, zone approximative, annonces similaires, **export agenda (.ics)**, partage |
-| **Publier** | Formulaire guidé en 7 étapes, **aperçu en direct**, brouillon enregistré automatiquement, jusqu'à 3 photos, modification / clôture / suppression |
-| **Messagerie** | Conversations par annonce, indicateur « en train d'écrire », réponses automatiques des membres de démo, alertes anti-arnaque |
+| **Publier** | Formulaire guidé en 8 étapes, **aperçu en direct**, brouillon enregistré automatiquement, **image facultative** : jusqu'à 3 photos (glisser-déposer, choix de la couverture) ou une illustration colorée au choix (6 couleurs × 5 motifs), modification / clôture / suppression |
+| **Alertes** | Enregistrer une recherche (« Créer une alerte ») et recevoir une notification dès qu'une nouvelle annonce correspond |
+| **Messagerie** | Conversations par annonce, **réponses rapides**, indicateur « en train d'écrire », réponses automatiques des membres de démo, alertes anti-arnaque |
 | **Planning** | Favoris + calendrier mensuel (récurrences gérées) + export de tous les rendez-vous vers Google Agenda / Apple / Outlook |
-| **Compte** | Profil public (photo, présentation, langues, savoir-faire), mes annonces, changement de mot de passe, **export et suppression de mes données (nLPD)** |
+| **Compte** | Profil public (photo, présentation, langues, savoir-faire) avec **jauge de profil complété**, mes annonces, mes alertes, changement de mot de passe, **export et suppression de mes données (nLPD)** |
 | **Confiance** | Signalement (annonce, membre, conversation), blocage, conseils de sécurité, numéros d'urgence suisses |
 | **Administration** | Tableau de bord, file de modération des signalements, masquage d'annonces, statistiques par catégorie, réinitialisation de la démo |
 | **Langues** | Français, **allemand, italien** et anglais (détection automatique de la langue du navigateur) |
-| **Confort** | Mode sombre, version mobile avec barre de navigation, installable comme une application (PWA), fonctionne hors ligne |
+| **Accueil** | Carte de la Suisse animée, catégories colorées, **villes populaires**, étapes « comment ça marche », FAQ |
+| **Confort** | Mode sombre, **texte plus grand** (pratique pour les aînés), version mobile avec barre de navigation, partage WhatsApp / e-mail, installable comme une application (PWA), fonctionne hors ligne |
 | **Légal** | Politique de confidentialité (nLPD), conditions d'utilisation, règles de la communauté, mentions légales, aide/FAQ |
 
 ## 🔐 Sécurité (résumé)
@@ -49,9 +51,9 @@ Tous les fichiers sont à la racine (pratique pour les envoyer sur GitHub) :
 
 ```
 index.html        la page (Content Security Policy, balises SEO)
-styles.css        le design (thème clair/sombre, version mobile)
+styles.css        le design (couleurs, thème clair/sombre, version mobile)
 voisina.js        tout le code JavaScript (routeur, pages, sécurité, traductions FR/DE/IT/EN)
-theme-boot.js     applique le thème avant l'affichage
+theme-boot.js     applique le thème et la taille du texte avant l'affichage
 sw.js             permet d'installer le site comme une application
 SECURITE.md       explications sur la sécurité
 ```

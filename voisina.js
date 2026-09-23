@@ -404,7 +404,7 @@ const fr = {
   "common.formerMember": "Ancien membre",
 
   // Démo
-  "demo.banner": "Version de démonstration (projet de fin d'année) : les annonces d'exemple sont fictives et vos données restent uniquement dans votre navigateur.",
+  "demo.banner": "Version de démonstration (projet TPA / PAE réalisé au CPNV) : les annonces d'exemple sont fictives et vos données restent uniquement dans votre navigateur.",
   "demo.learnMore": "En savoir plus",
   "demo.chip": "Exemple",
   "demo.chipTitle": "Annonce d'exemple fictive, générée pour la démonstration",
@@ -689,7 +689,7 @@ const fr = {
   "publish.payHint": "Voisina n'encaisse rien : le montant est indicatif et réglé directement entre vous, après le service.",
   "publish.sExtras": "Photos et langues",
   "publish.fPhotos": "Photos (facultatif, 3 maximum)",
-  "publish.addPhoto": "Ajouter",
+  "publish.addPhoto": "Ajouter des photos",
   "publish.removePhoto": "Retirer la photo",
   "publish.photoHint": "Les photos sont redimensionnées et leurs métadonnées (dont la position GPS) sont supprimées automatiquement.",
   "publish.photoTooLarge": "Photo trop lourde (8 Mo maximum).",
@@ -956,11 +956,70 @@ const fr = {
   "footer.privacy": "Politique de confidentialité",
   "footer.terms": "Conditions d'utilisation",
   "footer.imprint": "Mentions légales",
-  "footer.project": "Projet de fin d'année",
+  "footer.project": "Projet TPA / PAE · CPNV",
   "footer.madeIn": "Fait avec soin en Suisse",
   "notFound.title": "Page introuvable",
   "notFound.text": "Le lien est peut-être incorrect ou la page n'existe plus.",
   "notFound.home": "Retour à l'accueil",
+  // Nouveautés v2.1
+  "home.citiesKicker": "Près de chez vous",
+  "home.citiesTitle": "Villes populaires",
+  "alerts.create": "Créer une alerte",
+  "alerts.createHint": "Recevoir une notification quand une nouvelle annonce correspond à cette recherche",
+  "alerts.loginFirst": "Connectez-vous pour créer une alerte.",
+  "alerts.saved": "Alerte créée : vous serez prévenu·e des nouvelles annonces.",
+  "alerts.max": "Vous avez déjà 10 alertes. Supprimez-en une d'abord.",
+  "alerts.title": "Mes alertes",
+  "alerts.intro": "Une alerte enregistre une recherche. Dès qu'une nouvelle annonce y correspond, vous recevez une notification.",
+  "alerts.around": "à {km} km de {place}",
+  "alerts.everything": "Toutes les nouvelles annonces",
+  "alerts.since": "créée {when}",
+  "alerts.delete": "Supprimer l'alerte",
+  "alerts.deleted": "Alerte supprimée.",
+  "alerts.emptyTitle": "Aucune alerte pour l'instant",
+  "alerts.emptyText": "Faites une recherche dans « Explorer », puis cliquez sur « Créer une alerte ».",
+  "alerts.goSearch": "Faire une recherche",
+  "account.tab.alerts": "Mes alertes",
+  "account.completeTitle": "Profil complété à {percent} %",
+  "account.completeDone": "Bravo, votre profil inspire confiance !",
+  "account.completeHint": "Un profil complet reçoit plus de réponses.",
+  "account.todo.photo": "Ajouter une photo",
+  "account.todo.bio": "Écrire une présentation",
+  "account.todo.specialties": "Indiquer vos savoir-faire",
+  "account.todo.languages": "Indiquer vos langues",
+  "account.todo.city": "Indiquer votre localité",
+  "account.todo.listing": "Publier une annonce",
+  "account.textSize": "Taille du texte",
+  "account.text.normal": "Normale",
+  "account.text.large": "Plus grande",
+  "footer.textLarge": "Texte plus grand",
+  "footer.textNormal": "Texte normal",
+  "notif.alert": "Nouvelle annonce pour votre alerte : « {title} ».",
+  "messages.quickLabel": "Réponses rapides",
+  "messages.quick1": "Bonjour ! Est-ce toujours d'actualité ?",
+  "messages.quick2": "Quand seriez-vous disponible ?",
+  "messages.quick3": "Où pourrions-nous nous retrouver ?",
+  "messages.quick4": "Merci beaucoup !",
+  "share.copy": "Copier",
+  "share.email": "E-mail",
+  "common.optional": "Facultatif",
+  "publish.sImage": "Image de l'annonce",
+  "publish.imageIntro": "Une image attire beaucoup plus de réponses. Ajoutez vos photos ou choisissez simplement une illustration colorée. Si vous ne faites rien, une illustration est choisie automatiquement.",
+  "publish.dropHint": "ou glissez-les ici (3 max.)",
+  "publish.coverBadge": "Couverture",
+  "publish.makeCover": "Mettre en couverture",
+  "publish.coverTitle": "Pas de photo ? Choisissez votre illustration",
+  "publish.coverNote": "Elle s'affichera sur votre annonce.",
+  "publish.coverNoteWithPhoto": "Votre photo sera affichée en priorité ; l'illustration sert seulement si vous la retirez.",
+  "publish.coverColor": "Couleur de l'illustration",
+  "publish.coverAuto": "Auto",
+  "publish.coverColorN": "Couleur {n}",
+  "publish.coverPattern": "Motif de l'illustration",
+  "pattern.bubbles": "Bulles",
+  "pattern.confetti": "Confettis",
+  "pattern.stripes": "Rayures",
+  "pattern.waves": "Vagues",
+  "pattern.sun": "Soleil",
 };
 
 const de = {
@@ -995,7 +1054,7 @@ const de = {
   "common.breadcrumb": "Brotkrümelnavigation",
   "common.flexible": "Flexibel",
   "common.formerMember": "Ehemaliges Mitglied",
-  "demo.banner": "Demoversion (schulisches Abschlussprojekt): Die Beispielanzeigen sind fiktiv, und Ihre Daten bleiben ausschliesslich in Ihrem Browser.",
+  "demo.banner": "Demoversion (TPA-/PAE-Projekt am CPNV): Die Beispielanzeigen sind fiktiv, und Ihre Daten bleiben ausschliesslich in Ihrem Browser.",
   "demo.learnMore": "Mehr erfahren",
   "demo.chip": "Beispiel",
   "demo.chipTitle": "Fiktive Beispielanzeige für die Demo",
@@ -1255,7 +1314,7 @@ const de = {
   "publish.payHint": "Voisina kassiert nichts: Der Betrag ist ein Richtwert und wird nach der Hilfe direkt untereinander bezahlt.",
   "publish.sExtras": "Fotos und Sprachen",
   "publish.fPhotos": "Fotos (freiwillig, maximal 3)",
-  "publish.addPhoto": "Hinzufügen",
+  "publish.addPhoto": "Fotos hinzufügen",
   "publish.removePhoto": "Foto entfernen",
   "publish.photoHint": "Fotos werden verkleinert und ihre Metadaten (inklusive GPS-Position) automatisch entfernt.",
   "publish.photoTooLarge": "Foto zu gross (maximal 8 MB).",
@@ -1504,11 +1563,70 @@ const de = {
   "footer.privacy": "Datenschutzerklärung",
   "footer.terms": "Nutzungsbedingungen",
   "footer.imprint": "Impressum",
-  "footer.project": "Schulisches Abschlussprojekt",
+  "footer.project": "TPA-/PAE-Projekt · CPNV",
   "footer.madeIn": "Mit Sorgfalt in der Schweiz gemacht",
   "notFound.title": "Seite nicht gefunden",
   "notFound.text": "Der Link ist vielleicht falsch oder die Seite existiert nicht mehr.",
   "notFound.home": "Zur Startseite",
+  // Nouveautés v2.1
+  "home.citiesKicker": "In Ihrer Nähe",
+  "home.citiesTitle": "Beliebte Städte",
+  "alerts.create": "Suchauftrag",
+  "alerts.createHint": "Benachrichtigung erhalten, wenn eine neue Anzeige zu dieser Suche passt",
+  "alerts.loginFirst": "Melden Sie sich an, um einen Suchauftrag zu erstellen.",
+  "alerts.saved": "Suchauftrag erstellt: Sie werden über neue Anzeigen informiert.",
+  "alerts.max": "Sie haben bereits 10 Suchaufträge. Löschen Sie zuerst einen.",
+  "alerts.title": "Meine Suchaufträge",
+  "alerts.intro": "Ein Suchauftrag speichert eine Suche. Sobald eine neue Anzeige passt, erhalten Sie eine Benachrichtigung.",
+  "alerts.around": "{km} km um {place}",
+  "alerts.everything": "Alle neuen Anzeigen",
+  "alerts.since": "erstellt {when}",
+  "alerts.delete": "Suchauftrag löschen",
+  "alerts.deleted": "Suchauftrag gelöscht.",
+  "alerts.emptyTitle": "Noch keine Suchaufträge",
+  "alerts.emptyText": "Suchen Sie unter «Entdecken» und klicken Sie dann auf «Suchauftrag».",
+  "alerts.goSearch": "Jetzt suchen",
+  "account.tab.alerts": "Suchaufträge",
+  "account.completeTitle": "Profil zu {percent} % vollständig",
+  "account.completeDone": "Bravo, Ihr Profil schafft Vertrauen!",
+  "account.completeHint": "Vollständige Profile erhalten mehr Antworten.",
+  "account.todo.photo": "Foto hinzufügen",
+  "account.todo.bio": "Kurz vorstellen",
+  "account.todo.specialties": "Fähigkeiten angeben",
+  "account.todo.languages": "Sprachen angeben",
+  "account.todo.city": "Wohnort angeben",
+  "account.todo.listing": "Eine Anzeige erstellen",
+  "account.textSize": "Schriftgrösse",
+  "account.text.normal": "Normal",
+  "account.text.large": "Grösser",
+  "footer.textLarge": "Grössere Schrift",
+  "footer.textNormal": "Normale Schrift",
+  "notif.alert": "Neue Anzeige für Ihren Suchauftrag: «{title}».",
+  "messages.quickLabel": "Schnellantworten",
+  "messages.quick1": "Hallo! Ist das noch aktuell?",
+  "messages.quick2": "Wann hätten Sie Zeit?",
+  "messages.quick3": "Wo könnten wir uns treffen?",
+  "messages.quick4": "Vielen Dank!",
+  "share.copy": "Kopieren",
+  "share.email": "E-Mail",
+  "common.optional": "Freiwillig",
+  "publish.sImage": "Bild der Anzeige",
+  "publish.imageIntro": "Ein Bild bringt deutlich mehr Antworten. Laden Sie Fotos hoch oder wählen Sie einfach eine farbige Illustration. Wenn Sie nichts tun, wird automatisch eine Illustration gewählt.",
+  "publish.dropHint": "oder hierher ziehen (max. 3)",
+  "publish.coverBadge": "Titelbild",
+  "publish.makeCover": "Als Titelbild",
+  "publish.coverTitle": "Kein Foto? Wählen Sie Ihre Illustration",
+  "publish.coverNote": "Sie wird auf Ihrer Anzeige angezeigt.",
+  "publish.coverNoteWithPhoto": "Ihr Foto wird bevorzugt angezeigt; die Illustration dient nur, wenn Sie es entfernen.",
+  "publish.coverColor": "Farbe der Illustration",
+  "publish.coverAuto": "Auto",
+  "publish.coverColorN": "Farbe {n}",
+  "publish.coverPattern": "Muster der Illustration",
+  "pattern.bubbles": "Blasen",
+  "pattern.confetti": "Konfetti",
+  "pattern.stripes": "Streifen",
+  "pattern.waves": "Wellen",
+  "pattern.sun": "Sonne",
 };
 
 const it = {
@@ -1543,7 +1661,7 @@ const it = {
   "common.breadcrumb": "Percorso",
   "common.flexible": "Flessibile",
   "common.formerMember": "Ex membro",
-  "demo.banner": "Versione dimostrativa (progetto scolastico di fine anno): gli annunci d'esempio sono fittizi e i vostri dati restano solo nel vostro browser.",
+  "demo.banner": "Versione dimostrativa (progetto TPA / PAE realizzato al CPNV): gli annunci d'esempio sono fittizi e i vostri dati restano solo nel vostro browser.",
   "demo.learnMore": "Scopri di più",
   "demo.chip": "Esempio",
   "demo.chipTitle": "Annuncio d'esempio fittizio, creato per la dimostrazione",
@@ -1803,7 +1921,7 @@ const it = {
   "publish.payHint": "Voisina non incassa nulla: l'importo è indicativo e si paga direttamente tra voi, dopo il servizio.",
   "publish.sExtras": "Foto e lingue",
   "publish.fPhotos": "Foto (facoltative, massimo 3)",
-  "publish.addPhoto": "Aggiungi",
+  "publish.addPhoto": "Aggiungi foto",
   "publish.removePhoto": "Rimuovi la foto",
   "publish.photoHint": "Le foto vengono ridimensionate e i loro metadati (compresa la posizione GPS) eliminati automaticamente.",
   "publish.photoTooLarge": "Foto troppo pesante (massimo 8 MB).",
@@ -2052,11 +2170,70 @@ const it = {
   "footer.privacy": "Informativa sulla privacy",
   "footer.terms": "Condizioni d'uso",
   "footer.imprint": "Note legali",
-  "footer.project": "Progetto di fine anno",
+  "footer.project": "Progetto TPA / PAE · CPNV",
   "footer.madeIn": "Fatto con cura in Svizzera",
   "notFound.title": "Pagina non trovata",
   "notFound.text": "Il link potrebbe essere errato o la pagina non esiste più.",
   "notFound.home": "Torna alla home",
+  // Nouveautés v2.1
+  "home.citiesKicker": "Vicino a voi",
+  "home.citiesTitle": "Città popolari",
+  "alerts.create": "Crea un avviso",
+  "alerts.createHint": "Ricevere una notifica quando un nuovo annuncio corrisponde a questa ricerca",
+  "alerts.loginFirst": "Accedete per creare un avviso.",
+  "alerts.saved": "Avviso creato: sarete informati dei nuovi annunci.",
+  "alerts.max": "Avete già 10 avvisi. Eliminatene prima uno.",
+  "alerts.title": "I miei avvisi",
+  "alerts.intro": "Un avviso salva una ricerca. Appena un nuovo annuncio corrisponde, ricevete una notifica.",
+  "alerts.around": "entro {km} km da {place}",
+  "alerts.everything": "Tutti i nuovi annunci",
+  "alerts.since": "creato {when}",
+  "alerts.delete": "Elimina l'avviso",
+  "alerts.deleted": "Avviso eliminato.",
+  "alerts.emptyTitle": "Ancora nessun avviso",
+  "alerts.emptyText": "Fate una ricerca in «Esplora», poi cliccate su «Crea un avviso».",
+  "alerts.goSearch": "Fai una ricerca",
+  "account.tab.alerts": "I miei avvisi",
+  "account.completeTitle": "Profilo completo al {percent} %",
+  "account.completeDone": "Bravi, il vostro profilo ispira fiducia!",
+  "account.completeHint": "Un profilo completo riceve più risposte.",
+  "account.todo.photo": "Aggiungere una foto",
+  "account.todo.bio": "Scrivere una presentazione",
+  "account.todo.specialties": "Indicare le competenze",
+  "account.todo.languages": "Indicare le lingue",
+  "account.todo.city": "Indicare la località",
+  "account.todo.listing": "Pubblicare un annuncio",
+  "account.textSize": "Dimensione del testo",
+  "account.text.normal": "Normale",
+  "account.text.large": "Più grande",
+  "footer.textLarge": "Testo più grande",
+  "footer.textNormal": "Testo normale",
+  "notif.alert": "Nuovo annuncio per il vostro avviso: «{title}».",
+  "messages.quickLabel": "Risposte rapide",
+  "messages.quick1": "Buongiorno! È ancora attuale?",
+  "messages.quick2": "Quando sarebbe disponibile?",
+  "messages.quick3": "Dove potremmo incontrarci?",
+  "messages.quick4": "Grazie mille!",
+  "share.copy": "Copia",
+  "share.email": "E-mail",
+  "common.optional": "Facoltativo",
+  "publish.sImage": "Immagine dell'annuncio",
+  "publish.imageIntro": "Un'immagine attira molte più risposte. Aggiungete le vostre foto o scegliete semplicemente un'illustrazione colorata. Se non fate nulla, l'illustrazione viene scelta automaticamente.",
+  "publish.dropHint": "o trascinatele qui (max. 3)",
+  "publish.coverBadge": "Copertina",
+  "publish.makeCover": "Metti in copertina",
+  "publish.coverTitle": "Nessuna foto? Scegliete la vostra illustrazione",
+  "publish.coverNote": "Verrà mostrata sul vostro annuncio.",
+  "publish.coverNoteWithPhoto": "La vostra foto viene mostrata per prima; l'illustrazione serve solo se la togliete.",
+  "publish.coverColor": "Colore dell'illustrazione",
+  "publish.coverAuto": "Auto",
+  "publish.coverColorN": "Colore {n}",
+  "publish.coverPattern": "Motivo dell'illustrazione",
+  "pattern.bubbles": "Bolle",
+  "pattern.confetti": "Coriandoli",
+  "pattern.stripes": "Righe",
+  "pattern.waves": "Onde",
+  "pattern.sun": "Sole",
 };
 
 const en = {
@@ -2091,7 +2268,7 @@ const en = {
   "common.breadcrumb": "Breadcrumb",
   "common.flexible": "Flexible",
   "common.formerMember": "Former member",
-  "demo.banner": "Demo version (end-of-year school project): sample listings are fictional and your data stays in your browser only.",
+  "demo.banner": "Demo version (TPA / PAE project at CPNV): sample listings are fictional and your data stays in your browser only.",
   "demo.learnMore": "Learn more",
   "demo.chip": "Sample",
   "demo.chipTitle": "Fictional sample listing generated for the demo",
@@ -2351,7 +2528,7 @@ const en = {
   "publish.payHint": "Voisina collects nothing: the amount is indicative and paid directly between you, after the help.",
   "publish.sExtras": "Photos and languages",
   "publish.fPhotos": "Photos (optional, up to 3)",
-  "publish.addPhoto": "Add",
+  "publish.addPhoto": "Add photos",
   "publish.removePhoto": "Remove photo",
   "publish.photoHint": "Photos are resized and their metadata (including GPS location) is removed automatically.",
   "publish.photoTooLarge": "Photo too large (8 MB maximum).",
@@ -2600,11 +2777,70 @@ const en = {
   "footer.privacy": "Privacy policy",
   "footer.terms": "Terms of use",
   "footer.imprint": "Legal notice",
-  "footer.project": "End-of-year project",
+  "footer.project": "TPA / PAE project · CPNV",
   "footer.madeIn": "Made with care in Switzerland",
   "notFound.title": "Page not found",
   "notFound.text": "The link may be wrong or the page no longer exists.",
   "notFound.home": "Back to home",
+  // Nouveautés v2.1
+  "home.citiesKicker": "Near you",
+  "home.citiesTitle": "Popular cities",
+  "alerts.create": "Create alert",
+  "alerts.createHint": "Get notified when a new listing matches this search",
+  "alerts.loginFirst": "Log in to create an alert.",
+  "alerts.saved": "Alert created: you'll be notified of new listings.",
+  "alerts.max": "You already have 10 alerts. Delete one first.",
+  "alerts.title": "My alerts",
+  "alerts.intro": "An alert saves a search. As soon as a new listing matches, you get a notification.",
+  "alerts.around": "within {km} km of {place}",
+  "alerts.everything": "All new listings",
+  "alerts.since": "created {when}",
+  "alerts.delete": "Delete alert",
+  "alerts.deleted": "Alert deleted.",
+  "alerts.emptyTitle": "No alerts yet",
+  "alerts.emptyText": "Run a search in “Explore”, then click “Create alert”.",
+  "alerts.goSearch": "Search now",
+  "account.tab.alerts": "My alerts",
+  "account.completeTitle": "Profile {percent}% complete",
+  "account.completeDone": "Well done, your profile inspires trust!",
+  "account.completeHint": "Complete profiles get more replies.",
+  "account.todo.photo": "Add a photo",
+  "account.todo.bio": "Write a short bio",
+  "account.todo.specialties": "List your skills",
+  "account.todo.languages": "Add your languages",
+  "account.todo.city": "Add your town",
+  "account.todo.listing": "Post a listing",
+  "account.textSize": "Text size",
+  "account.text.normal": "Normal",
+  "account.text.large": "Larger",
+  "footer.textLarge": "Larger text",
+  "footer.textNormal": "Normal text",
+  "notif.alert": "New listing for your alert: “{title}”.",
+  "messages.quickLabel": "Quick replies",
+  "messages.quick1": "Hello! Is this still available?",
+  "messages.quick2": "When would suit you?",
+  "messages.quick3": "Where could we meet?",
+  "messages.quick4": "Thank you so much!",
+  "share.copy": "Copy",
+  "share.email": "Email",
+  "common.optional": "Optional",
+  "publish.sImage": "Listing image",
+  "publish.imageIntro": "An image gets many more replies. Add your photos or simply pick a colourful illustration. If you do nothing, an illustration is chosen automatically.",
+  "publish.dropHint": "or drag them here (max. 3)",
+  "publish.coverBadge": "Cover",
+  "publish.makeCover": "Make cover",
+  "publish.coverTitle": "No photo? Choose your illustration",
+  "publish.coverNote": "It will be shown on your listing.",
+  "publish.coverNoteWithPhoto": "Your photo is shown first; the illustration is only used if you remove it.",
+  "publish.coverColor": "Illustration colour",
+  "publish.coverAuto": "Auto",
+  "publish.coverColorN": "Colour {n}",
+  "publish.coverPattern": "Illustration pattern",
+  "pattern.bubbles": "Bubbles",
+  "pattern.confetti": "Confetti",
+  "pattern.stripes": "Stripes",
+  "pattern.waves": "Waves",
+  "pattern.sun": "Sunburst",
 };
 
 const DICT = { fr, de, it, en };
@@ -2702,7 +2938,7 @@ const LOCALITIES = RAW_LOCALITIES.map(([name, npa, canton, lat, lng, lang]) => (
 
 /** Supprime les accents pour des recherches tolérantes ("geneve" trouve "Genève"). */
 function normalize(text) {
-  return String(text || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+  return String(text || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
 
 /** Recherche locale d'une localité par nom ou NPA (fonctionne hors ligne). */
@@ -2752,6 +2988,10 @@ const PAYMENTS = ["free", "paid", "negotiable"];
 const UNITS = ["total", "hour", "visit"];
 const DURATIONS = [30, 60, 90, 120, 180, 240, 480];
 const RECURRENCES = ["once", "weekly", "monthly"];
+
+/** Motifs des illustrations de couverture (quand l'annonce n'a pas de photo). */
+const COVER_PATTERNS = ["bubbles", "confetti", "stripes", "waves", "sun"];
+const COVER_TONES = [0, 1, 2, 3, 4, 5];
 
 /* ---------------------------------------------------------------------
    MODÈLES D'ANNONCES DE DÉMONSTRATION (traduits dans les 4 langues)
@@ -2986,7 +3226,7 @@ const SPECIALTY_POOL = {
   other: ["cuisine", "Kochen", "cucina", "cooking"],
 };
 
-return { normalize, searchLocalities, findLocality, LANGS, CANTONS, CANTON_CODES, LOCALITIES, SWITZERLAND_CENTER, CATEGORIES, CATEGORY_IDS, getCategory, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, TEMPLATES, NAMES, SPECIALTY_POOL };
+return { normalize, searchLocalities, findLocality, LANGS, CANTONS, CANTON_CODES, LOCALITIES, SWITZERLAND_CENTER, CATEGORIES, CATEGORY_IDS, getCategory, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, COVER_PATTERNS, COVER_TONES, TEMPLATES, NAMES, SPECIALTY_POOL };
 });
 __def("i18n.js", function () {
 /* =====================================================================
@@ -3391,7 +3631,7 @@ __def("store.js", function () {
    ===================================================================== */
 const { storage, uid, safeImageSrc, distanceKm, parseDateKey, todayKey } = __req("util.js");
 const { getDemoData } = __req("seed.js");
-const { CANTON_CODES, CATEGORY_IDS, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, LANGS, LOCALITIES } = __req("data.js");
+const { CANTON_CODES, CATEGORY_IDS, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, LANGS, LOCALITIES, COVER_PATTERNS, COVER_TONES } = __req("data.js");
 const { ADMIN_ACCOUNT, hashPassword, verifyPassword, createSession, readSession, destroySession, loginLock, registerFailure, resetFailures, isValidEmail, passwordStrength } = __req("auth.js");
 const { t, getLang, categoryName } = __req("i18n.js");
 
@@ -3403,7 +3643,7 @@ function emit(kind = "data") { listeners.forEach((fn) => { try { fn(kind); } cat
 /* ------------------------- Nettoyage ---------------------------- */
 /** Supprime les caractères de contrôle et limite la longueur. */
 function cleanText(value, max = 500, multiline = false) {
-  let s = String(value ?? "").replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F​-‏‪-‮]/g, "");
+  let s = String(value ?? "").replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u200B-\u200F\u202A-\u202E]/g, "");
   s = multiline ? s.replace(/\r\n?/g, "\n").replace(/\n{3,}/g, "\n\n") : s.replace(/\s+/g, " ");
   return s.trim().slice(0, max);
 }
@@ -3641,6 +3881,68 @@ function toggleBlock(personId) {
   return blockedNow;
 }
 
+/* ============================== ALERTES ================================
+   Une alerte = une recherche enregistrée. Quand une nouvelle annonce
+   correspond, la personne reçoit une notification. */
+const ALERT_KEYS = ["q", "type", "cat", "canton", "pay"];
+
+function getAlerts() {
+  const list = currentUser()?.alerts;
+  return Array.isArray(list) ? list : [];
+}
+
+function saveAlert(filters, origin, radius) {
+  const me = currentUser();
+  if (!me) return { ok: false, error: "auth" };
+  const alert = { id: uid("a_"), created: new Date().toISOString() };
+  for (const k of ALERT_KEYS) if (filters[k]) alert[k] = cleanText(filters[k], 80);
+  if (alert.type && !TYPES.includes(alert.type)) delete alert.type;
+  if (alert.cat && !CATEGORY_IDS.includes(alert.cat)) delete alert.cat;
+  if (alert.canton && !CANTON_CODES.includes(alert.canton)) delete alert.canton;
+  if (alert.pay && !PAYMENTS.includes(alert.pay)) delete alert.pay;
+  if (origin && inSwitzerland(origin.lat, origin.lng)) {
+    alert.origin = { lat: origin.lat, lng: origin.lng, label: cleanText(origin.label, 60) };
+    alert.radius = [5, 10, 25, 50].includes(Number(radius)) ? Number(radius) : 25;
+  }
+  const current = getAlerts();
+  if (current.length >= 10) return { ok: false, error: "max" };
+  updateUserRecord(me.id, (u) => ({ ...u, alerts: [...current, alert] }));
+  emit("alerts");
+  return { ok: true, alert };
+}
+
+function deleteAlert(id) {
+  const me = currentUser();
+  if (!me) return;
+  updateUserRecord(me.id, (u) => ({ ...u, alerts: (u.alerts || []).filter((a) => a.id !== id) }));
+  emit("alerts");
+}
+
+/** Une annonce correspond-elle à une alerte ? */
+function matchesAlert(l, a) {
+  if (a.type && l.type !== a.type) return false;
+  if (a.cat && l.category !== a.cat) return false;
+  if (a.canton && l.canton !== a.canton) return false;
+  if (a.pay && l.payment !== a.pay) return false;
+  if (a.origin && distanceKm(a.origin, l) > (a.radius || 25)) return false;
+  if (a.q) {
+    const norm = (x) => String(x || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const hay = norm(`${typeof l.title === "object" ? Object.values(l.title).join(" ") : l.title} ${typeof l.description === "object" ? Object.values(l.description).join(" ") : l.description} ${l.city}`);
+    if (!norm(a.q).split(/\s+/).filter(Boolean).every((w) => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function notifyAlerts(listing) {
+  for (const u of getStoredUsers()) {
+    if (u.id === listing.authorId || !Array.isArray(u.alerts)) continue;
+    if ((u.blocked || []).includes(listing.authorId)) continue;
+    if (u.alerts.some((a) => matchesAlert(listing, a))) {
+      addNotification(u.id, { kind: "alert", params: { title: listing.title }, link: `#/annonce/${listing.id}` });
+    }
+  }
+}
+
 const isBlocked = (personId) => (currentUser()?.blocked || []).includes(personId);
 
 function getAllUsersForAdmin() {
@@ -3719,6 +4021,11 @@ function validateListing(input) {
   }
   const duration = DURATIONS.includes(Number(input.duration)) ? Number(input.duration) : null;
   const photos = (Array.isArray(input.photos) ? input.photos : []).map(safeImageSrc).filter(Boolean).slice(0, 3);
+  // Illustration choisie (facultatif) : seules les valeurs prévues sont acceptées
+  const coverTone = Number(input.cover?.tone);
+  const cover = input.cover && (COVER_TONES.includes(coverTone) || COVER_PATTERNS.includes(input.cover.pattern))
+    ? { tone: COVER_TONES.includes(coverTone) ? coverTone : null, pattern: COVER_PATTERNS.includes(input.cover.pattern) ? input.cover.pattern : null }
+    : null;
   const npa = /^\d{4}$/.test(String(input.npa || "")) ? String(input.npa) : loc?.npa || "";
 
   if (Object.keys(errors).length) return { errors };
@@ -3746,6 +4053,7 @@ function validateListing(input) {
       lng: Math.round((lng + jitter()) * 10000) / 10000,
       languages: (Array.isArray(input.languages) ? input.languages : []).filter((l) => LANGS.includes(l)),
       photos,
+      cover,
     },
   };
 }
@@ -3761,6 +4069,7 @@ function createListing(input) {
   if (!storage.set("listings", list)) return { ok: false, errors: { form: "quota" } };
   bump();
   addNotification(me.id, { kind: "published", params: { title: listing.title }, link: `#/annonce/${listing.id}` });
+  notifyAlerts(listing);
   emit("listings");
   return { ok: true, listing };
 }
@@ -3807,7 +4116,7 @@ function deleteListing(id) {
 
 /** Recherche + filtres + tri. `origin` = point de référence pour la distance. */
 function searchListings(f = {}, origin = null) {
-  const q = String(f.q || "").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const q = String(f.q || "").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const words = q.split(/\s+/).filter(Boolean);
   const lang = getLang();
   let results = allListings().map((l) => ({ listing: l, distance: origin ? distanceKm(origin, l) : null }));
@@ -3827,7 +4136,7 @@ function searchListings(f = {}, origin = null) {
     if (words.length) {
       const title = typeof l.title === "object" ? Object.values(l.title).join(" ") : l.title;
       const desc = typeof l.description === "object" ? l.description[lang] || "" : l.description;
-      const hay = `${title} ${desc} ${l.city} ${l.npa} ${l.canton} ${categoryName(l.category)}`.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+      const hay = `${title} ${desc} ${l.city} ${l.npa} ${l.canton} ${categoryName(l.category)}`.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (!words.every((w) => hay.includes(w))) return false;
     }
     return true;
@@ -4114,17 +4423,17 @@ function stats() {
 
 const dataVersion = () => version;
 
-return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, deleteAccount, exportMyData, toggleBlock, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
+return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, deleteAccount, exportMyData, toggleBlock, getAlerts, saveAlert, deleteAlert, matchesAlert, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
 });
 __def("ui.js", function () {
 /* =====================================================================
    COMPOSANTS D'INTERFACE RÉUTILISABLES
    (cartes d'annonce, avatars, boîtes de dialogue, notifications, etc.)
    ===================================================================== */
-const { html, raw, esc, $, mount, initials, avatarTone, debounce, safeImageSrc } = __req("util.js");
+const { html, raw, esc, $, mount, initials, avatarTone, debounce, safeImageSrc, hashString } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, pick, cantonName, categoryName, fmtCHF, fmtShortDate, fmtDistance, getLang } = __req("i18n.js");
-const { getCategory, searchLocalities, LOCALITIES, CANTON_CODES } = __req("data.js");
+const { getCategory, searchLocalities, LOCALITIES, CANTON_CODES, COVER_PATTERNS, COVER_TONES } = __req("data.js");
 const { getPerson, isFavorite, REPORT_REASONS, createReport } = __req("store.js");
 const { distanceKm } = __req("util.js");
 
@@ -4173,11 +4482,21 @@ function scheduleLabel(l) {
 
 const typeLabel = (type) => t(`type.${type}`);
 
+/** Couleur et motif de l'illustration : choisis par l'auteur, sinon automatiques. */
+function coverStyle(l) {
+  const cat = getCategory(l.category);
+  const tone = COVER_TONES.includes(l.cover?.tone) ? l.cover.tone : cat.tone;
+  const pattern = COVER_PATTERNS.includes(l.cover?.pattern) ? l.cover.pattern : COVER_PATTERNS[hashString(String(l.id)) % COVER_PATTERNS.length];
+  return { tone, pattern };
+}
+
+/** Image d'une annonce : la 1re photo si elle existe, sinon une illustration colorée. */
 function categoryThumb(l, cls = "") {
   const cat = getCategory(l.category);
   const photo = safeImageSrc(l.photos?.[0]);
   if (photo) return html`<div class="media ${cls}"><img src="${photo}" alt="" loading="lazy"></div>`;
-  return html`<div class="media media-illu tone-${cat.tone} ${cls}"><span class="media-icon">${icon(cat.icon)}</span></div>`;
+  const { tone, pattern } = coverStyle(l);
+  return html`<div class="media media-illu tv-${tone} pat-${pattern} ${cls}"><span class="media-icon">${icon(cat.icon)}</span><span class="media-deco" aria-hidden="true">${icon(cat.icon)}</span></div>`;
 }
 
 function listingTitle(l) { return pick(l.title); }
@@ -4310,16 +4629,30 @@ async function reportDialog(targetType, targetId) {
   if (done) toast(t("report.thanks"), "success");
 }
 
+/** Partage : menu natif du téléphone, sinon fenêtre avec lien, WhatsApp et e-mail. */
 async function shareLink(url, title) {
-  if (navigator.share) {
+  const touch = window.matchMedia?.("(pointer: coarse)").matches;
+  if (navigator.share && touch) {
     try { await navigator.share({ title, url }); return; } catch (e) { if (e?.name === "AbortError") return; }
   }
-  try {
-    await navigator.clipboard.writeText(url);
-    toast(t("share.copied"), "success");
-  } catch {
-    openDialog({ title: t("share.title"), size: "dialog-sm", body: html`<input class="input" readonly value="${url}">` });
-  }
+  const text = `${title} — ${url}`;
+  openDialog({
+    title: t("share.title"),
+    size: "dialog-sm",
+    body: html`
+      <div class="share-link"><input class="input" id="share-url" readonly value="${url}"><button type="button" class="btn btn-primary" id="share-copy">${icon("link")}${t("share.copy")}</button></div>
+      <div class="share-grid">
+        <a class="share-opt share-wa" href="https://wa.me/?text=${encodeURIComponent(text)}" target="_blank" rel="noopener noreferrer">${icon("message")}WhatsApp</a>
+        <a class="share-opt share-mail" href="mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(text)}">${icon("mail")}${t("share.email")}</a>
+      </div>`,
+    onOpen: (dlg) => {
+      dlg.querySelector("#share-copy").addEventListener("click", async () => {
+        const input = dlg.querySelector("#share-url");
+        try { await navigator.clipboard.writeText(url); } catch { input.select(); document.execCommand?.("copy"); }
+        toast(t("share.copied"), "success");
+      });
+    },
+  });
 }
 
 /* ---------------------- Saisie d'une localité ---------------------- */
@@ -4478,7 +4811,7 @@ function langChips(name, selected = []) {
 
 
 
-return { registerActions, toast, avatar, priceLabel, scheduleLabel, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
+return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
 });
 __def("switzerland.js", function () {
 /* Silhouette simplifiée de la Suisse (longitude, latitude) pour l'illustration
@@ -4526,10 +4859,11 @@ function swissMapSvg(dots = []) {
   const circles = dots
     .map((d) => {
       const [x, y] = project(d.lng, d.lat);
-      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${d.r || 3.2}" class="dot tone-${d.tone}"/>`;
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${d.r || 3.4}" class="dot tv-${d.tone}"/>`;
     })
     .join("");
   return raw(`<svg class="swiss-map" viewBox="0 0 ${VIEW_W} ${VIEW_H}" role="img" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="swiss-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="swiss-fill-a"/><stop offset="1" class="swiss-fill-b"/></linearGradient></defs>
     <path class="swiss-shape" d="${outlinePath()}"/>
     <path class="swiss-lake" d="${lemanPath()}"/>
     <g class="swiss-dots">${circles}</g>
@@ -4543,10 +4877,14 @@ __def("views/home.js", function () {
 const { html, raw } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, fmtNumber, categoryName } = __req("i18n.js");
-const { CATEGORIES, getCategory } = __req("data.js");
+const { CATEGORIES, getCategory, findLocality } = __req("data.js");
+const { distanceKm } = __req("util.js");
 const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite } = __req("store.js");
 const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
+
+/** Villes mises en avant sur la page d'accueil (annonces dans un rayon de 10 km). */
+const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion", "Winterthur"];
 
 function heroCards(listings) {
   const wanted = [["Lausanne", "right"], ["Zürich", "left"], ["Lugano", "left"]];
@@ -4635,8 +4973,8 @@ const __default = {
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
         <div class="cat-grid">
-          ${CATEGORIES.map((c) => html`<a class="cat-tile" href="#/explorer?cat=${c.id}">
-            <span class="cat-icon tone-${c.tone}">${icon(c.icon)}</span>
+          ${CATEGORIES.map((c) => html`<a class="cat-tile tv-${c.tone}" href="#/explorer?cat=${c.id}">
+            <span class="cat-icon">${icon(c.icon)}</span>
             <span class="cat-name">${categoryName(c.id)}</span>
             <span class="cat-count">${t("home.catCount", { count: counts[c.id] || 0 })}</span>
           </a>`)}
@@ -4656,7 +4994,27 @@ const __default = {
       </div>
     </section>
 
-    <section class="section" id="how">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2">${t("home.citiesTitle")}</h2></div>
+        </div>
+        <div class="city-grid">
+          ${POPULAR_CITIES.map((name, i) => {
+            const loc = findLocality(name);
+            const n = listings.filter((l) => distanceKm(loc, l) <= 10).length;
+            return html`<a class="city-card tv-${i % 6}" href="#/explorer?ville=${encodeURIComponent(name)}">
+              <span class="city-dot">${icon("pin")}</span>
+              <span class="city-name">${name}</span>
+              <span class="city-count">${t("home.catCount", { count: n })}</span>
+              ${icon("arrowRight", "city-arrow")}
+            </a>`;
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-warm" id="how">
       <div class="container">
         <div class="section-head center">
           <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
@@ -4670,7 +5028,7 @@ const __default = {
           </li>`)}
         </ol>
         <div class="center-actions">
-          <a class="btn btn-primary btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <a class="btn btn-cta btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
           <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
         </div>
       </div>
@@ -4694,7 +5052,7 @@ const __default = {
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-sky">
       <div class="container faq-wrap">
         <div>
           <span class="kicker">${t("home.faqKicker")}</span>
@@ -4708,14 +5066,14 @@ const __default = {
       </div>
     </section>
 
-    <section class="section cta-band">
+    <section class="section cta-band section-sky">
       <div class="container cta-inner">
         <div>
           <h2 class="h2">${t("home.ctaTitle")}</h2>
           <p>${t("home.ctaText")}</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-light btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
         </div>
       </div>
     </section>`;
@@ -4838,7 +5196,7 @@ function pinIcon(listing, active = false) {
   const cat = getCategory(listing.category);
   return window.L.divIcon({
     className: "",
-    html: `<span class="map-pin tone-${cat.tone}${listing.urgent ? " is-urgent" : ""}${active ? " is-active" : ""}">${icon(cat.icon)}</span>`,
+    html: `<span class="map-pin tv-${cat.tone}${listing.urgent ? " is-urgent" : ""}${active ? " is-active" : ""}">${icon(cat.icon)}</span>`,
     iconSize: [34, 34],
     iconAnchor: [17, 17],
     popupAnchor: [0, -16],
@@ -4924,7 +5282,7 @@ function listingsLayer(map) {
 function detailMap(el, listing) {
   const map = createMap(el, { center: [listing.lat, listing.lng], zoom: 13, interactive: true });
   if (!map) return null;
-  window.L.circle([listing.lat, listing.lng], { radius: 900, color: "#2F6F4E", weight: 2, fillColor: "#5E9F68", fillOpacity: 0.18, interactive: false }).addTo(map);
+  window.L.circle([listing.lat, listing.lng], { radius: 900, color: "#0f7a4f", weight: 2, fillColor: "#2bb673", fillOpacity: 0.18, interactive: false }).addTo(map);
   return map;
 }
 
@@ -4941,8 +5299,8 @@ __def("views/explore.js", function () {
 const { html, raw, $, $$, mount, debounce } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, cantonName, categoryName, fmtNumber } = __req("i18n.js");
-const { CATEGORIES, CANTON_CODES, TYPES, PAYMENTS, LOCALITIES } = __req("data.js");
-const { searchListings, getOrigin, setOrigin, isFavorite } = __req("store.js");
+const { CATEGORIES, CANTON_CODES, TYPES, PAYMENTS, LOCALITIES, findLocality } = __req("data.js");
+const { searchListings, getOrigin, setOrigin, isFavorite, currentUser, saveAlert } = __req("store.js");
 const { listingCard, emptyState, localityField, initLocalityFields, toast } = __req("ui.js");
 const { createMap, listingsLayer, leafletReady, fitSwitzerland } = __req("map.js");
 
@@ -5112,6 +5470,16 @@ const exploreActions = {
     $("#results-top")?.scrollIntoView({ behavior: "smooth", block: "start" });
   },
   "set-view": (el) => { state.f.view = el.dataset.value; applyView(); },
+  "save-alert": () => {
+    if (!currentUser()) {
+      toast(t("alerts.loginFirst"), "info");
+      location.hash = `#/connexion?next=${encodeURIComponent("#/explorer")}`;
+      return;
+    }
+    const res = saveAlert(state.f, getOrigin(), state.f.radius);
+    if (res.ok) toast(t("alerts.saved"), "success");
+    else toast(t(res.error === "max" ? "alerts.max" : "err.generic"), "error");
+  },
   "toggle-filters": (el) => {
     const bar = $("#filter-bar");
     const open = bar.classList.toggle("is-open");
@@ -5125,6 +5493,13 @@ const __default = {
 
   render(ctx) {
     const f = readFilters(ctx.query);
+    // Lien « ville » (ex. depuis l'accueil) : on centre la recherche sur cette localité
+    const ville = findLocality(ctx.query.get("ville") || "");
+    if (ville) {
+      setOrigin({ lat: ville.lat, lng: ville.lng, label: ville.name });
+      f.radius = f.radius || "10";
+      f.sort = "distance";
+    }
     // Une nouvelle recherche arrivant par l'URL remet la zone de carte à zéro
     mapBounds = null;
     state = { f };
@@ -5153,6 +5528,7 @@ const __default = {
         <div class="results-bar" id="results-top">
           <p id="results-count" class="results-count" aria-live="polite"></p>
           <div class="results-tools">
+            <button type="button" class="btn btn-ghost btn-sm alert-btn" data-action="save-alert" title="${t("alerts.createHint")}">${icon("bell")}<span>${t("alerts.create")}</span></button>
             <label class="sort"><span class="muted">${t("sort.label")}</span>
               <select class="select select-sm" data-filter="sort" aria-label="${t("sort.label")}">
                 ${sortOptions.map(([v, text]) => html`<option value="${v}" ${(f.sort || (origin ? "distance" : "recent")) === v ? raw("selected") : ""}>${text}</option>`)}
@@ -5593,12 +5969,13 @@ __def("views/publish.js", function () {
 const { html, raw, $, $$, mount, storage, processImage, detectSensitive, todayKey, debounce } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, getLang, categoryName } = __req("i18n.js");
-const { CATEGORIES, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, getCategory } = __req("data.js");
+const { CATEGORIES, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, COVER_TONES, COVER_PATTERNS, getCategory } = __req("data.js");
 const { currentUser, createListing, updateListing, getListing, isAdmin, validateListing } = __req("store.js");
 const { listingCard, localityField, initLocalityFields, langChips, toast, emptyState, confirmDialog } = __req("ui.js");
 
 let photos = [];
 let editId = null;
+let coverTouched = false; // l'auteur a-t-il choisi lui-même l'illustration ?
 
 const TYPE_ICONS = { offer: "hand", request: "help", donation: "gift" };
 const PAY_ICONS = { free: "heart", paid: "coins", negotiable: "message" };
@@ -5625,6 +6002,7 @@ function readForm(form) {
     unit: fd.get("unit"),
     languages: fd.getAll("languages"),
     photos,
+    cover: coverTouched ? { tone: fd.get("coverTone") === "auto" ? null : Number(fd.get("coverTone")), pattern: fd.get("coverPattern") } : null,
     lang: getLang(),
   };
 }
@@ -5647,6 +6025,7 @@ function previewListing(data) {
     canton: data.canton || "—",
     urgent: data.urgent,
     photos,
+    cover: data.cover,
     status: "active",
   };
 }
@@ -5661,8 +6040,30 @@ function field(name, label, control, { required = false, hint = "", counter = 0 
 }
 
 function photoList() {
-  return html`${photos.map((p, i) => html`<div class="photo-item"><img src="${p}" alt="${t("listing.photoN", { n: i + 1 })}"><button type="button" class="icon-btn icon-btn-sm" data-action="remove-photo" data-index="${i}" aria-label="${t("publish.removePhoto")}">${icon("x")}</button></div>`)}
-  ${photos.length < 3 ? html`<label class="photo-add">${icon("camera")}<span>${t("publish.addPhoto")}</span><input type="file" accept="image/jpeg,image/png,image/webp" multiple data-photo-input class="sr-only"></label>` : ""}`;
+  return html`${photos.map((p, i) => html`<div class="photo-item">
+      <img src="${p}" alt="${t("listing.photoN", { n: i + 1 })}">
+      ${i === 0 ? html`<span class="photo-badge">${icon("star")}${t("publish.coverBadge")}</span>` : html`<button type="button" class="photo-make-cover" data-action="cover-photo" data-index="${i}">${t("publish.makeCover")}</button>`}
+      <button type="button" class="icon-btn icon-btn-sm photo-remove" data-action="remove-photo" data-index="${i}" aria-label="${t("publish.removePhoto")}">${icon("x")}</button>
+    </div>`)}
+  ${photos.length < 3 ? html`<label class="photo-add">${icon("camera")}<strong>${t("publish.addPhoto")}</strong><span>${t("publish.dropHint")}</span><input type="file" accept="image/jpeg,image/png,image/webp" multiple data-photo-input class="sr-only"></label>` : ""}`;
+}
+
+/** Choix de l'illustration (couleur + motif), utilisée quand il n'y a pas de photo. */
+function coverPicker(v) {
+  const tone = COVER_TONES.includes(v.cover?.tone) ? v.cover.tone : "auto";
+  const pattern = COVER_PATTERNS.includes(v.cover?.pattern) ? v.cover.pattern : "bubbles";
+  const shownTone = tone === "auto" ? getCategory(v.category).tone : tone;
+  return html`<div class="cover-picker">
+    <p class="field-label">${t("publish.coverTitle")}</p>
+    <p class="help" id="cover-note">${icon("info")}<span>${photos.length ? t("publish.coverNoteWithPhoto") : t("publish.coverNote")}</span></p>
+    <div class="swatches" role="radiogroup" aria-label="${t("publish.coverColor")}">
+      <label class="swatch"><input type="radio" name="coverTone" value="auto" ${tone === "auto" ? raw("checked") : ""}><span class="swatch-auto">${icon("sparkles")}${t("publish.coverAuto")}</span></label>
+      ${COVER_TONES.map((n) => html`<label class="swatch"><input type="radio" name="coverTone" value="${n}" ${tone === n ? raw("checked") : ""}><span class="swatch-color tv-${n}" aria-label="${t("publish.coverColorN", { n: n + 1 })}"></span></label>`)}
+    </div>
+    <div class="patterns" role="radiogroup" aria-label="${t("publish.coverPattern")}">
+      ${COVER_PATTERNS.map((pat) => html`<label class="pattern-opt"><input type="radio" name="coverPattern" value="${pat}" ${pattern === pat ? raw("checked") : ""}><span class="pattern-thumb media-illu tv-${shownTone} pat-${pat}"></span><small>${t("pattern." + pat)}</small></label>`)}
+    </div>
+  </div>`;
 }
 
 const __default = {
@@ -5695,6 +6096,7 @@ const __default = {
       v = storage.get("draft", {}) || {};
       photos = Array.isArray(v.photos) ? v.photos.slice(0, 3) : [];
     }
+    coverTouched = !!(v.cover && (v.cover.tone !== null || v.cover.pattern));
     const hasDraft = !editId && (v.title || v.description);
     const type = TYPES.includes(v.type) ? v.type : "offer";
     const payment = PAYMENTS.includes(v.payment) ? v.payment : "free";
@@ -5732,15 +6134,25 @@ const __default = {
           <div id="sensitive-warning" class="notice notice-warn" hidden></div>
         </fieldset>
 
+        <fieldset class="form-section form-section-image">
+          <legend><span class="step-badge">3</span>${t("publish.sImage")}<span class="optional">${t("common.optional")}</span></legend>
+          <p class="help">${icon("image")}<span>${t("publish.imageIntro")}</span></p>
+          <div class="photo-drop" id="photo-drop">
+            <div class="photo-grid" id="photo-grid">${photoList()}</div>
+          </div>
+          <p class="help">${icon("shield")}<span>${t("publish.photoHint")}</span></p>
+          ${coverPicker(v)}
+        </fieldset>
+
         <fieldset class="form-section">
-          <legend><span class="step-badge">3</span>${t("publish.sWhere")}</legend>
+          <legend><span class="step-badge">4</span>${t("publish.sWhere")}</legend>
           ${localityField({ name: "city", label: t("publish.fCity"), value: v.city || me.city || "", canton: v.canton || me.canton || "", npa: v.npa || "", required: true })}
           <p class="field-error" id="err-city" hidden></p>
           <p class="help">${icon("shield")}${t("publish.privacyHint")}</p>
         </fieldset>
 
         <fieldset class="form-section">
-          <legend><span class="step-badge">4</span>${t("publish.sWhen")}</legend>
+          <legend><span class="step-badge">5</span>${t("publish.sWhen")}</legend>
           <div class="grid-2">
             ${field("date", t("publish.fDate"), html`<input id="f-date" class="input" type="date" name="date" min="${todayKey()}" value="${v.date || ""}">`, { hint: t("publish.fDateHint") })}
             ${field("time", t("publish.fTime"), html`<input id="f-time" class="input" type="time" name="time" value="${v.time || ""}">`)}
@@ -5756,7 +6168,7 @@ const __default = {
         </fieldset>
 
         <fieldset class="form-section">
-          <legend><span class="step-badge">5</span>${t("publish.sPayment")}</legend>
+          <legend><span class="step-badge">6</span>${t("publish.sPayment")}</legend>
           <div class="radio-cards">
             ${PAYMENTS.map((p) => html`<label class="radio-card"><input type="radio" name="payment" value="${p}" ${p === payment ? raw("checked") : ""}>
               <span class="radio-card-inner">${icon(PAY_ICONS[p])}<strong>${t("pay." + p)}</strong><small>${t("publish.pay." + p)}</small></span></label>`)}
@@ -5769,20 +6181,14 @@ const __default = {
         </fieldset>
 
         <fieldset class="form-section">
-          <legend><span class="step-badge">6</span>${t("publish.sExtras")}</legend>
+          <legend><span class="step-badge">7</span>${t("publish.fLanguages")}</legend>
           <div class="field">
-            <span class="field-label">${t("publish.fPhotos")}</span>
-            <div class="photo-grid" id="photo-grid">${photoList()}</div>
-            <p class="help">${icon("shield")}${t("publish.photoHint")}</p>
-          </div>
-          <div class="field">
-            <span class="field-label">${t("publish.fLanguages")}</span>
             ${langChips("languages", v.languages || me.languages || [getLang()])}
           </div>
         </fieldset>
 
         <fieldset class="form-section">
-          <legend><span class="step-badge">7</span>${t("publish.sConfirm")}</legend>
+          <legend><span class="step-badge">8</span>${t("publish.sConfirm")}</legend>
           <label class="check"><input type="checkbox" name="rules" value="1" required ${editId ? raw("checked") : ""}><span>${t("publish.cRules")} <a href="#/page/regles" target="_blank" rel="noopener">${t("publish.cRulesLink")}</a></span></label>
           <label class="check"><input type="checkbox" name="honest" value="1" required ${editId ? raw("checked") : ""}><span>${t("publish.cHonest")}</span></label>
           <p class="field-error" id="err-confirm" hidden></p>
@@ -5816,6 +6222,10 @@ const __default = {
       if (!form.isConnected) return; // la page a changé entre-temps
       const data = readForm(form);
       mount($("#preview-card"), listingCard(previewListing(data)));
+      // Les vignettes de motifs prennent la couleur choisie (ou celle de la catégorie)
+      const toneValue = form.elements.coverTone?.value;
+      const tone = toneValue && toneValue !== "auto" ? toneValue : getCategory(data.category).tone;
+      $$(".pattern-thumb", form).forEach((el) => { el.className = el.className.replace(/tv-\d/, `tv-${tone}`); });
       $("#pay-fields").hidden = data.payment !== "paid";
       $$("[data-counter]", form).forEach((c) => {
         const input = form.elements[c.dataset.counter];
@@ -5838,9 +6248,14 @@ const __default = {
     updatePreview();
 
     // Photos : vérification du format réel + suppression des métadonnées (GPS)
-    form.addEventListener("change", async (e) => {
-      if (!e.target.matches("[data-photo-input]")) return;
-      const files = [...e.target.files].slice(0, 3 - photos.length);
+    const refreshPhotos = () => {
+      mount($("#photo-grid"), photoList());
+      const note = $("#cover-note span");
+      if (note) note.textContent = photos.length ? t("publish.coverNoteWithPhoto") : t("publish.coverNote");
+      updatePreview();
+    };
+    const addFiles = async (fileList) => {
+      const files = [...fileList].filter((f) => f.type.startsWith("image/")).slice(0, 3 - photos.length);
       for (const file of files) {
         try {
           photos.push(await processImage(file, 1100, 0.8));
@@ -5848,15 +6263,24 @@ const __default = {
           toast(t(err.message === "too-large" ? "publish.photoTooLarge" : "publish.photoBadType"), "error");
         }
       }
-      mount($("#photo-grid"), photoList());
-      updatePreview();
+      refreshPhotos();
+    };
+    form.addEventListener("change", (e) => {
+      if (e.target.matches("[data-photo-input]")) addFiles(e.target.files);
+      if (e.target.name === "coverTone" || e.target.name === "coverPattern") coverTouched = true;
     });
+    // Glisser-déposer des photos depuis l'ordinateur
+    const drop = $("#photo-drop", root);
+    ["dragenter", "dragover"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("is-drag"); }));
+    ["dragleave", "drop"].forEach((ev) => drop.addEventListener(ev, () => drop.classList.remove("is-drag")));
+    drop.addEventListener("drop", (e) => { e.preventDefault(); if (e.dataTransfer?.files?.length) addFiles(e.dataTransfer.files); });
     root.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-action='remove-photo']");
-      if (!btn) return;
-      photos.splice(Number(btn.dataset.index), 1);
-      mount($("#photo-grid"), photoList());
-      updatePreview();
+      const rm = e.target.closest("[data-action='remove-photo']");
+      const cover = e.target.closest("[data-action='cover-photo']");
+      if (rm) photos.splice(Number(rm.dataset.index), 1);
+      else if (cover) photos.unshift(...photos.splice(Number(cover.dataset.index), 1));
+      else return;
+      refreshPhotos();
     });
 
     form.addEventListener("submit", (e) => {
@@ -6009,6 +6433,7 @@ function chatPane(c) {
   <div class="chat-messages" id="chat-messages" aria-live="polite">${messagesPane(c)}</div>
   <form class="chat-composer" id="chat-composer" data-id="${c.id}">
     <div id="composer-warning" class="composer-warning" hidden></div>
+    ${c.messages.length < 6 ? html`<div class="quick-replies" aria-label="${t("messages.quickLabel")}">${[1, 2, 3, 4].map((n) => html`<button type="button" class="quick-reply" data-action="quick-reply" data-text="${t("messages.quick" + n)}">${t("messages.quick" + n)}</button>`)}</div>` : ""}
     <div class="composer-row">
       <label for="chat-input" class="sr-only">${t("messages.placeholder")}</label>
       <textarea id="chat-input" class="input" name="text" rows="1" maxlength="1000" placeholder="${t("messages.placeholder")}" autocomplete="off"></textarea>
@@ -6099,6 +6524,13 @@ const __default = {
 };
 
 const messagesActions = {
+  "quick-reply": (el) => {
+    const input = $("#chat-input");
+    if (!input) return;
+    input.value = input.value ? `${input.value.trim()} ${el.dataset.text}` : el.dataset.text;
+    input.dispatchEvent(new Event("input"));
+    input.focus();
+  },
   "delete-conv": async (el) => {
     if (!(await confirmDialog({ title: t("messages.deleteTitle"), text: t("messages.deleteText"), confirm: t("messages.delete"), danger: true }))) return;
     deleteConversation(el.dataset.id);
@@ -6244,7 +6676,7 @@ const __default = {
 
   onData(kind) {
     if (kind === "favorites") {
-      const view = document.getElementById("view");
+      const view = document.querySelector("#view > .page") || document.getElementById("view");
       const y = window.scrollY;
       mount(view, this.render());
       window.scrollTo(0, y);
@@ -6489,19 +6921,78 @@ __def("views/account.js", function () {
 /* Mon compte : profil, annonces, sécurité, données personnelles, préférences */
 const { html, raw, $, $$, mount, processImage, downloadFile, safeImageSrc } = __req("util.js");
 const { icon } = __req("icons.js");
-const { t, fmtDate, cantonName, getLang, setLang, fmtRelative } = __req("i18n.js");
-const { currentUser, updateProfile, changePassword, deleteAccount, exportMyData, listingsByAuthor, getFavorites, getConversations, getPerson, logout, getPrefs, setPrefs, isAdmin } = __req("store.js");
+const { t, fmtDate, cantonName, categoryName, getLang, setLang, fmtRelative } = __req("i18n.js");
+const { currentUser, updateProfile, changePassword, deleteAccount, exportMyData, listingsByAuthor, getFavorites, getConversations, getPerson, logout, getPrefs, setPrefs, isAdmin, getAlerts, deleteAlert } = __req("store.js");
 const { passwordStrength } = __req("auth.js");
 const { avatar, listingCard, emptyState, localityField, initLocalityFields, langChips, toast, confirmDialog, openDialog, priceLabel, listingTitle, categoryThumb } = __req("ui.js");
 
-const TABS = ["profile", "listings", "security", "data", "prefs"];
-const TAB_ICONS = { profile: "user", listings: "file", security: "lock", data: "download", prefs: "sliders" };
+const TABS = ["profile", "listings", "alerts", "security", "data", "prefs"];
+const TAB_ICONS = { profile: "user", listings: "file", alerts: "bell", security: "lock", data: "download", prefs: "sliders" };
 let tab = "profile";
 let pendingPhoto = undefined;
+
+/** Profil complété à X % : plus un profil est complet, plus il inspire confiance. */
+function completeness(me) {
+  const checks = [
+    ["photo", !!me.photo],
+    ["bio", (me.bio || "").length >= 20],
+    ["specialties", (me.specialties || []).length > 0],
+    ["languages", (me.languages || []).length > 0],
+    ["city", !!me.city],
+    ["listing", listingsByAuthor(me.id, { includeInactive: true }).length > 0],
+  ];
+  const done = checks.filter(([, ok]) => ok).length;
+  return { percent: Math.round((done / checks.length) * 100), missing: checks.filter(([, ok]) => !ok).map(([k]) => k) };
+}
+
+function completenessCard(me) {
+  const c = completeness(me);
+  return html`<div class="card completeness${c.percent === 100 ? " is-complete" : ""}">
+    <div class="completeness-head">
+      <strong>${t("account.completeTitle", { percent: c.percent })}</strong>
+      <span class="muted small">${c.percent === 100 ? t("account.completeDone") : t("account.completeHint")}</span>
+    </div>
+    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${c.percent}"><span data-w="${c.percent}"></span></div>
+    ${c.missing.length ? html`<ul class="completeness-todo">${c.missing.map((k) => html`<li>${icon("plus")}${t("account.todo." + k)}</li>`)}</ul>` : ""}
+  </div>`;
+}
+
+function alertLabel(a) {
+  const parts = [];
+  if (a.q) parts.push(`« ${a.q} »`);
+  if (a.type) parts.push(t("type." + a.type));
+  if (a.cat) parts.push(categoryName(a.cat));
+  if (a.canton) parts.push(cantonName(a.canton));
+  if (a.pay) parts.push(t("pay." + a.pay));
+  if (a.origin) parts.push(t("alerts.around", { km: a.radius, place: a.origin.label }));
+  return parts.length ? parts.join(" · ") : t("alerts.everything");
+}
+
+function alertLink(a) {
+  const p = new URLSearchParams();
+  ["q", "type", "cat", "canton", "pay"].forEach((k) => { if (a[k]) p.set(k, a[k]); });
+  return `#/explorer${p.toString() ? "?" + p : ""}`;
+}
+
+function alertsTab() {
+  const alerts = getAlerts();
+  return html`<div class="card form-card">
+    <h2 class="h3">${icon("bell")}${t("alerts.title")}</h2>
+    <p>${t("alerts.intro")}</p>
+    ${alerts.length
+      ? html`<ul class="alert-list">${alerts.map((a) => html`<li class="alert-item">
+          <span class="alert-icon">${icon("bell")}</span>
+          <span class="alert-body"><a href="${alertLink(a)}">${alertLabel(a)}</a><span class="muted small">${t("alerts.since", { when: fmtRelative(a.created) })}</span></span>
+          <button type="button" class="icon-btn" data-action="delete-alert" data-id="${a.id}" aria-label="${t("alerts.delete")}" title="${t("alerts.delete")}">${icon("trash")}</button>
+        </li>`)}</ul>`
+      : emptyState({ iconName: "bell", title: t("alerts.emptyTitle"), text: t("alerts.emptyText"), action: html`<a class="btn btn-primary" href="#/explorer">${icon("search")}${t("alerts.goSearch")}</a>` })}
+  </div>`;
+}
 
 function profileTab(me) {
   const person = getPerson(me.id);
   return html`
+  ${completenessCard(me)}
   <form id="profile-form" class="card form-card" novalidate>
     <div class="profile-photo-row">
       <div id="profile-avatar">${avatar({ ...person, photo: pendingPhoto ?? me.photo }, "xl")}</div>
@@ -6605,13 +7096,16 @@ function prefsTab() {
     <fieldset class="field"><legend class="field-label">${t("account.theme")}</legend>
       <div class="segmented">${["system", "light", "dark"].map((th) => html`<label class="seg-radio"><input type="radio" name="theme" value="${th}" ${theme === th ? raw("checked") : ""}><span>${icon(th === "dark" ? "moon" : th === "light" ? "sun" : "laptop")}${t("theme." + th)}</span></label>`)}</div>
     </fieldset>
+    <fieldset class="field"><legend class="field-label">${t("account.textSize")}</legend>
+      <div class="segmented">${["normal", "large"].map((sz) => html`<label class="seg-radio"><input type="radio" name="textSize" value="${sz}" ${(prefs.textSize || "normal") === sz ? raw("checked") : ""}><span>${sz === "large" ? html`<strong>A+</strong>` : "A"} ${t("account.text." + sz)}</span></label>`)}</div>
+    </fieldset>
     <label class="check"><input type="checkbox" name="banner" value="1" ${!prefs.bannerDismissed ? raw("checked") : ""}><span>${t("account.showDemoBanner")}</span></label>
   </form>`;
 }
 
 const __default = {
   title: () => t("meta.accountTitle"),
-  refreshOn: ["auth", "listings", "profile"],
+  refreshOn: ["auth", "listings", "profile", "alerts"],
 
   render(ctx) {
     const me = currentUser();
@@ -6624,7 +7118,7 @@ const __default = {
     if (!TABS.includes(tab)) tab = "profile";
     const person = getPerson(me.id);
     const welcome = ctx.query.get("welcome") === "1";
-    const content = { profile: profileTab, listings: listingsTab, security: securityTab, data: dataTab, prefs: prefsTab }[tab](me);
+    const content = { profile: profileTab, listings: listingsTab, alerts: alertsTab, security: securityTab, data: dataTab, prefs: prefsTab }[tab](me);
     return html`
     <section class="page-head">
       <div class="container account-head">
@@ -6651,6 +7145,7 @@ const __default = {
   mount(root) {
     initLocalityFields(root);
     pendingPhoto = undefined;
+    root.querySelectorAll(".progress [data-w]").forEach((b) => { b.style.width = b.dataset.w + "%"; });
 
     const profile = $("#profile-form", root);
     if (profile) {
@@ -6705,6 +7200,7 @@ const __default = {
       const el = e.target;
       if (el.name === "lang") { setLang(el.value); window.dispatchEvent(new Event("voisina:lang")); }
       if (el.name === "theme") { setPrefs({ theme: el.value === "system" ? null : el.value }); window.dispatchEvent(new Event("voisina:theme")); }
+      if (el.name === "textSize") { setPrefs({ textSize: el.value }); document.documentElement.classList.toggle("text-lg", el.value === "large"); }
       if (el.name === "banner") { setPrefs({ bannerDismissed: !el.checked }); window.dispatchEvent(new Event("voisina:banner")); }
       toast(t("account.saved"), "success");
     });
@@ -6712,6 +7208,10 @@ const __default = {
 };
 
 const accountActions = {
+  "delete-alert": (el) => {
+    deleteAlert(el.dataset.id);
+    toast(t("alerts.deleted"), "success");
+  },
   "remove-avatar": () => {
     pendingPhoto = "";
     const me = currentUser();
@@ -6980,7 +7480,7 @@ const PAGES = {
           ["Comment écrire une bonne annonce ?", "Choisissez un titre court et précis, décrivez clairement le besoin ou l'aide proposée, indiquez une date si possible et précisez si c'est gratuit, rémunéré ou à discuter."],
           ["Mon adresse sera-t-elle visible ?", "Non, jamais. Seule votre localité est affichée et la position sur la carte est volontairement floutée d'environ un kilomètre."],
           ["Puis-je modifier ou supprimer mon annonce ?", "Oui, à tout moment depuis « Mon compte › Mes annonces ». Vous pouvez aussi la marquer comme terminée une fois l'entraide réalisée."],
-          ["Puis-je ajouter des photos ?", "Oui, jusqu'à trois. Elles sont automatiquement redimensionnées et leurs métadonnées (dont la position GPS enregistrée par les smartphones) sont supprimées."],
+          ["Puis-je ajouter des photos ?", "Oui, c'est facultatif : jusqu'à trois photos (vous choisissez celle de couverture). Elles sont redimensionnées et leurs métadonnées (dont la position GPS enregistrée par les smartphones) sont supprimées. Sans photo, vous pouvez choisir la couleur et le motif d'une illustration."],
         ] },
         { h: "Contacter un membre", qa: [
           ["Comment contacter l'auteur d'une annonce ?", "Cliquez sur « Contacter » sur la page de l'annonce. Une conversation s'ouvre dans la messagerie, sans que votre numéro ou votre e-mail ne soient partagés."],
@@ -7005,7 +7505,7 @@ const PAGES = {
           ["Wie schreibe ich eine gute Anzeige?", "Wählen Sie einen kurzen, präzisen Titel, beschreiben Sie klar, was Sie brauchen oder anbieten, geben Sie wenn möglich ein Datum an und ob es kostenlos, bezahlt oder verhandelbar ist."],
           ["Ist meine Adresse sichtbar?", "Nein, nie. Angezeigt wird nur Ihr Ort; die Position auf der Karte ist absichtlich um etwa einen Kilometer ungenau."],
           ["Kann ich meine Anzeige ändern oder löschen?", "Ja, jederzeit unter «Mein Konto › Meine Anzeigen». Nach erfolgter Hilfe können Sie sie auch als erledigt markieren."],
-          ["Kann ich Fotos hinzufügen?", "Ja, bis zu drei. Sie werden automatisch verkleinert und ihre Metadaten (inklusive der GPS-Position von Smartphones) werden entfernt."],
+          ["Kann ich Fotos hinzufügen?", "Ja, freiwillig: bis zu drei Fotos (Sie wählen das Titelbild). Sie werden verkleinert und ihre Metadaten (inklusive der GPS-Position von Smartphones) entfernt. Ohne Foto können Sie Farbe und Muster einer Illustration wählen."],
         ] },
         { h: "Ein Mitglied kontaktieren", qa: [
           ["Wie kontaktiere ich jemanden?", "Klicken Sie auf der Anzeige auf «Kontaktieren». Es öffnet sich ein Chat – ohne dass Telefonnummer oder E-Mail geteilt werden."],
@@ -7030,7 +7530,7 @@ const PAGES = {
           ["Come scrivere un buon annuncio?", "Scegliete un titolo breve e preciso, descrivete chiaramente il bisogno o l'aiuto offerto, indicate una data se possibile e specificate se è gratuito, retribuito o da concordare."],
           ["Il mio indirizzo sarà visibile?", "No, mai. Viene mostrata solo la località e la posizione sulla carta è volutamente sfocata di circa un chilometro."],
           ["Posso modificare o eliminare l'annuncio?", "Sì, in qualsiasi momento da «Il mio account › I miei annunci». Potete anche segnarlo come concluso."],
-          ["Posso aggiungere foto?", "Sì, fino a tre. Vengono ridimensionate automaticamente e i metadati (compresa la posizione GPS registrata dagli smartphone) vengono eliminati."],
+          ["Posso aggiungere foto?", "Sì, è facoltativo: fino a tre foto (scegliete voi la copertina). Vengono ridimensionate e i metadati (compresa la posizione GPS registrata dagli smartphone) eliminati. Senza foto potete scegliere colore e motivo di un'illustrazione."],
         ] },
         { h: "Contattare un membro", qa: [
           ["Come contatto l'autore di un annuncio?", "Cliccate su «Contatta» nella pagina dell'annuncio. Si apre una conversazione, senza condividere numero di telefono o e-mail."],
@@ -7055,7 +7555,7 @@ const PAGES = {
           ["How do I write a good listing?", "Pick a short, precise title, clearly describe what you need or offer, add a date if possible and say whether it's free, paid or negotiable."],
           ["Will my address be visible?", "No, never. Only your town is shown and the map position is deliberately blurred by about one kilometre."],
           ["Can I edit or delete my listing?", "Yes, at any time from “My account › My listings”. You can also mark it as done once the help has happened."],
-          ["Can I add photos?", "Yes, up to three. They are resized automatically and their metadata (including the GPS position smartphones record) is removed."],
+          ["Can I add photos?", "Yes, it's optional: up to three photos (you choose the cover). They are resized and their metadata (including the GPS position smartphones record) is removed. Without a photo, you can pick the colour and pattern of an illustration."],
         ] },
         { h: "Contacting a member", qa: [
           ["How do I contact someone?", "Click “Contact” on the listing page. A conversation opens in the inbox — your phone number and email are never shared."],
@@ -7268,7 +7768,7 @@ const PAGES = {
       updated: "Version de démonstration — dernière mise à jour : septembre 2026",
       sections: [
         { h: "1. Objet", p: ["Voisina est une plateforme qui met en relation des particuliers souhaitant s'entraider en Suisse. Voisina n'est partie à aucun accord conclu entre membres et n'agit pas comme employeur, intermédiaire de paiement ou prestataire de services."] },
-        { h: "2. Statut du service", p: ["Le site est actuellement un prototype réalisé dans le cadre d'un projet scolaire de fin d'année. Les annonces d'exemple sont fictives et les données saisies restent dans votre navigateur. Le service est fourni tel quel, sans garantie de disponibilité."] },
+        { h: "2. Statut du service", p: ["Le site est actuellement un prototype réalisé seul par Lenny H. dans le cadre de son projet TPA / PAE au CPNV (Centre professionnel du Nord vaudois). Les annonces d'exemple sont fictives et les données saisies restent dans votre navigateur. Le service est fourni tel quel, sans garantie de disponibilité."] },
         { h: "3. Inscription", p: ["L'inscription est gratuite et réservée aux personnes âgées d'au moins 16 ans ; en dessous, l'accord d'un représentant légal est nécessaire. Vous vous engagez à fournir des informations exactes et à garder votre mot de passe confidentiel."] },
         { h: "4. Annonces et comportements", p: ["Vous êtes responsable du contenu que vous publiez et de vos échanges. Vous vous engagez à respecter les Règles de la communauté et le droit suisse."] },
         { h: "5. Services rémunérés", p: ["Les montants sont convenus librement entre membres ; Voisina n'encaisse rien. Il appartient aux membres de respecter leurs éventuelles obligations légales (déclaration des revenus, cotisations sociales AVS pour certains travaux domestiques, assurances)."] },
@@ -7282,7 +7782,7 @@ const PAGES = {
       updated: "Demoversion — letzte Aktualisierung: September 2026",
       sections: [
         { h: "1. Zweck", p: ["Voisina ist eine Plattform, die Privatpersonen in der Schweiz für gegenseitige Hilfe zusammenbringt. Voisina ist nicht Partei von Vereinbarungen zwischen Mitgliedern und handelt weder als Arbeitgeberin noch als Zahlungsvermittlerin oder Dienstleisterin."] },
-        { h: "2. Status des Dienstes", p: ["Die Website ist derzeit ein Prototyp im Rahmen eines schulischen Abschlussprojekts. Die Beispielanzeigen sind fiktiv, und eingegebene Daten bleiben in Ihrem Browser. Der Dienst wird ohne Verfügbarkeitsgarantie bereitgestellt."] },
+        { h: "2. Status des Dienstes", p: ["Die Website ist derzeit ein Prototyp den Lenny H. allein im Rahmen seines TPA-/PAE-Projekts am CPNV (Centre professionnel du Nord vaudois) entwickelt hat. Die Beispielanzeigen sind fiktiv, und eingegebene Daten bleiben in Ihrem Browser. Der Dienst wird ohne Verfügbarkeitsgarantie bereitgestellt."] },
         { h: "3. Registrierung", p: ["Die Registrierung ist kostenlos und Personen ab 16 Jahren vorbehalten; darunter ist die Zustimmung einer gesetzlichen Vertretung nötig. Sie verpflichten sich zu korrekten Angaben und halten Ihr Passwort geheim."] },
         { h: "4. Anzeigen und Verhalten", p: ["Sie sind für Ihre Inhalte und Ihren Austausch verantwortlich und verpflichten sich, die Community-Regeln und das Schweizer Recht einzuhalten."] },
         { h: "5. Bezahlte Dienste", p: ["Beträge werden frei zwischen Mitgliedern vereinbart; Voisina kassiert nichts. Die Mitglieder sind selbst für allfällige gesetzliche Pflichten verantwortlich (Einkommensdeklaration, AHV-Beiträge bei gewissen Hausarbeiten, Versicherungen)."] },
@@ -7296,7 +7796,7 @@ const PAGES = {
       updated: "Versione dimostrativa — ultimo aggiornamento: settembre 2026",
       sections: [
         { h: "1. Oggetto", p: ["Voisina è una piattaforma che mette in contatto privati che desiderano aiutarsi in Svizzera. Voisina non è parte degli accordi tra membri e non agisce come datore di lavoro, intermediario di pagamento o fornitore di servizi."] },
-        { h: "2. Stato del servizio", p: ["Il sito è attualmente un prototipo realizzato nell'ambito di un progetto scolastico di fine anno. Gli annunci d'esempio sono fittizi e i dati inseriti restano nel vostro browser. Il servizio è fornito senza garanzia di disponibilità."] },
+        { h: "2. Stato del servizio", p: ["Il sito è attualmente un prototipo realizzato da solo da Lenny H. nell'ambito del suo progetto TPA / PAE al CPNV (Centre professionnel du Nord vaudois). Gli annunci d'esempio sono fittizi e i dati inseriti restano nel vostro browser. Il servizio è fornito senza garanzia di disponibilità."] },
         { h: "3. Iscrizione", p: ["L'iscrizione è gratuita e riservata alle persone di almeno 16 anni; al di sotto è necessario il consenso di un rappresentante legale. Vi impegnate a fornire informazioni corrette e a mantenere segreta la password."] },
         { h: "4. Annunci e comportamenti", p: ["Siete responsabili dei contenuti che pubblicate e dei vostri scambi. Vi impegnate a rispettare le Regole della comunità e il diritto svizzero."] },
         { h: "5. Servizi retribuiti", p: ["Gli importi sono concordati liberamente tra membri; Voisina non incassa nulla. Spetta ai membri rispettare eventuali obblighi legali (dichiarazione dei redditi, contributi AVS per alcuni lavori domestici, assicurazioni)."] },
@@ -7310,7 +7810,7 @@ const PAGES = {
       updated: "Demo version — last updated: September 2026",
       sections: [
         { h: "1. Purpose", p: ["Voisina is a platform connecting private individuals who want to help each other in Switzerland. Voisina is not a party to any agreement between members and does not act as an employer, payment intermediary or service provider."] },
-        { h: "2. Service status", p: ["The site is currently a prototype built as an end-of-year school project. Sample listings are fictional and the data you enter stays in your browser. The service is provided as is, with no availability guarantee."] },
+        { h: "2. Service status", p: ["The site is currently a prototype built single-handedly by Lenny H. as his TPA / PAE project at CPNV (Centre professionnel du Nord vaudois). Sample listings are fictional and the data you enter stays in your browser. The service is provided as is, with no availability guarantee."] },
         { h: "3. Registration", p: ["Registration is free and reserved for people aged 16 or over; under 16, a legal guardian's consent is required. You agree to provide accurate information and keep your password confidential."] },
         { h: "4. Listings and behaviour", p: ["You are responsible for the content you post and for your exchanges. You agree to follow the Community rules and Swiss law."] },
         { h: "5. Paid help", p: ["Amounts are freely agreed between members; Voisina collects nothing. Members are responsible for any legal obligations (declaring income, AHV/AVS social contributions for certain household work, insurance)."] },
@@ -7334,7 +7834,7 @@ const PAGES = {
           "Votre mot de passe n'est jamais enregistré : seule une empreinte chiffrée (PBKDF2) est conservée.",
           "Votre adresse exacte n'est jamais demandée ni affichée.",
         ] },
-        { h: "Responsable du traitement", p: ["Voisina — projet scolaire de fin d'année (voir les mentions légales)."] },
+        { h: "Responsable du traitement", p: ["Voisina — projet TPA / PAE de Lenny H. au CPNV (voir les mentions légales)."] },
         { h: "Données traitées", list: [
           "Compte : prénom, nom (seule l'initiale est publique), e-mail, localité, canton, empreinte du mot de passe.",
           "Profil facultatif : photo, présentation, langues, spécialités.",
@@ -7365,7 +7865,7 @@ const PAGES = {
           "Ihr Passwort wird nie gespeichert: Nur ein verschlüsselter Fingerabdruck (PBKDF2) wird aufbewahrt.",
           "Ihre genaue Adresse wird weder abgefragt noch angezeigt.",
         ] },
-        { h: "Verantwortliche Stelle", p: ["Voisina — schulisches Abschlussprojekt (siehe Impressum)."] },
+        { h: "Verantwortliche Stelle", p: ["Voisina — TPA-/PAE-Projekt von Lenny H. am CPNV (siehe Impressum)."] },
         { h: "Bearbeitete Daten", list: [
           "Konto: Vorname, Nachname (nur die Initiale ist öffentlich), E-Mail, Ort, Kanton, Passwort-Fingerabdruck.",
           "Freiwilliges Profil: Foto, Beschreibung, Sprachen, Fähigkeiten.",
@@ -7396,7 +7896,7 @@ const PAGES = {
           "La password non viene mai salvata: viene conservata solo un'impronta cifrata (PBKDF2).",
           "Il vostro indirizzo esatto non viene mai chiesto né mostrato.",
         ] },
-        { h: "Titolare del trattamento", p: ["Voisina — progetto scolastico di fine anno (vedi note legali)."] },
+        { h: "Titolare del trattamento", p: ["Voisina — progetto TPA / PAE di Lenny H. al CPNV (vedi note legali)."] },
         { h: "Dati trattati", list: [
           "Account: nome, cognome (è pubblica solo l'iniziale), e-mail, località, cantone, impronta della password.",
           "Profilo facoltativo: foto, presentazione, lingue, competenze.",
@@ -7427,7 +7927,7 @@ const PAGES = {
           "Your password is never stored: only an encrypted fingerprint (PBKDF2) is kept.",
           "Your exact address is never requested or shown.",
         ] },
-        { h: "Controller", p: ["Voisina — end-of-year school project (see legal notice)."] },
+        { h: "Controller", p: ["Voisina — TPA / PAE project by Lenny H. at CPNV (see legal notice)."] },
         { h: "Data processed", list: [
           "Account: first name, last name (only the initial is public), email, town, canton, password fingerprint.",
           "Optional profile: photo, bio, languages, skills.",
@@ -7454,7 +7954,7 @@ const PAGES = {
     fr: {
       title: "Mentions légales",
       sections: [
-        { h: "Éditeur du site", p: ["Voisina — projet scolaire de fin d'année réalisé par Lenny H., Suisse.", "Ce site est un prototype pédagogique non commercial. Les annonces et les membres d'exemple sont fictifs ; toute ressemblance avec des personnes réelles serait fortuite."] },
+        { h: "Éditeur du site", p: ["Voisina — projet TPA / PAE réalisé seul par Lenny H., CPNV (Centre professionnel du Nord vaudois), Suisse.", "Ce site est un prototype pédagogique non commercial. Les annonces et les membres d'exemple sont fictifs ; toute ressemblance avec des personnes réelles serait fortuite."] },
         { h: "Hébergement", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."] },
         { h: "Cartes et données géographiques", p: ["Fonds de carte © swisstopo (Office fédéral de topographie). Données de repli © contributeurs OpenStreetMap. Recherche de localités : service geo.admin.ch de la Confédération suisse."] },
         { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Police de titres : Fraunces (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC)."] },
@@ -7464,7 +7964,7 @@ const PAGES = {
     de: {
       title: "Impressum",
       sections: [
-        { h: "Herausgeber", p: ["Voisina — schulisches Abschlussprojekt von Lenny H., Schweiz.", "Diese Website ist ein nicht kommerzieller Lernprototyp. Beispielanzeigen und -mitglieder sind fiktiv; Ähnlichkeiten mit realen Personen wären zufällig."] },
+        { h: "Herausgeber", p: ["Voisina — TPA-/PAE-Projekt, allein realisiert von Lenny H., CPNV (Centre professionnel du Nord vaudois), Schweiz.", "Diese Website ist ein nicht kommerzieller Lernprototyp. Beispielanzeigen und -mitglieder sind fiktiv; Ähnlichkeiten mit realen Personen wären zufällig."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Karten und Geodaten", p: ["Kartenhintergrund © swisstopo (Bundesamt für Landestopografie). Ersatzdaten © OpenStreetMap-Mitwirkende. Ortssuche: Dienst geo.admin.ch der Schweizerischen Eidgenossenschaft."] },
         { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Titelschrift: Fraunces (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz)."] },
@@ -7474,7 +7974,7 @@ const PAGES = {
     it: {
       title: "Note legali",
       sections: [
-        { h: "Editore del sito", p: ["Voisina — progetto scolastico di fine anno realizzato da Lenny H., Svizzera.", "Questo sito è un prototipo didattico non commerciale. Gli annunci e i membri d'esempio sono fittizi; ogni somiglianza con persone reali è casuale."] },
+        { h: "Editore del sito", p: ["Voisina — progetto TPA / PAE realizzato da solo da Lenny H., CPNV (Centre professionnel du Nord vaudois), Svizzera.", "Questo sito è un prototipo didattico non commerciale. Gli annunci e i membri d'esempio sono fittizi; ogni somiglianza con persone reali è casuale."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Stati Uniti."] },
         { h: "Carte e dati geografici", p: ["Sfondi cartografici © swisstopo (Ufficio federale di topografia). Dati di riserva © contributori OpenStreetMap. Ricerca delle località: servizio geo.admin.ch della Confederazione Svizzera."] },
         { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Carattere dei titoli: Fraunces (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC)."] },
@@ -7484,7 +7984,7 @@ const PAGES = {
     en: {
       title: "Legal notice",
       sections: [
-        { h: "Publisher", p: ["Voisina — end-of-year school project by Lenny H., Switzerland.", "This site is a non-commercial educational prototype. Sample listings and members are fictional; any resemblance to real people is coincidental."] },
+        { h: "Publisher", p: ["Voisina — TPA / PAE project built single-handedly by Lenny H., CPNV (Centre professionnel du Nord vaudois), Switzerland.", "This site is a non-commercial educational prototype. Sample listings and members are fictional; any resemblance to real people is coincidental."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Maps and geodata", p: ["Base maps © swisstopo (Federal Office of Topography). Fallback data © OpenStreetMap contributors. Place search: geo.admin.ch service of the Swiss Confederation."] },
         { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Heading font: Fraunces (SIL Open Font License).", "Icons inspired by Lucide (ISC licence)."] },
@@ -7506,7 +8006,7 @@ const PAGES = {
           "Multilingue comme la Suisse : français, allemand, italien et anglais.",
           "Accessible à toutes et à tous, y compris aux personnes âgées et aux lecteurs d'écran.",
         ] },
-        { h: "Un projet de fin d'année", p: ["Voisina a été conçu et développé dans le cadre d'un projet scolaire. Le site fonctionne entièrement dans le navigateur : les annonces d'exemple servent à la démonstration et vos données restent sur votre appareil."] },
+        { h: "Un projet TPA / PAE au CPNV", p: ["Voisina a été imaginé, conçu et développé seul par Lenny H. dans le cadre de son projet TPA / PAE au CPNV (Centre professionnel du Nord vaudois). Le site fonctionne entièrement dans le navigateur : les annonces d'exemple servent à la démonstration et vos données restent sur votre appareil."] },
         { h: "Sous le capot", list: [
           "HTML, CSS et JavaScript modernes, sans framework, pour un site rapide et léger.",
           "Application monopage avec liens partageables vers chaque annonce.",
@@ -7528,7 +8028,7 @@ const PAGES = {
           "Mehrsprachig wie die Schweiz: Deutsch, Französisch, Italienisch und Englisch.",
           "Für alle zugänglich, auch für ältere Menschen und Screenreader.",
         ] },
-        { h: "Ein Abschlussprojekt", p: ["Voisina wurde im Rahmen eines Schulprojekts konzipiert und entwickelt. Die Website läuft vollständig im Browser: Die Beispielanzeigen dienen der Demonstration, und Ihre Daten bleiben auf Ihrem Gerät."] },
+        { h: "Ein TPA-/PAE-Projekt am CPNV", p: ["Voisina wurde von Lenny H. allein im Rahmen seines TPA-/PAE-Projekts am CPNV (Centre professionnel du Nord vaudois) erdacht, gestaltet und entwickelt. Die Website läuft vollständig im Browser: Die Beispielanzeigen dienen der Demonstration, und Ihre Daten bleiben auf Ihrem Gerät."] },
         { h: "Unter der Haube", list: [
           "Modernes HTML, CSS und JavaScript ohne Framework – schnell und leicht.",
           "Single-Page-App mit teilbaren Links zu jeder Anzeige.",
@@ -7550,7 +8050,7 @@ const PAGES = {
           "Multilingue come la Svizzera: italiano, francese, tedesco e inglese.",
           "Accessibile a tutti, anche alle persone anziane e ai lettori di schermo.",
         ] },
-        { h: "Un progetto di fine anno", p: ["Voisina è stato ideato e sviluppato nell'ambito di un progetto scolastico. Il sito funziona interamente nel browser: gli annunci d'esempio servono alla dimostrazione e i vostri dati restano sul vostro dispositivo."] },
+        { h: "Un progetto TPA / PAE al CPNV", p: ["Voisina è stato ideato, progettato e sviluppato da solo da Lenny H. nell'ambito del suo progetto TPA / PAE al CPNV (Centre professionnel du Nord vaudois). Il sito funziona interamente nel browser: gli annunci d'esempio servono alla dimostrazione e i vostri dati restano sul vostro dispositivo."] },
         { h: "Sotto il cofano", list: [
           "HTML, CSS e JavaScript moderni, senza framework, per un sito veloce e leggero.",
           "Applicazione a pagina singola con link condivisibili per ogni annuncio.",
@@ -7572,7 +8072,7 @@ const PAGES = {
           "Multilingual like Switzerland: French, German, Italian and English.",
           "Accessible to everyone, including older people and screen reader users.",
         ] },
-        { h: "An end-of-year project", p: ["Voisina was designed and built as a school project. The site runs entirely in the browser: sample listings are for demonstration and your data stays on your device."] },
+        { h: "A TPA / PAE project at CPNV", p: ["Voisina was imagined, designed and built single-handedly by Lenny H. as his TPA / PAE project at CPNV (Centre professionnel du Nord vaudois). The site runs entirely in the browser: sample listings are for demonstration and your data stays on your device."] },
         { h: "Under the hood", list: [
           "Modern HTML, CSS and JavaScript with no framework, for a fast, lightweight site.",
           "Single-page app with shareable links to every listing.",
@@ -7720,8 +8220,13 @@ function render({ keepScroll = false } = {}) {
   currentView = view;
   currentCtx = { path, params, query };
 
-  const root = $("#view");
+  const view$ = $("#view");
   const y = window.scrollY;
+  // Chaque page est rendue dans un nouvel élément : les écouteurs d'événements
+  // de la page précédente disparaissent avec elle (pas d'accumulation).
+  const root = document.createElement("div");
+  root.className = "page";
+  view$.replaceChildren(root);
   try {
     mount(root, view.render(currentCtx));
     view.mount?.(root, currentCtx);
@@ -7769,7 +8274,7 @@ function renderHeader() {
       ${NAV.map(([route, ic, key]) => html`<a class="nav-link${isActive(route)}" href="#/${route}" ${isActive(route) ? raw('aria-current="page"') : ""}>${icon(ic)}<span>${t(key)}</span>${route === "messages" && unread ? html`<span class="badge-count">${unread}</span>` : ""}</a>`)}
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary btn-publish" href="#/publier">${icon("plus")}<span>${t("nav.publish")}</span></a>
+      <a class="btn btn-cta btn-publish" href="#/publier">${icon("plus")}<span>${t("nav.publish")}</span></a>
       <div class="menu-wrap">
         <button type="button" class="icon-btn lang-btn" data-action="toggle-menu" data-menu="lang" aria-haspopup="true" aria-expanded="false" aria-label="${t("nav.language")}">${icon("globe")}<span>${getLang().toUpperCase()}</span></button>
         <div class="menu" id="menu-lang" hidden>
@@ -7784,7 +8289,7 @@ function renderHeader() {
           <div class="menu menu-wide" id="menu-notif" hidden>
             <div class="menu-head"><strong>${t("notif.title")}</strong>${unreadNotifs ? html`<button type="button" class="link-btn" data-action="notif-read">${t("notif.markRead")}</button>` : ""}</div>
             ${notifs.length ? notifs.slice(0, 8).map((n) => html`<a class="notif-item${n.read ? "" : " is-unread"}" href="${/^#\/[\w\-/?=&%.]*$/.test(n.link) ? n.link : "#/"}">
-              <span class="notif-icon">${icon(n.kind === "message" ? "message" : n.kind === "published" ? "checkCircle" : n.kind === "reportDone" ? "shieldCheck" : "sparkles")}</span>
+              <span class="notif-icon">${icon(n.kind === "message" ? "message" : n.kind === "published" ? "checkCircle" : n.kind === "reportDone" ? "shieldCheck" : n.kind === "alert" ? "bell" : "sparkles")}</span>
               <span><span class="notif-text">${notificationText(n)}</span><span class="notif-time">${fmtRelative(n.at)}</span></span></a>`) : html`<p class="menu-empty">${t("notif.empty")}</p>`}
           </div>
         </div>
@@ -7851,6 +8356,7 @@ function renderFooter() {
   </div>
   <div class="container footer-bottom">
     <span>© 2026 Voisina · ${t("footer.project")}</span>
+    <button type="button" class="link-btn footer-text" data-action="toggle-text">${icon("sparkles")}${document.documentElement.classList.contains("text-lg") ? t("footer.textNormal") : t("footer.textLarge")}</button>
     <span class="footer-langs">${LANGS.map((l) => html`<button type="button" class="link-btn${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${l.toUpperCase()}</button>`)}</span>
     <span>${t("footer.madeIn")}</span>
   </div>`);
@@ -7924,6 +8430,12 @@ registerActions({
     toast(added ? t("fav.added") : t("fav.removed"), "success");
   },
   "notif-read": () => { store.markNotificationsRead(); },
+  "toggle-text": () => {
+    const large = !document.documentElement.classList.contains("text-lg");
+    document.documentElement.classList.toggle("text-lg", large);
+    store.setPrefs({ textSize: large ? "large" : "normal" });
+    renderFooter();
+  },
   skip: () => { $("#main").focus(); $("#main").scrollIntoView(); },
   "dismiss-banner": () => { store.setPrefs({ bannerDismissed: true }); renderBanner(); },
   locate: (el) => {

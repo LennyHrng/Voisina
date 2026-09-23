@@ -11,6 +11,7 @@
     if (prefs.theme === "dark" || prefs.theme === "light") {
       document.documentElement.setAttribute("data-theme", prefs.theme);
     }
+    if (prefs.textSize === "large") document.documentElement.classList.add("text-lg");
     if (prefs.lang && /^(fr|de|it|en)$/.test(prefs.lang)) {
       document.documentElement.lang = prefs.lang;
     }
