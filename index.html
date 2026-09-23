@@ -31,6 +31,14 @@
   <meta name="theme-color" content="#0E1613" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
 
+  <!-- Application installée sur téléphone (Android et iPhone) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Voisina">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="application-name" content="Voisina">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Partage sur les réseaux (Open Graph) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Voisina">
@@ -50,10 +58,10 @@
   <!-- Carte : Leaflet (version figée + empreinte SRI = le fichier ne peut pas être modifié par un tiers) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=2.2">
+  <link rel="stylesheet" href="styles.css?v=2.3">
 
   <!-- Applique le thème (clair/sombre) avant l'affichage pour éviter un flash -->
-  <script src="theme-boot.js?v=2.2"></script>
+  <script src="theme-boot.js?v=2.3"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-action="skip">Aller au contenu</a>
@@ -79,6 +87,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="voisina.js?v=2.2" defer></script>
+  <script src="voisina.js?v=2.3" defer></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ une petite rémunération.
 | Domaine | Ce que le site fait |
 |---|---|
 | **Recherche** | Recherche plein texte, filtres (type, catégorie, canton, rémunération, urgent, profils vérifiés), tri, pagination, **distance autour de moi** (géolocalisation ou NPA/localité) |
-| **Carte** | Fond de carte officiel **swisstopo**, regroupement automatique des annonces, « Rechercher dans cette zone » |
+| **Carte** | **4 styles au choix** : carte nationale **swisstopo en couleur** (par défaut), **plan des rues** (OpenStreetMap), **satellite** (SWISSIMAGE) et gris ; bouton « me localiser » (point bleu), regroupement des annonces, « Rechercher dans cette zone », choix mémorisé |
 | **Annonces** | Page détaillée avec lien partageable, photos, zone approximative, annonces similaires, **export agenda (.ics)**, partage |
 | **Publier** | Formulaire guidé en 8 étapes, **aperçu en direct**, brouillon enregistré automatiquement, **image facultative** : jusqu'à 3 photos (glisser-déposer, choix de la couverture) ou une illustration colorée au choix (6 couleurs × 5 motifs), modification / clôture / suppression |
 | **Alertes** | Enregistrer une recherche (« Créer une alerte ») et recevoir une notification dès qu'une nouvelle annonce correspond |
@@ -23,8 +23,9 @@ une petite rémunération.
 | **Confiance** | Signalement (annonce, membre, conversation), blocage, conseils de sécurité, numéros d'urgence suisses |
 | **Administration** | Tableau de bord, file de modération des signalements, masquage d'annonces, statistiques par catégorie, réinitialisation de la démo |
 | **Langues** | Français, **allemand, italien** et anglais (détection automatique de la langue du navigateur) |
-| **Accueil** | Carte de la Suisse animée, catégories colorées, **villes populaires**, étapes « comment ça marche », FAQ |
-| **Confort** | Mode sombre, **texte plus grand** (pratique pour les aînés), version mobile avec barre de navigation, partage WhatsApp / e-mail, installable comme une application (PWA), fonctionne hors ligne |
+| **Accueil** | Carte de la Suisse animée, catégories colorées, **villes populaires**, vraie carte interactive des annonces, étapes « comment ça marche », FAQ |
+| **Téléphone** | Pensé comme une **vraie application** : barre d'onglets, filtres dans une feuille qui monte du bas, bouton flottant « Carte », photos à faire glisser au doigt (et à agrandir), barre « Contacter » toujours visible sur une annonce, messagerie plein écran, bouton retour, cartes qui ne bloquent pas le défilement, **installation sur l'écran d'accueil** (Android et iPhone, avec mode d'emploi), prise en charge des encoches |
+| **Confort** | Mode sombre, **texte plus grand** (pratique pour les aînés), annonces **vues récemment**, partage WhatsApp / e-mail, fonctionne hors ligne (avec message « hors ligne ») |
 | **Légal** | Politique de confidentialité (nLPD), conditions d'utilisation, règles de la communauté, mentions légales, aide/FAQ |
 
 ## 🔐 Sécurité (résumé)
@@ -67,4 +68,8 @@ python3 -m http.server 8000
 
 ---
 
-Fait avec soin en Suisse. Cartes © swisstopo · Leaflet (BSD-2) · Police Fraunces (OFL).
+> **Pourquoi pas Google Maps ?** Il faut une clé d'accès liée à une carte bancaire, et chaque visite enverrait des données
+> des visiteurs à Google — contraire à la promesse « sans traceur » du site. La carte officielle de la Confédération
+> (swisstopo) est gratuite, précise et hébergée en Suisse ; OpenStreetMap fournit le plan des rues.
+
+Fait avec soin en Suisse. Cartes © swisstopo · © contributeurs OpenStreetMap · Leaflet (BSD-2) · Police Fraunces (OFL).

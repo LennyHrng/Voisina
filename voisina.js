@@ -334,6 +334,15 @@ const P = {
   mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
   key: '<circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/>',
   refresh: '<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+  layers: '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+  pointer: '<path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-4 0"/><path d="M14 10V9a2 2 0 0 0-4 0v1"/><path d="M10 9.5V4a2 2 0 0 0-4 0v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>',
+  smartphone: '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
+  wifiOff: '<path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="M19 12.86a10 10 0 0 0-2-1.5"/><path d="M2 8.82a15 15 0 0 1 4.17-2.65"/><path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76"/><path d="m2 2 20 20"/>',
+  shareIos: '<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/>',
+  plusSquare: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/>',
+  history: '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/>',
+  expand: '<path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>',
+
 };
 
 /** Retourne une icône SVG (décorative : cachée aux lecteurs d'écran). */
@@ -1020,6 +1029,53 @@ const fr = {
   "pattern.stripes": "Rayures",
   "pattern.waves": "Vagues",
   "pattern.sun": "Soleil",
+  "map.styleTitle": "Style de carte",
+  "map.style.color": "Suisse",
+  "map.style.plan": "Plan",
+  "map.style.satellite": "Satellite",
+  "map.style.grey": "Gris",
+  "map.locate": "Me localiser",
+  "map.touchToMove": "Touchez pour déplacer la carte",
+  "filter.showResults": "Voir les annonces",
+  "filter.showN.one": "Voir 1 annonce",
+  "filter.showN.other": "Voir les {n} annonces",
+  "filter.showNone": "Aucune annonce",
+  "listing.photos": "Photos de l'annonce",
+  "listing.photoOpen": "Agrandir la photo {n} sur {total}",
+  "listing.photoPrev": "Photo précédente",
+  "listing.photoNext": "Photo suivante",
+  "listing.quickActions": "Actions rapides",
+  "listing.contactShort": "Contacter",
+  "install.title": "Installer Voisina",
+  "install.text": "Sur votre écran d'accueil, comme une vraie appli.",
+  "install.cta": "Installer",
+  "install.footer": "Installer l'application",
+  "install.dialogTitle": "Installer Voisina sur votre appareil",
+  "install.dialogIntro": "Voisina s'installe en quelques secondes, sans passer par un store : icône sur l'écran d'accueil, plein écran, ouverture même sans connexion.",
+  "install.already": "Voisina est déjà installé sur cet appareil.",
+  "install.iosTitle": "iPhone et iPad (Safari)",
+  "install.ios1": "Touchez le bouton « Partager » en bas de l'écran.",
+  "install.ios2": "Choisissez « Sur l'écran d'accueil ».",
+  "install.ios3": "Touchez « Ajouter » : l'icône Voisina apparaît.",
+  "install.androidTitle": "Android (Chrome)",
+  "install.android1": "Ouvrez le menu ⋮ en haut à droite.",
+  "install.android2": "Touchez « Installer l'application » (ou « Ajouter à l'écran d'accueil »).",
+  "install.android3": "Confirmez : Voisina rejoint vos applications.",
+  "install.desktopTitle": "Ordinateur (Chrome, Edge)",
+  "install.desktopText": "Cliquez sur l'icône d'installation à droite de la barre d'adresse, puis sur « Installer ».",
+  "install.ok": "J'ai compris",
+  "install.done": "Voisina est installé. Retrouvez-le sur votre écran d'accueil !",
+  "net.offline": "Vous êtes hors ligne. Voisina reste utilisable, la carte se rechargera plus tard.",
+  "net.online": "De retour en ligne.",
+  "home.seenKicker": "Vu récemment",
+  "home.seenTitle": "Reprendre là où vous en étiez",
+  "home.seenClear": "Effacer l'historique",
+  "home.mapKicker": "La carte",
+  "home.mapTitle": "Toute l'entraide de Suisse sur une carte",
+  "home.mapText": "Carte nationale officielle de swisstopo en couleur, plan des rues, vue satellite ou version sobre : choisissez votre style avec le bouton en haut à droite de la carte.",
+  "home.mapCta": "Ouvrir la carte",
+  "filter.resetShort": "Tout effacer",
+  "demo.bannerShort": "Démo TPA / PAE (CPNV) : annonces fictives, données gardées dans votre navigateur.",
 };
 
 const de = {
@@ -1627,6 +1683,53 @@ const de = {
   "pattern.stripes": "Streifen",
   "pattern.waves": "Wellen",
   "pattern.sun": "Sonne",
+  "map.styleTitle": "Kartenstil",
+  "map.style.color": "Schweiz",
+  "map.style.plan": "Strassen",
+  "map.style.satellite": "Satellit",
+  "map.style.grey": "Grau",
+  "map.locate": "Meinen Standort anzeigen",
+  "map.touchToMove": "Tippen, um die Karte zu bewegen",
+  "filter.showResults": "Anzeigen ansehen",
+  "filter.showN.one": "1 Anzeige ansehen",
+  "filter.showN.other": "{n} Anzeigen ansehen",
+  "filter.showNone": "Keine Anzeige",
+  "listing.photos": "Fotos der Anzeige",
+  "listing.photoOpen": "Foto {n} von {total} vergrössern",
+  "listing.photoPrev": "Vorheriges Foto",
+  "listing.photoNext": "Nächstes Foto",
+  "listing.quickActions": "Schnellaktionen",
+  "listing.contactShort": "Kontaktieren",
+  "install.title": "Voisina installieren",
+  "install.text": "Auf Ihrem Startbildschirm, wie eine echte App.",
+  "install.cta": "Installieren",
+  "install.footer": "App installieren",
+  "install.dialogTitle": "Voisina auf Ihrem Gerät installieren",
+  "install.dialogIntro": "Voisina lässt sich in wenigen Sekunden ohne App-Store installieren: Symbol auf dem Startbildschirm, Vollbild, funktioniert auch offline.",
+  "install.already": "Voisina ist auf diesem Gerät bereits installiert.",
+  "install.iosTitle": "iPhone und iPad (Safari)",
+  "install.ios1": "Tippen Sie unten auf «Teilen».",
+  "install.ios2": "Wählen Sie «Zum Home-Bildschirm».",
+  "install.ios3": "Tippen Sie auf «Hinzufügen»: Das Voisina-Symbol erscheint.",
+  "install.androidTitle": "Android (Chrome)",
+  "install.android1": "Öffnen Sie das Menü ⋮ oben rechts.",
+  "install.android2": "Tippen Sie auf «App installieren» (oder «Zum Startbildschirm hinzufügen»).",
+  "install.android3": "Bestätigen Sie: Voisina erscheint bei Ihren Apps.",
+  "install.desktopTitle": "Computer (Chrome, Edge)",
+  "install.desktopText": "Klicken Sie auf das Installationssymbol rechts in der Adressleiste und dann auf «Installieren».",
+  "install.ok": "Verstanden",
+  "install.done": "Voisina ist installiert. Sie finden es auf Ihrem Startbildschirm!",
+  "net.offline": "Sie sind offline. Voisina bleibt nutzbar, die Karte wird später neu geladen.",
+  "net.online": "Wieder online.",
+  "home.seenKicker": "Kürzlich angesehen",
+  "home.seenTitle": "Dort weitermachen, wo Sie aufgehört haben",
+  "home.seenClear": "Verlauf löschen",
+  "home.mapKicker": "Die Karte",
+  "home.mapTitle": "Die ganze Nachbarschaftshilfe der Schweiz auf einer Karte",
+  "home.mapText": "Offizielle Landeskarte von swisstopo in Farbe, Stadtplan, Satellitenbild oder schlichte Version: Wählen Sie Ihren Stil mit der Schaltfläche oben rechts auf der Karte.",
+  "home.mapCta": "Karte öffnen",
+  "filter.resetShort": "Alle löschen",
+  "demo.bannerShort": "Demo TPA / PAE (CPNV): fiktive Anzeigen, Daten bleiben in Ihrem Browser.",
 };
 
 const it = {
@@ -2234,6 +2337,53 @@ const it = {
   "pattern.stripes": "Righe",
   "pattern.waves": "Onde",
   "pattern.sun": "Sole",
+  "map.styleTitle": "Stile della mappa",
+  "map.style.color": "Svizzera",
+  "map.style.plan": "Stradale",
+  "map.style.satellite": "Satellite",
+  "map.style.grey": "Grigio",
+  "map.locate": "Mostra la mia posizione",
+  "map.touchToMove": "Tocca per spostare la mappa",
+  "filter.showResults": "Vedi gli annunci",
+  "filter.showN.one": "Vedi 1 annuncio",
+  "filter.showN.other": "Vedi i {n} annunci",
+  "filter.showNone": "Nessun annuncio",
+  "listing.photos": "Foto dell'annuncio",
+  "listing.photoOpen": "Ingrandisci la foto {n} di {total}",
+  "listing.photoPrev": "Foto precedente",
+  "listing.photoNext": "Foto successiva",
+  "listing.quickActions": "Azioni rapide",
+  "listing.contactShort": "Contatta",
+  "install.title": "Installa Voisina",
+  "install.text": "Sulla schermata iniziale, come una vera app.",
+  "install.cta": "Installa",
+  "install.footer": "Installa l'app",
+  "install.dialogTitle": "Installa Voisina sul tuo dispositivo",
+  "install.dialogIntro": "Voisina si installa in pochi secondi, senza passare da uno store: icona sulla schermata iniziale, schermo intero, funziona anche offline.",
+  "install.already": "Voisina è già installato su questo dispositivo.",
+  "install.iosTitle": "iPhone e iPad (Safari)",
+  "install.ios1": "Tocca il pulsante «Condividi» in basso.",
+  "install.ios2": "Scegli «Aggiungi alla schermata Home».",
+  "install.ios3": "Tocca «Aggiungi»: appare l'icona di Voisina.",
+  "install.androidTitle": "Android (Chrome)",
+  "install.android1": "Apri il menu ⋮ in alto a destra.",
+  "install.android2": "Tocca «Installa app» (o «Aggiungi a schermata Home»).",
+  "install.android3": "Conferma: Voisina si aggiunge alle tue app.",
+  "install.desktopTitle": "Computer (Chrome, Edge)",
+  "install.desktopText": "Fai clic sull'icona di installazione a destra della barra degli indirizzi, poi su «Installa».",
+  "install.ok": "Ho capito",
+  "install.done": "Voisina è installato. Lo trovi sulla schermata iniziale!",
+  "net.offline": "Sei offline. Voisina resta utilizzabile, la mappa si ricaricherà più tardi.",
+  "net.online": "Di nuovo online.",
+  "home.seenKicker": "Visti di recente",
+  "home.seenTitle": "Riprendi da dove eri rimasto",
+  "home.seenClear": "Cancella la cronologia",
+  "home.mapKicker": "La mappa",
+  "home.mapTitle": "Tutto l'aiuto reciproco svizzero su una mappa",
+  "home.mapText": "Carta nazionale ufficiale di swisstopo a colori, mappa stradale, vista satellitare o versione sobria: scegli il tuo stile con il pulsante in alto a destra sulla mappa.",
+  "home.mapCta": "Apri la mappa",
+  "filter.resetShort": "Cancella tutto",
+  "demo.bannerShort": "Demo TPA / PAE (CPNV): annunci fittizi, dati salvati nel tuo browser.",
 };
 
 const en = {
@@ -2841,6 +2991,53 @@ const en = {
   "pattern.stripes": "Stripes",
   "pattern.waves": "Waves",
   "pattern.sun": "Sunburst",
+  "map.styleTitle": "Map style",
+  "map.style.color": "Swiss map",
+  "map.style.plan": "Streets",
+  "map.style.satellite": "Satellite",
+  "map.style.grey": "Grey",
+  "map.locate": "Show my location",
+  "map.touchToMove": "Tap to move the map",
+  "filter.showResults": "Show listings",
+  "filter.showN.one": "Show 1 listing",
+  "filter.showN.other": "Show {n} listings",
+  "filter.showNone": "No listings",
+  "listing.photos": "Listing photos",
+  "listing.photoOpen": "Enlarge photo {n} of {total}",
+  "listing.photoPrev": "Previous photo",
+  "listing.photoNext": "Next photo",
+  "listing.quickActions": "Quick actions",
+  "listing.contactShort": "Contact",
+  "install.title": "Install Voisina",
+  "install.text": "On your home screen, like a real app.",
+  "install.cta": "Install",
+  "install.footer": "Install the app",
+  "install.dialogTitle": "Install Voisina on your device",
+  "install.dialogIntro": "Voisina installs in seconds, without an app store: an icon on your home screen, full screen, and it even opens offline.",
+  "install.already": "Voisina is already installed on this device.",
+  "install.iosTitle": "iPhone and iPad (Safari)",
+  "install.ios1": "Tap the “Share” button at the bottom of the screen.",
+  "install.ios2": "Choose “Add to Home Screen”.",
+  "install.ios3": "Tap “Add”: the Voisina icon appears.",
+  "install.androidTitle": "Android (Chrome)",
+  "install.android1": "Open the ⋮ menu at the top right.",
+  "install.android2": "Tap “Install app” (or “Add to Home screen”).",
+  "install.android3": "Confirm: Voisina joins your apps.",
+  "install.desktopTitle": "Computer (Chrome, Edge)",
+  "install.desktopText": "Click the install icon on the right of the address bar, then “Install”.",
+  "install.ok": "Got it",
+  "install.done": "Voisina is installed. Find it on your home screen!",
+  "net.offline": "You are offline. Voisina still works; the map will reload later.",
+  "net.online": "Back online.",
+  "home.seenKicker": "Recently viewed",
+  "home.seenTitle": "Pick up where you left off",
+  "home.seenClear": "Clear history",
+  "home.mapKicker": "The map",
+  "home.mapTitle": "All of Switzerland's neighbourly help on one map",
+  "home.mapText": "Official swisstopo national map in colour, street map, satellite view or a plain version: pick your style with the button at the top right of the map.",
+  "home.mapCta": "Open the map",
+  "filter.resetShort": "Clear all",
+  "demo.bannerShort": "TPA / PAE demo (CPNV): sample listings, data kept in your browser.",
 };
 
 const DICT = { fr, de, it, en };
@@ -3844,6 +4041,7 @@ async function deleteAccount(password) {
   const notifs = storage.get("notifications", {});
   delete notifs[me.id];
   storage.set("notifications", notifs);
+  storage.remove("recent");
   destroySession();
   bump();
   emit("auth");
@@ -3860,6 +4058,7 @@ function exportMyData() {
     profile: me,
     listings: getUserListings().filter((l) => l.authorId === me.id),
     favorites: getFavorites(),
+    recentlyViewed: storage.get("recent", []),
     conversations: getConversationsRaw().filter((c) => c.participants.includes(me.id)),
     reports: getReports().filter((r) => r.by === me.id),
     notifications: getNotifications(),
@@ -4183,6 +4382,24 @@ function clearFavorites() {
   emit("favorites");
 }
 
+/* ====================== ANNONCES CONSULTÉES RÉCEMMENT ======================
+   Restent uniquement sur cet appareil (12 au maximum). */
+function addRecentlyViewed(id) {
+  if (!id) return;
+  const list = storage.get("recent", []);
+  storage.set("recent", [id, ...(Array.isArray(list) ? list : []).filter((x) => x !== id)].slice(0, 12));
+}
+
+function getRecentlyViewed() {
+  const list = storage.get("recent", []);
+  return (Array.isArray(list) ? list : []).map(getListing).filter((l) => l && l.status === "active" && !isBlocked(l.authorId));
+}
+
+function clearRecentlyViewed() {
+  storage.remove("recent");
+  emit("recent");
+}
+
 /** Au moment de la connexion, on fusionne les favoris "invité" dans le compte. */
 function mergeGuestFavorites() {
   const me = currentUser();
@@ -4423,7 +4640,7 @@ function stats() {
 
 const dataVersion = () => version;
 
-return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, deleteAccount, exportMyData, toggleBlock, getAlerts, saveAlert, deleteAlert, matchesAlert, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
+return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, deleteAccount, exportMyData, toggleBlock, getAlerts, saveAlert, deleteAlert, matchesAlert, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, addRecentlyViewed, getRecentlyViewed, clearRecentlyViewed, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
 });
 __def("ui.js", function () {
 /* =====================================================================
@@ -4813,312 +5030,19 @@ function langChips(name, selected = []) {
 
 return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
 });
-__def("switzerland.js", function () {
-/* Silhouette simplifiée de la Suisse (longitude, latitude) pour l'illustration
-   de la page d'accueil, et projection des annonces sur ce dessin. */
-const { raw } = __req("util.js");
-
-const BORDER = [
-  [7.59, 47.59], [7.7, 47.54], [7.95, 47.55], [8.22, 47.61], [8.42, 47.58], [8.55, 47.62], [8.4, 47.68], [8.47, 47.77],
-  [8.6, 47.8], [8.7, 47.79], [8.81, 47.72], [8.73, 47.69], [8.86, 47.66], [9.0, 47.66], [9.18, 47.66], [9.4, 47.55],
-  [9.56, 47.53], [9.67, 47.46], [9.55, 47.3], [9.48, 47.1], [9.6, 47.05], [9.87, 46.99], [10.1, 46.92], [10.23, 46.87],
-  [10.39, 46.98], [10.49, 46.94], [10.47, 46.8], [10.49, 46.62], [10.43, 46.54], [10.3, 46.55], [10.1, 46.42], [10.16, 46.26],
-  [10.05, 46.3], [9.95, 46.37], [9.72, 46.3], [9.51, 46.33], [9.45, 46.45], [9.3, 46.5], [9.27, 46.42], [9.15, 46.2],
-  [9.07, 45.92], [9.02, 45.83], [8.94, 45.84], [8.86, 45.97], [8.79, 46.0], [8.71, 46.11], [8.61, 46.13], [8.45, 46.25],
-  [8.44, 46.44], [8.3, 46.41], [8.14, 46.25], [7.99, 46.05], [7.86, 45.92], [7.66, 45.98], [7.35, 45.91], [7.17, 45.87],
-  [7.04, 45.93], [6.93, 46.06], [6.8, 46.16], [6.87, 46.28], [6.79, 46.39], [6.55, 46.4], [6.23, 46.31], [6.31, 46.25],
-  [6.17, 46.18], [6.1, 46.14], [5.96, 46.14], [6.0, 46.23], [6.12, 46.31], [6.07, 46.41], [6.07, 46.46], [6.14, 46.56],
-  [6.37, 46.71], [6.45, 46.84], [6.46, 46.91], [6.63, 46.97], [6.72, 47.03], [6.85, 47.08], [6.95, 47.25], [7.03, 47.36],
-  [6.88, 47.37], [6.95, 47.44], [7.0, 47.5], [7.13, 47.5], [7.2, 47.44], [7.33, 47.44], [7.45, 47.47], [7.53, 47.5],
-];
-
-const K = 200;
-const COS = Math.cos((46.8 * Math.PI) / 180);
-const VIEW_W = 640;
-const VIEW_H = 412;
-
-function project(lng, lat) {
-  return [(lng - 5.9) * K * COS + 4, (47.87 - lat) * K + 4];
-}
-
-const outlinePath = () =>
-  BORDER.map(([lng, lat], i) => {
-    const [x, y] = project(lng, lat);
-    return `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`;
-  }).join("") + "Z";
-
-/** Lac Léman (très simplifié) pour reconnaître la carte au premier coup d'œil. */
-const LEMAN = [[6.15, 46.21], [6.25, 46.3], [6.45, 46.4], [6.62, 46.5], [6.8, 46.47], [6.91, 46.39], [6.78, 46.39], [6.55, 46.38], [6.3, 46.34], [6.17, 46.24]];
-const lemanPath = () =>
-  LEMAN.map(([lng, lat], i) => {
-    const [x, y] = project(lng, lat);
-    return `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`;
-  }).join("") + "Z";
-
-function swissMapSvg(dots = []) {
-  const circles = dots
-    .map((d) => {
-      const [x, y] = project(d.lng, d.lat);
-      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${d.r || 3.4}" class="dot tv-${d.tone}"/>`;
-    })
-    .join("");
-  return raw(`<svg class="swiss-map" viewBox="0 0 ${VIEW_W} ${VIEW_H}" role="img" aria-hidden="true" focusable="false">
-    <defs><linearGradient id="swiss-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="swiss-fill-a"/><stop offset="1" class="swiss-fill-b"/></linearGradient></defs>
-    <path class="swiss-shape" d="${outlinePath()}"/>
-    <path class="swiss-lake" d="${lemanPath()}"/>
-    <g class="swiss-dots">${circles}</g>
-  </svg>`);
-}
-
-return { project, swissMapSvg, VIEW_W, VIEW_H, outlinePath, lemanPath };
-});
-__def("views/home.js", function () {
-/* Page d'accueil */
-const { html, raw } = __req("util.js");
-const { icon } = __req("icons.js");
-const { t, fmtNumber, categoryName } = __req("i18n.js");
-const { CATEGORIES, getCategory, findLocality } = __req("data.js");
-const { distanceKm } = __req("util.js");
-const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite } = __req("store.js");
-const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
-const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
-
-/** Villes mises en avant sur la page d'accueil (annonces dans un rayon de 10 km). */
-const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion", "Winterthur"];
-
-function heroCards(listings) {
-  const wanted = [["Lausanne", "right"], ["Zürich", "left"], ["Lugano", "left"]];
-  return wanted
-    .map(([city, side], i) => {
-      const l = listings.find((x) => x.city === city && x.demo && x.type === (i === 1 ? "request" : "offer")) || listings.find((x) => x.city === city);
-      if (!l) return "";
-      const [x, y] = project(l.lng, l.lat);
-      const cat = getCategory(l.category);
-      return html`<a class="hero-float hero-float-${i} side-${side}" href="#/annonce/${l.id}" data-x="${((x / VIEW_W) * 100).toFixed(1)}" data-y="${((y / VIEW_H) * 100).toFixed(1)}">
-        <span class="hero-float-icon tone-${cat.tone}">${icon(cat.icon)}</span>
-        <span class="hero-float-text"><strong>${listingTitle(l)}</strong><span>${l.city} · ${priceLabel(l)}</span></span>
-      </a>`;
-    });
-}
-
-const FAQ = ["cost", "safety", "payment", "location", "languages", "data"];
-
-const __default = {
-  title: () => t("meta.homeTitle"),
-  refreshOn: ["listings", "auth"],
-  onData(kind) {
-    if (kind === "favorites") {
-      document.querySelectorAll(".fav-btn[data-id]").forEach((b) => {
-        const on = isFavorite(b.dataset.id);
-        b.classList.toggle("is-active", on);
-        b.setAttribute("aria-pressed", on ? "true" : "false");
-      });
-    }
-  },
-
-  render() {
-    const listings = allListings();
-    const s = stats();
-    const origin = getOrigin();
-    const recent = searchListings({ sort: origin ? "distance" : "recent" }, origin).slice(0, 8);
-    const counts = {};
-    listings.forEach((l) => { counts[l.category] = (counts[l.category] || 0) + 1; });
-    const dots = listings.slice(0, 380).map((l) => ({ lat: l.lat, lng: l.lng, tone: getCategory(l.category).tone }));
-
-    return html`
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">${icon("leaf")}${t("home.eyebrow")}</span>
-          <h1 class="display">${t("home.title1")}<br>${t("home.title2")}<br><em>${t("home.title3")}</em></h1>
-          <p class="lead">${t("home.lead")}</p>
-
-          <form class="hero-search" data-form="hero-search" role="search">
-            <div class="field">
-              <label class="sr-only" for="hero-q">${t("search.what")}</label>
-              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" name="q" placeholder="${t("search.whatPh")}" maxlength="80"></div>
-            </div>
-            ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
-            <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>
-          </form>
-          <div class="hero-quick">
-            <button type="button" class="link-btn" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
-            <span class="hero-quick-sep" aria-hidden="true">·</span>
-            ${["shopping", "pets", "digital", "garden"].map((c) => html`<a class="pill" href="#/explorer?cat=${c}">${categoryName(c)}</a>`)}
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-map">
-            ${swissMapSvg(dots)}
-            ${heroCards(listings)}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-band" aria-label="${t("home.statsLabel")}">
-      <div class="container stats-grid">
-        <div class="stat"><strong>${fmtNumber(s.active)}</strong><span>${t("home.statListings")}</span></div>
-        <div class="stat"><strong>26</strong><span>${t("home.statCantons")}</span></div>
-        <div class="stat"><strong>4</strong><span>${t("home.statLangs")}</span></div>
-        <div class="stat"><strong>0</strong><span>${t("home.statTrackers")}</span></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
-          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
-        </div>
-        <div class="cat-grid">
-          ${CATEGORIES.map((c) => html`<a class="cat-tile tv-${c.tone}" href="#/explorer?cat=${c.id}">
-            <span class="cat-icon">${icon(c.icon)}</span>
-            <span class="cat-name">${categoryName(c.id)}</span>
-            <span class="cat-count">${t("home.catCount", { count: counts[c.id] || 0 })}</span>
-          </a>`)}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
-          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
-        </div>
-        <div class="listing-grid">
-          ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2">${t("home.citiesTitle")}</h2></div>
-        </div>
-        <div class="city-grid">
-          ${POPULAR_CITIES.map((name, i) => {
-            const loc = findLocality(name);
-            const n = listings.filter((l) => distanceKm(loc, l) <= 10).length;
-            return html`<a class="city-card tv-${i % 6}" href="#/explorer?ville=${encodeURIComponent(name)}">
-              <span class="city-dot">${icon("pin")}</span>
-              <span class="city-name">${name}</span>
-              <span class="city-count">${t("home.catCount", { count: n })}</span>
-              ${icon("arrowRight", "city-arrow")}
-            </a>`;
-          })}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-warm" id="how">
-      <div class="container">
-        <div class="section-head center">
-          <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
-        </div>
-        <ol class="steps">
-          ${[["pencil", 1], ["message", 2], ["hand", 3]].map(([ic, n]) => html`<li class="step">
-            <span class="step-num">${n}</span>
-            <span class="step-icon">${icon(ic)}</span>
-            <h3>${t(`home.step${n}Title`)}</h3>
-            <p>${t(`home.step${n}Text`)}</p>
-          </li>`)}
-        </ol>
-        <div class="center-actions">
-          <a class="btn btn-cta btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
-          <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section trust-section">
-      <div class="container trust-grid">
-        <div class="trust-intro">
-          <span class="kicker kicker-light">${t("home.trustKicker")}</span>
-          <h2 class="h2">${t("home.trustTitle")}</h2>
-          <p>${t("home.trustText")}</p>
-          <a class="btn btn-light" href="#/page/securite">${icon("shieldCheck")}${t("home.trustCta")}</a>
-        </div>
-        <div class="trust-cards">
-          ${[["pin", "Loc"], ["lock", "Pwd"], ["flag", "Report"], ["eyeOff", "Track"]].map(([ic, k]) => html`<div class="trust-card">
-            <span class="trust-icon">${icon(ic)}</span>
-            <h3>${t(`home.trust${k}Title`)}</h3>
-            <p>${t(`home.trust${k}Text`)}</p>
-          </div>`)}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-sky">
-      <div class="container faq-wrap">
-        <div>
-          <span class="kicker">${t("home.faqKicker")}</span>
-          <h2 class="h2">${t("home.faqTitle")}</h2>
-          <p class="muted">${t("home.faqText")}</p>
-          <a class="btn btn-ghost" href="#/page/aide">${t("home.faqMore")}${icon("arrowRight")}</a>
-        </div>
-        <div class="faq">
-          ${FAQ.map((k) => html`<details class="faq-item"><summary>${t(`faq.${k}.q`)}${icon("chevronDown")}</summary><p>${t(`faq.${k}.a`)}</p></details>`)}
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-band section-sky">
-      <div class="container cta-inner">
-        <div>
-          <h2 class="h2">${t("home.ctaTitle")}</h2>
-          <p>${t("home.ctaText")}</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
-        </div>
-      </div>
-    </section>`;
-  },
-
-  mount(root) {
-    initLocalityFields(root);
-    let placeChosen = false;
-    root.addEventListener("locality-change", (e) => {
-      const loc = e.detail;
-      setOrigin({ lat: loc.lat, lng: loc.lng, label: loc.name });
-      placeChosen = true;
-    });
-    root.querySelector("[data-form='hero-search']")?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const p = new URLSearchParams();
-      const q = e.target.q.value.trim();
-      if (q) p.set("q", q);
-      if (placeChosen) { p.set("radius", "25"); p.set("sort", "distance"); }
-      location.hash = `#/explorer${p.toString() ? "?" + p : ""}`;
-    });
-    // Positionne les cartes flottantes sur l'illustration de la Suisse
-    root.querySelectorAll(".hero-float").forEach((el) => {
-      el.style.setProperty("--x", el.dataset.x + "%");
-      el.style.setProperty("--y", el.dataset.y + "%");
-    });
-  },
-};
-
-
-
-return { default: __default, raw };
-});
 __def("map.js", function () {
 /* =====================================================================
    CARTE (Leaflet + fond de carte officiel swisstopo)
    ---------------------------------------------------------------------
    - Fond de carte : Office fédéral de topographie (swisstopo), données
-     libres. Si le service ne répond pas, on bascule sur OpenStreetMap.
+     libres, en couleur par défaut, avec 4 styles au choix (Suisse, Plan,
+     Satellite, Gris). Si le service ne répond pas, on bascule sur OpenStreetMap.
    - Vie privée : zoom maximal limité et positions floutées (±1 km),
      on ne peut donc jamais voir l'adresse exacte de quelqu'un.
    - Si la librairie de carte ne charge pas, le reste du site continue
      de fonctionner normalement (l'ancienne version plantait entièrement).
    ===================================================================== */
-const { html, esc } = __req("util.js");
+const { html, esc, storage } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t } = __req("i18n.js");
 const { getCategory } = __req("data.js");
@@ -5134,32 +5058,145 @@ function mapUnavailable(el) {
   el.innerHTML = html`<div class="map-fallback-inner">${icon("map")}<p>${t("map.unavailable")}</p></div>`.toString();
 }
 
-function addBaseLayer(map) {
-  const L = window.L;
-  const swiss = L.tileLayer("https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-grau/default/current/3857/{z}/{x}/{y}.jpeg", {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.swisstopo.admin.ch/" target="_blank" rel="noopener noreferrer">swisstopo</a>',
-  });
-  let loaded = 0;
-  let errors = 0;
-  let switched = false;
-  swiss.on("tileload", () => { loaded++; });
-  swiss.on("tileerror", () => {
-    errors++;
-    if (!switched && loaded === 0 && errors >= 4) {
-      switched = true;
-      map.removeLayer(swiss);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>',
-      }).addTo(map);
-    }
-  });
-  swiss.addTo(map);
+/* ------------------------- Styles de fond de carte -------------------------
+   4 styles au choix (bouton « calques » en haut à droite de la carte) :
+   - Suisse    : carte nationale en couleur de swisstopo (relief, lacs, forêts) — par défaut
+   - Plan      : OpenStreetMap, un plan de rues détaillé (proche de Google Maps)
+   - Satellite : photos aériennes SWISSIMAGE de swisstopo
+   - Gris      : carte nationale sobre en noir et blanc
+   Pourquoi pas Google Maps ? Il faut une clé payante et chaque visite enverrait
+   des données à Google, ce qui irait contre la promesse « sans traceur » du site. */
+const SWISSTOPO = (layer) => `https://wmts.geo.admin.ch/1.0.0/${layer}/default/current/3857/{z}/{x}/{y}.jpeg`;
+const ATTR_SWISSTOPO = '&copy; <a href="https://www.swisstopo.admin.ch/" target="_blank" rel="noopener noreferrer">swisstopo</a>';
+const ATTR_OSM = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>';
+const OSM_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+const MAP_STYLES = [
+  { id: "color", url: SWISSTOPO("ch.swisstopo.pixelkarte-farbe"), attribution: ATTR_SWISSTOPO, maxNativeZoom: 18 },
+  { id: "plan", url: OSM_URL, attribution: ATTR_OSM, maxNativeZoom: 19 },
+  { id: "satellite", url: SWISSTOPO("ch.swisstopo.swissimage"), attribution: ATTR_SWISSTOPO, maxNativeZoom: 19 },
+  { id: "grey", url: SWISSTOPO("ch.swisstopo.pixelkarte-grau"), attribution: ATTR_SWISSTOPO, maxNativeZoom: 18 },
+];
+const DEFAULT_STYLE = "color";
+/* Petite vignette (Lausanne et le Léman) pour illustrer chaque style */
+const THUMB_TILE = { z: 13, x: 4246, y: 2897 };
+const thumbUrl = (style) => style.url.replace("{z}", THUMB_TILE.z).replace("{x}", THUMB_TILE.x).replace("{y}", THUMB_TILE.y);
+
+function getMapStyle() {
+  const id = storage.get("mapStyle", DEFAULT_STYLE);
+  return MAP_STYLES.some((s) => s.id === id) ? id : DEFAULT_STYLE;
 }
 
-/** Crée une carte dans un élément. */
-function createMap(el, { center = [46.8, 8.23], zoom = 8, interactive = true } = {}) {
+/** Met en place le fond de carte et renvoie une fonction pour en changer. */
+function baseLayers(map, el) {
+  const L = window.L;
+  let current = null;
+  let currentId = null;
+  const failed = new Set();
+
+  function use(id, { remember = true } = {}) {
+    const style = MAP_STYLES.find((s) => s.id === id) || MAP_STYLES[0];
+    if (current) map.removeLayer(current);
+    const layer = L.tileLayer(style.url, { maxZoom: 19, maxNativeZoom: style.maxNativeZoom, attribution: style.attribution, crossOrigin: false });
+    let loaded = 0;
+    let errors = 0;
+    layer.on("tileload", () => { loaded++; });
+    // Si le service ne répond pas du tout, on passe automatiquement sur OpenStreetMap
+    layer.on("tileerror", () => {
+      errors++;
+      if (current === layer && loaded === 0 && errors >= 4 && style.id !== "plan" && !failed.has(style.id)) {
+        failed.add(style.id);
+        use("plan", { remember: false });
+        el.dispatchEvent(new CustomEvent("map-style", { detail: "plan" }));
+      }
+    });
+    layer.addTo(map);
+    current = layer;
+    currentId = style.id;
+    MAP_STYLES.forEach((s) => el.classList.toggle(`map-style-${s.id}`, s.id === style.id));
+    if (remember) storage.set("mapStyle", style.id);
+    return style.id;
+  }
+
+  use(getMapStyle(), { remember: false });
+  return { use, get: () => currentId };
+}
+
+/** Boutons flottants : choix du style de carte (+ « me localiser » si demandé). */
+function mapTools(map, el, layers, { onLocate = null } = {}) {
+  const tools = document.createElement("div");
+  tools.className = "map-tools";
+  const styleButtons = MAP_STYLES.map((s) => html`<button type="button" class="map-style-opt" data-map-style="${s.id}" aria-pressed="false">
+      <span class="map-style-thumb thumb-${s.id}"><img src="${thumbUrl(s)}" alt="" loading="lazy" decoding="async" referrerpolicy="strict-origin-when-cross-origin"></span>
+      <span class="map-style-name">${t("map.style." + s.id)}</span></button>`);
+  tools.innerHTML = html`
+    <button type="button" class="map-tool" data-map-layers aria-expanded="false" aria-label="${t("map.styleTitle")}" title="${t("map.styleTitle")}">${icon("layers")}</button>
+    ${onLocate ? html`<button type="button" class="map-tool" data-map-locate aria-label="${t("map.locate")}" title="${t("map.locate")}">${icon("locate")}</button>` : ""}
+    <div class="map-styles" role="group" aria-label="${t("map.styleTitle")}" hidden>
+      <p class="map-styles-title">${t("map.styleTitle")}</p>
+      <div class="map-styles-grid">${styleButtons}</div>
+    </div>`.toString();
+  el.appendChild(tools);
+
+  const panel = tools.querySelector(".map-styles");
+  const toggle = tools.querySelector("[data-map-layers]");
+  const refresh = () => tools.querySelectorAll("[data-map-style]").forEach((b) => {
+    const on = b.dataset.mapStyle === layers.get();
+    b.classList.toggle("is-active", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  const open = (yes) => {
+    panel.hidden = !yes;
+    toggle.setAttribute("aria-expanded", yes ? "true" : "false");
+    toggle.classList.toggle("is-active", yes);
+  };
+  refresh();
+  // Une vignette qui ne charge pas garde simplement son fond coloré
+  tools.querySelectorAll(".map-style-thumb img").forEach((img) => img.addEventListener("error", () => img.remove(), { once: true }));
+
+  // Les clics sur les boutons ne doivent pas déplacer ou zoomer la carte
+  ["mousedown", "touchstart", "pointerdown", "dblclick", "wheel", "click", "keydown", "contextmenu"].forEach((ev) =>
+    tools.addEventListener(ev, (e) => e.stopPropagation(), { passive: ev === "touchstart" || ev === "wheel" }));
+  tools.addEventListener("keydown", (e) => { if (e.key === "Escape") { open(false); toggle.focus(); } });
+
+  tools.addEventListener("click", (e) => {
+    const styleBtn = e.target.closest("[data-map-style]");
+    if (styleBtn) { layers.use(styleBtn.dataset.mapStyle); refresh(); open(false); return; }
+    if (e.target.closest("[data-map-layers]")) { open(panel.hidden); return; }
+    const locate = e.target.closest("[data-map-locate]");
+    if (locate && onLocate) onLocate(locate);
+  });
+  el.addEventListener("map-style", refresh);
+  // Clic ailleurs = fermer le panneau
+  map.on("click movestart", () => open(false));
+  return tools;
+}
+
+/** Sur téléphone, une petite carte au milieu de la page ne doit pas « bloquer » le défilement :
+    on ne peut la déplacer qu'après l'avoir touchée une fois. */
+function touchGuard(map, el) {
+  const coarse = window.matchMedia?.("(pointer: coarse)").matches;
+  if (!coarse || !map.dragging) return;
+  map.dragging.disable();
+  map.touchZoom?.disable();
+  const hint = document.createElement("button");
+  hint.type = "button";
+  hint.className = "map-touch-hint";
+  hint.innerHTML = html`${icon("pointer")}<span>${t("map.touchToMove")}</span>`.toString();
+  el.appendChild(hint);
+  const activate = (e) => {
+    e?.stopPropagation?.();
+    map.dragging.enable();
+    map.touchZoom?.enable();
+    hint.remove();
+  };
+  hint.addEventListener("click", activate, { once: true });
+  map.once("click", activate);
+}
+
+/** Crée une carte dans un élément.
+    options : interactive, guardTouch (petite carte dans une page), tools (bouton de styles), onLocate. */
+function createMap(el, { center = [46.8, 8.23], zoom = 8, interactive = true, guardTouch = false, tools = true, onLocate = null } = {}) {
   if (!leafletReady()) { mapUnavailable(el); return null; }
   try {
     const L = window.L;
@@ -5169,20 +5206,24 @@ function createMap(el, { center = [46.8, 8.23], zoom = 8, interactive = true } =
       minZoom: 7,
       maxZoom: MAX_ZOOM,
       maxBounds: [[45.2, 5.0], [48.4, 11.4]],
+      maxBoundsViscosity: 0.8,
       zoomControl: interactive,
       scrollWheelZoom: false,
       dragging: interactive,
       touchZoom: interactive,
       doubleClickZoom: interactive,
+      boxZoom: false,
       keyboard: interactive,
       attributionControl: true,
     });
     map.attributionControl.setPrefix(false);
-    addBaseLayer(map);
+    const layers = baseLayers(map, el);
+    if (interactive && tools) mapTools(map, el, layers, { onLocate });
     // Molette active seulement après un clic sur la carte (évite de "piéger" le défilement de la page).
     if (interactive) {
       map.once("focus", () => map.scrollWheelZoom.enable());
       map.on("click", () => map.scrollWheelZoom.enable());
+      if (guardTouch) touchGuard(map, el);
     }
     return map;
   } catch (e) {
@@ -5280,10 +5321,24 @@ function listingsLayer(map) {
 
 /** Petite carte d'une annonce : zone approximative (cercle), jamais de point exact. */
 function detailMap(el, listing) {
-  const map = createMap(el, { center: [listing.lat, listing.lng], zoom: 13, interactive: true });
+  const map = createMap(el, { center: [listing.lat, listing.lng], zoom: 13, interactive: true, guardTouch: true });
   if (!map) return null;
   window.L.circle([listing.lat, listing.lng], { radius: 900, color: "#0f7a4f", weight: 2, fillColor: "#2bb673", fillOpacity: 0.18, interactive: false }).addTo(map);
   return map;
+}
+
+/** Point bleu « vous êtes ici » (reste uniquement sur l'appareil). */
+const meMarkers = new WeakMap();
+function meMarker(map, latlng) {
+  const L = window.L;
+  const prev = meMarkers.get(map);
+  if (prev) map.removeLayer(prev);
+  const m = L.marker(latlng, {
+    icon: L.divIcon({ className: "", html: '<span class="map-me"></span>', iconSize: [22, 22], iconAnchor: [11, 11] }),
+    keyboard: false, interactive: false, zIndexOffset: 1000, title: t("loc.myPosition"),
+  }).addTo(map);
+  meMarkers.set(map, m);
+  return m;
 }
 
 function fitSwitzerland(map) {
@@ -5292,17 +5347,378 @@ function fitSwitzerland(map) {
 
 
 
-return { mapUnavailable, createMap, listingsLayer, detailMap, fitSwitzerland, MAX_ZOOM, leafletReady, esc };
+return { mapUnavailable, getMapStyle, createMap, listingsLayer, detailMap, meMarker, fitSwitzerland, MAX_ZOOM, leafletReady, MAP_STYLES, esc };
+});
+__def("switzerland.js", function () {
+/* Silhouette simplifiée de la Suisse (longitude, latitude) pour l'illustration
+   de la page d'accueil, et projection des annonces sur ce dessin. */
+const { raw } = __req("util.js");
+
+const BORDER = [
+  [7.59, 47.59], [7.7, 47.54], [7.95, 47.55], [8.22, 47.61], [8.42, 47.58], [8.55, 47.62], [8.4, 47.68], [8.47, 47.77],
+  [8.6, 47.8], [8.7, 47.79], [8.81, 47.72], [8.73, 47.69], [8.86, 47.66], [9.0, 47.66], [9.18, 47.66], [9.4, 47.55],
+  [9.56, 47.53], [9.67, 47.46], [9.55, 47.3], [9.48, 47.1], [9.6, 47.05], [9.87, 46.99], [10.1, 46.92], [10.23, 46.87],
+  [10.39, 46.98], [10.49, 46.94], [10.47, 46.8], [10.49, 46.62], [10.43, 46.54], [10.3, 46.55], [10.1, 46.42], [10.16, 46.26],
+  [10.05, 46.3], [9.95, 46.37], [9.72, 46.3], [9.51, 46.33], [9.45, 46.45], [9.3, 46.5], [9.27, 46.42], [9.15, 46.2],
+  [9.07, 45.92], [9.02, 45.83], [8.94, 45.84], [8.86, 45.97], [8.79, 46.0], [8.71, 46.11], [8.61, 46.13], [8.45, 46.25],
+  [8.44, 46.44], [8.3, 46.41], [8.14, 46.25], [7.99, 46.05], [7.86, 45.92], [7.66, 45.98], [7.35, 45.91], [7.17, 45.87],
+  [7.04, 45.93], [6.93, 46.06], [6.8, 46.16], [6.87, 46.28], [6.79, 46.39], [6.55, 46.4], [6.23, 46.31], [6.31, 46.25],
+  [6.17, 46.18], [6.1, 46.14], [5.96, 46.14], [6.0, 46.23], [6.12, 46.31], [6.07, 46.41], [6.07, 46.46], [6.14, 46.56],
+  [6.37, 46.71], [6.45, 46.84], [6.46, 46.91], [6.63, 46.97], [6.72, 47.03], [6.85, 47.08], [6.95, 47.25], [7.03, 47.36],
+  [6.88, 47.37], [6.95, 47.44], [7.0, 47.5], [7.13, 47.5], [7.2, 47.44], [7.33, 47.44], [7.45, 47.47], [7.53, 47.5],
+];
+
+const K = 200;
+const COS = Math.cos((46.8 * Math.PI) / 180);
+const VIEW_W = 640;
+const VIEW_H = 412;
+
+function project(lng, lat) {
+  return [(lng - 5.9) * K * COS + 4, (47.87 - lat) * K + 4];
+}
+
+const outlinePath = () =>
+  BORDER.map(([lng, lat], i) => {
+    const [x, y] = project(lng, lat);
+    return `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`;
+  }).join("") + "Z";
+
+/** Lac Léman (très simplifié) pour reconnaître la carte au premier coup d'œil. */
+const LEMAN = [[6.15, 46.21], [6.25, 46.3], [6.45, 46.4], [6.62, 46.5], [6.8, 46.47], [6.91, 46.39], [6.78, 46.39], [6.55, 46.38], [6.3, 46.34], [6.17, 46.24]];
+const lemanPath = () =>
+  LEMAN.map(([lng, lat], i) => {
+    const [x, y] = project(lng, lat);
+    return `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`;
+  }).join("") + "Z";
+
+function swissMapSvg(dots = []) {
+  const circles = dots
+    .map((d) => {
+      const [x, y] = project(d.lng, d.lat);
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${d.r || 3.4}" class="dot tv-${d.tone}"/>`;
+    })
+    .join("");
+  return raw(`<svg class="swiss-map" viewBox="0 0 ${VIEW_W} ${VIEW_H}" role="img" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="swiss-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="swiss-fill-a"/><stop offset="1" class="swiss-fill-b"/></linearGradient></defs>
+    <path class="swiss-shape" d="${outlinePath()}"/>
+    <path class="swiss-lake" d="${lemanPath()}"/>
+    <g class="swiss-dots">${circles}</g>
+  </svg>`);
+}
+
+return { project, swissMapSvg, VIEW_W, VIEW_H, outlinePath, lemanPath };
+});
+__def("views/home.js", function () {
+/* Page d'accueil */
+const { html, raw } = __req("util.js");
+const { icon } = __req("icons.js");
+const { t, fmtNumber, categoryName } = __req("i18n.js");
+const { CATEGORIES, getCategory, findLocality } = __req("data.js");
+const { distanceKm } = __req("util.js");
+const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite, getRecentlyViewed, clearRecentlyViewed } = __req("store.js");
+const { createMap, listingsLayer, fitSwitzerland } = __req("map.js");
+const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
+const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
+
+/** Villes mises en avant sur la page d'accueil (annonces dans un rayon de 10 km). */
+const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion", "Winterthur"];
+
+function heroCards(listings) {
+  const wanted = [["Lausanne", "right"], ["Zürich", "left"], ["Lugano", "left"]];
+  return wanted
+    .map(([city, side], i) => {
+      const l = listings.find((x) => x.city === city && x.demo && x.type === (i === 1 ? "request" : "offer")) || listings.find((x) => x.city === city);
+      if (!l) return "";
+      const [x, y] = project(l.lng, l.lat);
+      const cat = getCategory(l.category);
+      return html`<a class="hero-float hero-float-${i} side-${side}" href="#/annonce/${l.id}" data-x="${((x / VIEW_W) * 100).toFixed(1)}" data-y="${((y / VIEW_H) * 100).toFixed(1)}">
+        <span class="hero-float-icon tone-${cat.tone}">${icon(cat.icon)}</span>
+        <span class="hero-float-text"><strong>${listingTitle(l)}</strong><span>${l.city} · ${priceLabel(l)}</span></span>
+      </a>`;
+    });
+}
+
+const FAQ = ["cost", "safety", "payment", "location", "languages", "data"];
+
+let homeMap = null;
+let mapObserver = null;
+
+/** « Vous avez consulté » : les dernières annonces vues sur cet appareil (défilement horizontal). */
+function recentlyViewedSection() {
+  const seen = getRecentlyViewed().slice(0, 8);
+  if (!seen.length) return "";
+  return html`<section class="section section-tight" aria-labelledby="seen-title">
+    <div class="container">
+      <div class="section-head section-head-sm">
+        <div><span class="kicker">${icon("history")}${t("home.seenKicker")}</span><h2 class="h3" id="seen-title">${t("home.seenTitle")}</h2></div>
+        <button type="button" class="link-btn" data-action="clear-recent">${t("home.seenClear")}</button>
+      </div>
+      <div class="h-scroll">${seen.map((l) => listingCard(l))}</div>
+    </div>
+  </section>`;
+}
+
+const __default = {
+  title: () => t("meta.homeTitle"),
+  refreshOn: ["listings", "auth", "recent"],
+  onData(kind) {
+    if (kind === "favorites") {
+      document.querySelectorAll(".fav-btn[data-id]").forEach((b) => {
+        const on = isFavorite(b.dataset.id);
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+  },
+
+  render() {
+    const listings = allListings();
+    const s = stats();
+    const origin = getOrigin();
+    const recent = searchListings({ sort: origin ? "distance" : "recent" }, origin).slice(0, 8);
+    const counts = {};
+    listings.forEach((l) => { counts[l.category] = (counts[l.category] || 0) + 1; });
+    const dots = listings.slice(0, 380).map((l) => ({ lat: l.lat, lng: l.lng, tone: getCategory(l.category).tone }));
+
+    return html`
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">${icon("leaf")}${t("home.eyebrow")}</span>
+          <h1 class="display">${t("home.title1")}<br>${t("home.title2")}<br><em>${t("home.title3")}</em></h1>
+          <p class="lead">${t("home.lead")}</p>
+
+          <form class="hero-search" data-form="hero-search" role="search">
+            <div class="field">
+              <label class="sr-only" for="hero-q">${t("search.what")}</label>
+              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
+            </div>
+            ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
+            <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>
+          </form>
+          <div class="hero-quick">
+            <button type="button" class="link-btn" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
+            <span class="hero-quick-sep" aria-hidden="true">·</span>
+            ${["shopping", "pets", "digital", "garden"].map((c) => html`<a class="pill" href="#/explorer?cat=${c}">${categoryName(c)}</a>`)}
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-map">
+            ${swissMapSvg(dots)}
+            ${heroCards(listings)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="${t("home.statsLabel")}">
+      <div class="container stats-grid">
+        <div class="stat"><strong>${fmtNumber(s.active)}</strong><span>${t("home.statListings")}</span></div>
+        <div class="stat"><strong>26</strong><span>${t("home.statCantons")}</span></div>
+        <div class="stat"><strong>4</strong><span>${t("home.statLangs")}</span></div>
+        <div class="stat"><strong>0</strong><span>${t("home.statTrackers")}</span></div>
+      </div>
+    </section>
+
+    ${recentlyViewedSection()}
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
+          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
+        </div>
+        <div class="cat-grid">
+          ${CATEGORIES.map((c) => html`<a class="cat-tile tv-${c.tone}" href="#/explorer?cat=${c.id}">
+            <span class="cat-icon">${icon(c.icon)}</span>
+            <span class="cat-name">${categoryName(c.id)}</span>
+            <span class="cat-count">${t("home.catCount", { count: counts[c.id] || 0 })}</span>
+          </a>`)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
+          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
+        </div>
+        <div class="listing-grid">
+          ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2">${t("home.citiesTitle")}</h2></div>
+        </div>
+        <div class="city-grid">
+          ${POPULAR_CITIES.map((name, i) => {
+            const loc = findLocality(name);
+            const n = listings.filter((l) => distanceKm(loc, l) <= 10).length;
+            return html`<a class="city-card tv-${i % 6}" href="#/explorer?ville=${encodeURIComponent(name)}">
+              <span class="city-dot">${icon("pin")}</span>
+              <span class="city-name">${name}</span>
+              <span class="city-count">${t("home.catCount", { count: n })}</span>
+              ${icon("arrowRight", "city-arrow")}
+            </a>`;
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-map" aria-labelledby="map-title">
+      <div class="container map-showcase">
+        <div class="map-showcase-text">
+          <span class="kicker">${icon("map")}${t("home.mapKicker")}</span>
+          <h2 class="h2" id="map-title">${t("home.mapTitle")}</h2>
+          <p class="muted">${t("home.mapText")}</p>
+          <ul class="map-styles-legend">
+            ${["color", "plan", "satellite", "grey"].map((id) => html`<li><span class="map-style-thumb thumb-${id}" aria-hidden="true"></span>${t("map.style." + id)}</li>`)}
+          </ul>
+          <a class="btn btn-primary" href="#/explorer?view=map">${icon("map")}${t("home.mapCta")}</a>
+        </div>
+        <div class="map-showcase-map">
+          <div id="home-map" class="map map-home" role="region" aria-label="${t("explore.mapLabel")}"></div>
+          <p class="map-note">${icon("shield")}${t("explore.mapPrivacy")}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-warm" id="how">
+      <div class="container">
+        <div class="section-head center">
+          <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
+        </div>
+        <ol class="steps">
+          ${[["pencil", 1], ["message", 2], ["hand", 3]].map(([ic, n]) => html`<li class="step">
+            <span class="step-num">${n}</span>
+            <span class="step-icon">${icon(ic)}</span>
+            <h3>${t(`home.step${n}Title`)}</h3>
+            <p>${t(`home.step${n}Text`)}</p>
+          </li>`)}
+        </ol>
+        <div class="center-actions">
+          <a class="btn btn-cta btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-section">
+      <div class="container trust-grid">
+        <div class="trust-intro">
+          <span class="kicker kicker-light">${t("home.trustKicker")}</span>
+          <h2 class="h2">${t("home.trustTitle")}</h2>
+          <p>${t("home.trustText")}</p>
+          <a class="btn btn-light" href="#/page/securite">${icon("shieldCheck")}${t("home.trustCta")}</a>
+        </div>
+        <div class="trust-cards">
+          ${[["pin", "Loc"], ["lock", "Pwd"], ["flag", "Report"], ["eyeOff", "Track"]].map(([ic, k]) => html`<div class="trust-card">
+            <span class="trust-icon">${icon(ic)}</span>
+            <h3>${t(`home.trust${k}Title`)}</h3>
+            <p>${t(`home.trust${k}Text`)}</p>
+          </div>`)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sky">
+      <div class="container faq-wrap">
+        <div>
+          <span class="kicker">${t("home.faqKicker")}</span>
+          <h2 class="h2">${t("home.faqTitle")}</h2>
+          <p class="muted">${t("home.faqText")}</p>
+          <a class="btn btn-ghost" href="#/page/aide">${t("home.faqMore")}${icon("arrowRight")}</a>
+        </div>
+        <div class="faq">
+          ${FAQ.map((k) => html`<details class="faq-item"><summary>${t(`faq.${k}.q`)}${icon("chevronDown")}</summary><p>${t(`faq.${k}.a`)}</p></details>`)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band section-sky">
+      <div class="container cta-inner">
+        <div>
+          <h2 class="h2">${t("home.ctaTitle")}</h2>
+          <p>${t("home.ctaText")}</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+        </div>
+      </div>
+    </section>`;
+  },
+
+  mount(root) {
+    initLocalityFields(root);
+    let placeChosen = false;
+    root.addEventListener("locality-change", (e) => {
+      const loc = e.detail;
+      setOrigin({ lat: loc.lat, lng: loc.lng, label: loc.name });
+      placeChosen = true;
+    });
+    root.querySelector("[data-form='hero-search']")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const p = new URLSearchParams();
+      const q = e.target.q.value.trim();
+      if (q) p.set("q", q);
+      if (placeChosen) { p.set("radius", "25"); p.set("sort", "distance"); }
+      location.hash = `#/explorer${p.toString() ? "?" + p : ""}`;
+    });
+    // La vraie carte n'est chargée que lorsqu'on arrive à sa hauteur (page plus rapide)
+    const mapEl = root.querySelector("#home-map");
+    if (mapEl) {
+      const init = () => {
+        if (homeMap || !mapEl.isConnected) return;
+        homeMap = createMap(mapEl, { zoom: 7, guardTouch: true });
+        if (!homeMap) return;
+        fitSwitzerland(homeMap);
+        listingsLayer(homeMap).setItems(allListings());
+      };
+      if ("IntersectionObserver" in window) {
+        mapObserver = new IntersectionObserver((entries) => {
+          if (entries.some((e) => e.isIntersecting)) { mapObserver.disconnect(); mapObserver = null; init(); }
+        }, { rootMargin: "300px" });
+        mapObserver.observe(mapEl);
+      } else init();
+    }
+    // Positionne les cartes flottantes sur l'illustration de la Suisse
+    root.querySelectorAll(".hero-float").forEach((el) => {
+      el.style.setProperty("--x", el.dataset.x + "%");
+      el.style.setProperty("--y", el.dataset.y + "%");
+    });
+  },
+
+  unmount() {
+    mapObserver?.disconnect();
+    mapObserver = null;
+    homeMap?.remove();
+    homeMap = null;
+  },
+};
+
+const homeActions = {
+  "clear-recent": () => clearRecentlyViewed(),
+};
+
+
+
+return { homeActions, default: __default, raw };
 });
 __def("views/explore.js", function () {
 /* Page "Explorer" : recherche, filtres, liste d'annonces et carte */
-const { html, raw, $, $$, mount, debounce } = __req("util.js");
+const { html, raw, esc, $, $$, mount, debounce } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, cantonName, categoryName, fmtNumber } = __req("i18n.js");
 const { CATEGORIES, CANTON_CODES, TYPES, PAYMENTS, LOCALITIES, findLocality } = __req("data.js");
 const { searchListings, getOrigin, setOrigin, isFavorite, currentUser, saveAlert } = __req("store.js");
 const { listingCard, emptyState, localityField, initLocalityFields, toast } = __req("ui.js");
-const { createMap, listingsLayer, leafletReady, fitSwitzerland } = __req("map.js");
+const { createMap, listingsLayer, leafletReady, fitSwitzerland, meMarker } = __req("map.js");
 
 const PAGE_SIZE = 16;
 const FILTER_KEYS = ["q", "type", "cat", "canton", "pay", "radius", "urgent", "verified", "sort", "page"];
@@ -5347,8 +5763,18 @@ function select(name, label, options, value) {
     </select></label>`;
 }
 
+/** Nombre de filtres actifs (affiché sur le bouton « Filtres » du téléphone). */
+function activeFilterCount(f) {
+  return ["type", "cat", "canton", "pay", "radius", "urgent", "verified"].filter((k) => f[k]).length;
+}
+
 function filtersBar(f, origin) {
   return html`
+  <div class="sheet-head">
+    <span class="sheet-grip" aria-hidden="true"></span>
+    <h2 class="h4">${icon("sliders")}${t("filter.title")}</h2>
+    <button type="button" class="icon-btn icon-btn-sm" data-action="toggle-filters" aria-label="${t("common.close")}">${icon("x")}</button>
+  </div>
   <div class="filter-row">
     <div class="segmented" role="group" aria-label="${t("filter.type")}">
       ${[["", t("filter.all")], ...TYPES.map((ty) => [ty, t("type." + ty)])].map(([v, text]) => html`<button type="button" class="seg${(f.type || "") === v ? " is-active" : ""}" data-action="filter-type" data-value="${v}" aria-pressed="${(f.type || "") === v ? "true" : "false"}">${text}</button>`)}
@@ -5359,7 +5785,27 @@ function filtersBar(f, origin) {
     ${select("radius", t("filter.radius"), [["", origin ? t("filter.anyDistance") : t("filter.radius")], ...["5", "10", "25", "50"].map((r) => [r, t("filter.within", { km: r })])], f.radius)}
     <label class="toggle"><input type="checkbox" data-filter="urgent" ${f.urgent ? raw("checked") : ""}><span>${icon("zap")}${t("filter.urgent")}</span></label>
     <label class="toggle"><input type="checkbox" data-filter="verified" ${f.verified ? raw("checked") : ""}><span>${icon("badgeCheck")}${t("filter.verified")}</span></label>
+  </div>
+  <div class="sheet-foot">
+    <button type="button" class="link-btn" data-action="reset-filters">${t("filter.resetShort")}</button>
+    <button type="button" class="btn btn-primary" data-action="toggle-filters" id="sheet-results">${t("filter.showResults")}</button>
   </div>`;
+}
+
+function updateFilterBadge() {
+  const n = state ? activeFilterCount(state.f) : 0;
+  const badge = $("#filters-count");
+  if (badge) { badge.textContent = n; badge.hidden = !n; }
+}
+
+function openSheet(open) {
+  const bar = $("#filter-bar");
+  if (!bar) return;
+  bar.classList.toggle("is-open", open);
+  $("#sheet-backdrop")?.toggleAttribute("hidden", !open);
+  document.documentElement.classList.toggle("sheet-open", open && window.matchMedia("(max-width: 980px)").matches);
+  $$("[data-action='toggle-filters'][aria-controls]").forEach((b) => b.setAttribute("aria-expanded", open ? "true" : "false"));
+  if (open) bar.querySelector("select, button.seg")?.focus({ preventScroll: true });
 }
 
 function activeChips(f, origin) {
@@ -5381,6 +5827,9 @@ function renderResults() {
   const pageItems = all.slice((f.page - 1) * PAGE_SIZE, f.page * PAGE_SIZE);
 
   mount($("#results-count"), html`<strong>${fmtNumber(all.length)}</strong> ${t("explore.results", { count: all.length })}`);
+  const sheetBtn = $("#sheet-results");
+  if (sheetBtn) sheetBtn.textContent = all.length ? t("filter.showN", { count: all.length, n: fmtNumber(all.length) }) : t("filter.showNone");
+  updateFilterBadge();
   mount($("#active-chips"), activeChips(f, origin));
   mount(
     $("#results-grid"),
@@ -5407,6 +5856,42 @@ function pagination(page, pages) {
     <button class="page-btn" data-action="page" data-page="${page + 1}" ${page === pages ? raw("disabled") : ""} aria-label="${t("common.next")}">${icon("chevronRight")}</button>`;
 }
 
+/** Définit le point de référence (localité ou position) et trie par distance. */
+function useOrigin(origin, radius, zoom) {
+  setOrigin(origin);
+  if (!state.f.radius) state.f.radius = radius;
+  state.f.sort = "distance";
+  mount($("#filter-bar"), filtersBar(state.f, getOrigin()));
+  const sortSel = $("[data-filter='sort']");
+  if (sortSel && ![...sortSel.options].some((o) => o.value === "distance")) {
+    sortSel.insertAdjacentHTML("afterbegin", `<option value="distance">${esc(t("sort.distance"))}</option>`);
+  }
+  if (sortSel) sortSel.value = "distance";
+  mapBounds = null;
+  renderResults();
+  if (map) map.setView([origin.lat, origin.lng], zoom);
+}
+
+/** Bouton « me localiser » de la carte : centre la carte sur ma position (point bleu). */
+function locateOnMap(btn) {
+  if (!navigator.geolocation) { toast(t("loc.unsupported"), "error"); return; }
+  btn.disabled = true;
+  btn.classList.add("is-busy");
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      btn.disabled = false;
+      btn.classList.remove("is-busy");
+      const { latitude: lat, longitude: lng } = pos.coords;
+      if (lat < 45.7 || lat > 47.95 || lng < 5.8 || lng > 10.6) { toast(t("loc.outside"), "info"); return; }
+      useOrigin({ lat, lng, label: t("loc.myPosition") }, "10", 13);
+      if (map) meMarker(map, [lat, lng]);
+      toast(t("loc.found"), "success");
+    },
+    () => { btn.disabled = false; btn.classList.remove("is-busy"); toast(t("loc.denied"), "error"); },
+    { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 }
+  );
+}
+
 function setFilter(key, value, { resetPage = true } = {}) {
   if (value === "" || value === null || value === false || value === undefined) delete state.f[key];
   else state.f[key] = value;
@@ -5424,6 +5909,10 @@ function applyView() {
     b.setAttribute("aria-pressed", on ? "true" : "false");
   });
   setTimeout(() => map?.invalidateSize(), 60);
+  // Sur téléphone, on amène la carte (ou le haut de la liste) sous l'en-tête
+  if (window.matchMedia("(max-width: 1180px)").matches && (state.f.view === "map" || layout.getBoundingClientRect().top < 0)) {
+    layout.scrollIntoView({ block: "start" });
+  }
   writeUrl();
 }
 
@@ -5480,10 +5969,12 @@ const exploreActions = {
     if (res.ok) toast(t("alerts.saved"), "success");
     else toast(t(res.error === "max" ? "alerts.max" : "err.generic"), "error");
   },
-  "toggle-filters": (el) => {
+  "toggle-filters": () => {
     const bar = $("#filter-bar");
-    const open = bar.classList.toggle("is-open");
-    el.setAttribute("aria-expanded", open ? "true" : "false");
+    if (!bar) return;
+    const open = !bar.classList.contains("is-open");
+    openSheet(open);
+    if (!open) $(".filters-toggle")?.focus({ preventScroll: true });
   },
 };
 
@@ -5513,13 +6004,14 @@ const __default = {
         <h1 class="h1">${t("explore.title")}</h1>
         <form class="explore-search" data-form="explore-search" role="search">
           <div class="field"><label class="sr-only" for="explore-q">${t("search.what")}</label>
-            <div class="input-icon">${icon("search")}<input id="explore-q" class="input" name="q" value="${f.q || ""}" placeholder="${t("search.whatPh")}" maxlength="80"></div></div>
+            <div class="input-icon">${icon("search")}<input id="explore-q" class="input" type="search" name="q" value="${f.q || ""}" placeholder="${t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div></div>
           ${localityField({ name: "where", value: "", placeholder: origin?.label || t("search.wherePh") })}
           <button type="button" class="btn btn-ghost btn-icon-only" data-action="locate" title="${t("search.nearMe")}" aria-label="${t("search.nearMe")}">${icon("locate")}</button>
           <button class="btn btn-primary" type="submit">${t("search.submit")}</button>
         </form>
-        <button type="button" class="btn btn-ghost filters-toggle" data-action="toggle-filters" aria-expanded="false" aria-controls="filter-bar">${icon("sliders")}${t("filter.title")}</button>
-        <div id="filter-bar" class="filter-bar">${filtersBar(f, origin)}</div>
+        <button type="button" class="btn btn-ghost filters-toggle" data-action="toggle-filters" aria-expanded="false" aria-controls="filter-bar">${icon("sliders")}${t("filter.title")}<span class="count-pill" id="filters-count" ${activeFilterCount(f) ? "" : raw("hidden")}>${activeFilterCount(f)}</span></button>
+        <div class="sheet-backdrop" id="sheet-backdrop" data-action="toggle-filters" hidden></div>
+        <div id="filter-bar" class="filter-bar" role="region" aria-label="${t("filter.title")}">${filtersBar(f, origin)}</div>
       </div>
     </section>
 
@@ -5542,6 +6034,7 @@ const __default = {
         <div id="active-chips"></div>
         <div id="results-grid" class="listing-grid listing-grid-explore"></div>
         <nav id="pagination" class="pagination" aria-label="${t("common.pagination")}"></nav>
+        <button type="button" class="btn map-fab" data-action="set-view" data-value="map">${icon("map")}${t("explore.map")}</button>
       </div>
       <div class="map-col">
         <div class="map-sticky">
@@ -5557,7 +6050,7 @@ const __default = {
   mount(root) {
     initLocalityFields(root);
     const mapEl = $("#explore-map", root);
-    map = createMap(mapEl, { zoom: 8 });
+    map = createMap(mapEl, { zoom: 8, onLocate: locateOnMap });
     if (map) {
       fitSwitzerland(map);
       layer = listingsLayer(map);
@@ -5591,19 +6084,9 @@ const __default = {
     // Choix d'une localité = point de référence pour la distance
     root.addEventListener("locality-change", (e) => {
       const loc = e.detail;
-      setOrigin({ lat: loc.lat, lng: loc.lng, label: loc.name });
-      if (!state.f.radius) state.f.radius = "25";
-      state.f.sort = "distance";
-      mount($("#filter-bar"), filtersBar(state.f, getOrigin()));
-      const sortSel = root.querySelector("[data-filter='sort']");
-      if (sortSel && ![...sortSel.options].some((o) => o.value === "distance")) {
-        sortSel.insertAdjacentHTML("afterbegin", `<option value="distance">${t("sort.distance")}</option>`);
-      }
-      if (sortSel) sortSel.value = "distance";
-      mapBounds = null;
-      renderResults();
-      if (map) map.setView([loc.lat, loc.lng], 11);
+      useOrigin({ lat: loc.lat, lng: loc.lng, label: loc.name }, "25", 11);
     });
+    root.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("#filter-bar")?.classList.contains("is-open")) openSheet(false); });
   },
 
   /** Mise à jour légère quand les favoris changent (cœurs). */
@@ -5618,6 +6101,7 @@ const __default = {
   },
 
   unmount() {
+    document.documentElement.classList.remove("sheet-open");
     map?.remove();
     map = null;
     layer = null;
@@ -5715,8 +6199,8 @@ const { html, raw, $, safeImageSrc } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, pick, getLang, cantonName, categoryName, fmtDate, fmtRelative, fmtDuration, fmtDistance, languageName } = __req("i18n.js");
 const { getCategory } = __req("data.js");
-const { getListing, getPerson, currentUser, isFavorite, searchListings, getOrigin, startConversation, setListingStatus, deleteListing, setListingHidden, isAdmin, toggleBlock, isBlocked } = __req("store.js");
-const { listingCard, avatar, priceLabel, typeLabel, emptyState, stars, confirmDialog, reportDialog, shareLink, toast, listingTitle, listingDescription, categoryThumb } = __req("ui.js");
+const { getListing, getPerson, currentUser, isFavorite, searchListings, getOrigin, startConversation, setListingStatus, deleteListing, setListingHidden, isAdmin, toggleBlock, isBlocked, addRecentlyViewed } = __req("store.js");
+const { listingCard, avatar, priceLabel, typeLabel, emptyState, stars, confirmDialog, reportDialog, shareLink, toast, listingTitle, listingDescription, categoryThumb, openDialog } = __req("ui.js");
 const { detailMap } = __req("map.js");
 const { downloadIcs } = __req("ics.js");
 const { distanceKm } = __req("util.js");
@@ -5734,13 +6218,49 @@ function fact(iconName, label, value) {
   return html`<div class="fact"><span class="fact-icon">${icon(iconName)}</span><div><dt>${label}</dt><dd>${value}</dd></div></div>`;
 }
 
+/** Galerie : on fait glisser les photos au doigt (téléphone) ou avec les flèches / vignettes (ordinateur).
+    Un appui sur une photo l'ouvre en grand. */
 function gallery(l) {
   const photos = (l.photos || []).map(safeImageSrc).filter(Boolean);
   if (!photos.length) return categoryThumb(l, "detail-media");
-  return html`<div class="gallery">
-    <img class="gallery-main" id="gallery-main" src="${photos[0]}" alt="${listingTitle(l)}">
-    ${photos.length > 1 ? html`<div class="gallery-thumbs">${photos.map((p, i) => html`<button type="button" class="gallery-thumb${i === 0 ? " is-active" : ""}" data-action="gallery" data-index="${i}" aria-label="${t("listing.photoN", { n: i + 1 })}"><img src="${p}" alt=""></button>`)}</div>` : ""}
+  const many = photos.length > 1;
+  return html`<div class="gallery" id="gallery" data-count="${photos.length}">
+    <div class="gallery-frame">
+      <div class="gallery-track" id="gallery-track" ${many ? raw(`tabindex="0" role="group" aria-roledescription="carousel"`) : ""} aria-label="${t("listing.photos")}">
+        ${photos.map((p, i) => html`<button type="button" class="gallery-slide" data-action="photo-zoom" data-index="${i}" aria-label="${t("listing.photoOpen", { n: i + 1, total: photos.length })}"><img src="${p}" alt="${listingTitle(l)}${many ? ` — ${i + 1}/${photos.length}` : ""}" ${i ? raw('loading="lazy"') : ""}></button>`)}
+      </div>
+      ${many ? html`
+        <button type="button" class="gallery-nav gallery-prev" data-action="gallery-step" data-delta="-1" aria-label="${t("listing.photoPrev")}">${icon("chevronLeft")}</button>
+        <button type="button" class="gallery-nav gallery-next" data-action="gallery-step" data-delta="1" aria-label="${t("listing.photoNext")}">${icon("chevronRight")}</button>
+        <span class="gallery-count" id="gallery-count" aria-hidden="true">1 / ${photos.length}</span>
+        <span class="gallery-dots" aria-hidden="true">${photos.map((_, i) => html`<i class="${i === 0 ? "is-active" : ""}"></i>`)}</span>` : html`<span class="gallery-zoom-hint" aria-hidden="true">${icon("expand")}</span>`}
+    </div>
+    ${many ? html`<div class="gallery-thumbs">${photos.map((p, i) => html`<button type="button" class="gallery-thumb${i === 0 ? " is-active" : ""}" data-action="gallery" data-index="${i}" aria-label="${t("listing.photoN", { n: i + 1 })}"><img src="${p}" alt=""></button>`)}</div>` : ""}
   </div>`;
+}
+
+/** Met à jour vignettes, points et compteur selon la photo visible. */
+function syncGallery(index) {
+  const g = $("#gallery");
+  if (!g) return;
+  g.querySelectorAll(".gallery-thumb").forEach((b, i) => b.classList.toggle("is-active", i === index));
+  g.querySelectorAll(".gallery-dots i").forEach((d, i) => d.classList.toggle("is-active", i === index));
+  const count = $("#gallery-count");
+  if (count) count.textContent = `${index + 1} / ${g.dataset.count}`;
+}
+
+function galleryIndex() {
+  const track = $("#gallery-track");
+  return track ? Math.round(track.scrollLeft / Math.max(1, track.clientWidth)) : 0;
+}
+
+function goToPhoto(index) {
+  const track = $("#gallery-track");
+  if (!track) return;
+  const n = track.children.length;
+  const i = (index + n) % n;
+  track.scrollTo({ left: i * track.clientWidth, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  syncGallery(i);
 }
 
 const __default = {
@@ -5776,6 +6296,12 @@ const __default = {
 
     return html`
     <div class="container">
+      <div class="mobile-back"><button type="button" class="btn btn-ghost btn-sm" data-action="go-back">${icon("arrowLeft")}${t("common.back")}</button>
+        <div class="mobile-back-actions">
+          <button type="button" class="icon-btn" data-action="share" data-id="${l.id}" aria-label="${t("listing.share")}">${icon("share")}</button>
+          <button type="button" class="icon-btn fav-toggle${fav ? " is-active" : ""}" data-action="fav" data-id="${l.id}" aria-pressed="${fav ? "true" : "false"}" aria-label="${fav ? t("fav.saved") : t("fav.save")}">${icon("heart")}</button>
+        </div>
+      </div>
       <nav class="breadcrumb" aria-label="${t("common.breadcrumb")}">
         <a href="#/explorer">${t("nav.explore")}</a>${icon("chevronRight")}
         <a href="#/explorer?cat=${l.category}">${categoryName(l.category)}</a>${icon("chevronRight")}
@@ -5876,6 +6402,13 @@ const __default = {
         </aside>
       </div>
 
+      <div class="detail-bar" role="region" aria-label="${t("listing.quickActions")}">
+        <div class="detail-bar-price"><strong class="${l.payment === "free" ? "is-free" : ""}">${priceLabel(l)}</strong><span>${l.city}</span></div>
+        ${owner
+          ? html`<a class="btn btn-primary" href="#/publier?edit=${l.id}">${icon("pencil")}${t("listing.edit")}</a>`
+          : html`<button type="button" class="btn btn-primary" data-action="contact" data-id="${l.id}" ${l.status !== "active" ? raw("disabled") : ""}>${icon("message")}${t("listing.contactShort")}</button>`}
+      </div>
+
       ${similar.length ? html`<section class="section-sm">
         <h2 class="h2">${t("listing.similar")}</h2>
         <div class="listing-grid">${similar.map(({ listing, distance }) => listingCard(listing, { distance }))}</div>
@@ -5887,6 +6420,18 @@ const __default = {
     const l = getListing(currentId);
     const el = $("#detail-map", root);
     if (l && el) map = detailMap(el, l);
+    if (l && l.status === "active") addRecentlyViewed(l.id);
+    const track = $("#gallery-track", root);
+    if (track && track.children.length > 1) {
+      let raf = 0;
+      track.addEventListener("scroll", () => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => syncGallery(galleryIndex()));
+      }, { passive: true });
+      track.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); goToPhoto(galleryIndex() + (e.key === "ArrowRight" ? 1 : -1)); }
+      });
+    }
   },
 
   onData(kind) {
@@ -5897,6 +6442,7 @@ const __default = {
         b.setAttribute("aria-pressed", fav ? "true" : "false");
         const span = b.querySelector("span");
         if (span) span.textContent = fav ? t("fav.saved") : t("fav.save");
+        else b.setAttribute("aria-label", fav ? t("fav.saved") : t("fav.save"));
       });
     }
   },
@@ -5950,13 +6496,18 @@ const listingActions = {
     const hide = el.dataset.hidden === "1";
     if (setListingHidden(el.dataset.id, hide)) toast(hide ? t("admin.hidden") : t("admin.unhidden"), "success");
   },
-  gallery: (el) => {
+  gallery: (el) => goToPhoto(Number(el.dataset.index) || 0),
+  "gallery-step": (el) => goToPhoto(galleryIndex() + Number(el.dataset.delta)),
+  "photo-zoom": (el) => {
     const l = getListing(currentId);
-    const photo = safeImageSrc(l?.photos?.[Number(el.dataset.index)]);
-    if (photo) {
-      $("#gallery-main").src = photo;
-      document.querySelectorAll(".gallery-thumb").forEach((b) => b.classList.toggle("is-active", b === el));
-    }
+    const photos = (l?.photos || []).map(safeImageSrc).filter(Boolean);
+    const photo = photos[Number(el.dataset.index)];
+    if (!photo) return;
+    openDialog({
+      title: listingTitle(l),
+      size: "dialog-photo",
+      body: html`<img class="photo-full" src="${photo}" alt="${listingTitle(l)}">`,
+    });
   },
 };
 
@@ -6436,7 +6987,7 @@ function chatPane(c) {
     ${c.messages.length < 6 ? html`<div class="quick-replies" aria-label="${t("messages.quickLabel")}">${[1, 2, 3, 4].map((n) => html`<button type="button" class="quick-reply" data-action="quick-reply" data-text="${t("messages.quick" + n)}">${t("messages.quick" + n)}</button>`)}</div>` : ""}
     <div class="composer-row">
       <label for="chat-input" class="sr-only">${t("messages.placeholder")}</label>
-      <textarea id="chat-input" class="input" name="text" rows="1" maxlength="1000" placeholder="${t("messages.placeholder")}" autocomplete="off"></textarea>
+      <textarea id="chat-input" class="input" name="text" rows="1" maxlength="1000" placeholder="${t("messages.placeholder")}" autocomplete="off" enterkeyhint="send"></textarea>
       <button type="submit" class="btn btn-primary btn-send" aria-label="${t("messages.send")}">${icon("send")}</button>
     </div>
   </form>`;
@@ -6472,6 +7023,8 @@ const __default = {
   },
 
   mount(root) {
+    // Sur téléphone, une conversation ouverte prend tout l'écran (comme une appli de messagerie)
+    document.body.classList.toggle("chat-open", !!$("#chat-composer", root));
     const msgs = $("#chat-messages", root);
     if (msgs) msgs.scrollTop = msgs.scrollHeight;
     const form = $("#chat-composer", root);
@@ -6520,7 +7073,10 @@ const __default = {
     }
   },
 
-  unmount() { activeId = null; },
+  unmount() {
+    activeId = null;
+    document.body.classList.remove("chat-open");
+  },
 };
 
 const messagesActions = {
@@ -7475,6 +8031,8 @@ const PAGES = {
           ["Qu'est-ce que Voisina ?", "Voisina est une plateforme d'entraide entre voisins, partout en Suisse. Vous pouvez proposer un coup de main, demander de l'aide ou donner un objet, gratuitement ou contre une petite rémunération."],
           ["Est-ce gratuit ?", "Oui. Publier, rechercher et discuter est entièrement gratuit. Voisina ne prend aucune commission et n'affiche aucune publicité."],
           ["Faut-il un compte ?", "Vous pouvez consulter les annonces et les ajouter à vos favoris sans compte. Pour publier une annonce ou écrire à un membre, un compte gratuit est nécessaire."],
+          ["Puis-je installer Voisina sur mon téléphone ?", "Oui, sans passer par un store. Sur iPhone : dans Safari, touchez « Partager » puis « Sur l'écran d'accueil ». Sur Android : menu ⋮ de Chrome puis « Installer l'application ». Voisina s'ouvre alors en plein écran, comme une application."],
+          ["Comment changer l'apparence de la carte ?", "Touchez le bouton « calques » en haut à droite de la carte : carte suisse en couleur, plan des rues, vue satellite ou version grise. Votre choix est mémorisé."],
         ] },
         { h: "Publier une annonce", qa: [
           ["Comment écrire une bonne annonce ?", "Choisissez un titre court et précis, décrivez clairement le besoin ou l'aide proposée, indiquez une date si possible et précisez si c'est gratuit, rémunéré ou à discuter."],
@@ -7500,6 +8058,8 @@ const PAGES = {
           ["Was ist Voisina?", "Voisina ist eine Plattform für Nachbarschaftshilfe in der ganzen Schweiz. Sie können Hilfe anbieten, um Hilfe bitten oder Gegenstände verschenken – kostenlos oder gegen eine kleine Entschädigung."],
           ["Ist Voisina kostenlos?", "Ja. Inserieren, Suchen und Schreiben sind komplett kostenlos. Voisina verlangt keine Kommission und zeigt keine Werbung."],
           ["Brauche ich ein Konto?", "Anzeigen ansehen und als Favoriten speichern geht ohne Konto. Um zu inserieren oder einem Mitglied zu schreiben, brauchen Sie ein kostenloses Konto."],
+          ["Kann ich Voisina auf meinem Handy installieren?", "Ja, ganz ohne App-Store. iPhone: In Safari auf «Teilen» und dann «Zum Home-Bildschirm» tippen. Android: Chrome-Menü ⋮ und «App installieren». Voisina öffnet sich dann im Vollbild wie eine App."],
+          ["Wie ändere ich das Aussehen der Karte?", "Tippen Sie auf die Ebenen-Schaltfläche oben rechts auf der Karte: farbige Schweizer Karte, Strassenkarte, Satellitenbild oder graue Version. Ihre Wahl wird gespeichert."],
         ] },
         { h: "Eine Anzeige erstellen", qa: [
           ["Wie schreibe ich eine gute Anzeige?", "Wählen Sie einen kurzen, präzisen Titel, beschreiben Sie klar, was Sie brauchen oder anbieten, geben Sie wenn möglich ein Datum an und ob es kostenlos, bezahlt oder verhandelbar ist."],
@@ -7525,6 +8085,8 @@ const PAGES = {
           ["Che cos'è Voisina?", "Voisina è una piattaforma di aiuto tra vicini in tutta la Svizzera. Potete offrire una mano, chiedere aiuto o regalare un oggetto, gratuitamente o con un piccolo compenso."],
           ["È gratuito?", "Sì. Pubblicare, cercare e scrivere è completamente gratuito. Voisina non prende commissioni e non mostra pubblicità."],
           ["Serve un account?", "Potete consultare gli annunci e salvarli nei preferiti senza account. Per pubblicare o scrivere a un membro serve un account gratuito."],
+          ["Posso installare Voisina sul telefono?", "Sì, senza passare da uno store. Su iPhone: in Safari tocca «Condividi» e poi «Aggiungi alla schermata Home». Su Android: menu ⋮ di Chrome e «Installa app». Voisina si apre a schermo intero, come un'app."],
+          ["Come cambio l'aspetto della mappa?", "Tocca il pulsante dei livelli in alto a destra sulla mappa: carta svizzera a colori, mappa stradale, vista satellitare o versione grigia. La scelta viene ricordata."],
         ] },
         { h: "Pubblicare un annuncio", qa: [
           ["Come scrivere un buon annuncio?", "Scegliete un titolo breve e preciso, descrivete chiaramente il bisogno o l'aiuto offerto, indicate una data se possibile e specificate se è gratuito, retribuito o da concordare."],
@@ -7550,6 +8112,8 @@ const PAGES = {
           ["What is Voisina?", "Voisina is a neighbourly help platform covering all of Switzerland. You can offer a hand, ask for help or give items away — for free or for a small fee."],
           ["Is it free?", "Yes. Posting, searching and messaging are completely free. Voisina takes no commission and shows no ads."],
           ["Do I need an account?", "You can browse listings and save favourites without an account. To post a listing or message a member, you need a free account."],
+          ["Can I install Voisina on my phone?", "Yes, without an app store. On iPhone: in Safari tap “Share”, then “Add to Home Screen”. On Android: Chrome's ⋮ menu, then “Install app”. Voisina then opens full screen, like an app."],
+          ["How do I change the map's look?", "Tap the layers button at the top right of the map: colour Swiss map, street map, satellite view or grey version. Your choice is remembered."],
         ] },
         { h: "Posting a listing", qa: [
           ["How do I write a good listing?", "Pick a short, precise title, clearly describe what you need or offer, add a date if possible and say whether it's free, paid or negotiable."],
@@ -7839,13 +8403,13 @@ const PAGES = {
           "Compte : prénom, nom (seule l'initiale est publique), e-mail, localité, canton, empreinte du mot de passe.",
           "Profil facultatif : photo, présentation, langues, spécialités.",
           "Contenus : annonces, photos d'annonces, messages, favoris, signalements.",
-          "Préférences : langue, thème, point de référence pour le calcul des distances.",
+          "Préférences : langue, thème, taille du texte, style de carte, point de référence pour le calcul des distances, annonces consultées récemment (12 au maximum).",
         ] },
         { h: "Où sont stockées vos données ?", p: ["Dans ce prototype, toutes les données sont enregistrées dans le stockage local (localStorage) de votre navigateur, sur votre appareil. Elles ne sont pas partagées avec d'autres appareils. Vider les données du site dans votre navigateur les supprime définitivement."] },
         { h: "Services tiers", p: ["Pour fonctionner, le site fait appel aux services suivants, qui reçoivent techniquement votre adresse IP :"], list: [
           "GitHub Pages (GitHub Inc., États-Unis) : hébergement du site.",
           "unpkg.com : distribution de la bibliothèque de cartes Leaflet (fichier vérifié par empreinte SRI).",
-          "swisstopo (Office fédéral de topographie, Suisse) : fonds de carte ; OpenStreetMap en secours.",
+          "swisstopo (Office fédéral de topographie, Suisse) : fonds de carte « Suisse », « Satellite » et « Gris » ; OpenStreetMap (Royaume-Uni) : style « Plan » et secours.",
           "geo.admin.ch (Confédération suisse) : recherche de localités — seul le texte saisi dans le champ « localité » est transmis.",
           "DeepL (Allemagne) : uniquement si vous cliquez sur « Traduire », le texte de l'annonce est ouvert sur deepl.com.",
         ] },
@@ -7870,13 +8434,13 @@ const PAGES = {
           "Konto: Vorname, Nachname (nur die Initiale ist öffentlich), E-Mail, Ort, Kanton, Passwort-Fingerabdruck.",
           "Freiwilliges Profil: Foto, Beschreibung, Sprachen, Fähigkeiten.",
           "Inhalte: Anzeigen, Anzeigenfotos, Nachrichten, Favoriten, Meldungen.",
-          "Einstellungen: Sprache, Design, Referenzpunkt für Distanzen.",
+          "Einstellungen: Sprache, Design, Textgrösse, Kartenstil, Referenzpunkt für Distanzen, kürzlich angesehene Anzeigen (höchstens 12).",
         ] },
         { h: "Wo werden Ihre Daten gespeichert?", p: ["In diesem Prototyp werden alle Daten im lokalen Speicher (localStorage) Ihres Browsers auf Ihrem Gerät abgelegt. Sie werden nicht mit anderen Geräten geteilt. Wenn Sie die Websitedaten im Browser löschen, sind sie endgültig entfernt."] },
         { h: "Drittdienste", p: ["Für den Betrieb nutzt die Website folgende Dienste, die technisch Ihre IP-Adresse erhalten:"], list: [
           "GitHub Pages (GitHub Inc., USA): Hosting der Website.",
           "unpkg.com: Auslieferung der Kartenbibliothek Leaflet (Datei per SRI-Prüfsumme verifiziert).",
-          "swisstopo (Bundesamt für Landestopografie, Schweiz): Kartenhintergrund; OpenStreetMap als Ersatz.",
+          "swisstopo (Bundesamt für Landestopografie, Schweiz): Kartenstile «Schweiz», «Satellit» und «Grau»; OpenStreetMap (Vereinigtes Königreich): Stil «Strassen» und Ersatz.",
           "geo.admin.ch (Schweizerische Eidgenossenschaft): Ortssuche — nur der im Feld «Ort» eingegebene Text wird übermittelt.",
           "DeepL (Deutschland): nur wenn Sie auf «Übersetzen» klicken, wird der Anzeigentext auf deepl.com geöffnet.",
         ] },
@@ -7901,13 +8465,13 @@ const PAGES = {
           "Account: nome, cognome (è pubblica solo l'iniziale), e-mail, località, cantone, impronta della password.",
           "Profilo facoltativo: foto, presentazione, lingue, competenze.",
           "Contenuti: annunci, foto degli annunci, messaggi, preferiti, segnalazioni.",
-          "Preferenze: lingua, tema, punto di riferimento per il calcolo delle distanze.",
+          "Preferenze: lingua, tema, dimensione del testo, stile della mappa, punto di riferimento per il calcolo delle distanze, annunci visti di recente (12 al massimo).",
         ] },
         { h: "Dove sono salvati i dati?", p: ["In questo prototipo tutti i dati sono registrati nella memoria locale (localStorage) del browser, sul vostro dispositivo. Non sono condivisi con altri dispositivi. Cancellando i dati del sito nel browser vengono eliminati definitivamente."] },
         { h: "Servizi di terzi", p: ["Per funzionare, il sito utilizza i seguenti servizi, che ricevono tecnicamente il vostro indirizzo IP:"], list: [
           "GitHub Pages (GitHub Inc., Stati Uniti): hosting del sito.",
           "unpkg.com: distribuzione della libreria cartografica Leaflet (file verificato con impronta SRI).",
-          "swisstopo (Ufficio federale di topografia, Svizzera): sfondi cartografici; OpenStreetMap come riserva.",
+          "swisstopo (Ufficio federale di topografia, Svizzera): stili «Svizzera», «Satellite» e «Grigio»; OpenStreetMap (Regno Unito): stile «Stradale» e riserva.",
           "geo.admin.ch (Confederazione Svizzera): ricerca delle località — viene trasmesso solo il testo digitato nel campo «località».",
           "DeepL (Germania): solo se cliccate su «Traduci», il testo dell'annuncio viene aperto su deepl.com.",
         ] },
@@ -7932,13 +8496,13 @@ const PAGES = {
           "Account: first name, last name (only the initial is public), email, town, canton, password fingerprint.",
           "Optional profile: photo, bio, languages, skills.",
           "Content: listings, listing photos, messages, favourites, reports.",
-          "Preferences: language, theme, reference point for distances.",
+          "Preferences: language, theme, text size, map style, reference point for distances, recently viewed listings (12 at most).",
         ] },
         { h: "Where is your data stored?", p: ["In this prototype, all data is saved in your browser's local storage (localStorage), on your device. It is not shared with other devices. Clearing the site data in your browser deletes it permanently."] },
         { h: "Third-party services", p: ["To work, the site uses the following services, which technically receive your IP address:"], list: [
           "GitHub Pages (GitHub Inc., USA): website hosting.",
           "unpkg.com: delivery of the Leaflet map library (file verified with an SRI hash).",
-          "swisstopo (Federal Office of Topography, Switzerland): base maps; OpenStreetMap as a fallback.",
+          "swisstopo (Federal Office of Topography, Switzerland): “Swiss map”, “Satellite” and “Grey” styles; OpenStreetMap (United Kingdom): “Streets” style and fallback.",
           "geo.admin.ch (Swiss Confederation): place search — only the text typed in the “town” field is sent.",
           "DeepL (Germany): only if you click “Translate”, the listing text is opened on deepl.com.",
         ] },
@@ -7956,7 +8520,7 @@ const PAGES = {
       sections: [
         { h: "Éditeur du site", p: ["Voisina — projet TPA / PAE réalisé seul par Lenny H., CPNV (Centre professionnel du Nord vaudois), Suisse.", "Ce site est un prototype pédagogique non commercial. Les annonces et les membres d'exemple sont fictifs ; toute ressemblance avec des personnes réelles serait fortuite."] },
         { h: "Hébergement", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."] },
-        { h: "Cartes et données géographiques", p: ["Fonds de carte © swisstopo (Office fédéral de topographie). Données de repli © contributeurs OpenStreetMap. Recherche de localités : service geo.admin.ch de la Confédération suisse."] },
+        { h: "Cartes et données géographiques", p: ["Fonds de carte © swisstopo (Office fédéral de topographie). Photos aériennes SWISSIMAGE © swisstopo. Style « Plan » © contributeurs OpenStreetMap. Recherche de localités : service geo.admin.ch de la Confédération suisse."] },
         { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Police de titres : Fraunces (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC)."] },
         { h: "Propriété intellectuelle", p: ["Les textes, le logo et la conception du site sont la propriété de leur auteur. Les contenus publiés par les membres restent leur propriété."] },
       ],
@@ -7966,7 +8530,7 @@ const PAGES = {
       sections: [
         { h: "Herausgeber", p: ["Voisina — TPA-/PAE-Projekt, allein realisiert von Lenny H., CPNV (Centre professionnel du Nord vaudois), Schweiz.", "Diese Website ist ein nicht kommerzieller Lernprototyp. Beispielanzeigen und -mitglieder sind fiktiv; Ähnlichkeiten mit realen Personen wären zufällig."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
-        { h: "Karten und Geodaten", p: ["Kartenhintergrund © swisstopo (Bundesamt für Landestopografie). Ersatzdaten © OpenStreetMap-Mitwirkende. Ortssuche: Dienst geo.admin.ch der Schweizerischen Eidgenossenschaft."] },
+        { h: "Karten und Geodaten", p: ["Kartenhintergrund © swisstopo (Bundesamt für Landestopografie). Luftbilder SWISSIMAGE © swisstopo. Stil «Strassen» © OpenStreetMap-Mitwirkende. Ortssuche: Dienst geo.admin.ch der Schweizerischen Eidgenossenschaft."] },
         { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Titelschrift: Fraunces (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz)."] },
         { h: "Geistiges Eigentum", p: ["Texte, Logo und Gestaltung der Website gehören ihrem Autor. Von Mitgliedern veröffentlichte Inhalte bleiben deren Eigentum."] },
       ],
@@ -7976,7 +8540,7 @@ const PAGES = {
       sections: [
         { h: "Editore del sito", p: ["Voisina — progetto TPA / PAE realizzato da solo da Lenny H., CPNV (Centre professionnel du Nord vaudois), Svizzera.", "Questo sito è un prototipo didattico non commerciale. Gli annunci e i membri d'esempio sono fittizi; ogni somiglianza con persone reali è casuale."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Stati Uniti."] },
-        { h: "Carte e dati geografici", p: ["Sfondi cartografici © swisstopo (Ufficio federale di topografia). Dati di riserva © contributori OpenStreetMap. Ricerca delle località: servizio geo.admin.ch della Confederazione Svizzera."] },
+        { h: "Carte e dati geografici", p: ["Sfondi cartografici © swisstopo (Ufficio federale di topografia). Foto aeree SWISSIMAGE © swisstopo. Stile «Stradale» © contributori OpenStreetMap. Ricerca delle località: servizio geo.admin.ch della Confederazione Svizzera."] },
         { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Carattere dei titoli: Fraunces (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC)."] },
         { h: "Proprietà intellettuale", p: ["Testi, logo e concezione del sito appartengono al loro autore. I contenuti pubblicati dai membri restano di loro proprietà."] },
       ],
@@ -7986,7 +8550,7 @@ const PAGES = {
       sections: [
         { h: "Publisher", p: ["Voisina — TPA / PAE project built single-handedly by Lenny H., CPNV (Centre professionnel du Nord vaudois), Switzerland.", "This site is a non-commercial educational prototype. Sample listings and members are fictional; any resemblance to real people is coincidental."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
-        { h: "Maps and geodata", p: ["Base maps © swisstopo (Federal Office of Topography). Fallback data © OpenStreetMap contributors. Place search: geo.admin.ch service of the Swiss Confederation."] },
+        { h: "Maps and geodata", p: ["Base maps © swisstopo (Federal Office of Topography). SWISSIMAGE aerial photos © swisstopo. “Streets” style © OpenStreetMap contributors. Place search: geo.admin.ch service of the Swiss Confederation."] },
         { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Heading font: Fraunces (SIL Open Font License).", "Icons inspired by Lucide (ISC licence)."] },
         { h: "Intellectual property", p: ["The texts, logo and design of the site belong to their author. Content posted by members remains their property."] },
       ],
@@ -8154,9 +8718,10 @@ const { icon, logo } = __req("icons.js");
 const { t, getLang, setLang, fmtRelative } = __req("i18n.js");
 const { LANGS } = __req("data.js");
 const store = __req("store.js");
-const { actions, registerActions, toast, initDialog, avatar } = __req("ui.js");
+const { actions, registerActions, toast, initDialog, avatar, openDialog } = __req("ui.js");
 
 const home = __req("views/home.js").default;
+const { homeActions } = __req("views/home.js");
 const explore = __req("views/explore.js").default;
 const { exploreActions } = __req("views/explore.js");
 const listing = __req("views/listing.js").default;
@@ -8235,6 +8800,8 @@ function render({ keepScroll = false } = {}) {
     mount(root, html`<section class="section"><div class="container narrow center"><h1 class="h2">${t("err.pageTitle")}</h1><p class="muted">${t("err.pageText")}</p><a class="btn btn-primary" href="#/">${t("notFound.home")}</a></div></section>`);
   }
   document.title = `${view.title ? view.title(currentCtx) + " · " : ""}Voisina`;
+  // Nom de la page sur <body> : permet d'adapter la version mobile (ex. barre d'action sur une annonce)
+  document.body.dataset.route = view === notFound ? "404" : path.split("/")[0] || "home";
   if (keepScroll || sameView) window.scrollTo(0, y);
   else window.scrollTo(0, 0);
   if (!keepScroll && !sameView) $("#main").focus({ preventScroll: true });
@@ -8356,6 +8923,7 @@ function renderFooter() {
   </div>
   <div class="container footer-bottom">
     <span>© 2026 Voisina · ${t("footer.project")}</span>
+    ${!isStandalone() ? html`<button type="button" class="link-btn footer-text" data-action="install-app">${icon("smartphone")}${t("install.footer")}</button>` : ""}
     <button type="button" class="link-btn footer-text" data-action="toggle-text">${icon("sparkles")}${document.documentElement.classList.contains("text-lg") ? t("footer.textNormal") : t("footer.textLarge")}</button>
     <span class="footer-langs">${LANGS.map((l) => html`<button type="button" class="link-btn${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${l.toUpperCase()}</button>`)}</span>
     <span>${t("footer.madeIn")}</span>
@@ -8366,14 +8934,80 @@ function renderBanner() {
   const banner = $("#demo-banner");
   if (store.getPrefs().bannerDismissed) { banner.hidden = true; return; }
   banner.hidden = false;
-  mount(banner, html`<div class="container demo-banner-inner">${icon("info")}<p>${t("demo.banner")} <a href="#/page/a-propos">${t("demo.learnMore")}</a></p>
+  mount(banner, html`<div class="container demo-banner-inner">${icon("info")}<p><span class="banner-long">${t("demo.banner")}</span><span class="banner-short">${t("demo.bannerShort")}</span> <a href="#/page/a-propos">${t("demo.learnMore")}</a></p>
     <button type="button" class="icon-btn icon-btn-sm" data-action="dismiss-banner" aria-label="${t("common.close")}">${icon("x")}</button></div>`);
 }
 
 function renderChrome() {
   renderHeader();
   renderTabbar();
+  renderInstallPromo();
 }
+
+/* ------------------- Installer l'application (PWA) ------------------- */
+// Android / Chrome / Edge : le navigateur nous donne un événement pour afficher sa fenêtre d'installation.
+// iPhone / iPad : pas d'événement, on explique comment faire avec « Partager › Sur l'écran d'accueil ».
+let installEvent = null;
+let navCount = 0;
+const isStandalone = () => window.matchMedia?.("(display-mode: standalone)").matches || navigator.standalone === true;
+const isIos = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const isAndroid = () => /android/i.test(navigator.userAgent);
+
+function renderInstallPromo() {
+  let el = $("#install-promo");
+  const engaged = navCount >= 2 || storage.get("visits", 0) >= 2;
+  const onPage = ["home", "planning"].includes(document.body.dataset.route);
+  const show = !isStandalone() && !store.getPrefs().installDismissed && engaged && onPage
+    && (installEvent || isIos()) && window.matchMedia("(max-width: 980px)").matches;
+  if (!show) { if (el) el.hidden = true; return; }
+  if (!el) {
+    el = document.createElement("aside");
+    el.id = "install-promo";
+    el.className = "install-promo";
+    document.body.appendChild(el);
+  }
+  el.hidden = false;
+  el.setAttribute("aria-label", t("install.title"));
+  mount(el, html`<span class="install-logo">${logo()}</span>
+    <span class="install-text"><strong>${t("install.title")}</strong><span>${t("install.text")}</span></span>
+    <button type="button" class="btn btn-primary btn-sm" data-action="install-app">${t("install.cta")}</button>
+    <button type="button" class="icon-btn icon-btn-sm install-close" data-action="install-dismiss" aria-label="${t("common.close")}">${icon("x")}</button>`);
+}
+
+function installDialog() {
+  const step = (ic, text, cls = "") => html`<li><span class="install-step-icon">${icon(ic, cls)}</span><span>${text}</span></li>`;
+  const blocks = [
+    { current: isIos(), html: html`<section class="install-os"><h3 class="h4">${icon("smartphone")}${t("install.iosTitle")}</h3><ol class="install-steps">
+      ${step("shareIos", t("install.ios1"))}${step("plusSquare", t("install.ios2"))}${step("check", t("install.ios3"))}</ol></section>` },
+    { current: isAndroid(), html: html`<section class="install-os"><h3 class="h4">${icon("smartphone")}${t("install.androidTitle")}</h3><ol class="install-steps">
+      ${step("more", t("install.android1"), "rot90")}${step("download", t("install.android2"))}${step("check", t("install.android3"))}</ol></section>` },
+    { current: !isIos() && !isAndroid(), html: html`<section class="install-os"><h3 class="h4">${icon("laptop")}${t("install.desktopTitle")}</h3><p class="muted small">${t("install.desktopText")}</p></section>` },
+  ].sort((a, b) => Number(b.current) - Number(a.current));
+  openDialog({
+    title: t("install.dialogTitle"),
+    size: "dialog-sm",
+    body: html`${isStandalone() ? html`<p class="notice notice-success">${icon("checkCircle")}<span>${t("install.already")}</span></p>` : html`<p class="dialog-text">${t("install.dialogIntro")}</p>`}
+      <div class="install-list">${blocks.map((b) => b.html)}</div>`,
+    footer: html`<button type="submit" class="btn btn-primary">${t("install.ok")}</button>`,
+    onSubmit: () => true,
+  });
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault(); // on affiche notre propre bouton, plus discret que la bannière du navigateur
+  installEvent = e;
+  renderInstallPromo();
+  renderFooter();
+});
+window.addEventListener("appinstalled", () => {
+  installEvent = null;
+  store.setPrefs({ installDismissed: true });
+  toast(t("install.done"), "success");
+});
+
+/* Connexion perdue / retrouvée (l'application continue de fonctionner hors ligne) */
+window.addEventListener("offline", () => { document.documentElement.classList.add("is-offline"); toast(t("net.offline"), "info"); });
+window.addEventListener("online", () => { document.documentElement.classList.remove("is-offline"); toast(t("net.online"), "success"); });
 
 function renderAll() {
   renderBanner();
@@ -8399,7 +9033,7 @@ function applyTheme(theme) {
 }
 
 registerActions({
-  ...exploreActions, ...listingActions, ...publishActions, ...messagesActions,
+  ...homeActions, ...exploreActions, ...listingActions, ...publishActions, ...messagesActions,
   ...planningActions, ...authActions, ...accountActions, ...adminActions,
 
   "toggle-menu": (el) => {
@@ -8437,6 +9071,24 @@ registerActions({
     renderFooter();
   },
   skip: () => { $("#main").focus(); $("#main").scrollIntoView(); },
+  "go-back": () => {
+    // Dans l'application installée il n'y a pas de bouton « retour » du navigateur
+    if (navCount > 0) history.back();
+    else location.hash = "#/explorer";
+  },
+  "install-app": async () => {
+    if (installEvent) {
+      const ev = installEvent;
+      installEvent = null;
+      ev.prompt();
+      const choice = await ev.userChoice.catch(() => null);
+      if (choice?.outcome === "accepted") store.setPrefs({ installDismissed: true });
+      renderInstallPromo();
+      return;
+    }
+    installDialog();
+  },
+  "install-dismiss": () => { store.setPrefs({ installDismissed: true }); },
   "dismiss-banner": () => { store.setPrefs({ bannerDismissed: true }); renderBanner(); },
   locate: (el) => {
     if (!navigator.geolocation) { toast(t("loc.unsupported"), "error"); return; }
@@ -8483,7 +9135,7 @@ store.onChange((kind) => {
   if (currentView.refreshOn?.includes(kind)) render({ keepScroll: true });
 });
 
-window.addEventListener("hashchange", () => { closeMenus(); render(); });
+window.addEventListener("hashchange", () => { navCount++; closeMenus(); render(); });
 window.addEventListener("voisina:lang", renderAll);
 window.addEventListener("voisina:theme", () => { applyTheme(store.getPrefs().theme); renderHeader(); });
 window.addEventListener("voisina:banner", renderBanner);
@@ -8493,6 +9145,8 @@ window.addEventListener("storage", (e) => { if (e.key?.startsWith("voisina:")) r
 /* --------------------------- Démarrage ----------------------------- */
 function start() {
   storage.purgeLegacy(); // efface les anciennes données (mots de passe en clair de la v1)
+  storage.set("visits", (Number(storage.get("visits", 0)) || 0) + 1);
+  if (!navigator.onLine) document.documentElement.classList.add("is-offline");
   document.documentElement.lang = getLang();
   initDialog();
   renderBanner();

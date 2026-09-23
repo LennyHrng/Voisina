@@ -25,6 +25,7 @@ honnêtes d'un site sans serveur. Utile pour la présentation orale.
 - **Énumération de comptes** : le message d'erreur est identique et le temps de calcul aussi, que l'e-mail existe ou non.
 - **Redirections** : le paramètre `next` n'accepte que des adresses internes (`#/...`).
 - **Clickjacking** : le site refuse de s'afficher dans une iframe d'un autre site.
+- **Cartes sans traceur** : fonds de carte swisstopo (Confédération) et OpenStreetMap, sans clé ni compte ; pas de Google Maps, qui transmettrait les visites à Google. Le style choisi et le point « ma position » restent sur l'appareil.
 - **Vie privée** : nom public = prénom + initiale, adresse jamais demandée, position floutée (± 1 km), zoom de carte limité, aucune donnée envoyée à un tiers sans action de l'utilisateur, aucun cookie.
 - **Anti-arnaque** : détection des numéros de téléphone, e-mails, IBAN et mots-clés d'arnaque (codes SMS, cartes cadeaux…) avec avertissement.
 - **Mots de passe** : 10 caractères minimum, 3 types de caractères (ou phrase de passe de 16+ caractères), refus des mots de passe courants ou contenant le nom.
