@@ -341,6 +341,9 @@ const P = {
   shareIos: '<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/>',
   plusSquare: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/>',
   history: '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/>',
+  qrCode: '<rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/>',
+  play: '<path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/>',
+  chevronUp: '<path d="m18 15-6-6-6 6"/>',
   expand: '<path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>',
 
 };
@@ -1076,6 +1079,43 @@ const fr = {
   "home.mapCta": "Ouvrir la carte",
   "filter.resetShort": "Tout effacer",
   "demo.bannerShort": "Démo TPA / PAE (CPNV) : annonces fictives, données gardées dans votre navigateur.",
+  "trial.firstname": "Invité",
+  "trial.lastname": "Essai",
+  "trial.cta": "Essayer en 1 clic",
+  "trial.title": "Juste envie d'essayer ?",
+  "trial.text": "Un compte d'essai est créé sur cet appareil, sans e-mail ni mot de passe. Tout est effacé à la fin de l'essai.",
+  "trial.or": "ou avec un vrai compte",
+  "trial.started": "Compte d'essai activé : essayez tout librement !",
+  "trial.badge": "Compte d'essai",
+  "trial.notice": "Vous utilisez un compte d'essai : tout reste sur cet appareil et sera effacé quand vous terminerez l'essai.",
+  "trial.end": "Terminer l'essai",
+  "trial.endTitle": "Terminer l'essai ?",
+  "trial.endText": "Les annonces, messages et favoris créés pendant l'essai seront effacés de cet appareil. Pratique pour laisser essayer la personne suivante !",
+  "trial.ended": "Essai terminé : tout a été effacé. Merci d'avoir testé Voisina !",
+  "trial.securityNote": "Un compte d'essai n'a pas de mot de passe à retenir. Pour garder vos annonces, créez plutôt un vrai compte.",
+  "notif.trial": "Bienvenue ! Vous testez Voisina avec un compte d'essai : contactez un membre ou publiez une annonce.",
+  "welcome.title": "Bienvenue sur Voisina !",
+  "welcome.text": "Ici, les voisins s'entraident : courses, jardin, informatique… C'est une version de démonstration : essayez tout librement.",
+  "welcome.explore": "Voir les annonces",
+  "qr.title": "Faire connaître Voisina",
+  "qr.text": "Faites scanner ce code avec l'appareil photo d'un téléphone : Voisina s'ouvre tout de suite.",
+  "qr.footer": "Montrer le QR code",
+  "home.qrCta": "Montrer le QR code",
+  "discover.title": "Découvrir",
+  "discover.kicker": "Nouveau",
+  "discover.promoTitle": "Les annonces une par une, en plein écran",
+  "discover.promoText": "Glissez vers le haut pour passer à la suivante, comme sur les réseaux sociaux.",
+  "discover.start": "C'est parti",
+  "discover.hint": "Glissez vers le haut",
+  "discover.like": "J'aime",
+  "discover.open": "Ouvrir l'annonce",
+  "discover.feed": "Annonces en plein écran",
+  "discover.endTitle": "Vous avez tout vu !",
+  "discover.endText": "Rien ne vous correspond ? Publiez votre propre annonce : c'est gratuit et ça prend deux minutes.",
+  "discover.again": "Revoir depuis le début",
+  "home.leadShort": "Proposez ou demandez un coup de main près de chez vous. Gratuit, sans pub.",
+  "home.storiesLabel": "Accès rapides",
+  "home.storyNear": "Près de moi",
 };
 
 const de = {
@@ -1730,6 +1770,43 @@ const de = {
   "home.mapCta": "Karte öffnen",
   "filter.resetShort": "Alle löschen",
   "demo.bannerShort": "Demo TPA / PAE (CPNV): fiktive Anzeigen, Daten bleiben in Ihrem Browser.",
+  "trial.firstname": "Gast",
+  "trial.lastname": "Test",
+  "trial.cta": "Mit 1 Klick testen",
+  "trial.title": "Einfach mal ausprobieren?",
+  "trial.text": "Ein Testkonto wird auf diesem Gerät erstellt, ohne E-Mail und Passwort. Am Ende des Tests wird alles gelöscht.",
+  "trial.or": "oder mit einem richtigen Konto",
+  "trial.started": "Testkonto aktiviert: Probieren Sie alles aus!",
+  "trial.badge": "Testkonto",
+  "trial.notice": "Sie verwenden ein Testkonto: Alles bleibt auf diesem Gerät und wird am Ende des Tests gelöscht.",
+  "trial.end": "Test beenden",
+  "trial.endTitle": "Test beenden?",
+  "trial.endText": "Die während des Tests erstellten Anzeigen, Nachrichten und Favoriten werden von diesem Gerät gelöscht. Praktisch für die nächste Person!",
+  "trial.ended": "Test beendet: Alles wurde gelöscht. Danke fürs Testen!",
+  "trial.securityNote": "Ein Testkonto hat kein Passwort. Um Ihre Anzeigen zu behalten, erstellen Sie besser ein richtiges Konto.",
+  "notif.trial": "Willkommen! Sie testen Voisina mit einem Testkonto: Kontaktieren Sie ein Mitglied oder erstellen Sie eine Anzeige.",
+  "welcome.title": "Willkommen bei Voisina!",
+  "welcome.text": "Hier helfen sich Nachbarn: Einkäufe, Garten, Computer… Dies ist eine Demoversion: Probieren Sie alles aus.",
+  "welcome.explore": "Anzeigen ansehen",
+  "qr.title": "Voisina weiterempfehlen",
+  "qr.text": "Lassen Sie diesen Code mit der Handykamera scannen: Voisina öffnet sich sofort.",
+  "qr.footer": "QR-Code zeigen",
+  "home.qrCta": "QR-Code zeigen",
+  "discover.title": "Entdecken",
+  "discover.kicker": "Neu",
+  "discover.promoTitle": "Die Anzeigen einzeln, im Vollbild",
+  "discover.promoText": "Nach oben wischen für die nächste – wie in den sozialen Netzwerken.",
+  "discover.start": "Los geht's",
+  "discover.hint": "Nach oben wischen",
+  "discover.like": "Merken",
+  "discover.open": "Anzeige öffnen",
+  "discover.feed": "Anzeigen im Vollbild",
+  "discover.endTitle": "Sie haben alles gesehen!",
+  "discover.endText": "Nichts Passendes? Erstellen Sie Ihre eigene Anzeige: gratis und in zwei Minuten.",
+  "discover.again": "Von vorne ansehen",
+  "home.leadShort": "Hilfe anbieten oder suchen, ganz in Ihrer Nähe. Gratis, ohne Werbung.",
+  "home.storiesLabel": "Schnellzugriff",
+  "home.storyNear": "In der Nähe",
 };
 
 const it = {
@@ -2384,6 +2461,43 @@ const it = {
   "home.mapCta": "Apri la mappa",
   "filter.resetShort": "Cancella tutto",
   "demo.bannerShort": "Demo TPA / PAE (CPNV): annunci fittizi, dati salvati nel tuo browser.",
+  "trial.firstname": "Ospite",
+  "trial.lastname": "Prova",
+  "trial.cta": "Prova con 1 clic",
+  "trial.title": "Vuoi solo provare?",
+  "trial.text": "Viene creato un account di prova su questo dispositivo, senza e-mail né password. Alla fine della prova tutto viene cancellato.",
+  "trial.or": "oppure con un vero account",
+  "trial.started": "Account di prova attivato: prova tutto liberamente!",
+  "trial.badge": "Account di prova",
+  "trial.notice": "Stai usando un account di prova: tutto resta su questo dispositivo e verrà cancellato alla fine della prova.",
+  "trial.end": "Termina la prova",
+  "trial.endTitle": "Terminare la prova?",
+  "trial.endText": "Annunci, messaggi e preferiti creati durante la prova verranno cancellati da questo dispositivo. Comodo per far provare la persona successiva!",
+  "trial.ended": "Prova terminata: tutto è stato cancellato. Grazie per aver provato Voisina!",
+  "trial.securityNote": "Un account di prova non ha una password da ricordare. Per conservare i tuoi annunci, crea piuttosto un vero account.",
+  "notif.trial": "Benvenuto! Stai provando Voisina con un account di prova: contatta un membro o pubblica un annuncio.",
+  "welcome.title": "Benvenuto su Voisina!",
+  "welcome.text": "Qui i vicini si aiutano: spesa, giardino, informatica… È una versione dimostrativa: prova tutto liberamente.",
+  "welcome.explore": "Vedi gli annunci",
+  "qr.title": "Far conoscere Voisina",
+  "qr.text": "Fai scansionare questo codice con la fotocamera di un telefono: Voisina si apre subito.",
+  "qr.footer": "Mostra il codice QR",
+  "home.qrCta": "Mostra il codice QR",
+  "discover.title": "Scopri",
+  "discover.kicker": "Novità",
+  "discover.promoTitle": "Gli annunci uno alla volta, a schermo intero",
+  "discover.promoText": "Scorri verso l'alto per passare al successivo, come sui social.",
+  "discover.start": "Si parte",
+  "discover.hint": "Scorri verso l'alto",
+  "discover.like": "Mi piace",
+  "discover.open": "Apri l'annuncio",
+  "discover.feed": "Annunci a schermo intero",
+  "discover.endTitle": "Hai visto tutto!",
+  "discover.endText": "Niente che faccia per te? Pubblica il tuo annuncio: è gratuito e richiede due minuti.",
+  "discover.again": "Ricomincia dall'inizio",
+  "home.leadShort": "Offri o chiedi una mano vicino a casa. Gratis, senza pubblicità.",
+  "home.storiesLabel": "Accesso rapido",
+  "home.storyNear": "Vicino a me",
 };
 
 const en = {
@@ -3038,6 +3152,43 @@ const en = {
   "home.mapCta": "Open the map",
   "filter.resetShort": "Clear all",
   "demo.bannerShort": "TPA / PAE demo (CPNV): sample listings, data kept in your browser.",
+  "trial.firstname": "Guest",
+  "trial.lastname": "Trial",
+  "trial.cta": "Try it in 1 click",
+  "trial.title": "Just want to try it?",
+  "trial.text": "A trial account is created on this device, with no e-mail or password. Everything is erased when the trial ends.",
+  "trial.or": "or with a real account",
+  "trial.started": "Trial account ready: try everything!",
+  "trial.badge": "Trial account",
+  "trial.notice": "You are using a trial account: everything stays on this device and is erased when you end the trial.",
+  "trial.end": "End the trial",
+  "trial.endTitle": "End the trial?",
+  "trial.endText": "Listings, messages and favourites created during the trial will be erased from this device. Handy before letting the next person try!",
+  "trial.ended": "Trial ended: everything was erased. Thanks for trying Voisina!",
+  "trial.securityNote": "A trial account has no password to remember. To keep your listings, create a real account instead.",
+  "notif.trial": "Welcome! You are trying Voisina with a trial account: contact a member or post a listing.",
+  "welcome.title": "Welcome to Voisina!",
+  "welcome.text": "Here, neighbours help each other: shopping, gardening, tech… This is a demo version: feel free to try everything.",
+  "welcome.explore": "See listings",
+  "qr.title": "Spread the word",
+  "qr.text": "Have someone scan this code with their phone camera: Voisina opens right away.",
+  "qr.footer": "Show the QR code",
+  "home.qrCta": "Show the QR code",
+  "discover.title": "Discover",
+  "discover.kicker": "New",
+  "discover.promoTitle": "Listings one at a time, full screen",
+  "discover.promoText": "Swipe up for the next one, just like on social media.",
+  "discover.start": "Let's go",
+  "discover.hint": "Swipe up",
+  "discover.like": "Save",
+  "discover.open": "Open the listing",
+  "discover.feed": "Full-screen listings",
+  "discover.endTitle": "You've seen them all!",
+  "discover.endText": "Nothing for you? Post your own listing: it's free and takes two minutes.",
+  "discover.again": "Start again",
+  "home.leadShort": "Offer or ask for a hand near you. Free, no ads.",
+  "home.storiesLabel": "Quick access",
+  "home.storyNear": "Near me",
 };
 
 const DICT = { fr, de, it, en };
@@ -3562,8 +3713,19 @@ __def("seed.js", function () {
 const { LOCALITIES, TEMPLATES, NAMES, SPECIALTY_POOL, LANGS, CATEGORY_IDS } = __req("data.js");
 const { seededRandom, dateKey } = __req("util.js");
 
-const DEMO_COUNT = 420;
-const BIG_CITIES = new Set(["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Winterthur", "Luzern", "St. Gallen", "Lugano", "Biel/Bienne", "Fribourg", "Neuchâtel", "Sion"]);
+/* Environ 100 annonces variées plutôt que des centaines de copies :
+   plus crédible, et chaque exemple reste intéressant à lire.
+   - quelques annonces garanties dans les grandes villes et autour d'Yverdon (CPNV),
+   - au moins une annonce dans chacun des 26 cantons,
+   - chaque modèle d'annonce est utilisé 3 ou 4 fois au plus (jamais deux fois dans la même ville). */
+const DEMO_VERSION = 3;
+const DEMO_COUNT = 100;
+const PLAN = [
+  ["Yverdon-les-Bains", 6], ["Orbe", 1], ["Sainte-Croix", 1], ["Payerne", 1], ["Estavayer", 1],
+  ["Lausanne", 6], ["Genève", 6], ["Zürich", 7], ["Bern", 5], ["Basel", 4], ["Luzern", 3], ["Lugano", 4],
+  ["St. Gallen", 3], ["Fribourg", 3], ["Neuchâtel", 3], ["Sion", 3], ["Winterthur", 3], ["Biel/Bienne", 2],
+  ["Montreux", 1], ["Nyon", 1], ["Morges", 1], ["Vevey", 1],
+];
 
 const BIOS = {
   fr: ["J'habite le quartier depuis {n} ans et j'aime rendre service.", "Toujours partant·e pour un coup de main entre voisins !", "Parent de deux enfants, je crois beaucoup à l'entraide locale.", "Retraité·e actif·ve, j'ai du temps à partager."],
@@ -3578,13 +3740,6 @@ function getDemoData() {
   if (cache) return cache;
   const r = seededRandom(20260622);
   const pick = (arr) => arr[Math.floor(r() * arr.length)];
-
-  // Localités pondérées : les grandes villes ont plus d'annonces.
-  const weighted = [];
-  LOCALITIES.forEach((loc) => {
-    const w = BIG_CITIES.has(loc.name) ? 5 : 1;
-    for (let i = 0; i < w; i++) weighted.push(loc);
-  });
 
   const authors = [];
   const byLocality = new Map();
@@ -3621,12 +3776,37 @@ function getDemoData() {
     return author;
   }
 
+  // 1) Liste des localités : plan fixe, puis un canton manquant = une annonce, puis quelques localités au hasard.
+  const places = [];
+  PLAN.forEach(([name, n]) => {
+    const loc = LOCALITIES.find((l) => l.name === name);
+    if (loc) for (let k = 0; k < n; k++) places.push(loc);
+  });
+  const covered = new Set(places.map((l) => l.canton));
+  LOCALITIES.forEach((loc) => { if (!covered.has(loc.canton)) { covered.add(loc.canton); places.push(loc); } });
+  const others = LOCALITIES.filter((l) => !places.includes(l));
+  while (places.length < DEMO_COUNT && others.length) places.push(others.splice(Math.floor(r() * others.length), 1)[0]);
+
+  // 2) Modèles d'annonces : on les passe en revue dans un ordre mélangé (variété maximale).
+  const deck = [];
+  for (let round = 0; round < 4; round++) {
+    const copy = TEMPLATES.slice();
+    for (let k = copy.length - 1; k > 0; k--) { const j = Math.floor(r() * (k + 1)); [copy[k], copy[j]] = [copy[j], copy[k]]; }
+    deck.push(...copy);
+  }
+  const usedIn = new Map(); // ville -> modèles déjà utilisés
+
   const listings = [];
-  for (let i = 1; i <= DEMO_COUNT; i++) {
-    const loc = pick(weighted);
+  for (let i = 1; i <= places.length; i++) {
+    const loc = places[i - 1];
     const locals = byLocality.get(loc.name) || [];
-    const author = locals.length && r() < 0.45 ? pick(locals) : createAuthor(loc);
-    const tpl = pick(TEMPLATES);
+    const author = locals.length && r() < 0.35 ? pick(locals) : createAuthor(loc);
+    const seen = usedIn.get(loc.name) || new Set();
+    let at = deck.findIndex((x) => !seen.has(x.t));
+    if (at < 0) at = 0;
+    const tpl = deck.splice(at, 1)[0];
+    seen.add(tpl.t);
+    usedIn.set(loc.name, seen);
 
     const createdDaysAgo = Math.floor(r() * 30);
     const created = new Date(Date.now() - createdDaysAgo * 86400000 - Math.floor(r() * 12) * 3600000);
@@ -3671,7 +3851,7 @@ function getDemoData() {
   return cache;
 }
 
-return { getDemoData };
+return { getDemoData, DEMO_VERSION };
 });
 __def("auth.js", function () {
 /* =====================================================================
@@ -3827,7 +4007,7 @@ __def("store.js", function () {
    aux données reçues).
    ===================================================================== */
 const { storage, uid, safeImageSrc, distanceKm, parseDateKey, todayKey } = __req("util.js");
-const { getDemoData } = __req("seed.js");
+const { getDemoData, DEMO_VERSION } = __req("seed.js");
 const { CANTON_CODES, CATEGORY_IDS, TYPES, PAYMENTS, UNITS, DURATIONS, RECURRENCES, LANGS, LOCALITIES, COVER_PATTERNS, COVER_TONES } = __req("data.js");
 const { ADMIN_ACCOUNT, hashPassword, verifyPassword, createSession, readSession, destroySession, loginLock, registerFailure, resetFailures, isValidEmail, passwordStrength } = __req("auth.js");
 const { t, getLang, categoryName } = __req("i18n.js");
@@ -3975,9 +4155,12 @@ async function login(identifier, password) {
   return { ok: true };
 }
 
+/** Déconnexion. Pour un compte d'essai, cela termine l'essai (impossible de s'y reconnecter). */
 function logout() {
+  if (endTrial()) return { trialEnded: true };
   destroySession();
   emit("auth");
+  return { trialEnded: false };
 }
 
 function updateUserRecord(id, updater) {
@@ -4026,22 +4209,78 @@ async function changePassword(oldPassword, newPassword) {
   return { ok: true };
 }
 
+/** Efface un compte et tout ce qu'il a créé (annonces, conversations, favoris, notifications). */
+function purgeUserData(id) {
+  saveUsers(getStoredUsers().filter((u) => u.id !== id));
+  storage.set("listings", getUserListings().filter((l) => l.authorId !== id));
+  storage.set("conversations", getConversationsRaw().filter((c) => !c.participants.includes(id)));
+  const favs = storage.get("favorites", {});
+  delete favs[id];
+  storage.set("favorites", favs);
+  const notifs = storage.get("notifications", {});
+  delete notifs[id];
+  storage.set("notifications", notifs);
+  storage.remove("recent");
+}
+
+/* ============================ COMPTE D'ESSAI ============================
+   Pour faire tester Voisina (par ex. dans la rue avec le flyer) sans remplir
+   de formulaire : un compte temporaire est créé sur l'appareil, avec un mot de
+   passe aléatoire que personne ne connaît. Terminer l'essai (ou se déconnecter)
+   efface tout ce qui a été créé pendant l'essai. */
+async function startTrial() {
+  if (currentUser()) return { ok: false, error: "already" };
+  const origin = getOrigin();
+  let loc = LOCALITIES.find((l) => l.name === "Yverdon-les-Bains") || LOCALITIES[0];
+  if (origin) loc = LOCALITIES.reduce((best, l) => (distanceKm(origin, l) < distanceKm(origin, best) ? l : best), loc);
+  const secret = Array.from(crypto.getRandomValues(new Uint8Array(24)), (b) => b.toString(16).padStart(2, "0")).join("");
+  const user = {
+    id: uid("u_"),
+    email: `essai-${uid()}@voisina.invalid`,
+    firstname: t("trial.firstname"),
+    lastname: t("trial.lastname"),
+    city: loc.name,
+    canton: loc.canton,
+    languages: [getLang()],
+    specialties: [],
+    bio: "",
+    photo: "",
+    role: "user",
+    trial: true,
+    verified: false,
+    blocked: [],
+    created: new Date().toISOString(),
+    password: await hashPassword(secret),
+  };
+  const users = getStoredUsers();
+  users.push(user);
+  if (!saveUsers(users)) return { ok: false, error: "quota" };
+  createSession(user.id);
+  addNotification(user.id, { kind: "trial", link: "#/explorer" });
+  emit("auth");
+  return { ok: true, user };
+}
+
+const isTrial = () => !!currentUser()?.trial;
+
+/** Termine l'essai : efface le compte d'essai et tout son contenu. */
+function endTrial() {
+  const me = currentUser();
+  if (!me?.trial) return false;
+  purgeUserData(me.id);
+  destroySession();
+  bump();
+  emit("auth");
+  return true;
+}
+
 /** Droit à l'effacement (nLPD) : supprime le compte et toutes ses données. */
 async function deleteAccount(password) {
   const me = currentUser();
   if (!me || me.role === "admin") return { ok: false, error: "forbidden" };
   const record = findUserRecord(me.id);
   if (!(await verifyPassword(password, record.password))) return { ok: false, error: "invalid" };
-  saveUsers(getStoredUsers().filter((u) => u.id !== me.id));
-  storage.set("listings", getUserListings().filter((l) => l.authorId !== me.id));
-  storage.set("conversations", getConversationsRaw().filter((c) => !c.participants.includes(me.id)));
-  const favs = storage.get("favorites", {});
-  delete favs[me.id];
-  storage.set("favorites", favs);
-  const notifs = storage.get("notifications", {});
-  delete notifs[me.id];
-  storage.set("notifications", notifs);
-  storage.remove("recent");
+  purgeUserData(me.id);
   destroySession();
   bump();
   emit("auth");
@@ -4382,6 +4621,18 @@ function clearFavorites() {
   emit("favorites");
 }
 
+/** Les annonces d'exemple ont changé (v2.5 : 100 annonces au lieu de 420) :
+    on retire les favoris, l'historique et les conversations qui pointaient vers les anciennes. */
+function migrateDemoData() {
+  if (storage.get("demoVersion", 0) === DEMO_VERSION) return;
+  const favs = storage.get("favorites", {});
+  for (const k of Object.keys(favs)) favs[k] = (favs[k] || []).filter((id) => !/^d\d+$/.test(id));
+  storage.set("favorites", favs);
+  storage.remove("recent");
+  storage.set("conversations", getConversationsRaw().filter((c) => !/^d\d+$/.test(c.listingId || "")));
+  storage.set("demoVersion", DEMO_VERSION);
+}
+
 /* ====================== ANNONCES CONSULTÉES RÉCEMMENT ======================
    Restent uniquement sur cet appareil (12 au maximum). */
 function addRecentlyViewed(id) {
@@ -4640,7 +4891,7 @@ function stats() {
 
 const dataVersion = () => version;
 
-return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, deleteAccount, exportMyData, toggleBlock, getAlerts, saveAlert, deleteAlert, matchesAlert, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, addRecentlyViewed, getRecentlyViewed, clearRecentlyViewed, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
+return { onChange, cleanText, currentUser, displayName, getPerson, register, login, logout, updateProfile, changePassword, startTrial, endTrial, deleteAccount, exportMyData, toggleBlock, getAlerts, saveAlert, deleteAlert, matchesAlert, getAllUsersForAdmin, allListings, getListing, validateListing, createListing, updateListing, setListingStatus, deleteListing, searchListings, getFavorites, toggleFavorite, clearFavorites, migrateDemoData, addRecentlyViewed, getRecentlyViewed, clearRecentlyViewed, mergeGuestFavorites, getConversations, otherParticipant, unreadCount, startConversation, sendMessage, markConversationRead, deleteConversation, getReports, createReport, resolveReport, setListingHidden, addNotification, getNotifications, markNotificationsRead, getPrefs, setPrefs, getOrigin, setOrigin, stats, isAdmin, isTrial, isBlocked, listingsByAuthor, isFavorite, getConversation, totalUnread, typing, REPORT_REASONS, isHidden, dataVersion };
 });
 __def("ui.js", function () {
 /* =====================================================================
@@ -4736,6 +4987,7 @@ function listingCard(l, { distance = null, origin = null } = {}) {
     </div>
     <button class="fav-btn${fav ? " is-active" : ""}" type="button" data-action="fav" data-id="${l.id}" aria-pressed="${fav ? "true" : "false"}" aria-label="${fav ? t("fav.remove") : t("fav.add")}">${icon("heart")}</button>
     <div class="listing-card-body">
+      <span class="card-type chip chip-type type-${l.type}">${typeLabel(l.type)}</span>
       <div class="listing-card-cat">${icon(getCategory(l.category).icon)}${categoryName(l.category)}</div>
       <h3 class="listing-card-title"><a href="#/annonce/${l.id}" class="stretched">${title}</a></h3>
       <div class="listing-card-meta">
@@ -5029,6 +5281,15 @@ function langChips(name, selected = []) {
 
 
 return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
+});
+__def("qr-site.js", function () {
+/* QR code du site (généré une fois à partir de l'adresse officielle, avec correction d'erreurs élevée).
+   Sert au bouton « Montrer le QR code » : pratique pour faire découvrir Voisina dans la rue. */
+const SITE_URL = "https://lennyhrng.github.io/Voisina/";
+const SITE_LABEL = "lennyhrng.github.io/Voisina";
+const QR_SVG = "<svg class=\"qr-svg\" role=\"img\" aria-label=\"QR code : lennyhrng.github.io/Voisina\" viewBox=\"-0.2 -0.2 37.4 37.4\" shape-rendering=\"crispEdges\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#12372a\"><rect x=\"8\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"0\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"0\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"0\" width=\"3\" height=\"1\"/><rect x=\"9\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"16\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"21\" y=\"1\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"21\" y=\"2\" width=\"4\" height=\"1\"/><rect x=\"28\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"3\" width=\"5\" height=\"1\"/><rect x=\"21\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"4\" width=\"5\" height=\"1\"/><rect x=\"17\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"4\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"16\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"22\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"19\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"22\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"27\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"8\" width=\"3\" height=\"1\"/><rect x=\"26\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"36\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"9\" width=\"3\" height=\"1\"/><rect x=\"11\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"9\" width=\"4\" height=\"1\"/><rect x=\"28\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"33\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"10\" width=\"5\" height=\"1\"/><rect x=\"30\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"10\" width=\"5\" height=\"1\"/><rect x=\"0\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"11\" width=\"4\" height=\"1\"/><rect x=\"36\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"12\" width=\"4\" height=\"1\"/><rect x=\"12\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"12\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"27\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"33\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"13\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"13\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"13\" width=\"2\" height=\"1\"/><rect x=\"31\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"14\" width=\"4\" height=\"1\"/><rect x=\"23\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"14\" width=\"4\" height=\"1\"/><rect x=\"30\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"14\" width=\"2\" height=\"1\"/><rect x=\"35\" y=\"14\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"33\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"16\" width=\"4\" height=\"1\"/><rect x=\"34\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"17\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"17\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"17\" width=\"3\" height=\"1\"/><rect x=\"27\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"33\" y=\"17\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"29\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"18\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"19\" width=\"3\" height=\"1\"/><rect x=\"7\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"19\" width=\"5\" height=\"1\"/><rect x=\"32\" y=\"19\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"20\" width=\"2\" height=\"1\"/><rect x=\"9\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"20\" width=\"4\" height=\"1\"/><rect x=\"29\" y=\"20\" width=\"4\" height=\"1\"/><rect x=\"34\" y=\"20\" width=\"3\" height=\"1\"/><rect x=\"2\" y=\"21\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"21\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"21\" width=\"3\" height=\"1\"/><rect x=\"31\" y=\"21\" width=\"4\" height=\"1\"/><rect x=\"0\" y=\"22\" width=\"3\" height=\"1\"/><rect x=\"4\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"22\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"23\" width=\"3\" height=\"1\"/><rect x=\"33\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"24\" width=\"3\" height=\"1\"/><rect x=\"5\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"16\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"24\" width=\"6\" height=\"1\"/><rect x=\"35\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"25\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"25\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"25\" width=\"4\" height=\"1\"/><rect x=\"24\" y=\"25\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"25\" width=\"3\" height=\"1\"/><rect x=\"0\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"10\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"26\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"21\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"35\" y=\"26\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"36\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"28\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"28\" width=\"9\" height=\"1\"/><rect x=\"8\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"29\" width=\"3\" height=\"1\"/><rect x=\"16\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"29\" width=\"6\" height=\"1\"/><rect x=\"25\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"29\" width=\"2\" height=\"1\"/><rect x=\"9\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"16\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"30\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"30\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"30\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"35\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"32\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"32\" width=\"6\" height=\"1\"/><rect x=\"21\" y=\"32\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"32\" width=\"9\" height=\"1\"/><rect x=\"34\" y=\"32\" width=\"3\" height=\"1\"/><rect x=\"9\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"33\" width=\"3\" height=\"1\"/><rect x=\"19\" y=\"33\" width=\"4\" height=\"1\"/><rect x=\"25\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"34\" width=\"3\" height=\"1\"/><rect x=\"20\" y=\"34\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"34\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"34\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"34\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"35\" width=\"4\" height=\"1\"/><rect x=\"16\" y=\"35\" width=\"4\" height=\"1\"/><rect x=\"21\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"35\" width=\"2\" height=\"1\"/><rect x=\"32\" y=\"35\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"12\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"20\" y=\"36\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"31\" y=\"36\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"0.5\" y=\"0.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"2\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.0\"/><rect x=\"30.5\" y=\"0.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"32\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.0\"/><rect x=\"0.5\" y=\"30.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"2\" y=\"32\" width=\"3\" height=\"3\" rx=\"0.0\"/></g><rect x=\"14.3\" y=\"14.3\" width=\"8.4\" height=\"8.4\" rx=\"1.6\" fill=\"#fff\"/><g shape-rendering=\"geometricPrecision\"><svg x=\"14.9\" y=\"14.9\" width=\"7.2\" height=\"7.2\" viewBox=\"0 0 48 48\" aria-hidden=\"true\">\n    <rect width=\"48\" height=\"48\" rx=\"14\" fill=\"#12372A\"/>\n    <path d=\"M38.5 9.5C27.6 10 17.6 13.6 12 20.6C7.2 26.6 9.1 36.1 9.9 38.8C17.7 38.2 26.8 35.4 32.7 28.7C37.9 22.7 38.8 14.6 38.5 9.5Z\" fill=\"#5E9F68\"/>\n    <path d=\"M10.6 38.3C17.4 29.4 24.3 23.5 34.9 15.1\" stroke=\"#DCEFE2\" stroke-width=\"2.6\" stroke-linecap=\"round\" fill=\"none\"/>\n    <path d=\"M20.2 28.6 19.1 21.8M27 22.9 26.1 17.1\" stroke=\"#DCEFE2\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/>\n  </svg></g></svg>";
+
+return { SITE_URL, SITE_LABEL, QR_SVG };
 });
 __def("map.js", function () {
 /* =====================================================================
@@ -5421,7 +5682,7 @@ const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
 
 /** Villes mises en avant sur la page d'accueil (annonces dans un rayon de 10 km). */
-const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion", "Winterthur"];
+const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Yverdon-les-Bains", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion"];
 
 function heroCards(listings) {
   const wanted = [["Lausanne", "right"], ["Zürich", "left"], ["Lugano", "left"]];
@@ -5441,6 +5702,16 @@ function heroCards(listings) {
 const FAQ = ["cost", "safety", "payment", "location", "languages", "data"];
 
 let homeMap = null;
+
+/** Rangée de « bulles » à faire glisser (comme les stories d'Instagram) : accès direct, sans texte à lire. */
+function stories() {
+  return html`<nav class="stories" aria-label="${t("home.storiesLabel")}">
+    <a class="story story-discover" href="#/decouvrir"><span class="story-ring"><span class="story-bubble">${icon("play")}</span></span><span class="story-label">${t("discover.title")}</span></a>
+    <button type="button" class="story story-near" data-action="locate"><span class="story-ring"><span class="story-bubble">${icon("locate")}</span></span><span class="story-label">${t("home.storyNear")}</span></button>
+    <a class="story story-map" href="#/explorer?view=map"><span class="story-ring"><span class="story-bubble">${icon("map")}</span></span><span class="story-label">${t("explore.map")}</span></a>
+    ${CATEGORIES.map((c) => html`<a class="story tv-${c.tone}" href="#/explorer?cat=${c.id}"><span class="story-ring"><span class="story-bubble">${icon(c.icon)}</span></span><span class="story-label">${categoryName(c.id)}</span></a>`)}
+  </nav>`;
+}
 let mapObserver = null;
 
 /** « Vous avez consulté » : les dernières annonces vues sur cet appareil (défilement horizontal). */
@@ -5487,6 +5758,7 @@ const __default = {
           <span class="eyebrow">${icon("leaf")}${t("home.eyebrow")}</span>
           <h1 class="display">${t("home.title1")}<br>${t("home.title2")}<br><em>${t("home.title3")}</em></h1>
           <p class="lead">${t("home.lead")}</p>
+          <p class="lead-short">${t("home.leadShort")}</p>
 
           <form class="hero-search" data-form="hero-search" role="search">
             <div class="field">
@@ -5501,6 +5773,7 @@ const __default = {
             <span class="hero-quick-sep" aria-hidden="true">·</span>
             ${["shopping", "pets", "digital", "garden"].map((c) => html`<a class="pill" href="#/explorer?cat=${c}">${categoryName(c)}</a>`)}
           </div>
+          ${stories()}
         </div>
 
         <div class="hero-visual" aria-hidden="true">
@@ -5521,9 +5794,19 @@ const __default = {
       </div>
     </section>
 
+    <section class="discover-promo-wrap">
+      <div class="container">
+        <a class="discover-promo" href="#/decouvrir">
+          <span class="discover-promo-phone" aria-hidden="true"><span class="dp-card tv-0"></span><span class="dp-card tv-3"></span><span class="dp-play">${icon("play")}</span></span>
+          <span class="discover-promo-text"><span class="kicker kicker-light">${t("discover.kicker")}</span><strong>${t("discover.promoTitle")}</strong><span>${t("discover.promoText")}</span></span>
+          <span class="btn btn-sun discover-promo-btn">${icon("play")}${t("discover.start")}</span>
+        </a>
+      </div>
+    </section>
+
     ${recentlyViewedSection()}
 
-    <section class="section">
+    <section class="section home-cats">
       <div class="container">
         <div class="section-head">
           <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
@@ -5545,7 +5828,7 @@ const __default = {
           <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
-        <div class="listing-grid">
+        <div class="listing-grid home-feed">
           ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
         </div>
       </div>
@@ -5609,7 +5892,7 @@ const __default = {
       </div>
     </section>
 
-    <section class="section trust-section">
+    <section class="section trust-section home-trust">
       <div class="container trust-grid">
         <div class="trust-intro">
           <span class="kicker kicker-light">${t("home.trustKicker")}</span>
@@ -5627,7 +5910,7 @@ const __default = {
       </div>
     </section>
 
-    <section class="section section-sky">
+    <section class="section section-sky home-faq">
       <div class="container faq-wrap">
         <div>
           <span class="kicker">${t("home.faqKicker")}</span>
@@ -5649,6 +5932,7 @@ const __default = {
         </div>
         <div class="cta-actions">
           <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <button type="button" class="btn btn-light btn-lg" data-action="show-qr">${icon("qrCode")}${t("home.qrCta")}</button>
         </div>
       </div>
     </section>`;
@@ -6630,7 +6914,7 @@ const __default = {
           iconName: "pencil",
           title: t("publish.gateTitle"),
           text: t("publish.gateText"),
-          action: html`<div class="empty-actions"><a class="btn btn-primary" href="#/connexion?mode=register&next=${encodeURIComponent("#/publier")}">${t("auth.createAccount")}</a><a class="btn btn-ghost" href="#/connexion?next=${encodeURIComponent("#/publier")}">${t("auth.login")}</a></div>`,
+          action: html`<div class="empty-actions"><a class="btn btn-primary" href="#/connexion?mode=register&next=${encodeURIComponent("#/publier")}">${t("auth.createAccount")}</a><a class="btn btn-ghost" href="#/connexion?next=${encodeURIComponent("#/publier")}">${t("auth.login")}</a><button type="button" class="btn btn-cta" data-action="trial-start">${icon("sparkles")}${t("trial.cta")}</button></div>`,
         })}
       </div></section>`;
     }
@@ -7002,7 +7286,7 @@ const __default = {
     if (!me) {
       return html`<section class="section"><div class="container narrow">${emptyState({
         iconName: "message", title: t("messages.gateTitle"), text: t("messages.gateText"),
-        action: html`<div class="empty-actions"><a class="btn btn-primary" href="#/connexion?next=${encodeURIComponent("#/messages")}">${t("auth.login")}</a><a class="btn btn-ghost" href="#/connexion?mode=register&next=${encodeURIComponent("#/messages")}">${t("auth.createAccount")}</a></div>`,
+        action: html`<div class="empty-actions"><a class="btn btn-primary" href="#/connexion?next=${encodeURIComponent("#/messages")}">${t("auth.login")}</a><a class="btn btn-ghost" href="#/connexion?mode=register&next=${encodeURIComponent("#/messages")}">${t("auth.createAccount")}</a><button type="button" class="btn btn-cta" data-action="trial-start">${icon("sparkles")}${t("trial.cta")}</button></div>`,
       })}</div></section>`;
     }
     activeId = ctx.params[0] || null;
@@ -7362,6 +7646,12 @@ const __default = {
       <div class="container auth-grid">
         <div class="auth-card card">
           <div class="auth-brand">${logo()}<span>Voisina</span></div>
+          <div class="trial-box">
+            <span class="trial-icon">${icon("sparkles")}</span>
+            <div><strong>${t("trial.title")}</strong><p>${t("trial.text")}</p></div>
+            <button type="button" class="btn btn-cta" data-action="trial-start">${t("trial.cta")}</button>
+          </div>
+          <p class="auth-or"><span>${t("trial.or")}</span></p>
           <div class="tabs" role="tablist">
             <button type="button" role="tab" class="tab${mode === "login" ? " is-active" : ""}" aria-selected="${mode === "login" ? "true" : "false"}" data-action="auth-mode" data-mode="login">${t("auth.login")}</button>
             <button type="button" role="tab" class="tab${mode === "register" ? " is-active" : ""}" aria-selected="${mode === "register" ? "true" : "false"}" data-action="auth-mode" data-mode="register">${t("auth.createAccount")}</button>
@@ -7596,6 +7886,10 @@ function listingsTab(me) {
 }
 
 function securityTab(me) {
+  if (me.trial) {
+    return html`<div class="card form-card"><p class="notice">${icon("info")}<span>${t("trial.securityNote")}</span></p>
+      <div class="form-actions"><a class="btn btn-primary" href="#/connexion?mode=register">${t("auth.createAccount")}</a></div></div>`;
+  }
   if (me.role === "admin") {
     return html`<div class="card form-card"><p class="notice">${icon("info")}<span>${t("account.adminPwNote")}</span></p></div>`;
   }
@@ -7629,14 +7923,18 @@ function dataTab(me) {
   <div class="card form-card">
     <h2 class="h3">${icon("info")}${t("account.storedTitle")}</h2>
     <ul class="data-list">
-      <li><strong>${t("account.storedProfile")}</strong><span>${me.email}</span></li>
+      <li><strong>${t("account.storedProfile")}</strong><span>${me.trial ? t("trial.badge") : me.email}</span></li>
       <li><strong>${t("account.storedListings")}</strong><span>${listingsByAuthor(me.id, { includeInactive: true }).length}</span></li>
       <li><strong>${t("account.storedFavorites")}</strong><span>${getFavorites().length}</span></li>
       <li><strong>${t("account.storedConversations")}</strong><span>${getConversations().length}</span></li>
     </ul>
     <p class="help">${t("account.storedWhere")}</p>
   </div>
-  ${me.role !== "admin" ? html`<div class="card form-card danger-zone">
+  ${me.trial ? html`<div class="card form-card danger-zone">
+    <h2 class="h3">${icon("trash")}${t("trial.endTitle")}</h2>
+    <p>${t("trial.endText")}</p>
+    <button type="button" class="btn btn-danger" data-action="trial-end">${icon("trash")}${t("trial.end")}</button>
+  </div>` : me.role !== "admin" ? html`<div class="card form-card danger-zone">
     <h2 class="h3">${icon("trash")}${t("account.deleteTitle")}</h2>
     <p>${t("account.deleteText")}</p>
     <button type="button" class="btn btn-danger" data-action="delete-account">${icon("trash")}${t("account.deleteBtn")}</button>
@@ -7681,17 +7979,18 @@ const __default = {
         ${avatar(person, "lg")}
         <div>
           <h1 class="h1">${t("account.hello", { name: me.firstname })}</h1>
-          <p class="muted">${me.email} · ${t("trust.memberSince")} ${fmtDate(me.created, { month: "long", year: "numeric" })}${me.canton ? ` · ${cantonName(me.canton)}` : ""}</p>
+          <p class="muted">${me.trial ? t("trial.badge") : me.email} · ${t("trust.memberSince")} ${fmtDate(me.created, { month: "long", year: "numeric" })}${me.canton ? ` · ${cantonName(me.canton)}` : ""}</p>
         </div>
         ${isAdmin() ? html`<a class="btn btn-primary account-admin-btn" href="#/admin">${icon("shield")}${t("nav.admin")}</a>` : ""}
       </div>
     </section>
     <div class="container">
+      ${me.trial ? html`<div class="notice notice-trial">${icon("sparkles")}<span>${t("trial.notice")}</span><button type="button" class="btn btn-ghost btn-sm" data-action="trial-end">${t("trial.end")}</button></div>` : ""}
       ${welcome ? html`<div class="notice notice-success">${icon("sparkles")}<span>${t("account.welcomeNotice")}</span><a class="btn btn-primary btn-sm" href="#/publier">${t("nav.publish")}</a></div>` : ""}
       <div class="account-layout">
         <nav class="account-nav" aria-label="${t("account.sections")}">
           ${TABS.map((k) => html`<a class="account-nav-link${k === tab ? " is-active" : ""}" href="#/compte?tab=${k}" ${k === tab ? raw('aria-current="page"') : ""}>${icon(TAB_ICONS[k])}${t("account.tab." + k)}</a>`)}
-          <button type="button" class="account-nav-link" data-action="logout">${icon("logout")}${t("nav.logout")}</button>
+          <button type="button" class="account-nav-link" data-action="${me.trial ? "trial-end" : "logout"}">${icon("logout")}${me.trial ? t("trial.end") : t("nav.logout")}</button>
         </nav>
         <div class="account-content">${content}</div>
       </div>
@@ -7774,8 +8073,8 @@ const accountActions = {
     mount($("#profile-avatar"), avatar({ ...getPerson(me.id), photo: "" }, "xl"));
   },
   logout: () => {
-    logout();
-    toast(t("auth.loggedOut"), "success");
+    const res = logout();
+    toast(res.trialEnded ? t("trial.ended") : t("auth.loggedOut"), "success");
     location.hash = "#/";
   },
   "export-data": () => {
@@ -8032,6 +8331,7 @@ const PAGES = {
           ["Est-ce gratuit ?", "Oui. Publier, rechercher et discuter est entièrement gratuit. Voisina ne prend aucune commission et n'affiche aucune publicité."],
           ["Faut-il un compte ?", "Vous pouvez consulter les annonces et les ajouter à vos favoris sans compte. Pour publier une annonce ou écrire à un membre, un compte gratuit est nécessaire."],
           ["Puis-je installer Voisina sur mon téléphone ?", "Oui, sans passer par un store. Sur iPhone : dans Safari, touchez « Partager » puis « Sur l'écran d'accueil ». Sur Android : menu ⋮ de Chrome puis « Installer l'application ». Voisina s'ouvre alors en plein écran, comme une application."],
+          ["Puis-je essayer sans créer de compte ?", "Oui : touchez « Essayer en 1 clic ». Un compte d'essai est créé sur votre appareil, sans e-mail ni mot de passe. « Terminer l'essai » efface tout ce que vous avez fait."],
           ["Comment changer l'apparence de la carte ?", "Touchez le bouton « calques » en haut à droite de la carte : carte suisse en couleur, plan des rues, vue satellite ou version grise. Votre choix est mémorisé."],
         ] },
         { h: "Publier une annonce", qa: [
@@ -8059,6 +8359,7 @@ const PAGES = {
           ["Ist Voisina kostenlos?", "Ja. Inserieren, Suchen und Schreiben sind komplett kostenlos. Voisina verlangt keine Kommission und zeigt keine Werbung."],
           ["Brauche ich ein Konto?", "Anzeigen ansehen und als Favoriten speichern geht ohne Konto. Um zu inserieren oder einem Mitglied zu schreiben, brauchen Sie ein kostenloses Konto."],
           ["Kann ich Voisina auf meinem Handy installieren?", "Ja, ganz ohne App-Store. iPhone: In Safari auf «Teilen» und dann «Zum Home-Bildschirm» tippen. Android: Chrome-Menü ⋮ und «App installieren». Voisina öffnet sich dann im Vollbild wie eine App."],
+          ["Kann ich es ohne Konto ausprobieren?", "Ja: Tippen Sie auf «Mit 1 Klick testen». Ein Testkonto wird auf Ihrem Gerät erstellt, ohne E-Mail und Passwort. «Test beenden» löscht alles wieder."],
           ["Wie ändere ich das Aussehen der Karte?", "Tippen Sie auf die Ebenen-Schaltfläche oben rechts auf der Karte: farbige Schweizer Karte, Strassenkarte, Satellitenbild oder graue Version. Ihre Wahl wird gespeichert."],
         ] },
         { h: "Eine Anzeige erstellen", qa: [
@@ -8086,6 +8387,7 @@ const PAGES = {
           ["È gratuito?", "Sì. Pubblicare, cercare e scrivere è completamente gratuito. Voisina non prende commissioni e non mostra pubblicità."],
           ["Serve un account?", "Potete consultare gli annunci e salvarli nei preferiti senza account. Per pubblicare o scrivere a un membro serve un account gratuito."],
           ["Posso installare Voisina sul telefono?", "Sì, senza passare da uno store. Su iPhone: in Safari tocca «Condividi» e poi «Aggiungi alla schermata Home». Su Android: menu ⋮ di Chrome e «Installa app». Voisina si apre a schermo intero, come un'app."],
+          ["Posso provare senza creare un account?", "Sì: tocca «Prova con 1 clic». Viene creato un account di prova sul tuo dispositivo, senza e-mail né password. «Termina la prova» cancella tutto."],
           ["Come cambio l'aspetto della mappa?", "Tocca il pulsante dei livelli in alto a destra sulla mappa: carta svizzera a colori, mappa stradale, vista satellitare o versione grigia. La scelta viene ricordata."],
         ] },
         { h: "Pubblicare un annuncio", qa: [
@@ -8113,6 +8415,7 @@ const PAGES = {
           ["Is it free?", "Yes. Posting, searching and messaging are completely free. Voisina takes no commission and shows no ads."],
           ["Do I need an account?", "You can browse listings and save favourites without an account. To post a listing or message a member, you need a free account."],
           ["Can I install Voisina on my phone?", "Yes, without an app store. On iPhone: in Safari tap “Share”, then “Add to Home Screen”. On Android: Chrome's ⋮ menu, then “Install app”. Voisina then opens full screen, like an app."],
+          ["Can I try it without an account?", "Yes: tap “Try it in 1 click”. A trial account is created on your device, with no e-mail or password. “End the trial” erases everything."],
           ["How do I change the map's look?", "Tap the layers button at the top right of the map: colour Swiss map, street map, satellite view or grey version. Your choice is remembered."],
         ] },
         { h: "Posting a listing", qa: [
@@ -8703,6 +9006,130 @@ const __default = {
 
 return { default: __default };
 });
+__def("views/discover.js", function () {
+/* =====================================================================
+   DÉCOUVRIR — les annonces une par une, en plein écran
+   ---------------------------------------------------------------------
+   Inspiré des applis que tout le monde sait utiliser (Reels, TikTok) :
+   une seule annonce à la fois, peu de texte, on glisse vers le haut pour
+   passer à la suivante, et les actions sont à portée de pouce à droite.
+   ===================================================================== */
+const { html, raw, $, $$, safeImageSrc } = __req("util.js");
+const { icon } = __req("icons.js");
+const { t, categoryName, fmtDistance } = __req("i18n.js");
+const { getCategory, TYPES } = __req("data.js");
+const { searchListings, getOrigin, isFavorite, getPerson } = __req("store.js");
+const { avatar, priceLabel, typeLabel, listingTitle, listingDescription, scheduleLabel, coverStyle } = __req("ui.js");
+
+let type = "";
+
+function reel(l, distance, index) {
+  const cat = getCategory(l.category);
+  const photo = safeImageSrc(l.photos?.[0]);
+  const { tone, pattern } = coverStyle(l);
+  const author = getPerson(l.authorId);
+  const fav = isFavorite(l.id);
+  return html`<article class="reel media-illu tv-${tone} pat-${pattern}${photo ? " has-photo" : ""}" aria-label="${listingTitle(l)}" data-id="${l.id}">
+    ${photo
+      ? html`<img class="reel-photo" src="${photo}" alt="" ${index > 1 ? raw('loading="lazy"') : ""}>`
+      : html`<span class="reel-art" aria-hidden="true"><span class="reel-art-icon">${icon(cat.icon)}</span></span>`}
+    <div class="reel-shade" aria-hidden="true"></div>
+    <div class="reel-info">
+      <div class="reel-chips">
+        <span class="chip chip-type type-${l.type}">${typeLabel(l.type)}</span>
+        ${l.urgent ? html`<span class="chip chip-urgent">${icon("zap")}${t("listing.urgent")}</span>` : ""}
+      </div>
+      <h2 class="reel-title"><a href="#/annonce/${l.id}">${listingTitle(l)}</a></h2>
+      <p class="reel-desc">${listingDescription(l)}</p>
+      <p class="reel-meta"><span>${icon("pin")}${l.city}${distance !== null ? ` · ${fmtDistance(distance)}` : ""}</span><span>${icon(cat.icon)}${categoryName(l.category)}</span></p>
+      <div class="reel-foot">
+        ${avatar(author, "sm")}<span class="reel-author">${author?.name || t("common.formerMember")}<small>${scheduleLabel(l)}</small></span>
+        <strong class="reel-price">${priceLabel(l)}</strong>
+      </div>
+    </div>
+    <div class="reel-actions">
+      <button type="button" class="reel-btn reel-fav${fav ? " is-active" : ""}" data-action="fav" data-id="${l.id}" aria-pressed="${fav ? "true" : "false"}" aria-label="${fav ? t("fav.remove") : t("fav.add")}"><span class="reel-btn-icon">${icon("heart")}</span><span>${t("discover.like")}</span></button>
+      <button type="button" class="reel-btn" data-action="contact" data-id="${l.id}" aria-label="${t("listing.contact")}"><span class="reel-btn-icon">${icon("message")}</span><span>${t("listing.contactShort")}</span></button>
+      <button type="button" class="reel-btn" data-action="share" data-id="${l.id}" aria-label="${t("listing.share")}"><span class="reel-btn-icon">${icon("share")}</span><span>${t("listing.share")}</span></button>
+      <a class="reel-btn" href="#/annonce/${l.id}" aria-label="${t("discover.open")}"><span class="reel-btn-icon">${icon("arrowRight")}</span><span>${t("common.view")}</span></a>
+    </div>
+    ${index === 0 ? html`<p class="reel-hint" aria-hidden="true">${icon("chevronUp")}${t("discover.hint")}</p>` : ""}
+  </article>`;
+}
+
+function endCard() {
+  return html`<article class="reel reel-end media-illu tv-0 pat-confetti" aria-label="${t("discover.endTitle")}">
+    <div class="reel-end-inner">
+      <span class="reel-art-icon">${icon("sparkles")}</span>
+      <h2 class="reel-title">${t("discover.endTitle")}</h2>
+      <p>${t("discover.endText")}</p>
+      <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+      <button type="button" class="btn btn-light" data-action="discover-top">${icon("chevronUp")}${t("discover.again")}</button>
+    </div>
+  </article>`;
+}
+
+const __default = {
+  title: () => t("discover.title"),
+  refreshOn: ["listings", "block"],
+
+  render(ctx) {
+    type = TYPES.includes(ctx.query.get("type")) ? ctx.query.get("type") : "";
+    const cat = ctx.query.get("cat") || "";
+    const origin = getOrigin();
+    const results = searchListings({ type, cat, sort: origin ? "distance" : "recent" }, origin);
+    const tabs = [["", t("filter.all")], ...TYPES.map((ty) => [ty, t("type." + ty)])];
+    const qs = (ty) => { const p = new URLSearchParams(); if (ty) p.set("type", ty); if (cat) p.set("cat", cat); return p.toString() ? "?" + p : ""; };
+    return html`
+    <h1 class="sr-only">${t("discover.title")}</h1>
+    <div class="discover">
+      <nav class="discover-tabs" aria-label="${t("filter.type")}">
+        ${tabs.map(([v, label]) => html`<a class="discover-tab${v === type ? " is-active" : ""}" href="#/decouvrir${qs(v)}" ${v === type ? raw('aria-current="page"') : ""}>${label}</a>`)}
+      </nav>
+      <div class="reels" id="reels" tabindex="0" aria-label="${t("discover.feed")}">
+        ${results.length
+          ? html`${results.map(({ listing, distance }, i) => reel(listing, distance, i))}${endCard()}`
+          : html`<article class="reel reel-end media-illu tv-3 pat-waves"><div class="reel-end-inner"><h2 class="reel-title">${t("explore.emptyTitle")}</h2><a class="btn btn-light" href="#/decouvrir">${t("filter.reset")}</a></div></article>`}
+      </div>
+    </div>`;
+  },
+
+  mount(root) {
+    const reels = $("#reels", root);
+    if (!reels) return;
+    reels.focus({ preventScroll: true });
+    // L'indication « glissez vers le haut » disparaît dès qu'on a fait défiler
+    reels.addEventListener("scroll", () => {
+      if (reels.scrollTop > 40) $(".reel-hint", reels)?.classList.add("is-hidden");
+    }, { passive: true });
+    // Touches du clavier : flèches / Page suivante = annonce suivante
+    reels.addEventListener("keydown", (e) => {
+      const keys = { ArrowDown: 1, PageDown: 1, j: 1, ArrowUp: -1, PageUp: -1, k: -1 };
+      if (!(e.key in keys) || e.target.closest("button, a") && !["ArrowDown", "ArrowUp"].includes(e.key)) return;
+      e.preventDefault();
+      const h = reels.clientHeight;
+      const i = Math.round(reels.scrollTop / h) + keys[e.key];
+      reels.scrollTo({ top: Math.max(0, i) * h, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+  },
+
+  onData(kind) {
+    if (kind !== "favorites") return;
+    $$(".reel-fav[data-id]").forEach((b) => {
+      const on = isFavorite(b.dataset.id);
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.setAttribute("aria-label", on ? t("fav.remove") : t("fav.add"));
+    });
+  },
+};
+
+const discoverActions = {
+  "discover-top": () => $("#reels")?.scrollTo({ top: 0, behavior: "smooth" }),
+};
+
+return { discoverActions, default: __default };
+});
 __def("app.js", function () {
 /* =====================================================================
    VOISINA — point d'entrée de l'application
@@ -8718,7 +9145,8 @@ const { icon, logo } = __req("icons.js");
 const { t, getLang, setLang, fmtRelative } = __req("i18n.js");
 const { LANGS } = __req("data.js");
 const store = __req("store.js");
-const { actions, registerActions, toast, initDialog, avatar, openDialog } = __req("ui.js");
+const { actions, registerActions, toast, initDialog, avatar, openDialog, confirmDialog } = __req("ui.js");
+const { QR_SVG, SITE_URL, SITE_LABEL } = __req("qr-site.js");
 
 const home = __req("views/home.js").default;
 const { homeActions } = __req("views/home.js");
@@ -8740,6 +9168,8 @@ const profile = __req("views/profile.js").default;
 const admin = __req("views/admin.js").default;
 const { adminActions } = __req("views/admin.js");
 const pages = __req("views/pages.js").default;
+const discover = __req("views/discover.js").default;
+const { discoverActions } = __req("views/discover.js");
 
 /* ------------------------------ Routes ------------------------------ */
 const notFound = {
@@ -8752,6 +9182,7 @@ const notFound = {
 const ROUTES = [
   [/^$/, home],
   [/^explorer$/, explore],
+  [/^decouvrir$/, discover],
   [/^annonce\/([\w-]{1,40})$/, listing],
   [/^publier$/, publish],
   [/^messages(?:\/([\w-]{1,40}))?$/, messages],
@@ -8863,12 +9294,15 @@ function renderHeader() {
         <div class="menu-wrap">
           <button type="button" class="avatar-btn" data-action="toggle-menu" data-menu="account" aria-haspopup="true" aria-expanded="false" aria-label="${t("nav.account")}">${avatar(store.getPerson(me.id), "sm")}</button>
           <div class="menu" id="menu-account" hidden>
-            <div class="menu-head menu-user"><strong>${me.firstname} ${me.lastname}</strong><span class="muted small">${me.email}</span></div>
+            <div class="menu-head menu-user"><strong>${me.firstname} ${me.lastname}</strong><span class="muted small">${me.trial ? t("trial.badge") : me.email}</span></div>
             <a class="menu-item" href="#/compte">${icon("user")}${t("nav.account")}</a>
             <a class="menu-item" href="#/compte?tab=listings">${icon("file")}${t("account.myListings")}</a>
             <a class="menu-item" href="#/planning">${icon("heart")}${t("nav.planning")}</a>
             ${me.role === "admin" ? html`<a class="menu-item" href="#/admin">${icon("shield")}${t("nav.admin")}</a>` : ""}
-            <button type="button" class="menu-item" data-action="logout">${icon("logout")}${t("nav.logout")}</button>
+            <button type="button" class="menu-item" data-action="show-qr">${icon("qrCode")}${t("qr.footer")}</button>
+            ${me.trial
+              ? html`<button type="button" class="menu-item" data-action="trial-end">${icon("logout")}${t("trial.end")}</button>`
+              : html`<button type="button" class="menu-item" data-action="logout">${icon("logout")}${t("nav.logout")}</button>`}
           </div>
         </div>`
         : html`<a class="btn btn-ghost btn-login" href="#/connexion">${icon("user")}<span>${t("nav.login")}</span></a>`}
@@ -8906,6 +9340,7 @@ function renderFooter() {
     <div><h2 class="footer-title">${t("footer.explore")}</h2><ul>
       <li><a href="#/explorer">${t("footer.listings")}</a></li>
       <li><a href="#/explorer?view=map">${t("footer.map")}</a></li>
+      <li><a href="#/decouvrir">${t("discover.title")}</a></li>
       <li><a href="#/publier">${t("nav.publish")}</a></li>
       <li><a href="#/planning">${t("nav.planning")}</a></li>
     </ul></div>
@@ -8923,6 +9358,7 @@ function renderFooter() {
   </div>
   <div class="container footer-bottom">
     <span>© 2026 Voisina · ${t("footer.project")}</span>
+    <button type="button" class="link-btn footer-text" data-action="show-qr">${icon("qrCode")}${t("qr.footer")}</button>
     ${!isStandalone() ? html`<button type="button" class="link-btn footer-text" data-action="install-app">${icon("smartphone")}${t("install.footer")}</button>` : ""}
     <button type="button" class="link-btn footer-text" data-action="toggle-text">${icon("sparkles")}${document.documentElement.classList.contains("text-lg") ? t("footer.textNormal") : t("footer.textLarge")}</button>
     <span class="footer-langs">${LANGS.map((l) => html`<button type="button" class="link-btn${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${l.toUpperCase()}</button>`)}</span>
@@ -8941,7 +9377,47 @@ function renderBanner() {
 function renderChrome() {
   renderHeader();
   renderTabbar();
+  renderWelcome();
   renderInstallPromo();
+}
+
+/* ------------------- Bienvenue (première visite) -------------------
+   Petite carte non bloquante : explique le site en une phrase et propose
+   l'essai en 1 clic (idéal pour les personnes qui scannent le flyer). */
+function renderWelcome() {
+  let el = $("#welcome-card");
+  const show = !storage.get("welcome", false) && document.body.dataset.route === "home";
+  if (!show) { if (el) el.hidden = true; return; }
+  if (!el) {
+    el = document.createElement("aside");
+    el.id = "welcome-card";
+    el.className = "welcome-card";
+    document.body.appendChild(el);
+  }
+  el.hidden = false;
+  el.setAttribute("aria-labelledby", "welcome-title");
+  const me = store.currentUser();
+  mount(el, html`<button type="button" class="icon-btn icon-btn-sm welcome-close" data-action="welcome-dismiss" aria-label="${t("common.close")}">${icon("x")}</button>
+    <span class="welcome-logo">${logo()}</span>
+    <h2 class="h4" id="welcome-title">${t("welcome.title")}</h2>
+    <p>${t("welcome.text")}</p>
+    <div class="welcome-actions">
+      ${me ? "" : html`<button type="button" class="btn btn-cta btn-sm" data-action="trial-start">${icon("sparkles")}${t("trial.cta")}</button>`}
+      <button type="button" class="btn btn-ghost btn-sm" data-action="welcome-go">${t("welcome.explore")}</button>
+    </div>`);
+}
+
+function showQr() {
+  openDialog({
+    title: t("qr.title"),
+    size: "dialog-sm dialog-qr",
+    body: html`<div class="qr-show">${raw(QR_SVG)}</div>
+      <p class="qr-url">${SITE_LABEL}</p>
+      <p class="dialog-text center">${t("qr.text")}</p>`,
+    footer: html`<button type="button" class="btn btn-ghost" data-action="qr-copy">${icon("link")}${t("share.copy")}</button>
+      ${navigator.share ? html`<button type="button" class="btn btn-primary" data-action="qr-share">${icon("share")}${t("listing.share")}</button>` : html`<button type="submit" class="btn btn-primary">${t("install.ok")}</button>`}`,
+    onSubmit: () => true,
+  });
 }
 
 /* ------------------- Installer l'application (PWA) ------------------- */
@@ -8957,7 +9433,7 @@ function renderInstallPromo() {
   let el = $("#install-promo");
   const engaged = navCount >= 2 || storage.get("visits", 0) >= 2;
   const onPage = ["home", "planning"].includes(document.body.dataset.route);
-  const show = !isStandalone() && !store.getPrefs().installDismissed && engaged && onPage
+  const show = !isStandalone() && !store.getPrefs().installDismissed && engaged && onPage && storage.get("welcome", false)
     && (installEvent || isIos()) && window.matchMedia("(max-width: 980px)").matches;
   if (!show) { if (el) el.hidden = true; return; }
   if (!el) {
@@ -9033,7 +9509,7 @@ function applyTheme(theme) {
 }
 
 registerActions({
-  ...homeActions, ...exploreActions, ...listingActions, ...publishActions, ...messagesActions,
+  ...homeActions, ...discoverActions, ...exploreActions, ...listingActions, ...publishActions, ...messagesActions,
   ...planningActions, ...authActions, ...accountActions, ...adminActions,
 
   "toggle-menu": (el) => {
@@ -9089,6 +9565,39 @@ registerActions({
     installDialog();
   },
   "install-dismiss": () => { store.setPrefs({ installDismissed: true }); },
+  "welcome-dismiss": () => { storage.set("welcome", true); renderWelcome(); },
+  "welcome-go": () => { storage.set("welcome", true); renderWelcome(); location.hash = "#/explorer"; },
+  "trial-start": async (el) => {
+    storage.set("welcome", true);
+    if (store.currentUser()) return;
+    el.disabled = true;
+    el.classList.add("is-loading");
+    const res = await store.startTrial();
+    el.disabled = false;
+    el.classList.remove("is-loading");
+    if (!res.ok) { toast(t("err.generic"), "error"); return; }
+    store.mergeGuestFavorites();
+    toast(t("trial.started"), "success");
+    const { path, query } = parseHash();
+    if (path === "connexion") {
+      const nxt = query.get("next");
+      location.hash = /^#\/[\w\-/?=&%.]*$/.test(nxt || "") && nxt !== "#/compte" ? nxt : "#/explorer";
+    } else renderWelcome();
+  },
+  "trial-end": async () => {
+    if (!(await confirmDialog({ title: t("trial.endTitle"), text: t("trial.endText"), confirm: t("trial.end"), danger: true }))) return;
+    store.endTrial();
+    toast(t("trial.ended"), "success");
+    location.hash = "#/";
+  },
+  "show-qr": () => showQr(),
+  "qr-copy": async () => {
+    try { await navigator.clipboard.writeText(SITE_URL); toast(t("share.copied"), "success"); }
+    catch { toast(SITE_URL, "info"); }
+  },
+  "qr-share": async () => {
+    try { await navigator.share({ title: "Voisina", text: t("footer.tagline"), url: SITE_URL }); } catch { /* partage annulé */ }
+  },
   "dismiss-banner": () => { store.setPrefs({ bannerDismissed: true }); renderBanner(); },
   locate: (el) => {
     if (!navigator.geolocation) { toast(t("loc.unsupported"), "error"); return; }
@@ -9145,6 +9654,7 @@ window.addEventListener("storage", (e) => { if (e.key?.startsWith("voisina:")) r
 /* --------------------------- Démarrage ----------------------------- */
 function start() {
   storage.purgeLegacy(); // efface les anciennes données (mots de passe en clair de la v1)
+  store.migrateDemoData();
   storage.set("visits", (Number(storage.get("visits", 0)) || 0) + 1);
   if (!navigator.onLine) document.documentElement.classList.add("is-offline");
   document.documentElement.lang = getLang();

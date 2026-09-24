@@ -25,6 +25,7 @@ honnêtes d'un site sans serveur. Utile pour la présentation orale.
 - **Énumération de comptes** : le message d'erreur est identique et le temps de calcul aussi, que l'e-mail existe ou non.
 - **Redirections** : le paramètre `next` n'accepte que des adresses internes (`#/...`).
 - **Clickjacking** : le site refuse de s'afficher dans une iframe d'un autre site.
+- **Compte d'essai** : créé sans e-mail réel (adresse en `.invalid`) avec un mot de passe aléatoire de 192 bits, lui aussi transformé en empreinte PBKDF2 ; terminer l'essai (ou se déconnecter) efface le compte et tout ce qu'il a créé.
 - **Cartes sans traceur** : fonds de carte swisstopo (Confédération) et OpenStreetMap, sans clé ni compte ; pas de Google Maps, qui transmettrait les visites à Google. Le style choisi et le point « ma position » restent sur l'appareil.
 - **Vie privée** : nom public = prénom + initiale, adresse jamais demandée, position floutée (± 1 km), zoom de carte limité, aucune donnée envoyée à un tiers sans action de l'utilisateur, aucun cookie.
 - **Anti-arnaque** : détection des numéros de téléphone, e-mails, IBAN et mots-clés d'arnaque (codes SMS, cartes cadeaux…) avec avertissement.
