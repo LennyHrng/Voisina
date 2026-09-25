@@ -1,5 +1,15 @@
 # Voisina — journal des changements
 
+## v3.3 — Illustrations dessinées
+- Chaque catégorie a sa propre illustration, dessinée en code (SVG) dans les verts du site : sac de courses,
+  chien en laisse, fauteuil et tasse de thé, cerf-volant et cubes, voiture sur la route, caisse à outils,
+  ordinateur, bulles « Bonjour / Grüezi / Ciao / Hello », potager et arrosoir, maison, cartons de déménagement,
+  cadeau et livres, maisons avec fanions, ampoule d'idée.
+- Utilisées partout où une annonce n'a pas de photo : liste, accueil, fiche d'annonce, mode « Découvrir ».
+- Variété : les nuances de vert changent selon l'annonce et certaines illustrations sont inversées en miroir.
+- Mode sombre adapté ; léger zoom de l'illustration au survol.
+- Très légères (quelques Ko, aucun fichier image à charger). Les vraies photos restent prioritaires quand un membre en ajoute.
+
 ## v3.2 — Une seule couleur : le vert Voisina
 - Fini le jaune, le bleu et le turquoise : les catégories, annonces, bulles, étapes, chiffres et cartes de sécurité
   utilisent 6 nuances de vert (émeraude, forêt, menthe, jade, sauge, pin). Le site reste vivant, mais tout s'accorde.
@@ -26,4 +36,4 @@ Les couleurs vives de Voisina sont conservées. Le site gagne des animations soi
 - Espaces insécables avant ? ! : ; en français ; titres équilibrés.
 - Boutons, pagination, barre d'onglets et pied de page adaptés aux petits écrans.
 
-Fichiers modifiés : index.html, styles.css (blocs « v2.6 », « v3.1 » et « v3.2 » à la fin), voisina.js, sw.js
+Fichiers modifiés : index.html, styles.css (blocs « v2.6 », « v3.1 », « v3.2 » et « v3.3 » à la fin), voisina.js, sw.js
