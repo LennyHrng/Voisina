@@ -1947,3 +1947,185 @@ h1, h2, h3, .h2, .h3, .h4 { text-wrap: balance; }
   .pagination { flex-wrap: wrap; }
   .pagination .btn, .pagination button, .pagination a { min-width: 34px; }
 }
+
+/* =====================================================================
+   v3.0 — Direction « Atelier suisse »
+   Inspirée des sites automobiles premium (Polestar, Volvo, Porsche) :
+   une scène gris clair, de l'encre presque noire, une seule couleur
+   d'accent (le vert du logo), des coins plus nets, très peu d'ombres.
+   Les annonces n'ont plus six couleurs : l'icône suffit à les distinguer.
+   ===================================================================== */
+:root {
+  --bg: #f2f3f0;  --bg-alt: #ffffff; --bg-warm: #ffffff; --bg-sky: #f2f3f0;
+  --surface: #ffffff; --surface-2: #eceee9;
+  --text: #121a16; --text-muted: #5b6560;
+  --border: #e0e3de; --border-strong: #c7ccc6;
+  --primary: #15241d; --primary-hover: #26392f; --primary-contrast: #ffffff;
+  --brand-dark: #14201a;
+  --accent: #2f6d4c; --accent-text: #2a6546; --accent-soft: #e3ece5;
+  --cta: #15241d; --cta-2: #15241d; --cta-hover: #26392f;
+  --sun: #b9c9bd; --price: #121a16;
+  --tone-0-bg: #eceee9; --tone-0-fg: #2a3a32; --tone-0-a: #eef0ec; --tone-0-b: #dde1db;
+  --tone-1-bg: #eceee9; --tone-1-fg: #2a3a32; --tone-1-a: #eef0ec; --tone-1-b: #dde1db;
+  --tone-2-bg: #eceee9; --tone-2-fg: #2a3a32; --tone-2-a: #eef0ec; --tone-2-b: #dde1db;
+  --tone-3-bg: #eceee9; --tone-3-fg: #2a3a32; --tone-3-a: #eef0ec; --tone-3-b: #dde1db;
+  --tone-4-bg: #eceee9; --tone-4-fg: #2a3a32; --tone-4-a: #eef0ec; --tone-4-b: #dde1db;
+  --tone-5-bg: #eceee9; --tone-5-fg: #2a3a32; --tone-5-a: #eef0ec; --tone-5-b: #dde1db;
+  --rainbow: linear-gradient(90deg, var(--border), var(--border));
+  --grad-green: linear-gradient(135deg, #2a4a3a, #15241d);
+  --shadow-sm: 0 1px 2px rgba(18, 26, 22, 0.04);
+  --shadow: 0 10px 30px rgba(18, 26, 22, 0.07);
+  --shadow-lg: 0 24px 60px rgba(18, 26, 22, 0.12);
+  --radius-sm: 8px; --radius: 12px; --radius-lg: 18px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1311; --bg-alt: #141917; --bg-warm: #141917; --bg-sky: #0f1311;
+    --surface: #171c19; --surface-2: #1f2521; --text: #eceeec; --text-muted: #a1aaa5;
+    --border: #2a302c; --border-strong: #3a423d;
+    --primary: #e8ece9; --primary-hover: #ffffff; --primary-contrast: #121a16; --brand-dark: #0a0d0b;
+    --accent: #8cc9a5; --accent-text: #93cfab; --accent-soft: #1d2a23;
+    --cta: #e8ece9; --cta-2: #e8ece9; --cta-hover: #ffffff; --price: #eceeec;
+    --tone-0-bg: #1f2521; --tone-0-fg: #d3dad5; --tone-0-a: #222925; --tone-0-b: #181d1a;
+    --tone-1-bg: #1f2521; --tone-1-fg: #d3dad5; --tone-1-a: #222925; --tone-1-b: #181d1a;
+    --tone-2-bg: #1f2521; --tone-2-fg: #d3dad5; --tone-2-a: #222925; --tone-2-b: #181d1a;
+    --tone-3-bg: #1f2521; --tone-3-fg: #d3dad5; --tone-3-a: #222925; --tone-3-b: #181d1a;
+    --tone-4-bg: #1f2521; --tone-4-fg: #d3dad5; --tone-4-a: #222925; --tone-4-b: #181d1a;
+    --tone-5-bg: #1f2521; --tone-5-fg: #d3dad5; --tone-5-a: #222925; --tone-5-b: #181d1a;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1311; --bg-alt: #141917; --bg-warm: #141917; --bg-sky: #0f1311;
+  --surface: #171c19; --surface-2: #1f2521; --text: #eceeec; --text-muted: #a1aaa5;
+  --border: #2a302c; --border-strong: #3a423d;
+  --primary: #e8ece9; --primary-hover: #ffffff; --primary-contrast: #121a16; --brand-dark: #0a0d0b;
+  --accent: #8cc9a5; --accent-text: #93cfab; --accent-soft: #1d2a23;
+  --cta: #e8ece9; --cta-2: #e8ece9; --cta-hover: #ffffff; --price: #eceeec;
+  --tone-0-bg: #1f2521; --tone-0-fg: #d3dad5; --tone-0-a: #222925; --tone-0-b: #181d1a;
+  --tone-1-bg: #1f2521; --tone-1-fg: #d3dad5; --tone-1-a: #222925; --tone-1-b: #181d1a;
+  --tone-2-bg: #1f2521; --tone-2-fg: #d3dad5; --tone-2-a: #222925; --tone-2-b: #181d1a;
+  --tone-3-bg: #1f2521; --tone-3-fg: #d3dad5; --tone-3-a: #222925; --tone-3-b: #181d1a;
+  --tone-4-bg: #1f2521; --tone-4-fg: #d3dad5; --tone-4-a: #222925; --tone-4-b: #181d1a;
+  --tone-5-bg: #1f2521; --tone-5-fg: #d3dad5; --tone-5-a: #222925; --tone-5-b: #181d1a;
+}
+.tv-1, .tone-1, .tv-2, .tone-2 { --con: var(--text); }
+
+/* Typographie : l'écriture porte la marque, pas la couleur */
+body { letter-spacing: -0.005em; }
+.display { color: var(--text); letter-spacing: -0.035em; line-height: 0.98; }
+.display em, :root[data-theme="dark"] .display em { background: none; -webkit-text-fill-color: currentColor; color: var(--text-muted); }
+.h1, .h2 { letter-spacing: -0.03em; }
+.h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.kicker, .footer-title { text-transform: none; letter-spacing: 0; font-weight: 600; font-size: 0.9rem; color: var(--text-muted); }
+.kicker .icon { display: none; }
+.kicker-light { color: #b9c4bd; }
+.lead { color: var(--text-muted); }
+
+/* Boutons : aplats d'encre, pas de dégradé ni d'ombre colorée */
+.btn { border-radius: 10px; font-weight: 650; letter-spacing: -0.005em; transition: background 0.25s var(--ease), color 0.25s, border-color 0.25s, transform 0.2s var(--ease); }
+.btn-lg { border-radius: 12px; }
+.btn-primary, .btn-cta { background: var(--primary); color: var(--primary-contrast); box-shadow: none; }
+.btn-primary:hover, .btn-cta:hover { background: var(--primary-hover); color: var(--primary-contrast); }
+.btn-cta .icon { color: currentColor; }
+.btn-sun { background: #ffffff; color: #121a16; }
+.btn-sun:hover { background: #eceee9; color: #121a16; }
+.btn-ghost { background: transparent; border-color: var(--border-strong); }
+.btn-ghost:hover { background: var(--surface); border-color: var(--text); }
+.btn-light:hover { transform: none; box-shadow: none; background: #eceee9; }
+
+/* En-tête : verre dépoli, filet fin */
+.site-header { background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: saturate(1.2) blur(20px); -webkit-backdrop-filter: saturate(1.2) blur(20px); }
+.logo-mark { box-shadow: none; border-radius: 10px; }
+.demo-banner { background: var(--brand-dark); }
+.demo-banner::after, .site-footer::before { display: none; }
+.demo-banner-inner > .icon { color: #b9c4bd; }
+
+/* Accueil : une scène calme, une seule lumière douce */
+.hero { background: radial-gradient(900px 520px at 78% 30%, color-mix(in srgb, var(--surface) 90%, transparent), transparent 70%), var(--bg); padding-block: 80px 72px; }
+.hero-search { border-radius: 16px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.hero-float { border-radius: 12px; }
+.hero-float::before { background: var(--text); border-color: var(--surface); }
+.hero-float-icon { background: var(--surface-2) !important; color: var(--text) !important; }
+.hero-map .dot, .hero-map circle { fill: var(--text) !important; }
+
+/* Moment d'entrée unique : le titre se dévoile ligne par ligne */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .display { animation: v3Rise 1s var(--ease) both; }
+  .hero .lead { animation: v3Rise 1s 0.12s var(--ease) both; }
+  .hero-search, .hero-quick { animation: v3Rise 1s 0.22s var(--ease) both; }
+  .hero-visual { animation: v3Fade 1.4s 0.3s var(--ease) both; }
+}
+@keyframes v3Rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes v3Fade { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: none; } }
+
+/* Bande de chiffres : blanche, filets fins */
+.stats-band { background: var(--surface); color: var(--text-muted); border-block: 1px solid var(--border); }
+.stats-band::before { display: none; }
+.stats-band .stat strong, .stats-band .stat b, .stat-value { color: var(--text) !important; background: none !important; -webkit-text-fill-color: currentColor !important; }
+.stats-band .stat + .stat { border-color: var(--border) !important; }
+
+/* Annonces : couvertures « studio » neutres, l'icône en encre */
+.media-illu { color: var(--text); --pattern: none !important; background: linear-gradient(160deg, var(--ca), var(--cb)); }
+.media-deco { display: none; }
+.media-icon { width: 58px; height: 58px; border-radius: 16px; background: var(--surface); color: var(--text); box-shadow: 0 1px 0 var(--border), 0 12px 30px rgba(18, 26, 22, 0.08); transition: transform 0.6s var(--ease); }
+.media img { transition: transform 0.8s var(--ease); }
+.listing-card { border-radius: 14px; transition: border-color 0.3s, box-shadow 0.4s var(--ease); }
+.listing-card:hover { transform: none; box-shadow: var(--shadow); border-color: var(--border-strong); }
+.listing-card:hover .media img { transform: scale(1.04); }
+.listing-card:hover .media-icon { transform: scale(1.06); }
+.listing-card-cat { text-transform: none; letter-spacing: 0; font-weight: 600; }
+.media-chips .chip, .chip-type { background: var(--surface) !important; color: var(--text) !important; box-shadow: none !important; border: 1px solid var(--border) !important; }
+.fav-btn { box-shadow: none; border: 1px solid var(--border); }
+.fav-btn:hover, .fav-btn.is-active { color: var(--text); }
+.price, .listing-price { color: var(--text); }
+
+/* Catégories et bulles : icônes en encre sur gris clair */
+.cat-tile { border-radius: 14px; box-shadow: none !important; }
+.cat-tile:hover { transform: none; border-color: var(--text); }
+.cat-icon { background: var(--surface-2) !important; color: var(--text) !important; box-shadow: none !important; border-radius: 12px; }
+.story-ring, .story-discover .story-ring, .story-near .story-ring, .story-map .story-ring { background: var(--border-strong) !important; padding: 1.5px; }
+.story-bubble, .story-near .story-bubble { color: var(--text) !important; }
+.story-discover .story-bubble { background: var(--primary) !important; color: var(--primary-contrast) !important; }
+
+/* Sections sombres : anthracite forêt, icônes blanches */
+.trust-section { background: var(--brand-dark); }
+.trust-section::before, .trust-section::after { display: none; }
+.trust-icon, .trust-card:nth-child(n) .trust-icon { background: rgba(255, 255, 255, 0.08) !important; color: #fff !important; }
+.trust-card { border-radius: 14px; background: rgba(255, 255, 255, 0.04); }
+.discover-promo { background: var(--brand-dark) !important; border-radius: 16px; }
+.discover-promo::before, .discover-promo::after { display: none !important; }
+.discover-promo-text .kicker { color: #b9c4bd; }
+.cta-band .cta-card, .cta-card, .final-cta { background: var(--brand-dark) !important; }
+.cta-card::before, .cta-card::after { display: none !important; }
+
+/* Carte : épingles à l'encre */
+.map-pin.tv-0, .map-pin.tv-1, .map-pin.tv-2, .map-pin.tv-3, .map-pin.tv-4, .map-pin.tv-5 { background: #15241d; color: #fff; }
+
+/* Onglet actif de la barre mobile : encre */
+.tab-link.is-active, :root[data-theme="dark"] .tab-link.is-active { color: var(--text); }
+.stat + .stat { border-left-color: var(--border); }
+.stat strong { color: var(--text); }
+.stat strong:nth-child(n) { color: var(--text) !important; }
+.stat span { color: var(--text-muted); }
+.cta-inner { background: var(--brand-dark) !important; border-radius: 18px; }
+.cta-inner::before, .cta-inner::after { display: none; }
+/* Carte de la Suisse de l'accueil : un objet « studio », sans couleur */
+.swiss-shape { stroke: var(--border-strong); stroke-width: 1.2; filter: drop-shadow(0 30px 40px rgba(18, 26, 22, 0.10)); }
+.swiss-fill-a, :root[data-theme="dark"] .swiss-fill-a { stop-color: var(--surface); }
+.swiss-fill-b, :root[data-theme="dark"] .swiss-fill-b { stop-color: var(--surface-2); }
+.swiss-lake, :root[data-theme="dark"] .swiss-lake { fill: var(--border); }
+.swiss-dots .dot { opacity: 0.7; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .swiss-fill-a { stop-color: var(--surface); }
+  :root:not([data-theme="light"]) .swiss-fill-b { stop-color: var(--surface-2); }
+  :root:not([data-theme="light"]) .swiss-lake { fill: var(--border); }
+  :root:not([data-theme="light"]) .swiss-shape { stroke: var(--border-strong); }
+}
+.tab-publish { background: var(--primary) !important; color: var(--primary-contrast) !important; box-shadow: 0 10px 24px rgba(18, 26, 22, 0.22) !important; border-radius: 16px; }
+.tab-link.is-active .icon { background: var(--surface-2); }
+.fact-icon { background: var(--surface-2); color: var(--text); }
+.tabbar { background: color-mix(in srgb, var(--surface) 86%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.step { border-radius: 14px; }
+.step-icon, .step:nth-child(n) .step-icon { background: var(--surface-2) !important; color: var(--text) !important; box-shadow: none !important; border-radius: 12px; }
+.step-num, .step:nth-child(n) .step-num { color: var(--border-strong) !important; -webkit-text-fill-color: currentColor; background: none !important; }
