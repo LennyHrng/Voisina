@@ -1,5 +1,12 @@
 # Voisina — journal des changements
 
+## v3.2 — Une seule couleur : le vert Voisina
+- Fini le jaune, le bleu et le turquoise : les catégories, annonces, bulles, étapes, chiffres et cartes de sécurité
+  utilisent 6 nuances de vert (émeraude, forêt, menthe, jade, sauge, pin). Le site reste vivant, mais tout s'accorde.
+- Boutons « soleil » remplacés par des boutons blancs à texte vert forêt ; barre de progression et dégradés 100 % verts.
+- Étiquettes en minuscules (plus de MAJUSCULES espacées), plus calme et plus « pro ».
+- Fondu court entre les pages, défilement doux, barre de défilement fine et verte, sélection de texte verte.
+
 ## v3.1 — Mouvement
 Les couleurs vives de Voisina sont conservées. Le site gagne des animations soignées, surtout sur ordinateur.
 - Titre de l'accueil : chaque ligne sort d'un masque, l'une après l'autre.
@@ -19,4 +26,4 @@ Les couleurs vives de Voisina sont conservées. Le site gagne des animations soi
 - Espaces insécables avant ? ! : ; en français ; titres équilibrés.
 - Boutons, pagination, barre d'onglets et pied de page adaptés aux petits écrans.
 
-Fichiers modifiés : index.html, styles.css (blocs « v2.6 » et « v3.1 » à la fin), voisina.js, sw.js
+Fichiers modifiés : index.html, styles.css (blocs « v2.6 », « v3.1 » et « v3.2 » à la fin), voisina.js, sw.js

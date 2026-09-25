@@ -2021,3 +2021,94 @@ body.is-scrolled .site-header { box-shadow: 0 10px 30px rgba(22, 38, 31, 0.08); 
   .btn .icon:last-child:not(:first-child) { transition: transform 0.3s var(--ease-out); }
   .btn:hover .icon:last-child:not(:first-child) { transform: translateX(4px); }
 }
+
+/* =====================================================================
+   v3.2 — Une seule famille de couleur : le vert Voisina
+   Fini le jaune, le bleu et le turquoise : les 6 teintes de catégories
+   deviennent 6 nuances de vert (émeraude, forêt, menthe, jade, sauge, pin).
+   Le site reste vivant, mais tout va ensemble.
+   ===================================================================== */
+:root {
+  --sun: #8fe0ae;  --lime: #5fd49a;
+  --rainbow: linear-gradient(90deg, #0e3b2c, #0f7a4f 35%, #34c77f 70%, #8fe0ae);
+  --tone-0-bg: #dcf5e5; --tone-0-fg: #156b3c; --tone-0-a: #34c77f; --tone-0-b: #11915a;  /* émeraude */
+  --tone-1-bg: #dcefe2; --tone-1-fg: #1f5c3e; --tone-1-a: #3f9a66; --tone-1-b: #1d5a3c;  /* forêt */
+  --tone-2-bg: #e1f6ea; --tone-2-fg: #17704a; --tone-2-a: #62d49c; --tone-2-b: #1c9a63;  /* menthe */
+  --tone-3-bg: #d8f1e5; --tone-3-fg: #0f6649; --tone-3-a: #2fbf8a; --tone-3-b: #0d7d57;  /* jade */
+  --tone-4-bg: #e3eee6; --tone-4-fg: #35573f; --tone-4-a: #86b891; --tone-4-b: #43795a;  /* sauge */
+  --tone-5-bg: #d5e9dd; --tone-5-fg: #12432e; --tone-5-a: #238257; --tone-5-b: #0e3b2c;  /* pin */
+  --blue: #0f6a4f; --blue-soft: #dcf2e8;
+}
+.tv-1, .tone-1, .tv-2, .tone-2 { --con: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tone-0-bg: #1b3a29; --tone-0-fg: #7ee2a8; --tone-1-bg: #1c3326; --tone-1-fg: #9fd3ad; --tone-2-bg: #1a3a2b; --tone-2-fg: #8fe8b8;
+    --tone-3-bg: #173a2f; --tone-3-fg: #6fdcb0; --tone-4-bg: #213229; --tone-4-fg: #b3d1bb; --tone-5-bg: #16301f; --tone-5-fg: #86c9a0;
+    --blue: #7ee2a8; --blue-soft: #16301f;
+  }
+}
+:root[data-theme="dark"] {
+  --tone-0-bg: #1b3a29; --tone-0-fg: #7ee2a8; --tone-1-bg: #1c3326; --tone-1-fg: #9fd3ad; --tone-2-bg: #1a3a2b; --tone-2-fg: #8fe8b8;
+  --tone-3-bg: #173a2f; --tone-3-fg: #6fdcb0; --tone-4-bg: #213229; --tone-4-fg: #b3d1bb; --tone-5-bg: #16301f; --tone-5-fg: #86c9a0;
+  --blue: #7ee2a8; --blue-soft: #16301f;
+}
+
+/* Titre : dégradé 100 % vert */
+.display em { background-image: linear-gradient(100deg, #0f7a4f 0%, #1fa865 55%, #34c77f 100%); }
+:root[data-theme="dark"] .display em { background-image: linear-gradient(100deg, #5fd394, #7ee2a8 50%, #b4f0cb); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .display em { background-image: linear-gradient(100deg, #5fd394, #7ee2a8 50%, #b4f0cb); } }
+
+/* Étiquettes en minuscules : plus calme, plus « maison de design » */
+.kicker, .footer-title { text-transform: none; letter-spacing: 0; font-size: 0.92rem; font-weight: 700; }
+.listing-card-cat, .fact dt, .cal-weekday { text-transform: none; letter-spacing: 0; }
+
+/* Accueil : lumières uniquement vertes */
+.hero {
+  background:
+    radial-gradient(640px 420px at 82% 22%, rgba(52, 199, 127, 0.22), transparent 70%),
+    radial-gradient(560px 380px at -5% 100%, rgba(95, 212, 154, 0.20), transparent 70%),
+    radial-gradient(420px 280px at 48% -5%, rgba(15, 122, 79, 0.08), transparent 70%),
+    var(--bg);
+}
+.swiss-lake { fill: #cfe9dc; }
+:root[data-theme="dark"] .swiss-lake { fill: #173328; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .swiss-lake { fill: #173328; } }
+
+/* Chiffres, étapes, sécurité : même vert partout */
+.stat strong, .stat:nth-child(n) strong { color: #7ee2a8; }
+.step:nth-child(n) .step-icon { background: linear-gradient(135deg, #34c77f, #0f7a4f); color: #fff; box-shadow: 0 10px 22px rgba(15, 122, 79, 0.25); }
+.step:nth-child(n) .step-num { color: color-mix(in srgb, #34c77f 40%, var(--surface)); }
+.trust-card:nth-child(n) .trust-icon { --ta: #34c77f; --tb: #0f7a4f; color: #fff; }
+.trust-section::after { background: radial-gradient(circle, rgba(52, 199, 127, 0.22), transparent 65%) !important; }
+.cta-inner::after { background: radial-gradient(circle, rgba(143, 224, 174, 0.35), transparent 65%); }
+.cta-inner::before { background: radial-gradient(circle, rgba(52, 199, 127, 0.35), transparent 65%); }
+.discover-promo { background: radial-gradient(420px 200px at 90% 0%, rgba(143, 224, 174, 0.30), transparent 70%), linear-gradient(115deg, #0e3b2c, #0f7a4f 70%, #1fa865) !important; }
+
+/* Boutons « soleil » → boutons blancs à texte forêt */
+.btn-sun { background: #ffffff; color: #0e3b2c; }
+.btn-sun:hover { background: #e6f7ed; color: #0e3b2c; }
+.btn-cta .icon { color: #c9f5da; }
+.reel-price { color: #0e3b2c; }
+
+/* Bulles de l'accueil (téléphone) */
+@media (max-width: 980px) {
+  .story-discover .story-ring { background: conic-gradient(from 200deg, #0e3b2c, #11915a, #34c77f, #8fe0ae, #0e3b2c) !important; }
+  .story-near .story-ring, .story-map .story-ring { background: linear-gradient(135deg, #34c77f, #0f7a4f) !important; }
+  .story-near .story-bubble, .story-map .story-bubble { color: #0f7a4f !important; }
+}
+.progress span { background: linear-gradient(90deg, #0f7a4f, #34c77f, #8fe0ae); }
+@media (hover: hover) and (pointer: fine) {
+  .trust-card::after { background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(143, 224, 174, 0.14), transparent 70%); }
+}
+
+/* Détails de finition */
+::selection { background: #c9f0d8; color: #0e3b2c; }
+html { scrollbar-color: #9fcdb1 transparent; scrollbar-width: thin; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  /* Passage d'une page à l'autre : fondu court */
+  #view > .page { animation: pageIn 0.45s var(--ease-out, ease-out) both; }
+}
+@keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+body[data-route="home"] #view > .page { animation: none; }
+:root { --bg-warm: #eaf6ef; }
