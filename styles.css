@@ -2143,3 +2143,27 @@ body[data-route="home"] #view > .page { animation: none; }
 /* Le choix de motif n'a plus d'effet avec les illustrations : on le cache */
 .patterns { display: none !important; }
 .reel-info, .reel-actions { z-index: 2; }
+
+/* v3.4 — Palette « nature » pour les illustrations : ciel, soleil, terre cuite, miel, bois */
+.sc { --sc-sky: #e4f0f6; --sc-sun: #f6dfa0; --sc-hill: #d4ead0; --sc-ground: #bfe0bb;
+  --sc-clay: #e07a5f; --sc-clay2: #eea08a; --sc-clay3: #c4583f; --sc-honey: #f2bb4f; --sc-sand: #f1e3c6;
+  --sc-wood: #c08a5a; --sc-wood2: #93643c; --sc-skyb: #7fb3d5; --sc-skyb2: #4f86b0; --sc-glass: #cfe6f3;
+  --sc-cream: #fffaf0; --sc-box: #dcb885; --sc-boxd: #b98a55; --sc-soil: #6b4a31; --sc-bulb: #ffe7a6; }
+.sc .sun { fill: var(--sc-sun); }
+.sc .clay { fill: var(--sc-clay); } .sc .clay2 { fill: var(--sc-clay2); } .sc .clay3 { fill: var(--sc-clay3); }
+.sc .honey { fill: var(--sc-honey); } .sc .sand { fill: var(--sc-sand); } .sc .wood { fill: var(--sc-wood); } .sc .wood2 { fill: var(--sc-wood2); }
+.sc .skyb { fill: var(--sc-skyb); } .sc .skyb2 { fill: var(--sc-skyb2); } .sc .glass { fill: var(--sc-glass); } .sc .cream { fill: var(--sc-cream); }
+.sc .cbox { fill: var(--sc-box); } .sc .cboxd { fill: var(--sc-boxd); } .sc .soil { fill: var(--sc-soil); } .sc .bulb { fill: var(--sc-bulb); }
+.sc .s.sclay { stroke: var(--sc-clay); } .sc .s.shoney { stroke: var(--sc-honey); } .sc .s.swood { stroke: var(--sc-wood); } .sc .s.swood2 { stroke: var(--sc-wood2); }
+.sc .s.sskyb { stroke: var(--sc-skyb); } .sc .s.sskyb2 { stroke: var(--sc-skyb2); }
+.media-scene, .reel-scene { background: #e4f0f6 !important; }
+:root[data-theme="dark"] .sc { --sc-sky: #16232e; --sc-sun: #e9d8a6; --sc-hill: #1b3325; --sc-ground: #1f3d2d;
+  --sc-clay: #d0725a; --sc-clay2: #b8705d; --sc-clay3: #a94c37; --sc-honey: #e0ab45; --sc-sand: #d9ccb0; --sc-wood: #a87a50; --sc-wood2: #7b5433;
+  --sc-skyb: #6fa2c4; --sc-skyb2: #4a7ea6; --sc-glass: #9cc3da; --sc-cream: #ece6d8; --sc-box: #c6a375; --sc-boxd: #a27848; --sc-soil: #4d3524; --sc-bulb: #f1d98f; }
+:root[data-theme="dark"] .media-scene, :root[data-theme="dark"] .reel-scene { background: #16232e !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sc { --sc-sky: #16232e; --sc-sun: #e9d8a6; --sc-hill: #1b3325; --sc-ground: #1f3d2d;
+    --sc-clay: #d0725a; --sc-clay2: #b8705d; --sc-clay3: #a94c37; --sc-honey: #e0ab45; --sc-sand: #d9ccb0; --sc-wood: #a87a50; --sc-wood2: #7b5433;
+    --sc-skyb: #6fa2c4; --sc-skyb2: #4a7ea6; --sc-glass: #9cc3da; --sc-cream: #ece6d8; --sc-box: #c6a375; --sc-boxd: #a27848; --sc-soil: #4d3524; --sc-bulb: #f1d98f; }
+  :root:not([data-theme="light"]) .media-scene, :root:not([data-theme="light"]) .reel-scene { background: #16232e !important; }
+}

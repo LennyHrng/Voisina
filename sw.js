@@ -1,7 +1,7 @@
 /* Service worker : permet d'installer Voisina comme une application et de l'ouvrir hors ligne.
    Stratégie "réseau d'abord" : toujours la version la plus récente, le cache seulement hors ligne. */
-const CACHE = "voisina-v3.3";
-const SHELL = ["./", "./index.html", "./styles.css?v=3.3", "./voisina.js?v=3.3", "./theme-boot.js?v=3.3", "./fraunces-latin-600-normal.woff2", "./favicon.svg", "./manifest.webmanifest"];
+const CACHE = "voisina-v3.4";
+const SHELL = ["./", "./index.html", "./styles.css?v=3.4", "./voisina.js?v=3.4", "./theme-boot.js?v=3.4", "./fraunces-latin-600-normal.woff2", "./favicon.svg", "./manifest.webmanifest"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", (e) => {

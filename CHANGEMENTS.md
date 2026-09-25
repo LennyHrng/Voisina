@@ -1,5 +1,11 @@
 # Voisina — journal des changements
 
+## v3.4 — Illustrations aux couleurs de la nature
+- Les illustrations ne sont plus toutes vertes : ciel bleu clair, soleil doré, collines vertes, et des objets en terre cuite,
+  miel, bois, bleu ciel et crème (chien brun, voiture et fauteuil terre cuite, cartons, pots de fleurs, arrosoir bleu…).
+- Ces couleurs sont choisies pour aller avec le vert : l'interface du site reste verte, les images apportent la chaleur.
+- Version nuit adaptée en mode sombre.
+
 ## v3.3 — Illustrations dessinées
 - Chaque catégorie a sa propre illustration, dessinée en code (SVG) dans les verts du site : sac de courses,
   chien en laisse, fauteuil et tasse de thé, cerf-volant et cubes, voiture sur la route, caisse à outils,
