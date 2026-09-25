@@ -5759,7 +5759,7 @@ const __default = {
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">${icon("leaf")}${t("home.eyebrow")}</span>
-          <h1 class="display">${t("home.title1")}<br>${t("home.title2")}<br><em>${t("home.title3")}</em></h1>
+          <h1 class="display"><span class="line"><span>${t("home.title1")}</span></span> <span class="line"><span>${t("home.title2")}</span></span> <span class="line"><em>${t("home.title3")}</em></span></h1>
           <p class="lead">${t("home.lead")}</p>
           <p class="lead-short">${t("home.leadShort")}</p>
 
@@ -9241,7 +9241,108 @@ function render({ keepScroll = false } = {}) {
   if (!keepScroll && !sameView) $("#main").focus({ preventScroll: true });
   renderChrome();
   centerActiveTabs(root);
+  motion.scan(root);
 }
+
+/* ======================= MOUVEMENT (v3.1) =======================
+   Apparitions au défilement (depuis la gauche, la droite ou le bas),
+   chiffres qui comptent, relief de la carte qui suit la souris,
+   lumière qui suit le curseur sur les annonces, barre de progression.
+   Tout est désactivé si l'appareil demande de réduire les animations. */
+const motion = (() => {
+  const reduced = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = () => window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
+  let io = null;
+  // [sélecteur, sens, décalage en cascade]
+  const RULES = [
+    [".section-head, .page-head .container > *", "left", true],
+    [".cat-grid > *, .home-feed > *, .city-grid > *, .steps > *", "up", true],
+    [".listing-grid-explore > *", "up", true],
+    [".map-showcase-text", "left", false], [".map-showcase-map", "right", false],
+    [".trust-intro", "left", false], [".trust-cards > *", "right", true],
+    [".faq-wrap > :first-child", "left", false], [".faq-item", "right", true],
+    [".discover-promo", "right", false], [".cta-inner", "zoom", false],
+    [".stats-grid > .stat", "up", true], [".center-actions", "up", false],
+  ];
+  function count(el) {
+    const target = parseInt((el.textContent || "").replace(/[^0-9]/g, ""), 10);
+    if (!target) return;
+    const start = performance.now(), dur = 1400, fmt = (n) => (typeof fmtNumber === "function" ? fmtNumber(n) : String(n));
+    const tick = (now) => {
+      const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = fmt(Math.round(target * e));
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+  function onSeen(entries) {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      el.classList.add("is-in");
+      io.unobserve(el);
+      if (el.classList.contains("stat")) { const n = el.querySelector("strong"); if (n) count(n); }
+    });
+  }
+  function scan(root) {
+    if (reduced() || !("IntersectionObserver" in window)) return;
+    if (!io) io = new IntersectionObserver(onSeen, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    RULES.forEach(([sel, dir, cascade]) => {
+      root.querySelectorAll(sel).forEach((el) => {
+        if (el.classList.contains("rv")) return;
+        // Pas d'apparition dans une rangée qui défile à l'horizontale (sinon les cartes hors écran resteraient cachées)
+        const ox = getComputedStyle(el.parentElement).overflowX;
+        if (ox === "auto" || ox === "scroll") return;
+        const i = cascade ? [...el.parentElement.children].indexOf(el) : 0;
+        el.classList.add("rv", "rv-" + dir);
+        if (cascade) el.style.setProperty("--rd", `${Math.min(i % 8, 7) * 0.07}s`);
+        io.observe(el);
+      });
+    });
+    if (finePointer()) { tiltHero(root); spotlight(root); }
+  }
+  // Relief : les cartes flottantes bougent plus que la Suisse (effet de profondeur)
+  function tiltHero(root) {
+    const hero = root.querySelector(".hero");
+    const vis = hero?.querySelector(".hero-visual");
+    if (!vis) return;
+    hero.addEventListener("pointermove", (e) => {
+      const r = hero.getBoundingClientRect();
+      vis.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+      vis.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+    });
+    hero.addEventListener("pointerleave", () => { vis.style.setProperty("--px", 0); vis.style.setProperty("--py", 0); });
+  }
+  // Lumière verte qui suit le curseur sur les cartes
+  function spotlight(root) {
+    root.addEventListener("pointermove", (e) => {
+      const card = e.target.closest?.(".listing-card, .cat-tile, .step, .trust-card");
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      card.style.setProperty("--my", `${e.clientY - r.top}px`);
+    });
+  }
+  // Barre de progression de lecture + en-tête qui se détache au défilement
+  function initScroll() {
+    const bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.setProperty("--p", max > 0 ? (scrollY / max).toFixed(4) : 0);
+      document.body.classList.toggle("is-scrolled", scrollY > 8);
+    };
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener("hashchange", () => setTimeout(update, 50));
+    update();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initScroll); else initScroll();
+  return { scan };
+})();
 
 /* Sur téléphone, les menus qui défilent horizontalement montrent l'élément actif
    (sinon « À propos » ou « Mentions légales » restent cachés hors de l'écran). */

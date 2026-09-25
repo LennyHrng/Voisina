@@ -1,15 +1,15 @@
 # Voisina — journal des changements
 
-## v3.0 — Direction « Atelier suisse »
-Inspirée des sites automobiles premium (Polestar, Volvo, Porsche) : la typographie porte la marque, pas la couleur.
-- Palette réduite : fond gris clair « studio », texte encre presque noir, une seule couleur d'accent (vert du logo, pour « Gratuit » et les liens).
-- Annonces sans photo : couverture neutre avec l'icône de la catégorie, au lieu de six dégradés de couleur.
-- Boutons en aplat d'encre (clair sur fond sombre en mode nuit), coins plus nets, ombres très légères.
-- Titres sans étiquettes en majuscules ; « Humainement. » en gris au lieu du dégradé vert.
-- Sections sombres unifiées en anthracite forêt ; bande de chiffres blanche à filets fins.
-- Carte de la Suisse, catégories, bulles, étapes et barre d'onglets en noir et blanc.
-- Effets discrets : entrée du titre ligne par ligne à l'ouverture, léger zoom de l'image au survol d'une annonce,
-  en-tête et barre d'onglets en verre dépoli. Désactivés si l'appareil demande de réduire les animations.
+## v3.1 — Mouvement
+Les couleurs vives de Voisina sont conservées. Le site gagne des animations soignées, surtout sur ordinateur.
+- Titre de l'accueil : chaque ligne sort d'un masque, l'une après l'autre.
+- Au défilement, les éléments apparaissent : titres de section depuis la gauche, cartes de sécurité et questions depuis la droite,
+  catégories, annonces, villes et étapes en vague depuis le bas.
+- Les chiffres (100 annonces, 26 cantons…) comptent jusqu'à leur valeur quand on les voit.
+- Carte de la Suisse en relief : elle suit la souris, les annonces flottantes bougent plus qu'elle (effet de profondeur).
+- Lumière verte qui suit le curseur sur les annonces, catégories et cartes ; léger zoom des images ; flèches qui avancent sur les boutons.
+- Barre de progression aux couleurs de Voisina en haut de l'écran ; l'en-tête se détache du contenu au défilement.
+- Accessibilité : tout est désactivé si l'appareil demande de réduire les animations ; rien ne reste caché si le navigateur est ancien.
 
 ## v2.6 — Finitions téléphone
 - Fiche annonce (320 px) : cases qui dépassaient et barre « Contacter » invisible, corrigé.
@@ -19,4 +19,4 @@ Inspirée des sites automobiles premium (Polestar, Volvo, Porsche) : la typograp
 - Espaces insécables avant ? ! : ; en français ; titres équilibrés.
 - Boutons, pagination, barre d'onglets et pied de page adaptés aux petits écrans.
 
-Fichiers modifiés : index.html, styles.css (blocs « v2.6 » et « v3.0 » à la fin), voisina.js, sw.js
+Fichiers modifiés : index.html, styles.css (blocs « v2.6 » et « v3.1 » à la fin), voisina.js, sw.js
