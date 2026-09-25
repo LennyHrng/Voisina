@@ -1847,3 +1847,103 @@ body[data-route="decouvrir"] .site-footer, body[data-route="decouvrir"] .demo-ba
   .listing-grid-explore .listing-card-foot { border-top: 0; padding-top: 2px; }
   .listing-grid-explore .fav-btn { top: 8px; right: 8px; width: 34px; height: 34px; box-shadow: none; background: var(--surface-2); }
 }
+
+/* =====================================================================
+   v2.6 — Finitions téléphone (tests automatiques de 320 px à 1440 px)
+   ===================================================================== */
+
+/* Recherche de l'accueil : icône seule sur téléphone, le champ garde la place */
+.hero-search-btn .icon { display: none; }
+@media (max-width: 640px) {
+  .hero-search-btn { width: 48px; padding: 0 !important; justify-content: center; }
+  .hero-search-btn .icon { display: block; width: 22px; height: 22px; }
+  .hero-search-btn .btn-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* Bandeau de démo : une seule ligne sur téléphone */
+@media (max-width: 640px) {
+  .demo-banner-inner { min-height: 36px; padding-block: 4px; gap: 8px; }
+  .demo-banner p { line-height: 1.35; }
+  .demo-banner .icon-btn { width: 30px; height: 30px; }
+}
+
+/* Carte de bienvenue : compacte sur téléphone pour laisser voir la recherche */
+@media (max-width: 640px) {
+  .welcome-card { padding: 12px 12px 12px; gap: 2px 10px; border-radius: 18px; }
+  .welcome-card p { display: none; }
+  .welcome-logo .logo-mark { width: 34px; height: 34px; }
+  .welcome-actions { margin-top: 8px; flex-wrap: nowrap; }
+  .welcome-actions .btn { min-height: 42px; white-space: nowrap; }
+}
+
+/* Fiche annonce : les cases Date / Horaire / … ne dépassent plus */
+.fact, .fact > div { min-width: 0; }
+.fact dd { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fact dt { font-size: 0.7rem; letter-spacing: 0.02em; }
+  .fact dd { font-size: 0.95rem; line-height: 1.25; }
+}
+@media (max-width: 380px) {
+  .fact { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .fact-icon { width: 30px; height: 30px; border-radius: 9px; }
+}
+
+/* Calendrier : l'en-tête passe sur deux lignes si l'écran est étroit */
+.cal-head { flex-wrap: wrap; row-gap: 10px; }
+@media (max-width: 420px) {
+  .cal-card { padding: 14px 12px; }
+  .cal-head { justify-content: space-between; }
+  .cal-title { flex: 1 1 100%; }
+  .cal-nav { flex: 1 1 100%; justify-content: space-between; }
+  .cal-grid { gap: 3px; }
+  .cal-weekday { font-size: 0.66rem; letter-spacing: 0; }
+}
+
+/* Connexion : onglets et titres qui ne se cassent plus */
+@media (max-width: 420px) {
+  .tabs .tab { padding: 9px 6px; font-size: 0.92rem; line-height: 1.2; }
+  .trial-box strong { text-wrap: balance; }
+}
+h1, h2, h3, .h2, .h3, .h4 { text-wrap: balance; }
+
+/* Pages « Connectez-vous » : boutons de même largeur, un seul bouton principal */
+@media (max-width: 640px) {
+  .empty-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; margin-inline: auto; }
+  .empty-actions .btn { width: 100%; justify-content: center; }
+  .empty-state { padding: 36px 18px; }
+}
+
+/* Pagination compacte sur téléphone (une seule ligne) */
+@media (max-width: 640px) {
+  .pagination { gap: 4px; flex-wrap: nowrap; }
+  .pagination .btn, .pagination button, .pagination a { min-width: 38px; padding-inline: 8px; }
+}
+
+/* Pied de page plus court sur téléphone : la barre d'onglets remplace « Explorer » */
+@media (max-width: 640px) {
+  .site-footer { padding-top: 36px; }
+  .footer-grid { gap: 22px; padding-bottom: 24px; }
+  .footer-brand p, .footer-badges { display: none; }
+  .footer-grid > div:nth-child(2) { display: none; }
+  .footer-bottom { gap: 10px; padding-block: 16px; }
+}
+
+/* Fiche annonce : la colonne de droite ne force plus la largeur sur petit écran */
+.detail-layout > *, .detail-side > *, .side-card { min-width: 0; }
+.side-row { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+.side-row .btn { min-width: 0; white-space: normal; text-align: center; }
+
+/* Barre d'onglets : libellés lisibles même sur 320 px */
+@media (max-width: 350px) {
+  .tab-link { font-size: 0.64rem; letter-spacing: -0.01em; }
+}
+
+/* Carte de bienvenue : boutons sur deux lignes si besoin */
+@media (max-width: 380px) {
+  .welcome-actions { flex-wrap: wrap; }
+}
+@media (max-width: 360px) {
+  .pagination { flex-wrap: wrap; }
+  .pagination .btn, .pagination button, .pagination a { min-width: 34px; }
+}
