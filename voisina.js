@@ -6016,7 +6016,7 @@ const __default = {
           <form class="hero-search hero-fade" data-form="hero-search" role="search">
             <div class="field">
               <label class="sr-only" for="hero-q">${t("search.what")}</label>
-              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${window.matchMedia?.("(max-width: 640px)").matches ? t("search.whatPhShort") : t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
+              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${t("search.whatPhShort")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
             </div>
             ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
             <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>

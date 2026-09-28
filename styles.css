@@ -2204,3 +2204,48 @@ html:not(.is-scrolled) body[data-route="home"] .site-header .logo-mark { box-sha
   .marquee::-webkit-scrollbar { display: none; }
   .marquee-track { flex-wrap: nowrap !important; width: max-content !important; justify-content: flex-start !important; padding-inline: 16px; }
 }
+
+/* =====================================================================
+   10. PETITS TÉLÉPHONES (320–375 px) ET « TEXTE PLUS GRAND » — v3.2
+   Rien ne doit dépasser sur le côté, même en allemand ou avec le texte agrandi.
+   ===================================================================== */
+/* Barre du bas : 5 colonnes qui peuvent rétrécir, libellés jamais coupés en dehors de l'écran */
+@media (max-width: 1180px) {
+  .tabbar { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .tab-link { min-width: 0; }
+  .tab-link span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+@media (max-width: 380px) {
+  .tab-link { font-size: 10.5px; letter-spacing: -0.01em; padding-inline: 0; }
+}
+/* Boutons : un texte long passe à la ligne au lieu d'être coupé */
+.btn-block, .page-head-actions .btn { white-space: normal; text-align: center; }
+.page-head-actions { flex-wrap: wrap; }
+.side-row { display: flex; flex-wrap: wrap; }
+.side-row .btn { flex: 1 1 auto; }
+/* Annonce : les 4 cases (date, horaire, fréquence, rémunération) restent dans l'écran */
+.fact > div { min-width: 0; }
+.fact dt, .fact dd { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fact dt { letter-spacing: 0.02em; }
+}
+@media (max-width: 359px) {
+  .facts { grid-template-columns: minmax(0, 1fr); }
+}
+html.text-lg .facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+/* Planning : le mois et les flèches passent sur deux lignes si besoin */
+.cal-head { flex-wrap: wrap; row-gap: 8px; }
+.cal-title { min-width: 0; }
+/* Pied de page : les longs mots allemands (« Datenschutzerklärung »…) se coupent proprement */
+@media (max-width: 980px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-grid > * { min-width: 0; }
+}
+.site-footer a, .site-footer li, .site-footer p, .footer-title { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+h1, h2, h3, .h1, .h2, .h3 { overflow-wrap: break-word; }
+/* Calendrier sur petit écran : jours de la semaine plus compacts */
+@media (max-width: 380px) {
+  .cal-card { padding: 14px; }
+  .cal-weekday { font-size: 10px; letter-spacing: 0; overflow: hidden; text-overflow: clip; }
+}
