@@ -1143,6 +1143,8 @@ const fr = {
   "home.showcase1": "Glissez vers le haut pour passer à la suivante",
   "home.showcase2": "Double-tap pour garder une annonce",
   "home.showcase3": "Filtrez par région : Romandie, Tessin, votre canton…",
+  "home.statementKicker": "Voisina en bref",
+  "home.statement": "Voisina relie les habitants d'un même quartier : on propose un coup de main, on en demande un, on donne une seconde vie aux objets. Simplement, gratuitement, près de chez soi.",
 };
 
 const de = {
@@ -1861,6 +1863,8 @@ const de = {
   "home.showcase1": "Nach oben wischen für die nächste",
   "home.showcase2": "Doppeltippen, um eine Anzeige zu merken",
   "home.showcase3": "Nach Region filtern: Westschweiz, Tessin, Ihr Kanton…",
+  "home.statementKicker": "Voisina in Kürze",
+  "home.statement": "Voisina verbindet die Menschen eines Quartiers: Man bietet Hilfe an, bittet um Hilfe und gibt Gegenständen ein zweites Leben. Einfach, kostenlos, gleich um die Ecke.",
 };
 
 const it = {
@@ -2579,6 +2583,8 @@ const it = {
   "home.showcase1": "Scorri verso l'alto per passare al successivo",
   "home.showcase2": "Doppio tap per salvare un annuncio",
   "home.showcase3": "Filtra per regione: Romandia, Ticino, il tuo cantone…",
+  "home.statementKicker": "Voisina in breve",
+  "home.statement": "Voisina unisce gli abitanti dello stesso quartiere: si offre una mano, se ne chiede una, si dà una seconda vita agli oggetti. Semplicemente, gratuitamente, vicino a casa.",
 };
 
 const en = {
@@ -3297,6 +3303,8 @@ const en = {
   "home.showcase1": "Swipe up for the next one",
   "home.showcase2": "Double-tap to save a listing",
   "home.showcase3": "Filter by region: Romandy, Ticino, your canton…",
+  "home.statementKicker": "Voisina in short",
+  "home.statement": "Voisina connects people who live in the same neighbourhood: offer a hand, ask for one, give things a second life. Simply, for free, close to home.",
 };
 
 const DICT = { fr, de, it, en };
@@ -5403,17 +5411,19 @@ __def("motion.js", function () {
 /* =====================================================================
    MOUVEMENT — animations douces, inspirées des sites « premium »
    ---------------------------------------------------------------------
-   - [data-reveal]      : l'élément apparaît en glissant quand on arrive dessus
-                          (variantes : "left", "right", "zoom", "fade")
-   - [data-stagger]     : les enfants apparaissent l'un après l'autre
-   - [data-parallax=".1"] : léger effet de profondeur pendant le défilement
+   Apparitions (une seule fois, quand on arrive dessus) :
+   - [data-reveal]        : l'élément apparaît en glissant ("left", "right", "zoom", "fade")
+   - [data-stagger]       : les enfants apparaissent l'un après l'autre
    - [data-countup="100"] : le nombre défile de 0 à la valeur
-   - en-tête transparent sur l'accueil, puis opaque dès qu'on défile
-   - barre de progression de lecture en haut de l'écran
-   Tout est désactivé si l'utilisateur a demandé « moins d'animations »
-   dans les réglages de son appareil (accessibilité).
-   Seules les propriétés transform et opacity sont animées : fluide même
-   sur un petit téléphone.
+   Effets liés au défilement (ils suivent le doigt ou la molette) :
+   - [data-slide]         : le texte arrive DE LA DROITE pendant qu'on descend
+                            ("left" = depuis la gauche). Appliqué automatiquement
+                            aux titres et textes de toutes les pages.
+   - [data-words]         : le texte « s'allume » mot par mot
+   - [data-parallax=".1"] : léger effet de profondeur
+   + en-tête transparent sur l'accueil, barre de progression de lecture.
+   Tout est désactivé si l'appareil demande « moins d'animations » (accessibilité).
+   Seules transform et opacity sont animées : fluide même sur un petit téléphone.
    ===================================================================== */
 const { fmtNumber } = __req("i18n.js");
 
@@ -5421,10 +5431,20 @@ const root = document.documentElement;
 let revealIO = null;
 let countIO = null;
 let parallaxEls = [];
+let slideEls = [];
+let wordEls = [];
 let ticking = false;
 let progressBar = null;
+let canSlide = false;
 
 const reducedMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
+/* Titres et textes qui arrivent de la droite sur TOUTES les pages (sans modifier chaque page). */
+const AUTO_SLIDE = [
+  ".section-head > div", ".section .kicker-row", ".showcase-text > .kicker", ".showcase-text > h2", ".showcase-text > .lead",
+  ".page-head .h1", ".page-head .lead", ".prose h2", ".detail-main h2", ".trust-intro > *", ".faq-wrap > div > .h2",
+  ".map-showcase-text > h2", ".map-showcase-text > p", ".cta-inner h2", ".cta-inner p",
+].join(",");
 
 function animateCount(el) {
   const target = Number(el.dataset.countup);
@@ -5441,40 +5461,110 @@ function animateCount(el) {
   requestAnimationFrame(step);
 }
 
+/** Découpe un paragraphe en mots (pour l'effet « le texte s'allume »). Le texte reste lisible par les lecteurs d'écran. */
+function splitWords(el) {
+  if (el.dataset.split) return;
+  el.dataset.split = "1";
+  const words = el.textContent.trim().split(/\s+/);
+  el.setAttribute("aria-label", el.textContent.trim().replace(/\s+/g, " "));
+  el.textContent = "";
+  words.forEach((w, i) => {
+    const s = document.createElement("span");
+    s.className = "w";
+    s.setAttribute("aria-hidden", "true");
+    s.textContent = w;
+    el.appendChild(s);
+    if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
+  });
+}
+
 /** Cherche les éléments animés dans un bout de page (appelé aussi quand la page change). */
 function scan(node = document) {
-  if (!revealIO || !node.querySelectorAll) return;
+  if (!node.querySelectorAll) return;
   const pick = (sel) => [...(node.matches?.(sel) ? [node] : []), ...node.querySelectorAll(sel)];
-  pick("[data-reveal], [data-stagger]").forEach((el) => {
-    if (el.dataset.stagger !== undefined) [...el.children].forEach((c, i) => c.style.setProperty("--i", String(Math.min(i, 10))));
-    if (!el.classList.contains("is-in")) revealIO.observe(el);
-  });
-  pick("[data-countup]").forEach((el) => { if (!el.dataset.counted) countIO.observe(el); });
-  const par = pick("[data-parallax]");
-  if (par.length) {
-    parallaxEls = [...parallaxEls.filter((el) => el.isConnected), ...par];
-    requestTick();
+  if (revealIO) {
+    pick("[data-reveal], [data-stagger]").forEach((el) => {
+      if (el.dataset.stagger !== undefined) [...el.children].forEach((c, i) => c.style.setProperty("--i", String(Math.min(i, 10))));
+      if (!el.classList.contains("is-in")) revealIO.observe(el);
+    });
+    pick("[data-countup]").forEach((el) => { if (!el.dataset.counted) countIO.observe(el); });
   }
+  if (!reducedMotion()) {
+    if (canSlide) {
+      pick(AUTO_SLIDE).forEach((el) => {
+        if (el.dataset.slide === undefined && !el.closest("[data-no-slide], [data-reveal], [data-stagger], dialog, .reels-page")) el.dataset.slide = "";
+      });
+      const slides = pick("[data-slide]");
+      if (slides.length) slideEls = [...slideEls.filter((el) => el.isConnected), ...slides];
+    }
+    const words = pick("[data-words]");
+    words.forEach(splitWords);
+    if (words.length) wordEls = [...wordEls.filter((el) => el.isConnected), ...words];
+  }
+  const par = pick("[data-parallax]");
+  if (par.length) parallaxEls = [...parallaxEls.filter((el) => el.isConnected), ...par];
+  requestTick();
+}
+
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const easeOut = (p) => 1 - Math.pow(1 - p, 3);
+
+/** Progression 0 → 1 d'un élément : 0 quand il entre en bas de l'écran, 1 quand il arrive vers le milieu.
+    Si la page est trop courte pour l'amener jusque-là, il finit quand même à 1 en bas de page. */
+function progressOf(r, vh, y, maxY, endAt = 0.5) {
+  const top = r.top + y;
+  const start = top - vh;
+  const end = Math.min(top - vh * endAt, maxY);
+  if (end <= start) return 1;
+  return clamp((y - start) / (end - start));
 }
 
 function onScroll() {
+  ticking = false;
   const y = window.scrollY;
+  const vh = window.innerHeight;
+  const maxY = Math.max(0, root.scrollHeight - vh);
   root.classList.toggle("is-scrolled", y > 12);
-  if (progressBar) {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.transform = `scaleX(${max > 40 ? Math.min(1, y / max) : 0})`;
+  if (progressBar) progressBar.style.transform = `scaleX(${maxY > 40 ? Math.min(1, y / maxY) : 0})`;
+  if (reducedMotion()) return;
+
+  // Parallaxe
+  parallaxEls = parallaxEls.filter((el) => el.isConnected);
+  for (const el of parallaxEls) {
+    const r = el.getBoundingClientRect();
+    if (r.bottom < -200 || r.top > vh + 200) continue;
+    const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.parallax || 0);
+    el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
   }
-  if (!reducedMotion()) {
-    const vh = window.innerHeight;
-    parallaxEls = parallaxEls.filter((el) => el.isConnected);
-    for (const el of parallaxEls) {
+
+  // Texte qui arrive de la droite, en suivant le défilement
+  if (slideEls.length) {
+    const dist = Math.min(window.innerWidth * 0.22, 240);
+    slideEls = slideEls.filter((el) => el.isConnected);
+    for (const el of slideEls) {
       const r = el.getBoundingClientRect();
-      if (r.bottom < -200 || r.top > vh + 200) continue;
-      const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.parallax || 0);
-      el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+      if (r.top > vh + 40 && el.dataset.slid === "0") continue; // encore loin sous l'écran : déjà en position de départ
+      const p = easeOut(progressOf(r, vh, y, maxY, 0.55));
+      const dir = el.dataset.slide === "left" ? -1 : 1;
+      el.dataset.slid = p >= 1 ? "1" : "0";
+      el.style.transform = p >= 1 ? "" : `translate3d(${((1 - p) * dist * dir).toFixed(1)}px, 0, 0)`;
+      el.style.opacity = p >= 1 ? "" : (0.05 + 0.95 * p).toFixed(3);
     }
   }
-  ticking = false;
+
+  // Mots qui s'allument un par un
+  wordEls = wordEls.filter((el) => el.isConnected);
+  for (const el of wordEls) {
+    const r = el.getBoundingClientRect();
+    if (r.bottom < -100 || r.top > vh + 100) continue;
+    const p = progressOf(r, vh, y, maxY, 0.35);
+    const spans = el.children;
+    const n = spans.length;
+    for (let i = 0; i < n; i++) {
+      const w = clamp(p * (n + 6) - i, 0, 6) / 6; // chaque mot s'allume progressivement
+      spans[i].style.opacity = (0.16 + 0.84 * w).toFixed(3);
+    }
+  }
 }
 
 function requestTick() {
@@ -5488,6 +5578,10 @@ function initMotion() {
   document.body.appendChild(progressBar);
   window.addEventListener("scroll", requestTick, { passive: true });
   window.addEventListener("resize", requestTick, { passive: true });
+  window.addEventListener("load", requestTick);
+  // Le glissement horizontal a besoin de « overflow: clip » (sinon la page pourrait déborder sur le côté)
+  canSlide = !!window.CSS?.supports?.("overflow", "clip");
+  root.classList.toggle("can-slide", canSlide);
 
   if (reducedMotion() || !("IntersectionObserver" in window)) {
     root.classList.add("motion-off");
@@ -5523,6 +5617,84 @@ function initMotion() {
 }
 
 return { scan, initMotion, reducedMotion };
+});
+__def("smooth.js", function () {
+/* =====================================================================
+   DÉFILEMENT DOUX (ordinateur uniquement)
+   ---------------------------------------------------------------------
+   Avec une souris, chaque cran de molette fait un petit saut. Ici, la page
+   glisse jusqu'à la bonne position avec un léger amorti, comme sur les
+   sites « premium ». Le défilement reste celui du navigateur (clavier,
+   barre de défilement, liens…), on ne fait que lisser la molette.
+   Désactivé : sur écran tactile, si l'appareil demande « moins d'animations »,
+   au-dessus d'une carte, d'une fenêtre ou d'une zone qui défile toute seule.
+   ===================================================================== */
+const EASE = 0.12;
+let target = 0;
+let current = 0;
+let running = false;
+let last = 0;
+let ours = false;
+
+const maxScroll = () => Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+
+/** Vrai si la molette doit faire défiler un élément intérieur (liste, carte, fenêtre…) plutôt que la page. */
+function insideScrollable(el, dy) {
+  for (let e = el; e && e !== document.body && e !== document.documentElement; e = e.parentElement) {
+    if (e.matches?.(".leaflet-container, .map, dialog, [data-no-smooth], .reels-stage, .chat-messages")) return true;
+    const s = getComputedStyle(e);
+    if (/(auto|scroll)/.test(s.overflowY) && e.scrollHeight > e.clientHeight + 1) {
+      if ((dy < 0 && e.scrollTop > 0) || (dy > 0 && e.scrollTop + e.clientHeight < e.scrollHeight - 1)) return true;
+    }
+  }
+  return false;
+}
+
+function frame(now) {
+  const dt = Math.min(64, now - (last || now)) || 16.7;
+  last = now;
+  const k = 1 - Math.pow(1 - EASE, dt / 16.7);
+  current += (target - current) * k;
+  if (Math.abs(target - current) < 0.4) current = target;
+  ours = true;
+  window.scrollTo({ top: current, behavior: "instant" });
+  if (current !== target) requestAnimationFrame(frame);
+  else { running = false; last = 0; }
+}
+
+function stop() { running = false; target = current = window.scrollY; }
+
+function initSmoothScroll() {
+  const fine = window.matchMedia?.("(pointer: fine) and (hover: hover)");
+  const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+  if (!fine?.matches || reduce?.matches) return;
+  target = current = window.scrollY;
+
+  window.addEventListener("wheel", (e) => {
+    if (e.defaultPrevented || e.ctrlKey || e.metaKey || !fine.matches || reduce.matches) return;
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // défilement horizontal : on laisse faire
+    if (document.documentElement.classList.contains("reels-lock") || document.querySelector("dialog[open]")) return;
+    let dy = e.deltaY;
+    if (e.deltaMode === 1) dy *= 32;
+    else if (e.deltaMode === 2) dy *= window.innerHeight;
+    if (insideScrollable(e.target, dy)) return;
+    e.preventDefault();
+    if (!running) { target = current = window.scrollY; }
+    target = Math.max(0, Math.min(maxScroll(), target + dy));
+    if (!running) { running = true; requestAnimationFrame(frame); }
+  }, { passive: false });
+
+  // Défilement venu d'ailleurs (clavier, barre, lien, changement de page) : on se recale
+  window.addEventListener("scroll", () => {
+    if (ours) { ours = false; return; }
+    if (!running) target = current = window.scrollY;
+  }, { passive: true });
+  window.addEventListener("hashchange", stop);
+  window.addEventListener("keydown", (e) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) stop(); });
+  window.addEventListener("pointerdown", () => { if (running) stop(); });
+}
+
+return { initSmoothScroll };
 });
 __def("map.js", function () {
 /* =====================================================================
@@ -6047,9 +6219,16 @@ const __default = {
       </div>
     </section>
 
+    <section class="section statement-section" aria-labelledby="statement-kicker">
+      <div class="container statement-wrap">
+        <span class="kicker" id="statement-kicker" data-slide>${t("home.statementKicker")}</span>
+        <p class="statement" data-words data-slide>${t("home.statement")}</p>
+      </div>
+    </section>
+
     <section class="section showcase" aria-labelledby="showcase-title">
       <div class="container showcase-grid">
-        <div class="showcase-text" data-reveal="left">
+        <div class="showcase-text">
           <span class="kicker">${t("discover.kicker")}</span>
           <h2 class="h2 showcase-title" id="showcase-title">${t("home.showcaseTitle1")} <em>${t("home.showcaseTitle2")}</em></h2>
           <p class="lead">${t("discover.promoText")}</p>
@@ -6074,7 +6253,7 @@ const __default = {
 
     <section class="section home-cats section-alt">
       <div class="container">
-        <div class="section-head" data-reveal>
+        <div class="section-head">
           <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
@@ -6090,7 +6269,7 @@ const __default = {
 
     <section class="section">
       <div class="container">
-        <div class="section-head" data-reveal>
+        <div class="section-head">
           <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
@@ -6102,7 +6281,7 @@ const __default = {
 
     <section class="section cities-section section-alt" aria-labelledby="cities-title">
       <div class="container">
-        <div class="section-head" data-reveal>
+        <div class="section-head">
           <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2></div>
         </div>
       </div>
@@ -6113,7 +6292,7 @@ const __default = {
 
     <section class="section section-map" aria-labelledby="map-title">
       <div class="container map-showcase">
-        <div class="map-showcase-text" data-reveal="left">
+        <div class="map-showcase-text">
           <span class="kicker">${icon("map")}${t("home.mapKicker")}</span>
           <h2 class="h2" id="map-title">${t("home.mapTitle")}</h2>
           <p class="muted">${t("home.mapText")}</p>
@@ -6131,7 +6310,7 @@ const __default = {
 
     <section class="section section-warm how" id="how">
       <div class="container">
-        <div class="section-head center" data-reveal>
+        <div class="section-head center">
           <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
         </div>
         <ol class="steps timeline" data-stagger>
@@ -6151,7 +6330,7 @@ const __default = {
 
     <section class="section trust-section home-trust">
       <div class="container trust-grid">
-        <div class="trust-intro" data-reveal="left">
+        <div class="trust-intro">
           <span class="kicker kicker-light">${t("home.trustKicker")}</span>
           <h2 class="h2">${t("home.trustTitle")}</h2>
           <p>${t("home.trustText")}</p>
@@ -6169,7 +6348,7 @@ const __default = {
 
     <section class="section section-sky home-faq">
       <div class="container faq-wrap">
-        <div data-reveal="left">
+        <div>
           <span class="kicker">${t("home.faqKicker")}</span>
           <h2 class="h2">${t("home.faqTitle")}</h2>
           <p class="muted">${t("home.faqText")}</p>
@@ -9796,7 +9975,8 @@ const { LANGS } = __req("data.js");
 const store = __req("store.js");
 const { actions, registerActions, toast, initDialog, avatar, openDialog, confirmDialog } = __req("ui.js");
 const { QR_SVG, SITE_URL, SITE_LABEL } = __req("qr-site.js");
-const { initMotion } = __req("motion.js");
+const { initMotion, reducedMotion } = __req("motion.js");
+const { initSmoothScroll } = __req("smooth.js");
 
 const home = __req("views/home.js").default;
 const { homeActions } = __req("views/home.js");
@@ -9853,6 +10033,8 @@ function parseHash() {
   return { path: decodeURIComponent(path).replace(/\/$/, ""), query: new URLSearchParams(qs) };
 }
 
+let firstRender = true;
+
 function render({ keepScroll = false } = {}) {
   const { path, query } = parseHash();
   let view = notFound;
@@ -9862,32 +10044,48 @@ function render({ keepScroll = false } = {}) {
     if (m) { view = v; params = m.slice(1); break; }
   }
   const sameView = view === currentView && currentCtx?.path === path;
-  if (currentView?.unmount) { try { currentView.unmount(); } catch (e) { console.error(e); } }
-  currentView = view;
-  currentCtx = { path, params, query };
+  const isNav = !(keepScroll || sameView);
+  // Changement de page : la nouvelle page glisse depuis la droite (View Transitions, si le navigateur sait le faire)
+  const useVT = isNav && !firstRender && typeof document.startViewTransition === "function" && !reducedMotion() && document.visibilityState === "visible";
+  firstRender = false;
 
-  const view$ = $("#view");
-  const y = window.scrollY;
-  // Chaque page est rendue dans un nouvel élément : les écouteurs d'événements
-  // de la page précédente disparaissent avec elle (pas d'accumulation).
-  const root = document.createElement("div");
-  // Petite animation d'entrée quand on change de page (pas lors d'une simple mise à jour)
-  root.className = keepScroll || sameView ? "page" : "page page-enter";
-  view$.replaceChildren(root);
-  try {
-    mount(root, view.render(currentCtx));
-    view.mount?.(root, currentCtx);
-  } catch (e) {
-    console.error(e);
-    mount(root, html`<section class="section"><div class="container narrow center"><h1 class="h2">${t("err.pageTitle")}</h1><p class="muted">${t("err.pageText")}</p><a class="btn btn-primary" href="#/">${t("notFound.home")}</a></div></section>`);
-  }
-  document.title = `${view.title ? view.title(currentCtx) + " · " : ""}Voisina`;
-  // Nom de la page sur <body> : permet d'adapter la version mobile (ex. barre d'action sur une annonce)
-  document.body.dataset.route = view === notFound ? "404" : path.split("/")[0] || "home";
-  if (keepScroll || sameView) window.scrollTo(0, y);
-  else window.scrollTo(0, 0);
-  if (!keepScroll && !sameView) $("#main").focus({ preventScroll: true });
-  renderChrome();
+  const draw = () => {
+    if (currentView?.unmount) { try { currentView.unmount(); } catch (e) { console.error(e); } }
+    currentView = view;
+    currentCtx = { path, params, query };
+
+    const view$ = $("#view");
+    const y = window.scrollY;
+    // Chaque page est rendue dans un nouvel élément : les écouteurs d'événements
+    // de la page précédente disparaissent avec elle (pas d'accumulation).
+    const root = document.createElement("div");
+    // Petite animation d'entrée quand on change de page (si la transition du navigateur n'est pas disponible)
+    root.className = isNav && !useVT ? "page page-enter" : "page";
+    view$.replaceChildren(root);
+    try {
+      mount(root, view.render(currentCtx));
+      view.mount?.(root, currentCtx);
+    } catch (e) {
+      console.error(e);
+      mount(root, html`<section class="section"><div class="container narrow center"><h1 class="h2">${t("err.pageTitle")}</h1><p class="muted">${t("err.pageText")}</p><a class="btn btn-primary" href="#/">${t("notFound.home")}</a></div></section>`);
+    }
+    document.title = `${view.title ? view.title(currentCtx) + " · " : ""}Voisina`;
+    // Nom de la page sur <body> : permet d'adapter la version mobile (ex. barre d'action sur une annonce)
+    document.body.dataset.route = view === notFound ? "404" : path.split("/")[0] || "home";
+    if (!isNav) window.scrollTo(0, y);
+    else window.scrollTo({ top: 0, behavior: "instant" });
+    if (isNav) $("#main").focus({ preventScroll: true });
+    renderChrome();
+  };
+
+  if (useVT) {
+    const root = document.documentElement;
+    root.classList.add("vt-nav");
+    try {
+      const tr = document.startViewTransition(draw);
+      tr.finished.finally(() => root.classList.remove("vt-nav"));
+    } catch (e) { root.classList.remove("vt-nav"); draw(); }
+  } else draw();
 }
 
 /* ----------------------- En-tête et navigation ---------------------- */
@@ -10317,6 +10515,7 @@ function start() {
   renderFooter();
   render();
   initMotion();
+  initSmoothScroll();
   document.body.classList.add("is-ready");
 
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
