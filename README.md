@@ -30,6 +30,8 @@ une petite rémunération.
 | **Annonces d'exemple** | 100 annonces fictives variées (au lieu de centaines de copies), présentes dans les 26 cantons et autour d'Yverdon-les-Bains, clairement signalées « Exemple » |
 | **Téléphone** | Conçu **d'abord pour le téléphone**, barre du bas **comme Instagram** (Accueil · Explorer · Publier · Découvrir · Profil, messages en haut à droite) : accueil court avec une rangée de « bulles » (comme les stories), rangées d'annonces qu'on fait glisser, liste compacte avec petite image, peu de texte à la fois. Pensé comme une **vraie application** : barre d'onglets, filtres dans une feuille qui monte du bas, bouton flottant « Carte », photos à faire glisser au doigt (et à agrandir), barre « Contacter » toujours visible sur une annonce, messagerie plein écran, bouton retour, cartes qui ne bloquent pas le défilement, **installation sur l'écran d'accueil** (Android et iPhone, avec mode d'emploi), prise en charge des encoches |
 | **Confort** | Mode sombre, **texte plus grand** (pratique pour les aînés), annonces **vues récemment**, partage WhatsApp / e-mail, **QR code du site à montrer à l'écran**, fonctionne hors ligne (avec message « hors ligne ») |
+| **Accessibilité** | Audit fait sur téléphone : zones à toucher d'au moins **44 px** (recommandation WCAG 2.2), chaque champ a une étiquette lue par les lecteurs d'écran, contrastes du texte vérifiés en mode clair **et** sombre, réglage « moins d'animations » respecté |
+| **Partage** | Belle **image d'aperçu** quand on envoie le lien sur WhatsApp, Teams ou Instagram (JPEG léger, 1200 × 630) |
 | **Légal** | Politique de confidentialité (nLPD), conditions d'utilisation, règles de la communauté, mentions légales, aide/FAQ |
 
 ## 🔐 Sécurité (résumé)

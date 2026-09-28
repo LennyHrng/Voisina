@@ -2166,3 +2166,41 @@ html:not(.is-scrolled) body[data-route="home"] .site-header .logo-mark { box-sha
   .main-nav .nav-link { padding: 8px 9px; gap: 5px; font-size: 0.9rem; }
   .header-actions { gap: 6px; }
 }
+
+/* =====================================================================
+   9. FINITIONS 3.1 — résultats de l'audit (téléphone, accessibilité)
+   ===================================================================== */
+/* Onglet Découvrir : étiquette « Je cherche / Je propose / Je donne » lisible aussi en mode sombre */
+.reel-chips .chip-type { background: #fff; }
+.reel-chips .type-offer { color: #156b3c; }
+.reel-chips .type-request { color: #0b6a66; }
+.reel-chips .type-donation { color: #7a4d00; }
+
+/* Carte de bienvenue : chaque bouton prend la place dont il a besoin */
+.welcome-actions .btn { flex: 1 1 auto; }
+
+/* Doigts sur écran tactile : zones à toucher d'au moins 44 px (recommandation WCAG 2.2 / Apple / Google) */
+@media (pointer: coarse) {
+  .link-btn { min-height: 44px; }
+  .demo-hint summary { min-height: 44px; }
+  .footer-bottom { row-gap: 0; }
+  .footer-langs { gap: 0; margin-left: -12px; }
+  .footer-langs .link-btn { min-width: 44px; justify-content: center; }
+  .menu-head .link-btn { min-height: 36px; }
+}
+
+/* Planning : les jours du mois précédent / suivant restent discrets mais lisibles */
+.cal-day.is-other .cal-num { color: var(--text-muted); opacity: 0.75; }
+
+/* Téléphone + « moins d'animations » : les villes défilent au doigt au lieu de s'empiler */
+@media (max-width: 640px) {
+  .motion-off .marquee { scroll-snap-type: x proximity; overflow-x: auto; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
+  .motion-off .marquee::-webkit-scrollbar { display: none; }
+  .motion-off .marquee-track { flex-wrap: nowrap; width: max-content; justify-content: flex-start; padding-inline: 16px; }
+  .motion-off .marquee-track > * { scroll-snap-align: start; }
+}
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
+  .marquee::-webkit-scrollbar { display: none; }
+  .marquee-track { flex-wrap: nowrap !important; width: max-content !important; justify-content: flex-start !important; padding-inline: 16px; }
+}

@@ -1078,7 +1078,8 @@ const fr = {
   "home.mapText": "Carte nationale officielle de swisstopo en couleur, plan des rues, vue satellite ou version sobre : choisissez votre style avec le bouton en haut à droite de la carte.",
   "home.mapCta": "Ouvrir la carte",
   "filter.resetShort": "Tout effacer",
-  "demo.bannerShort": "Démo TPA / PAE (CPNV) : annonces fictives, données gardées dans votre navigateur.",
+  "demo.bannerShort": "Démo TPA · annonces fictives.",
+  "search.whatPhShort": "Courses, jardin…",
   "trial.firstname": "Invité",
   "trial.lastname": "Essai",
   "trial.cta": "Essayer en 1 clic",
@@ -1795,7 +1796,8 @@ const de = {
   "home.mapText": "Offizielle Landeskarte von swisstopo in Farbe, Stadtplan, Satellitenbild oder schlichte Version: Wählen Sie Ihren Stil mit der Schaltfläche oben rechts auf der Karte.",
   "home.mapCta": "Karte öffnen",
   "filter.resetShort": "Alle löschen",
-  "demo.bannerShort": "Demo TPA / PAE (CPNV): fiktive Anzeigen, Daten bleiben in Ihrem Browser.",
+  "demo.bannerShort": "Demo TPA · fiktive Anzeigen.",
+  "search.whatPhShort": "Einkauf, Garten…",
   "trial.firstname": "Gast",
   "trial.lastname": "Test",
   "trial.cta": "Mit 1 Klick testen",
@@ -2512,7 +2514,8 @@ const it = {
   "home.mapText": "Carta nazionale ufficiale di swisstopo a colori, mappa stradale, vista satellitare o versione sobria: scegli il tuo stile con il pulsante in alto a destra sulla mappa.",
   "home.mapCta": "Apri la mappa",
   "filter.resetShort": "Cancella tutto",
-  "demo.bannerShort": "Demo TPA / PAE (CPNV): annunci fittizi, dati salvati nel tuo browser.",
+  "demo.bannerShort": "Demo TPA · annunci fittizi.",
+  "search.whatPhShort": "Spesa, giardino…",
   "trial.firstname": "Ospite",
   "trial.lastname": "Prova",
   "trial.cta": "Prova con 1 clic",
@@ -3229,7 +3232,8 @@ const en = {
   "home.mapText": "Official swisstopo national map in colour, street map, satellite view or a plain version: pick your style with the button at the top right of the map.",
   "home.mapCta": "Open the map",
   "filter.resetShort": "Clear all",
-  "demo.bannerShort": "TPA / PAE demo (CPNV): sample listings, data kept in your browser.",
+  "demo.bannerShort": "TPA demo · sample listings.",
+  "search.whatPhShort": "Shopping, garden…",
   "trial.firstname": "Guest",
   "trial.lastname": "Trial",
   "trial.cta": "Try it in 1 click",
@@ -5368,7 +5372,7 @@ function initLocalityFields(root = document) {
 function localityField({ name = "city", label, value = "", canton = "", npa = "", lat = "", lng = "", required = false, placeholder = "", error = "" }) {
   return html`<div class="field locality-field">
     ${label ? html`<label class="field-label" for="f-${name}">${label}${required ? html` <span class="req" aria-hidden="true">*</span>` : ""}</label>` : ""}
-    <div class="input-icon">${icon("pin")}<input id="f-${name}" class="input" name="${name}" data-locality value="${value}" placeholder="${placeholder || t("loc.placeholder")}" ${required ? raw("required") : ""} maxlength="60"></div>
+    <div class="input-icon">${icon("pin")}<input id="f-${name}" class="input" name="${name}" data-locality value="${value}" placeholder="${placeholder || t("loc.placeholder")}" ${label ? "" : raw(`aria-label="${esc(placeholder || t("loc.placeholder"))}"`)} ${required ? raw("required") : ""} maxlength="60"></div>
     <input type="hidden" name="canton" data-loc="canton" value="${canton}">
     <input type="hidden" name="npa" data-loc="npa" value="${npa}">
     <input type="hidden" name="lat" data-loc="lat" value="${lat}">
@@ -6012,7 +6016,7 @@ const __default = {
           <form class="hero-search hero-fade" data-form="hero-search" role="search">
             <div class="field">
               <label class="sr-only" for="hero-q">${t("search.what")}</label>
-              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
+              <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${window.matchMedia?.("(max-width: 640px)").matches ? t("search.whatPhShort") : t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
             </div>
             ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
             <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>
@@ -9821,7 +9825,7 @@ const { discoverActions } = __req("views/discover.js");
 const notFound = {
   title: () => t("notFound.title"),
   render: () => html`<section class="section"><div class="container narrow center">
-    <p class="big-404">404</p><h1 class="h2">${t("notFound.title")}</h1><p class="muted">${t("notFound.text")}</p>
+    <p class="big-404" aria-hidden="true">404</p><h1 class="h2">${t("notFound.title")}</h1><p class="muted">${t("notFound.text")}</p>
     <a class="btn btn-primary" href="#/">${t("notFound.home")}</a></div></section>`,
 };
 
