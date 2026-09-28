@@ -416,7 +416,7 @@ const fr = {
   "common.formerMember": "Ancien membre",
 
   // Démo
-  "demo.banner": "Version de démonstration (projet TPA / PAE réalisé au CPNV) : les annonces d'exemple sont fictives et vos données restent uniquement dans votre navigateur.",
+  "demo.banner": "Version de démonstration (projet TPA / PAE réalisé au CPNV) : les annonces d'exemple sont fictives et vos données restent uniquement dans votre navigateur.",
   "demo.learnMore": "En savoir plus",
   "demo.chip": "Exemple",
   "demo.chipTitle": "Annonce d'exemple fictive, générée pour la démonstration",
@@ -449,8 +449,8 @@ const fr = {
   "status.active": "Active", "status.done": "Terminée", "status.hidden": "Masquée",
 
   // Recherche
-  "search.what": "Que cherchez-vous ?",
-  "search.whatPh": "Courses, jardin…",
+  "search.what": "Que cherchez-vous ?",
+  "search.whatPh": "Courses, promenade de chien, bricolage…",
   "search.wherePh": "NPA ou localité",
   "search.submit": "Rechercher",
   "search.nearMe": "Autour de moi",
@@ -459,7 +459,7 @@ const fr = {
   "loc.found": "Position trouvée. Les annonces sont triées par distance.",
   "loc.denied": "Impossible d'obtenir votre position. Indiquez plutôt une localité.",
   "loc.unsupported": "La géolocalisation n'est pas disponible sur cet appareil.",
-  "loc.outside": "Vous semblez être hors de Suisse : indiquez plutôt une localité.",
+  "loc.outside": "Vous semblez être hors de Suisse : indiquez plutôt une localité.",
 
   // Accueil
   "home.eyebrow": "L'entraide locale, partout en Suisse",
@@ -473,7 +473,7 @@ const fr = {
   "home.statLangs": "langues nationales + anglais",
   "home.statTrackers": "publicité ni traceur",
   "home.catKicker": "Catégories",
-  "home.catTitle": "De quoi avez-vous besoin ?",
+  "home.catTitle": "De quoi avez-vous besoin ?",
   "home.catCount.one": "{count} annonce",
   "home.catCount.other": "{count} annonces",
   "home.seeAll": "Tout voir",
@@ -497,9 +497,9 @@ const fr = {
   "home.trustLocTitle": "Adresse jamais affichée",
   "home.trustLocText": "Seule la localité est visible, et la position sur la carte est floutée d'environ 1 km.",
   "home.trustPwdTitle": "Mots de passe protégés",
-  "home.trustPwdText": "Ils ne sont jamais enregistrés en clair : seule une empreinte chiffrée est conservée.",
+  "home.trustPwdText": "Ils ne sont jamais enregistrés en clair : seule une empreinte chiffrée est conservée.",
   "home.trustReportTitle": "Signaler et bloquer",
-  "home.trustReportText": "Chaque annonce, profil et conversation peut être signalé ; chaque signalement est examiné.",
+  "home.trustReportText": "Chaque annonce, profil et conversation peut être signalé ; chaque signalement est examiné.",
   "home.trustTrackTitle": "Zéro pistage",
   "home.trustTrackText": "Aucun cookie, aucune publicité, aucun outil de statistiques. Vos données vous appartiennent.",
   "home.faqKicker": "Questions fréquentes",
@@ -509,17 +509,17 @@ const fr = {
   "home.ctaTitle": "Un coup de main change une journée.",
   "home.ctaText": "Publiez votre première annonce en moins de deux minutes.",
 
-  "faq.cost.q": "Voisina est-il vraiment gratuit ?",
+  "faq.cost.q": "Voisina est-il vraiment gratuit ?",
   "faq.cost.a": "Oui. Publier, rechercher et discuter est gratuit. Voisina ne prélève aucune commission et n'affiche aucune publicité.",
-  "faq.safety.q": "Comment savoir si je peux faire confiance à quelqu'un ?",
+  "faq.safety.q": "Comment savoir si je peux faire confiance à quelqu'un ?",
   "faq.safety.a": "Consultez son profil (ancienneté, évaluations, badge vérifié), échangez d'abord par la messagerie et donnez-vous rendez-vous dans un lieu public la première fois.",
-  "faq.payment.q": "Comment se passe le paiement d'un service ?",
+  "faq.payment.q": "Comment se passe le paiement d'un service ?",
   "faq.payment.a": "Le montant est convenu directement entre vous, puis réglé en main propre ou par TWINT après le service. Ne payez jamais à l'avance.",
-  "faq.location.q": "Mon adresse est-elle visible ?",
+  "faq.location.q": "Mon adresse est-elle visible ?",
   "faq.location.a": "Non. Seule votre localité apparaît et la position sur la carte est volontairement approximative.",
-  "faq.languages.q": "Dans quelles langues puis-je utiliser Voisina ?",
+  "faq.languages.q": "Dans quelles langues puis-je utiliser Voisina ?",
   "faq.languages.a": "En français, allemand, italien et anglais. Changez de langue à tout moment via le bouton en haut de la page.",
-  "faq.data.q": "Que faites-vous de mes données ?",
+  "faq.data.q": "Que faites-vous de mes données ?",
   "faq.data.a": "Rien d'autre que faire fonctionner le service. Vous pouvez les exporter ou les supprimer à tout moment depuis votre compte.",
 
   // Explorer
@@ -533,7 +533,7 @@ const fr = {
   "explore.searchArea": "Rechercher dans cette zone",
   "explore.mapPrivacy": "Positions approximatives pour protéger la vie privée.",
   "explore.emptyTitle": "Aucune annonce ne correspond",
-  "explore.emptyText": "Essayez d'élargir la zone ou de retirer un filtre. Vous pouvez aussi publier votre propre demande !",
+  "explore.emptyText": "Essayez d'élargir la zone ou de retirer un filtre. Vous pouvez aussi publier votre propre demande !",
   "explore.emptyPublish": "Publier une demande",
   "filter.title": "Filtres",
   "filter.type": "Type d'annonce",
@@ -546,7 +546,7 @@ const fr = {
   "filter.anyPayment": "Gratuit ou rémunéré",
   "filter.radius": "Distance",
   "filter.anyDistance": "Toute distance",
-  "filter.distanceNeedsPlace": "Distance : indiquez d'abord un lieu",
+  "filter.distanceNeedsPlace": "Distance : indiquez d'abord un lieu",
   "filter.within": "Dans un rayon de {km} km",
   "filter.urgent": "Urgent",
   "filter.verified": "Profils vérifiés",
@@ -580,7 +580,7 @@ const fr = {
   "listing.payment": "Rémunération",
   "listing.languages": "Langues parlées",
   "listing.description": "Description",
-  "listing.where": "Où ?",
+  "listing.where": "Où ?",
   "listing.mapLabel": "Zone approximative de l'annonce",
   "listing.approxLocation": "Zone approximative (± 1 km). L'adresse exacte est communiquée uniquement par message, si vous le souhaitez.",
   "listing.contact": "Contacter",
@@ -589,11 +589,11 @@ const fr = {
   "listing.totalHint": "Montant indicatif, à confirmer ensemble.",
   "listing.edit": "Modifier",
   "listing.markDone": "Marquer comme terminée",
-  "listing.markedDone": "Annonce marquée comme terminée. Merci pour votre entraide !",
+  "listing.markedDone": "Annonce marquée comme terminée. Merci pour votre entraide !",
   "listing.reactivate": "Réactiver",
   "listing.reactivated": "Annonce réactivée.",
   "listing.delete": "Supprimer",
-  "listing.deleteTitle": "Supprimer cette annonce ?",
+  "listing.deleteTitle": "Supprimer cette annonce ?",
   "listing.deleteText": "Cette action est définitive. Les conversations liées resteront accessibles.",
   "listing.deleted": "Annonce supprimée.",
   "listing.similar": "Annonces similaires à proximité",
@@ -623,10 +623,10 @@ const fr = {
   "safety.tip2": "Ne payez jamais à l'avance et ne communiquez aucun code (TWINT, e-banking, SMS).",
   "safety.tip3": "Pour une première rencontre, choisissez un lieu public.",
   "safety.more": "Tous nos conseils",
-  "safety.sensitive.contact": "Votre texte semble contenir un numéro ou une adresse e-mail. Pour votre sécurité, évitez de les publier : les membres vous contacteront via la messagerie.",
-  "safety.sensitive.contactChat": "Vous partagez vos coordonnées : faites-le seulement si vous faites confiance à cette personne.",
+  "safety.sensitive.contact": "Votre texte semble contenir un numéro ou une adresse e-mail. Pour votre sécurité, évitez de les publier : les membres vous contacteront via la messagerie.",
+  "safety.sensitive.contactChat": "Vous partagez vos coordonnées : faites-le seulement si vous faites confiance à cette personne.",
   "safety.sensitive.iban": "Ne partagez jamais vos coordonnées bancaires sur Voisina.",
-  "safety.sensitive.scam": "Attention : ne communiquez jamais de mot de passe, code SMS ou carte cadeau. C'est souvent le signe d'une arnaque.",
+  "safety.sensitive.scam": "Attention : ne communiquez jamais de mot de passe, code SMS ou carte cadeau. C'est souvent le signe d'une arnaque.",
 
   // Signalement / blocage
   "report.title": "Signaler un problème",
@@ -648,7 +648,7 @@ const fr = {
   "report.conversation": "Signaler la conversation",
   "block.user": "Bloquer",
   "block.unblock": "Débloquer",
-  "block.confirmTitle": "Bloquer {name} ?",
+  "block.confirmTitle": "Bloquer {name} ?",
   "block.confirmText": "Vous ne verrez plus ses annonces ni ses messages. Cette personne n'est pas prévenue. Vous pourrez la débloquer depuis son profil.",
   "block.confirm": "Bloquer",
   "block.done": "Membre bloqué.",
@@ -657,7 +657,7 @@ const fr = {
   // Partage / agenda
   "share.copied": "Lien copié dans le presse-papiers.",
   "share.title": "Partager ce lien",
-  "calendar.icsDone": "Fichier agenda téléchargé : ouvrez-le pour l'ajouter à votre calendrier.",
+  "calendar.icsDone": "Fichier agenda téléchargé : ouvrez-le pour l'ajouter à votre calendrier.",
 
   // Publier
   "publish.kicker": "Nouvelle annonce",
@@ -685,7 +685,7 @@ const fr = {
   "publish.sWhere": "Lieu",
   "publish.fCity": "Localité",
   "publish.privacyHint": "Seule la localité est affichée. La position sur la carte est floutée d'environ 1 km.",
-  "publish.sWhen": "Quand ?",
+  "publish.sWhen": "Quand ?",
   "publish.fDate": "Date",
   "publish.fDateHint": "Laissez vide si c'est flexible.",
   "publish.fTime": "Heure",
@@ -698,7 +698,7 @@ const fr = {
   "publish.pay.negotiable": "On en parle ensemble",
   "publish.fAmount": "Montant",
   "publish.fUnit": "Unité",
-  "publish.payHint": "Voisina n'encaisse rien : le montant est indicatif et réglé directement entre vous, après le service.",
+  "publish.payHint": "Voisina n'encaisse rien : le montant est indicatif et réglé directement entre vous, après le service.",
   "publish.sExtras": "Photos et langues",
   "publish.fPhotos": "Photos (facultatif, 3 maximum)",
   "publish.addPhoto": "Ajouter des photos",
@@ -713,7 +713,7 @@ const fr = {
   "publish.cHonest": "Mon annonce est honnête et ne concerne aucune activité illégale ou dangereuse.",
   "publish.submit": "Publier l'annonce",
   "publish.save": "Enregistrer les modifications",
-  "publish.published": "Votre annonce est en ligne !",
+  "publish.published": "Votre annonce est en ligne !",
   "publish.saved": "Modifications enregistrées.",
   "publish.preview": "Aperçu",
   "publish.previewTitle": "Titre de votre annonce",
@@ -757,17 +757,17 @@ const fr = {
   "messages.selectConv": "Sélectionnez une conversation.",
   "messages.placeholder": "Écrire un message…",
   "messages.send": "Envoyer",
-  "messages.you": "Vous :",
+  "messages.you": "Vous :",
   "messages.noMessagesYet": "Pas encore de message",
   "messages.listingGone": "Annonce supprimée",
   "messages.unread.one": "{count} message non lu",
   "messages.unread.other": "{count} messages non lus",
   "messages.typing": "{name} est en train d'écrire",
   "messages.safetyBanner": "Restez sur Voisina pour échanger, et ne payez jamais à l'avance.",
-  "messages.firstHint": "Présentez-vous et expliquez brièvement votre demande. Un message poli obtient plus souvent une réponse !",
-  "messages.demoNotice": "Membre de démonstration : les réponses sont générées automatiquement.",
+  "messages.firstHint": "Présentez-vous et expliquez brièvement votre demande. Un message poli obtient plus souvent une réponse !",
+  "messages.demoNotice": "Membre de démonstration : les réponses sont générées automatiquement.",
   "messages.delete": "Supprimer la conversation",
-  "messages.deleteTitle": "Supprimer cette conversation ?",
+  "messages.deleteTitle": "Supprimer cette conversation ?",
   "messages.deleteText": "Elle disparaîtra de votre messagerie.",
   "messages.deleted": "Conversation supprimée.",
 
@@ -790,7 +790,7 @@ const fr = {
   "planning.emptyText": "Touchez le cœur d'une annonce pour la retrouver ici et dans votre calendrier.",
   "planning.explore": "Explorer les annonces",
   "planning.clearFavs": "Tout retirer",
-  "planning.clearTitle": "Retirer tous les favoris ?",
+  "planning.clearTitle": "Retirer tous les favoris ?",
   "planning.clearText": "Votre liste de favoris et votre calendrier seront vidés.",
   "planning.cleared": "Favoris retirés.",
   "planning.guestNotice": "Vos favoris sont enregistrés sur cet appareil. Connectez-vous pour les rattacher à votre compte.",
@@ -808,31 +808,31 @@ const fr = {
   "auth.firstname": "Prénom",
   "auth.lastname": "Nom",
   "auth.city": "Localité",
-  "auth.nameHint": "Seuls votre prénom et l'initiale de votre nom sont visibles (ex. « Léa M. »).",
+  "auth.nameHint": "Seuls votre prénom et l'initiale de votre nom sont visibles (ex. « Léa M. »).",
   "auth.terms": "J'accepte les {terms} et la {privacy}.",
-  "auth.noAccount": "Pas encore de compte ?",
-  "auth.haveAccount": "Déjà inscrit·e ?",
+  "auth.noAccount": "Pas encore de compte ?",
+  "auth.haveAccount": "Déjà inscrit·e ?",
   "auth.showPassword": "Afficher le mot de passe",
   "auth.hidePassword": "Masquer le mot de passe",
   "auth.pwRules": "Au moins 10 caractères, avec des lettres, des chiffres ou des symboles. Une longue phrase facile à retenir fonctionne aussi.",
   "auth.pwGood": "Excellent mot de passe.",
-  "auth.pwIssue.length": "Encore un peu : 10 caractères minimum.",
+  "auth.pwIssue.length": "Encore un peu : 10 caractères minimum.",
   "auth.pwIssue.common": "Ce mot de passe est trop courant ou contient votre nom.",
   "auth.pwIssue.variety": "Mélangez majuscules, minuscules, chiffres ou symboles.",
   "auth.invalid": "E-mail ou mot de passe incorrect.",
   "auth.locked": "Trop de tentatives. Pour votre sécurité, réessayez dans {seconds} secondes.",
-  "auth.loggedIn": "Bonjour {name} !",
-  "auth.welcome": "Bienvenue sur Voisina, {name} !",
+  "auth.loggedIn": "Bonjour {name} !",
+  "auth.welcome": "Bienvenue sur Voisina, {name} !",
   "auth.loggedOut": "Vous êtes déconnecté·e.",
   "auth.loginToContact": "Connectez-vous pour contacter ce membre.",
   "auth.demoTitle": "Accès de démonstration",
-  "auth.demoText": "Créez librement un compte de test : il reste dans votre navigateur. Un compte administrateur existe aussi pour la présentation du projet.",
-  "auth.whyTitle": "Pourquoi créer un compte ?",
+  "auth.demoText": "Créez librement un compte de test : il reste dans votre navigateur. Un compte administrateur existe aussi pour la présentation du projet.",
+  "auth.whyTitle": "Pourquoi créer un compte ?",
   "auth.why1": "Publier des annonces et répondre aux demandes près de chez vous.",
   "auth.why2": "Discuter en toute sécurité, sans partager votre numéro.",
   "auth.why3": "Retrouver vos favoris et votre agenda d'entraide.",
   "auth.why4": "Construire votre réputation au fil des échanges.",
-  "auth.securityNote": "Votre mot de passe n'est jamais enregistré : nous n'en gardons qu'une empreinte chiffrée (PBKDF2, 600 000 itérations).",
+  "auth.securityNote": "Votre mot de passe n'est jamais enregistré : nous n'en gardons qu'une empreinte chiffrée (PBKDF2, 600 000 itérations).",
 
   // Compte
   "account.hello": "Bonjour {name}",
@@ -843,11 +843,11 @@ const fr = {
   "account.tab.data": "Mes données",
   "account.tab.prefs": "Préférences",
   "account.myListings": "Mes annonces",
-  "account.welcomeNotice": "Votre compte est prêt ! Complétez votre profil pour inspirer confiance, puis publiez votre première annonce.",
+  "account.welcomeNotice": "Votre compte est prêt ! Complétez votre profil pour inspirer confiance, puis publiez votre première annonce.",
   "account.changePhoto": "Changer la photo",
   "account.removePhoto": "Retirer la photo",
-  "account.photoReady": "Photo prête : pensez à enregistrer.",
-  "account.publicName": "Nom public : {name}",
+  "account.photoReady": "Photo prête : pensez à enregistrer.",
+  "account.publicName": "Nom public : {name}",
   "account.bio": "Présentation",
   "account.bioPh": "Quelques mots sur vous, ce que vous aimez faire, vos disponibilités…",
   "account.specialties": "Savoir-faire",
@@ -857,7 +857,7 @@ const fr = {
   "account.viewPublic": "Voir mon profil public",
   "account.saved": "Modifications enregistrées.",
   "account.noListings": "Vous n'avez pas encore publié d'annonce",
-  "account.noListingsText": "Proposez votre aide ou demandez un coup de main : c'est gratuit.",
+  "account.noListingsText": "Proposez votre aide ou demandez un coup de main : c'est gratuit.",
   "account.changePassword": "Changer de mot de passe",
   "account.currentPassword": "Mot de passe actuel",
   "account.newPassword": "Nouveau mot de passe",
@@ -865,7 +865,7 @@ const fr = {
   "account.passwordChanged": "Mot de passe modifié.",
   "account.adminPwNote": "Le mot de passe du compte administrateur de démonstration est défini dans le code (sous forme d'empreinte) et ne peut pas être modifié ici.",
   "account.howProtected": "Comment votre compte est protégé",
-  "account.prot1": "Mot de passe transformé en empreinte PBKDF2 (600 000 itérations, sel unique) : personne ne peut le relire.",
+  "account.prot1": "Mot de passe transformé en empreinte PBKDF2 (600 000 itérations, sel unique) : personne ne peut le relire.",
   "account.prot2": "Connexion bloquée temporairement après 5 essais ratés.",
   "account.prot3": "Session automatiquement expirée après 14 jours.",
   "account.exportTitle": "Télécharger mes données",
@@ -882,10 +882,10 @@ const fr = {
   "account.deleteText": "Votre profil, vos annonces, vos favoris et vos conversations seront définitivement supprimés.",
   "account.deleteConfirmText": "Cette action est irréversible. Saisissez votre mot de passe pour confirmer.",
   "account.deleteBtn": "Supprimer définitivement",
-  "account.deleted": "Votre compte a été supprimé. Au revoir et merci !",
+  "account.deleted": "Votre compte a été supprimé. Au revoir et merci !",
   "account.language": "Langue",
   "account.theme": "Apparence",
-  "account.showDemoBanner": "Afficher le bandeau « version de démonstration »",
+  "account.showDemoBanner": "Afficher le bandeau « version de démonstration »",
 
   // Profil public
   "profile.notFound": "Membre introuvable",
@@ -908,7 +908,7 @@ const fr = {
   "admin.kpiMessages": "messages échangés",
   "admin.kpiReports": "signalements ouverts",
   "admin.reportsTitle": "Signalements à traiter",
-  "admin.noReports": "Aucun signalement en attente. Tout va bien !",
+  "admin.noReports": "Aucun signalement en attente. Tout va bien !",
   "admin.colTarget": "Élément",
   "admin.colReason": "Motif",
   "admin.colDetails": "Précisions",
@@ -938,22 +938,22 @@ const fr = {
   "admin.pwNote": "Les mots de passe ne sont jamais visibles, même pour l'administration.",
   "admin.moderation": "Modération",
   "admin.reset": "Réinitialiser la démo",
-  "admin.resetTitle": "Réinitialiser toutes les données ?",
+  "admin.resetTitle": "Réinitialiser toutes les données ?",
   "admin.resetText": "Tous les comptes, annonces, messages et favoris créés sur ce navigateur seront effacés. Les annonces d'exemple restent.",
 
   // Notifications
   "notif.title": "Notifications",
   "notif.markRead": "Tout marquer comme lu",
   "notif.empty": "Aucune notification pour l'instant.",
-  "notif.welcome": "Bienvenue sur Voisina ! Complétez votre profil pour inspirer confiance.",
-  "notif.published": "Votre annonce « {title} » est en ligne.",
+  "notif.welcome": "Bienvenue sur Voisina ! Complétez votre profil pour inspirer confiance.",
+  "notif.published": "Votre annonce « {title} » est en ligne.",
   "notif.message": "Nouveau message de {name}.",
-  "notif.reportDone": "Votre signalement a été traité. Merci !",
+  "notif.reportDone": "Votre signalement a été traité. Merci !",
 
   // Pages / pied de page
   "pages.kicker": "Informations",
   "pages.nav": "Pages d'information",
-  "footer.tagline": "La plateforme suisse d'entraide entre voisins : proposer un coup de main, demander de l'aide, donner une seconde vie aux objets.",
+  "footer.tagline": "La plateforme suisse d'entraide entre voisins : proposer un coup de main, demander de l'aide, donner une seconde vie aux objets.",
   "footer.noTracking": "Sans pub ni traceur",
   "footer.secure": "Sécurisé dès la conception",
   "footer.explore": "Explorer",
@@ -979,7 +979,7 @@ const fr = {
   "alerts.create": "Créer une alerte",
   "alerts.createHint": "Recevoir une notification quand une nouvelle annonce correspond à cette recherche",
   "alerts.loginFirst": "Connectez-vous pour créer une alerte.",
-  "alerts.saved": "Alerte créée : vous serez prévenu·e des nouvelles annonces.",
+  "alerts.saved": "Alerte créée : vous serez prévenu·e des nouvelles annonces.",
   "alerts.max": "Vous avez déjà 10 alertes. Supprimez-en une d'abord.",
   "alerts.title": "Mes alertes",
   "alerts.intro": "Une alerte enregistre une recherche. Dès qu'une nouvelle annonce y correspond, vous recevez une notification.",
@@ -989,11 +989,11 @@ const fr = {
   "alerts.delete": "Supprimer l'alerte",
   "alerts.deleted": "Alerte supprimée.",
   "alerts.emptyTitle": "Aucune alerte pour l'instant",
-  "alerts.emptyText": "Faites une recherche dans « Explorer », puis cliquez sur « Créer une alerte ».",
+  "alerts.emptyText": "Faites une recherche dans « Explorer », puis cliquez sur « Créer une alerte ».",
   "alerts.goSearch": "Faire une recherche",
   "account.tab.alerts": "Mes alertes",
   "account.completeTitle": "Profil complété à {percent} %",
-  "account.completeDone": "Bravo, votre profil inspire confiance !",
+  "account.completeDone": "Bravo, votre profil inspire confiance !",
   "account.completeHint": "Un profil complet reçoit plus de réponses.",
   "account.todo.photo": "Ajouter une photo",
   "account.todo.bio": "Écrire une présentation",
@@ -1006,12 +1006,12 @@ const fr = {
   "account.text.large": "Plus grande",
   "footer.textLarge": "Texte plus grand",
   "footer.textNormal": "Texte normal",
-  "notif.alert": "Nouvelle annonce pour votre alerte : « {title} ».",
+  "notif.alert": "Nouvelle annonce pour votre alerte : « {title} ».",
   "messages.quickLabel": "Réponses rapides",
-  "messages.quick1": "Bonjour ! Est-ce toujours d'actualité ?",
-  "messages.quick2": "Quand seriez-vous disponible ?",
-  "messages.quick3": "Où pourrions-nous nous retrouver ?",
-  "messages.quick4": "Merci beaucoup !",
+  "messages.quick1": "Bonjour ! Est-ce toujours d'actualité ?",
+  "messages.quick2": "Quand seriez-vous disponible ?",
+  "messages.quick3": "Où pourrions-nous nous retrouver ?",
+  "messages.quick4": "Merci beaucoup !",
   "share.copy": "Copier",
   "share.email": "E-mail",
   "common.optional": "Facultatif",
@@ -1020,9 +1020,9 @@ const fr = {
   "publish.dropHint": "ou glissez-les ici (3 max.)",
   "publish.coverBadge": "Couverture",
   "publish.makeCover": "Mettre en couverture",
-  "publish.coverTitle": "Pas de photo ? Choisissez votre illustration",
+  "publish.coverTitle": "Pas de photo ? Choisissez votre illustration",
   "publish.coverNote": "Elle s'affichera sur votre annonce.",
-  "publish.coverNoteWithPhoto": "Votre photo sera affichée en priorité ; l'illustration sert seulement si vous la retirez.",
+  "publish.coverNoteWithPhoto": "Votre photo sera affichée en priorité ; l'illustration sert seulement si vous la retirez.",
   "publish.coverColor": "Couleur de l'illustration",
   "publish.coverAuto": "Auto",
   "publish.coverColorN": "Couleur {n}",
@@ -1054,20 +1054,20 @@ const fr = {
   "install.cta": "Installer",
   "install.footer": "Installer l'application",
   "install.dialogTitle": "Installer Voisina sur votre appareil",
-  "install.dialogIntro": "Voisina s'installe en quelques secondes, sans passer par un store : icône sur l'écran d'accueil, plein écran, ouverture même sans connexion.",
+  "install.dialogIntro": "Voisina s'installe en quelques secondes, sans passer par un store : icône sur l'écran d'accueil, plein écran, ouverture même sans connexion.",
   "install.already": "Voisina est déjà installé sur cet appareil.",
   "install.iosTitle": "iPhone et iPad (Safari)",
-  "install.ios1": "Touchez le bouton « Partager » en bas de l'écran.",
-  "install.ios2": "Choisissez « Sur l'écran d'accueil ».",
-  "install.ios3": "Touchez « Ajouter » : l'icône Voisina apparaît.",
+  "install.ios1": "Touchez le bouton « Partager » en bas de l'écran.",
+  "install.ios2": "Choisissez « Sur l'écran d'accueil ».",
+  "install.ios3": "Touchez « Ajouter » : l'icône Voisina apparaît.",
   "install.androidTitle": "Android (Chrome)",
   "install.android1": "Ouvrez le menu ⋮ en haut à droite.",
-  "install.android2": "Touchez « Installer l'application » (ou « Ajouter à l'écran d'accueil »).",
-  "install.android3": "Confirmez : Voisina rejoint vos applications.",
+  "install.android2": "Touchez « Installer l'application » (ou « Ajouter à l'écran d'accueil »).",
+  "install.android3": "Confirmez : Voisina rejoint vos applications.",
   "install.desktopTitle": "Ordinateur (Chrome, Edge)",
-  "install.desktopText": "Cliquez sur l'icône d'installation à droite de la barre d'adresse, puis sur « Installer ».",
+  "install.desktopText": "Cliquez sur l'icône d'installation à droite de la barre d'adresse, puis sur « Installer ».",
   "install.ok": "J'ai compris",
-  "install.done": "Voisina est installé. Retrouvez-le sur votre écran d'accueil !",
+  "install.done": "Voisina est installé. Retrouvez-le sur votre écran d'accueil !",
   "net.offline": "Vous êtes hors ligne. Voisina reste utilisable, la carte se rechargera plus tard.",
   "net.online": "De retour en ligne.",
   "home.seenKicker": "Vu récemment",
@@ -1075,30 +1075,30 @@ const fr = {
   "home.seenClear": "Effacer l'historique",
   "home.mapKicker": "La carte",
   "home.mapTitle": "Toute l'entraide de Suisse sur une carte",
-  "home.mapText": "Carte nationale officielle de swisstopo en couleur, plan des rues, vue satellite ou version sobre : choisissez votre style avec le bouton en haut à droite de la carte.",
+  "home.mapText": "Carte nationale officielle de swisstopo en couleur, plan des rues, vue satellite ou version sobre : choisissez votre style avec le bouton en haut à droite de la carte.",
   "home.mapCta": "Ouvrir la carte",
   "filter.resetShort": "Tout effacer",
-  "demo.bannerShort": "Site de démonstration : annonces fictives.",
+  "demo.bannerShort": "Démo TPA / PAE (CPNV) : annonces fictives, données gardées dans votre navigateur.",
   "trial.firstname": "Invité",
   "trial.lastname": "Essai",
   "trial.cta": "Essayer en 1 clic",
-  "trial.title": "Juste envie d'essayer ?",
+  "trial.title": "Juste envie d'essayer ?",
   "trial.text": "Un compte d'essai est créé sur cet appareil, sans e-mail ni mot de passe. Tout est effacé à la fin de l'essai.",
   "trial.or": "ou avec un vrai compte",
-  "trial.started": "Compte d'essai activé : essayez tout librement !",
+  "trial.started": "Compte d'essai activé : essayez tout librement !",
   "trial.badge": "Compte d'essai",
-  "trial.notice": "Vous utilisez un compte d'essai : tout reste sur cet appareil et sera effacé quand vous terminerez l'essai.",
+  "trial.notice": "Vous utilisez un compte d'essai : tout reste sur cet appareil et sera effacé quand vous terminerez l'essai.",
   "trial.end": "Terminer l'essai",
-  "trial.endTitle": "Terminer l'essai ?",
-  "trial.endText": "Les annonces, messages et favoris créés pendant l'essai seront effacés de cet appareil. Pratique pour laisser essayer la personne suivante !",
-  "trial.ended": "Essai terminé : tout a été effacé. Merci d'avoir testé Voisina !",
+  "trial.endTitle": "Terminer l'essai ?",
+  "trial.endText": "Les annonces, messages et favoris créés pendant l'essai seront effacés de cet appareil. Pratique pour laisser essayer la personne suivante !",
+  "trial.ended": "Essai terminé : tout a été effacé. Merci d'avoir testé Voisina !",
   "trial.securityNote": "Un compte d'essai n'a pas de mot de passe à retenir. Pour garder vos annonces, créez plutôt un vrai compte.",
-  "notif.trial": "Bienvenue ! Vous testez Voisina avec un compte d'essai : contactez un membre ou publiez une annonce.",
-  "welcome.title": "Bienvenue sur Voisina !",
-  "welcome.text": "Ici, les voisins s'entraident : courses, jardin, informatique… C'est une version de démonstration : essayez tout librement.",
+  "notif.trial": "Bienvenue ! Vous testez Voisina avec un compte d'essai : contactez un membre ou publiez une annonce.",
+  "welcome.title": "Bienvenue sur Voisina !",
+  "welcome.text": "Ici, les voisins s'entraident : courses, jardin, informatique… C'est une version de démonstration : essayez tout librement.",
   "welcome.explore": "Voir les annonces",
   "qr.title": "Faire connaître Voisina",
-  "qr.text": "Faites scanner ce code avec l'appareil photo d'un téléphone : Voisina s'ouvre tout de suite.",
+  "qr.text": "Faites scanner ce code avec l'appareil photo d'un téléphone : Voisina s'ouvre tout de suite.",
   "qr.footer": "Montrer le QR code",
   "home.qrCta": "Montrer le QR code",
   "discover.title": "Découvrir",
@@ -1110,12 +1110,38 @@ const fr = {
   "discover.like": "J'aime",
   "discover.open": "Ouvrir l'annonce",
   "discover.feed": "Annonces en plein écran",
-  "discover.endTitle": "Vous avez tout vu !",
-  "discover.endText": "Rien ne vous correspond ? Publiez votre propre annonce : c'est gratuit et ça prend deux minutes.",
+  "discover.endTitle": "Vous avez tout vu !",
+  "discover.endText": "Rien ne vous correspond ? Publiez votre propre annonce : c'est gratuit et ça prend deux minutes.",
   "discover.again": "Revoir depuis le début",
   "home.leadShort": "Proposez ou demandez un coup de main près de chez vous. Gratuit, sans pub.",
   "home.storiesLabel": "Accès rapides",
   "home.storyNear": "Près de moi",
+  "reels.region.all": "Toute la Suisse",
+  "reels.region.near": "Autour de moi",
+  "reels.region.romandie": "Suisse romande",
+  "reels.region.deutsch": "Suisse alémanique",
+  "reels.region.ticino": "Suisse italienne",
+  "reels.filterTitle": "Que voulez-vous voir ?",
+  "reels.where": "Où ?",
+  "reels.orCanton": "… ou un canton précis",
+  "reels.what": "Quoi ?",
+  "reels.locateAndShow": "Me localiser et afficher",
+  "reels.emptyTitle": "Rien par ici pour le moment",
+  "reels.emptyText": "Essayez une autre région ou un autre type d'annonce.",
+  "reels.change": "Changer le filtre",
+  "reels.slide": "annonce",
+  "reels.feed": "fil d'annonces vertical",
+  "reels.prev": "Annonce précédente",
+  "reels.next": "Annonce suivante",
+  "reels.keys": "Astuce : flèches du clavier ou molette pour passer d'une annonce à l'autre. Double-clic = J'aime.",
+  "nav.discover": "Découvrir",
+  "home.heroDiscover": "Découvrir les annonces",
+  "home.scroll": "Défiler",
+  "home.showcaseTitle1": "Les annonces une par une,",
+  "home.showcaseTitle2": "en plein écran.",
+  "home.showcase1": "Glissez vers le haut pour passer à la suivante",
+  "home.showcase2": "Double-tap pour garder une annonce",
+  "home.showcase3": "Filtrez par région : Romandie, Tessin, votre canton…",
 };
 
 const de = {
@@ -1127,7 +1153,7 @@ const de = {
   "meta.accountTitle": "Mein Konto",
   "nav.main": "Hauptnavigation",
   "nav.home": "Start",
-  "nav.explore": "Entdecken",
+  "nav.explore": "Suchen",
   "nav.planning": "Meine Planung",
   "nav.messages": "Nachrichten",
   "nav.messagesShort": "Chats",
@@ -1178,7 +1204,7 @@ const de = {
   "recurrence.once": "Einmalig", "recurrence.weekly": "Jede Woche", "recurrence.monthly": "Jeden Monat",
   "status.active": "Aktiv", "status.done": "Erledigt", "status.hidden": "Ausgeblendet",
   "search.what": "Was suchen Sie?",
-  "search.whatPh": "Einkauf, Garten, Reparaturen…",
+  "search.whatPh": "Einkaufen, Hund ausführen, Reparaturen…",
   "search.wherePh": "PLZ oder Ort",
   "search.submit": "Suchen",
   "search.nearMe": "In meiner Nähe",
@@ -1769,7 +1795,7 @@ const de = {
   "home.mapText": "Offizielle Landeskarte von swisstopo in Farbe, Stadtplan, Satellitenbild oder schlichte Version: Wählen Sie Ihren Stil mit der Schaltfläche oben rechts auf der Karte.",
   "home.mapCta": "Karte öffnen",
   "filter.resetShort": "Alle löschen",
-  "demo.bannerShort": "Demo-Website: fiktive Anzeigen.",
+  "demo.bannerShort": "Demo TPA / PAE (CPNV): fiktive Anzeigen, Daten bleiben in Ihrem Browser.",
   "trial.firstname": "Gast",
   "trial.lastname": "Test",
   "trial.cta": "Mit 1 Klick testen",
@@ -1807,6 +1833,32 @@ const de = {
   "home.leadShort": "Hilfe anbieten oder suchen, ganz in Ihrer Nähe. Gratis, ohne Werbung.",
   "home.storiesLabel": "Schnellzugriff",
   "home.storyNear": "In der Nähe",
+  "reels.region.all": "Ganze Schweiz",
+  "reels.region.near": "In meiner Nähe",
+  "reels.region.romandie": "Westschweiz",
+  "reels.region.deutsch": "Deutschschweiz",
+  "reels.region.ticino": "Tessin",
+  "reels.filterTitle": "Was möchten Sie sehen?",
+  "reels.where": "Wo?",
+  "reels.orCanton": "… oder ein bestimmter Kanton",
+  "reels.what": "Was?",
+  "reels.locateAndShow": "Standort bestimmen und anzeigen",
+  "reels.emptyTitle": "Hier gibt es noch nichts",
+  "reels.emptyText": "Versuchen Sie eine andere Region oder Anzeigenart.",
+  "reels.change": "Filter ändern",
+  "reels.slide": "Anzeige",
+  "reels.feed": "vertikaler Anzeigen-Feed",
+  "reels.prev": "Vorherige Anzeige",
+  "reels.next": "Nächste Anzeige",
+  "reels.keys": "Tipp: Pfeiltasten oder Mausrad zum Wechseln. Doppelklick = Merken.",
+  "nav.discover": "Entdecken",
+  "home.heroDiscover": "Anzeigen entdecken",
+  "home.scroll": "Scrollen",
+  "home.showcaseTitle1": "Die Anzeigen einzeln,",
+  "home.showcaseTitle2": "im Vollbild.",
+  "home.showcase1": "Nach oben wischen für die nächste",
+  "home.showcase2": "Doppeltippen, um eine Anzeige zu merken",
+  "home.showcase3": "Nach Region filtern: Westschweiz, Tessin, Ihr Kanton…",
 };
 
 const it = {
@@ -1869,7 +1921,7 @@ const it = {
   "recurrence.once": "Una volta", "recurrence.weekly": "Ogni settimana", "recurrence.monthly": "Ogni mese",
   "status.active": "Attivo", "status.done": "Concluso", "status.hidden": "Nascosto",
   "search.what": "Cosa cercate?",
-  "search.whatPh": "Spesa, giardino, riparazioni…",
+  "search.whatPh": "Spesa, passeggiata col cane, riparazioni…",
   "search.wherePh": "NPA o località",
   "search.submit": "Cerca",
   "search.nearMe": "Vicino a me",
@@ -2460,7 +2512,7 @@ const it = {
   "home.mapText": "Carta nazionale ufficiale di swisstopo a colori, mappa stradale, vista satellitare o versione sobria: scegli il tuo stile con il pulsante in alto a destra sulla mappa.",
   "home.mapCta": "Apri la mappa",
   "filter.resetShort": "Cancella tutto",
-  "demo.bannerShort": "Sito dimostrativo: annunci fittizi.",
+  "demo.bannerShort": "Demo TPA / PAE (CPNV): annunci fittizi, dati salvati nel tuo browser.",
   "trial.firstname": "Ospite",
   "trial.lastname": "Prova",
   "trial.cta": "Prova con 1 clic",
@@ -2498,6 +2550,32 @@ const it = {
   "home.leadShort": "Offri o chiedi una mano vicino a casa. Gratis, senza pubblicità.",
   "home.storiesLabel": "Accesso rapido",
   "home.storyNear": "Vicino a me",
+  "reels.region.all": "Tutta la Svizzera",
+  "reels.region.near": "Vicino a me",
+  "reels.region.romandie": "Svizzera romanda",
+  "reels.region.deutsch": "Svizzera tedesca",
+  "reels.region.ticino": "Svizzera italiana",
+  "reels.filterTitle": "Cosa vuoi vedere?",
+  "reels.where": "Dove?",
+  "reels.orCanton": "… o un cantone preciso",
+  "reels.what": "Cosa?",
+  "reels.locateAndShow": "Localizzami e mostra",
+  "reels.emptyTitle": "Niente per ora qui",
+  "reels.emptyText": "Prova un'altra regione o un altro tipo di annuncio.",
+  "reels.change": "Cambia filtro",
+  "reels.slide": "annuncio",
+  "reels.feed": "flusso verticale di annunci",
+  "reels.prev": "Annuncio precedente",
+  "reels.next": "Annuncio successivo",
+  "reels.keys": "Suggerimento: frecce o rotellina per passare da un annuncio all'altro. Doppio clic = Mi piace.",
+  "nav.discover": "Scopri",
+  "home.heroDiscover": "Scopri gli annunci",
+  "home.scroll": "Scorri",
+  "home.showcaseTitle1": "Gli annunci uno alla volta,",
+  "home.showcaseTitle2": "a schermo intero.",
+  "home.showcase1": "Scorri verso l'alto per passare al successivo",
+  "home.showcase2": "Doppio tap per salvare un annuncio",
+  "home.showcase3": "Filtra per regione: Romandia, Ticino, il tuo cantone…",
 };
 
 const en = {
@@ -3151,7 +3229,7 @@ const en = {
   "home.mapText": "Official swisstopo national map in colour, street map, satellite view or a plain version: pick your style with the button at the top right of the map.",
   "home.mapCta": "Open the map",
   "filter.resetShort": "Clear all",
-  "demo.bannerShort": "Demo site: sample listings.",
+  "demo.bannerShort": "TPA / PAE demo (CPNV): sample listings, data kept in your browser.",
   "trial.firstname": "Guest",
   "trial.lastname": "Trial",
   "trial.cta": "Try it in 1 click",
@@ -3189,6 +3267,32 @@ const en = {
   "home.leadShort": "Offer or ask for a hand near you. Free, no ads.",
   "home.storiesLabel": "Quick access",
   "home.storyNear": "Near me",
+  "reels.region.all": "All of Switzerland",
+  "reels.region.near": "Near me",
+  "reels.region.romandie": "French-speaking Switzerland",
+  "reels.region.deutsch": "German-speaking Switzerland",
+  "reels.region.ticino": "Italian-speaking Switzerland",
+  "reels.filterTitle": "What would you like to see?",
+  "reels.where": "Where?",
+  "reels.orCanton": "… or a specific canton",
+  "reels.what": "What?",
+  "reels.locateAndShow": "Locate me and show",
+  "reels.emptyTitle": "Nothing here yet",
+  "reels.emptyText": "Try another region or listing type.",
+  "reels.change": "Change filter",
+  "reels.slide": "listing",
+  "reels.feed": "vertical listing feed",
+  "reels.prev": "Previous listing",
+  "reels.next": "Next listing",
+  "reels.keys": "Tip: arrow keys or mouse wheel to move between listings. Double-click = Save.",
+  "nav.discover": "Discover",
+  "home.heroDiscover": "Discover listings",
+  "home.scroll": "Scroll",
+  "home.showcaseTitle1": "Listings one at a time,",
+  "home.showcaseTitle2": "full screen.",
+  "home.showcase1": "Swipe up for the next one",
+  "home.showcase2": "Double-tap to save a listing",
+  "home.showcase3": "Filter by region: Romandy, Ticino, your canton…",
 };
 
 const DICT = { fr, de, it, en };
@@ -4958,24 +5062,13 @@ function coverStyle(l) {
   return { tone, pattern };
 }
 
-/* Illustrations dessinées pour chaque catégorie (SVG, couleurs du site via CSS).
-   Utilisées quand une annonce n'a pas de photo. */
-const CATEGORY_SCENES = {"shopping": "<path class=\"a\" d=\"M138 84L124 30l9-2 14 56z\"/><path class=\"b\" d=\"M131 36c-6-4-8-10-6-16 7 2 11 8 11 14z\"/>\n<rect class=\"bread\" x=\"150\" y=\"32\" width=\"12\" height=\"60\" rx=\"6\" transform=\"rotate(14 156 62)\"/>\n<path class=\"b\" d=\"M176 84c-2-22 8-38 26-42-4 18-10 32-20 42z\"/><circle class=\"clay\" cx=\"160\" cy=\"80\" r=\"11\"/><path class=\"s sd s2\" d=\"M160 69c1-4 4-6 7-6\"/>\n<path class=\"sand\" d=\"M120 80h80l9 72H111z\"/><path class=\"wood\" d=\"M111 152h98l-2-14H113z\"/><rect class=\"wood\" x=\"120\" y=\"80\" width=\"80\" height=\"9\"/>\n<path class=\"a\" d=\"M148 128c6-14 20-18 26-18 0 8-6 18-22 20z\"/><path class=\"s\" d=\"M150 128c6-6 12-10 18-13\"/>", "pets": "<path class=\"s swood s7\" d=\"M121 112c-14-8-16-22-10-32\"/>\n<rect class=\"wood2\" x=\"126\" y=\"124\" width=\"10\" height=\"28\" rx=\"5\"/><rect class=\"wood2\" x=\"142\" y=\"126\" width=\"10\" height=\"26\" rx=\"5\"/><rect class=\"wood2\" x=\"168\" y=\"126\" width=\"10\" height=\"26\" rx=\"5\"/><rect class=\"wood2\" x=\"182\" y=\"124\" width=\"10\" height=\"28\" rx=\"5\"/>\n<rect class=\"wood\" x=\"116\" y=\"102\" width=\"82\" height=\"32\" rx=\"16\"/><circle class=\"wood\" cx=\"204\" cy=\"94\" r=\"19\"/><ellipse class=\"wood\" cx=\"220\" cy=\"101\" rx=\"12\" ry=\"8\"/>\n<circle class=\"d\" cx=\"231\" cy=\"98\" r=\"3.5\"/><circle class=\"d\" cx=\"208\" cy=\"88\" r=\"2.6\"/><path class=\"wood2\" d=\"M190 80c-7 8-6 22 1 28 7-6 9-18 5-28z\"/>\n<rect class=\"clay\" x=\"188\" y=\"108\" width=\"20\" height=\"7\" rx=\"3.5\" transform=\"rotate(-18 198 111)\"/>\n<path class=\"s sclay s4\" d=\"M200 114c24-2 44-26 62-52\"/><circle class=\"honey\" cx=\"84\" cy=\"144\" r=\"10\"/><path class=\"s sw s3\" d=\"M76 140c5 2 11 2 16-2\"/>", "seniors": "<rect class=\"d\" x=\"78\" y=\"64\" width=\"4\" height=\"86\" rx=\"2\"/><path class=\"honey\" d=\"M62 68h36l-7-24H69z\"/><ellipse class=\"d\" cx=\"80\" cy=\"151\" rx=\"12\" ry=\"3\"/>\n<rect class=\"clay\" x=\"118\" y=\"66\" width=\"86\" height=\"62\" rx=\"20\"/><rect class=\"cream\" x=\"140\" y=\"84\" width=\"42\" height=\"26\" rx=\"9\"/>\n<rect class=\"clay2\" x=\"112\" y=\"112\" width=\"98\" height=\"26\" rx=\"11\"/><rect class=\"clay\" x=\"102\" y=\"96\" width=\"22\" height=\"46\" rx=\"11\"/><rect class=\"clay\" x=\"198\" y=\"96\" width=\"22\" height=\"46\" rx=\"11\"/>\n<rect class=\"d\" x=\"120\" y=\"138\" width=\"7\" height=\"14\" rx=\"3\"/><rect class=\"d\" x=\"195\" y=\"138\" width=\"7\" height=\"14\" rx=\"3\"/>\n<rect class=\"wood\" x=\"228\" y=\"112\" width=\"44\" height=\"6\" rx=\"3\"/><rect class=\"wood\" x=\"247\" y=\"118\" width=\"6\" height=\"34\" rx=\"3\"/>\n<rect class=\"w\" x=\"240\" y=\"92\" width=\"20\" height=\"20\" rx=\"4\"/><path class=\"s sw s3\" d=\"M260 97c7 0 7 10 0 10\"/><path class=\"s sl s3\" d=\"M246 86c-4-5 4-8 0-13M254 86c-4-5 4-8 0-13\"/>", "family": "<path class=\"s sd s2\" d=\"M206 92c-6 12 8 18 0 30s6 16-4 28\"/><path class=\"clay\" d=\"M206 24l28 32-28 36-28-36z\"/><path class=\"s sw s2\" d=\"M206 24v68M178 56h56\"/>\n<path class=\"honey\" d=\"M203 108l6 4-6 4zM203 128l-6 4 6 4z\"/>\n<rect class=\"honey\" x=\"96\" y=\"120\" width=\"32\" height=\"32\" rx=\"5\"/><rect class=\"skyb\" x=\"130\" y=\"120\" width=\"32\" height=\"32\" rx=\"5\"/><rect class=\"b\" x=\"113\" y=\"87\" width=\"32\" height=\"32\" rx=\"5\"/>\n<text class=\"sc-t td\" x=\"112\" y=\"143\" text-anchor=\"middle\">A</text><text class=\"sc-t tw\" x=\"146\" y=\"143\" text-anchor=\"middle\">B</text><text class=\"sc-t tw\" x=\"129\" y=\"110\" text-anchor=\"middle\">C</text>\n<circle class=\"clay\" cx=\"252\" cy=\"140\" r=\"13\"/><path class=\"s sw s3\" d=\"M240 136c7 4 17 4 24 0M241 146c7-3 16-3 22 0\"/>", "transport": "<rect class=\"d\" x=\"44\" y=\"108\" width=\"6\" height=\"40\" rx=\"3\"/><circle class=\"b\" cx=\"47\" cy=\"98\" r=\"20\"/><rect class=\"d\" x=\"276\" y=\"112\" width=\"6\" height=\"36\" rx=\"3\"/><circle class=\"a\" cx=\"279\" cy=\"102\" r=\"17\"/>\n<rect class=\"d\" x=\"0\" y=\"150\" width=\"320\" height=\"30\"/><path class=\"s sw s3\" d=\"M0 165h320\" stroke-dasharray=\"18 14\"/>\n<path class=\"clay\" d=\"M88 136c0-12 8-18 20-20l20-18c4-4 10-6 16-6h44c8 0 14 4 18 10l12 14c16 2 26 8 28 20v8H88z\"/>\n<path class=\"glass\" d=\"M134 114l12-14h20v14z\"/><path class=\"glass\" d=\"M172 100h14c4 0 7 2 9 5l7 9h-30z\"/><rect class=\"honey\" x=\"232\" y=\"124\" width=\"10\" height=\"6\" rx=\"3\"/>\n<circle class=\"d\" cx=\"122\" cy=\"144\" r=\"14\"/><circle class=\"w\" cx=\"122\" cy=\"144\" r=\"5\"/><circle class=\"d\" cx=\"212\" cy=\"144\" r=\"14\"/><circle class=\"w\" cx=\"212\" cy=\"144\" r=\"5\"/>", "repair": "<g transform=\"rotate(-22 84 112)\"><rect class=\"d\" x=\"79\" y=\"84\" width=\"11\" height=\"68\" rx=\"5.5\"/><circle class=\"d\" cx=\"84.5\" cy=\"80\" r=\"14\"/><rect class=\"k0\" x=\"80\" y=\"62\" width=\"9\" height=\"16\" rx=\"2\"/></g>\n<path class=\"s sd s6\" d=\"M144 98V84h32v14\"/><rect class=\"clay\" x=\"108\" y=\"104\" width=\"104\" height=\"48\" rx=\"7\"/><rect class=\"clay3\" x=\"104\" y=\"94\" width=\"112\" height=\"18\" rx=\"6\"/><rect class=\"w\" x=\"153\" y=\"108\" width=\"14\" height=\"9\" rx=\"2\"/>\n<g transform=\"rotate(18 238 112)\"><rect class=\"wood\" x=\"233\" y=\"92\" width=\"10\" height=\"60\" rx=\"5\"/><rect class=\"d\" x=\"218\" y=\"82\" width=\"40\" height=\"16\" rx=\"4\"/></g>", "digital": "<rect class=\"d\" x=\"106\" y=\"58\" width=\"108\" height=\"72\" rx=\"7\"/><rect class=\"glass\" x=\"113\" y=\"65\" width=\"94\" height=\"58\" rx=\"3\"/>\n<circle class=\"a\" cx=\"160\" cy=\"94\" r=\"17\"/><path class=\"s sw s4\" d=\"M152 94l6 6 11-12\"/>\n<path class=\"b\" d=\"M94 130h132l8 14H86z\"/><rect class=\"d\" x=\"146\" y=\"130\" width=\"28\" height=\"4\" rx=\"2\"/>\n<rect class=\"d\" x=\"58\" y=\"106\" width=\"28\" height=\"46\" rx=\"6\"/><rect class=\"honey\" x=\"62\" y=\"112\" width=\"20\" height=\"32\" rx=\"2\"/>\n<path class=\"clay\" d=\"M246 130h30l-4 22h-22z\"/><path class=\"a\" d=\"M261 130c-2-14-12-20-20-20 2 10 8 18 20 20z\"/><path class=\"b\" d=\"M261 130c0-18 8-28 18-30 0 14-6 24-18 30z\"/>", "language": "<rect class=\"w\" x=\"50\" y=\"36\" width=\"116\" height=\"40\" rx=\"14\"/><path class=\"w\" d=\"M70 74l-6 14 18-12z\"/><text class=\"sc-t td\" x=\"108\" y=\"62\" text-anchor=\"middle\">Bonjour</text>\n<rect class=\"d\" x=\"190\" y=\"26\" width=\"84\" height=\"34\" rx=\"12\"/><path class=\"d\" d=\"M258 58l8 12-18-10z\"/><text class=\"sc-t tw\" x=\"232\" y=\"49\" text-anchor=\"middle\">Ciao</text>\n<rect class=\"a\" x=\"168\" y=\"80\" width=\"108\" height=\"38\" rx=\"13\"/><path class=\"a\" d=\"M190 116l-8 14 20-12z\"/><text class=\"sc-t tw\" x=\"222\" y=\"105\" text-anchor=\"middle\">Grüezi</text>\n<rect class=\"clay\" x=\"64\" y=\"92\" width=\"90\" height=\"36\" rx=\"13\"/><path class=\"clay\" d=\"M140 126l6 12-18-10z\"/><text class=\"sc-t tw\" x=\"109\" y=\"116\" text-anchor=\"middle\">Hello</text>", "garden": "<rect class=\"soil\" x=\"72\" y=\"112\" width=\"140\" height=\"12\" rx=\"5\"/><rect class=\"wood\" x=\"66\" y=\"120\" width=\"152\" height=\"32\" rx=\"5\"/><path class=\"s swood2 s2\" d=\"M66 136h152\"/>\n<path class=\"s sa s4\" d=\"M94 114V94\"/><path class=\"a\" d=\"M94 100c-12-2-17-12-15-20 9 0 15 8 15 20z\"/><path class=\"b\" d=\"M94 96c10-2 15-10 13-18-8 0-13 7-13 18z\"/><path class=\"s sa s4\" d=\"M126 114V94\"/><path class=\"a\" d=\"M126 100c-12-2-17-12-15-20 9 0 15 8 15 20z\"/><path class=\"b\" d=\"M126 96c10-2 15-10 13-18-8 0-13 7-13 18z\"/><path class=\"s sa s4\" d=\"M158 114V94\"/><path class=\"a\" d=\"M158 100c-12-2-17-12-15-20 9 0 15 8 15 20z\"/><path class=\"b\" d=\"M158 96c10-2 15-10 13-18-8 0-13 7-13 18z\"/><path class=\"s sa s4\" d=\"M190 114V94\"/><path class=\"a\" d=\"M190 100c-12-2-17-12-15-20 9 0 15 8 15 20z\"/><path class=\"b\" d=\"M190 96c10-2 15-10 13-18-8 0-13 7-13 18z\"/>\n<path class=\"s sskyb s6\" d=\"M244 122l-22-16\"/><rect class=\"skyb\" x=\"240\" y=\"112\" width=\"42\" height=\"38\" rx=\"7\"/><path class=\"s sskyb2 s5\" d=\"M250 112c0-16 22-16 22 0\"/><circle class=\"skyb\" cx=\"214\" cy=\"108\" r=\"2.5\"/><circle class=\"skyb\" cx=\"210\" cy=\"116\" r=\"2.5\"/><circle class=\"skyb\" cx=\"218\" cy=\"118\" r=\"2.5\"/>", "home": "<rect class=\"clay3\" x=\"186\" y=\"52\" width=\"13\" height=\"26\" rx=\"2\"/><rect class=\"cream\" x=\"110\" y=\"86\" width=\"100\" height=\"66\" rx=\"3\"/><path class=\"clay\" d=\"M98 92l62-48 62 48z\"/>\n<rect class=\"a\" x=\"148\" y=\"112\" width=\"24\" height=\"40\" rx=\"3\"/><circle class=\"w\" cx=\"167\" cy=\"133\" r=\"2\"/><rect class=\"glass\" x=\"121\" y=\"100\" width=\"20\" height=\"18\" rx=\"2\"/><rect class=\"glass\" x=\"179\" y=\"100\" width=\"20\" height=\"18\" rx=\"2\"/>\n<path class=\"skyb\" d=\"M58 124h34l-4 28H62z\"/><path class=\"s sd s3\" d=\"M60 124c0-14 30-14 30 0\"/><path class=\"honey\" transform=\"translate(244 72) scale(1.2)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/><path class=\"b\" transform=\"translate(262 98) scale(0.7)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/><path class=\"honey\" transform=\"translate(84 70) scale(0.9)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/>", "moving": "<rect class=\"cbox\" x=\"98\" y=\"108\" width=\"72\" height=\"44\" rx=\"3\"/><rect class=\"cboxd\" x=\"129\" y=\"108\" width=\"10\" height=\"44\"/>\n<rect class=\"cbox\" x=\"170\" y=\"116\" width=\"58\" height=\"36\" rx=\"3\"/><rect class=\"cboxd\" x=\"194\" y=\"116\" width=\"10\" height=\"36\"/>\n<rect class=\"cbox\" x=\"112\" y=\"72\" width=\"54\" height=\"36\" rx=\"3\"/><rect class=\"cboxd\" x=\"134\" y=\"72\" width=\"10\" height=\"36\"/>\n<path class=\"s sd s3\" d=\"M112 136v-12m0 0l-5 5m5-5l5 5\"/>\n<path class=\"clay\" d=\"M184 116h26l-3-14h-20z\"/><path class=\"a\" d=\"M197 102c-2-14-12-20-20-20 2 10 8 18 20 20z\"/><path class=\"b\" d=\"M197 102c0-16 8-26 18-28 0 14-6 22-18 28z\"/>", "donation": "<rect class=\"skyb2\" x=\"60\" y=\"136\" width=\"58\" height=\"15\" rx=\"2\"/><rect class=\"honey\" x=\"64\" y=\"121\" width=\"52\" height=\"15\" rx=\"2\"/><rect class=\"a\" x=\"58\" y=\"106\" width=\"56\" height=\"15\" rx=\"2\"/><path class=\"s sw s2\" d=\"M70 113h24M76 128h30\"/>\n<rect class=\"clay\" x=\"130\" y=\"98\" width=\"66\" height=\"54\" rx=\"4\"/><rect class=\"clay3\" x=\"124\" y=\"86\" width=\"78\" height=\"17\" rx=\"4\"/><rect class=\"honey\" x=\"157\" y=\"86\" width=\"12\" height=\"66\"/>\n<path class=\"honey\" d=\"M163 86c-18-4-26-18-16-22 8-3 14 10 16 22zM163 86c18-4 26-18 16-22-8-3-14 10-16 22z\"/>\n<path class=\"clay\" d=\"M232 130h28l-4 22h-20z\"/><path class=\"a\" d=\"M246 130c-2-14-12-20-20-20 2 10 8 18 20 20z\"/><path class=\"b\" d=\"M246 130c0-16 8-26 18-28 0 14-6 22-18 28z\"/>", "community": "<path class=\"s sd s2\" d=\"M30 36Q160 80 290 36\"/><path class=\"clay\" d=\"M43 42.8L61 45.2L52 60.8z\"/><path class=\"honey\" d=\"M71 49.7L89 51.4L80 67.7z\"/><path class=\"skyb\" d=\"M99 54.5L117 55.6L108 72.5z\"/><path class=\"cream\" d=\"M127 57.3L145 57.7L136 75.3z\"/><path class=\"clay\" d=\"M155 58.0L173 57.8L164 76.0z\"/><path class=\"honey\" d=\"M183 56.7L201 55.8L192 74.7z\"/><path class=\"skyb\" d=\"M211 53.3L229 51.8L220 71.3z\"/><path class=\"cream\" d=\"M239 47.9L257 45.8L248 65.9z\"/>\n<rect class=\"cream\" x=\"66\" y=\"104\" width=\"56\" height=\"48\" rx=\"2\"/><path class=\"clay\" d=\"M58 108l36-30 36 30z\"/><rect class=\"skyb2\" x=\"86\" y=\"126\" width=\"16\" height=\"26\" rx=\"2\"/>\n<rect class=\"cream\" x=\"132\" y=\"96\" width=\"60\" height=\"56\" rx=\"2\"/><path class=\"a\" d=\"M124 100l38-32 38 32z\"/><rect class=\"clay\" x=\"154\" y=\"122\" width=\"16\" height=\"30\" rx=\"2\"/><rect class=\"glass\" x=\"140\" y=\"106\" width=\"12\" height=\"10\" rx=\"1\"/><rect class=\"glass\" x=\"172\" y=\"106\" width=\"12\" height=\"10\" rx=\"1\"/>\n<rect class=\"cream\" x=\"202\" y=\"108\" width=\"54\" height=\"44\" rx=\"2\"/><path class=\"b\" d=\"M194 112l35-28 35 28z\"/><rect class=\"a\" x=\"221\" y=\"128\" width=\"16\" height=\"24\" rx=\"2\"/>", "other": "<path class=\"s shoney s4\" d=\"M160 26v-12M124 42l-8-8M196 42l8-8M110 78H98M210 78h12\"/>\n<circle class=\"bulb\" cx=\"160\" cy=\"78\" r=\"32\"/><path class=\"s sclay s4\" d=\"M148 90c0-12 6-18 12-18s12 6 12 18\"/><rect class=\"d\" x=\"146\" y=\"106\" width=\"28\" height=\"22\" rx=\"4\"/><path class=\"s sl s2\" d=\"M146 114h28M146 121h28\"/>\n<path class=\"clay\" transform=\"translate(234 108) scale(1.3)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/><path class=\"b\" transform=\"translate(90 116) scale(1)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/><path class=\"honey\" transform=\"translate(252 62) scale(0.7)\" d=\"M0-10L2.6-2.6L10 0L2.6 2.6L0 10L-2.6 2.6L-10 0L-2.6-2.6Z\"/>"};
-const SCENE_FRAME = '<svg class="sc" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="k0" width="320" height="180"/><circle class="sun" cx="266" cy="40" r="20"/><path class="k1" d="M0 126C60 108 110 112 160 122 215 134 262 114 320 120V180H0Z"/><path class="k2" d="M0 146C70 134 140 140 200 148 250 154 290 146 320 142V180H0Z"/>';
-function sceneSvg(categoryId, fit = "slice") {
-  const inner = CATEGORY_SCENES[categoryId] || CATEGORY_SCENES.other;
-  const frame = fit === "meet" ? SCENE_FRAME.replace("xMidYMid slice", "xMidYMax meet") : SCENE_FRAME;
-  return raw(frame + inner + "</svg>");
-}
-
 /** Image d'une annonce : la 1re photo si elle existe, sinon une illustration colorée. */
 function categoryThumb(l, cls = "") {
   const cat = getCategory(l.category);
   const photo = safeImageSrc(l.photos?.[0]);
   if (photo) return html`<div class="media ${cls}"><img src="${photo}" alt="" loading="lazy"></div>`;
   const { tone, pattern } = coverStyle(l);
-  const flip = cat.id !== "language" && hashString(String(l.id)) % 2 === 1;
-  return html`<div class="media media-illu media-scene tv-${tone}${flip ? " is-flipped" : ""} ${cls}" data-pattern="${pattern}">${sceneSvg(cat.id)}</div>`;
+  return html`<div class="media media-illu tv-${tone} pat-${pattern} ${cls}"><span class="media-icon">${icon(cat.icon)}</span><span class="media-deco" aria-hidden="true">${icon(cat.icon)}</span></div>`;
 }
 
 function listingTitle(l) { return pick(l.title); }
@@ -5291,7 +5384,7 @@ function langChips(name, selected = []) {
 
 
 
-return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, sceneSvg, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
+return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
 });
 __def("qr-site.js", function () {
 /* QR code du site (généré une fois à partir de l'adresse officielle, avec correction d'erreurs élevée).
@@ -5301,6 +5394,131 @@ const SITE_LABEL = "lennyhrng.github.io/Voisina";
 const QR_SVG = "<svg class=\"qr-svg\" role=\"img\" aria-label=\"QR code : lennyhrng.github.io/Voisina\" viewBox=\"-0.2 -0.2 37.4 37.4\" shape-rendering=\"crispEdges\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#12372a\"><rect x=\"8\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"0\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"0\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"0\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"0\" width=\"3\" height=\"1\"/><rect x=\"9\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"16\" y=\"1\" width=\"1\" height=\"1\"/><rect x=\"21\" y=\"1\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"1\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"21\" y=\"2\" width=\"4\" height=\"1\"/><rect x=\"28\" y=\"2\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"3\" width=\"5\" height=\"1\"/><rect x=\"21\" y=\"3\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"3\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"3\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"4\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"4\" width=\"5\" height=\"1\"/><rect x=\"17\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"4\" width=\"3\" height=\"1\"/><rect x=\"25\" y=\"4\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"5\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"5\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"16\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"22\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"6\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"19\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"22\" y=\"7\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"27\" y=\"7\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"8\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"8\" width=\"3\" height=\"1\"/><rect x=\"26\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"36\" y=\"8\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"9\" width=\"3\" height=\"1\"/><rect x=\"11\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"20\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"9\" width=\"4\" height=\"1\"/><rect x=\"28\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"9\" width=\"2\" height=\"1\"/><rect x=\"33\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"9\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"10\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"10\" width=\"5\" height=\"1\"/><rect x=\"30\" y=\"10\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"10\" width=\"5\" height=\"1\"/><rect x=\"0\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"11\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"11\" width=\"4\" height=\"1\"/><rect x=\"36\" y=\"11\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"12\" width=\"4\" height=\"1\"/><rect x=\"12\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"12\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"27\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"12\" width=\"2\" height=\"1\"/><rect x=\"33\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"12\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"13\" width=\"2\" height=\"1\"/><rect x=\"15\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"13\" width=\"3\" height=\"1\"/><rect x=\"22\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"13\" width=\"2\" height=\"1\"/><rect x=\"31\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"13\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"14\" width=\"4\" height=\"1\"/><rect x=\"23\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"14\" width=\"4\" height=\"1\"/><rect x=\"30\" y=\"14\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"14\" width=\"2\" height=\"1\"/><rect x=\"35\" y=\"14\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"23\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"15\" width=\"1\" height=\"1\"/><rect x=\"33\" y=\"15\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"11\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"16\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"16\" width=\"4\" height=\"1\"/><rect x=\"34\" y=\"16\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"17\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"17\" width=\"3\" height=\"1\"/><rect x=\"8\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"17\" width=\"3\" height=\"1\"/><rect x=\"27\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"17\" width=\"1\" height=\"1\"/><rect x=\"33\" y=\"17\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"18\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"29\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"18\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"18\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"19\" width=\"3\" height=\"1\"/><rect x=\"7\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"19\" width=\"5\" height=\"1\"/><rect x=\"32\" y=\"19\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"19\" width=\"1\" height=\"1\"/><rect x=\"1\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"5\" y=\"20\" width=\"2\" height=\"1\"/><rect x=\"9\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"20\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"20\" width=\"4\" height=\"1\"/><rect x=\"29\" y=\"20\" width=\"4\" height=\"1\"/><rect x=\"34\" y=\"20\" width=\"3\" height=\"1\"/><rect x=\"2\" y=\"21\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"21\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"21\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"21\" width=\"3\" height=\"1\"/><rect x=\"31\" y=\"21\" width=\"4\" height=\"1\"/><rect x=\"0\" y=\"22\" width=\"3\" height=\"1\"/><rect x=\"4\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"6\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"22\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"22\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"5\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"7\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"23\" width=\"3\" height=\"1\"/><rect x=\"33\" y=\"23\" width=\"1\" height=\"1\"/><rect x=\"35\" y=\"23\" width=\"2\" height=\"1\"/><rect x=\"1\" y=\"24\" width=\"3\" height=\"1\"/><rect x=\"5\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"16\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"24\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"24\" width=\"6\" height=\"1\"/><rect x=\"35\" y=\"24\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"3\" y=\"25\" width=\"2\" height=\"1\"/><rect x=\"8\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"25\" width=\"2\" height=\"1\"/><rect x=\"13\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"25\" width=\"1\" height=\"1\"/><rect x=\"19\" y=\"25\" width=\"4\" height=\"1\"/><rect x=\"24\" y=\"25\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"25\" width=\"3\" height=\"1\"/><rect x=\"0\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"4\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"10\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"26\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"21\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"26\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"26\" width=\"3\" height=\"1\"/><rect x=\"35\" y=\"26\" width=\"2\" height=\"1\"/><rect x=\"0\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"2\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"7\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"17\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"24\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"27\" width=\"2\" height=\"1\"/><rect x=\"29\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"31\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"34\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"36\" y=\"27\" width=\"1\" height=\"1\"/><rect x=\"0\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"3\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"6\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"15\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"18\" y=\"28\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"28\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"28\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"28\" width=\"9\" height=\"1\"/><rect x=\"8\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"12\" y=\"29\" width=\"3\" height=\"1\"/><rect x=\"16\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"29\" width=\"6\" height=\"1\"/><rect x=\"25\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"29\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"29\" width=\"2\" height=\"1\"/><rect x=\"9\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"16\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"30\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"25\" y=\"30\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"30\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"30\" width=\"1\" height=\"1\"/><rect x=\"8\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"18\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"21\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"26\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"31\" width=\"1\" height=\"1\"/><rect x=\"32\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"35\" y=\"31\" width=\"2\" height=\"1\"/><rect x=\"10\" y=\"32\" width=\"2\" height=\"1\"/><rect x=\"14\" y=\"32\" width=\"6\" height=\"1\"/><rect x=\"21\" y=\"32\" width=\"1\" height=\"1\"/><rect x=\"24\" y=\"32\" width=\"9\" height=\"1\"/><rect x=\"34\" y=\"32\" width=\"3\" height=\"1\"/><rect x=\"9\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"11\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"33\" width=\"3\" height=\"1\"/><rect x=\"19\" y=\"33\" width=\"4\" height=\"1\"/><rect x=\"25\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"27\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"30\" y=\"33\" width=\"1\" height=\"1\"/><rect x=\"13\" y=\"34\" width=\"3\" height=\"1\"/><rect x=\"20\" y=\"34\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"34\" width=\"2\" height=\"1\"/><rect x=\"28\" y=\"34\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"34\" width=\"1\" height=\"1\"/><rect x=\"10\" y=\"35\" width=\"4\" height=\"1\"/><rect x=\"16\" y=\"35\" width=\"4\" height=\"1\"/><rect x=\"21\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"23\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"26\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"28\" y=\"35\" width=\"2\" height=\"1\"/><rect x=\"32\" y=\"35\" width=\"2\" height=\"1\"/><rect x=\"36\" y=\"35\" width=\"1\" height=\"1\"/><rect x=\"9\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"12\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"14\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"17\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"20\" y=\"36\" width=\"3\" height=\"1\"/><rect x=\"28\" y=\"36\" width=\"2\" height=\"1\"/><rect x=\"31\" y=\"36\" width=\"3\" height=\"1\"/><rect x=\"36\" y=\"36\" width=\"1\" height=\"1\"/><rect x=\"0.5\" y=\"0.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"2\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.0\"/><rect x=\"30.5\" y=\"0.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"32\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.0\"/><rect x=\"0.5\" y=\"30.5\" width=\"6\" height=\"6\" rx=\"0\" fill=\"none\" stroke=\"#12372a\" stroke-width=\"1\"/><rect x=\"2\" y=\"32\" width=\"3\" height=\"3\" rx=\"0.0\"/></g><rect x=\"14.3\" y=\"14.3\" width=\"8.4\" height=\"8.4\" rx=\"1.6\" fill=\"#fff\"/><g shape-rendering=\"geometricPrecision\"><svg x=\"14.9\" y=\"14.9\" width=\"7.2\" height=\"7.2\" viewBox=\"0 0 48 48\" aria-hidden=\"true\">\n    <rect width=\"48\" height=\"48\" rx=\"14\" fill=\"#12372A\"/>\n    <path d=\"M38.5 9.5C27.6 10 17.6 13.6 12 20.6C7.2 26.6 9.1 36.1 9.9 38.8C17.7 38.2 26.8 35.4 32.7 28.7C37.9 22.7 38.8 14.6 38.5 9.5Z\" fill=\"#5E9F68\"/>\n    <path d=\"M10.6 38.3C17.4 29.4 24.3 23.5 34.9 15.1\" stroke=\"#DCEFE2\" stroke-width=\"2.6\" stroke-linecap=\"round\" fill=\"none\"/>\n    <path d=\"M20.2 28.6 19.1 21.8M27 22.9 26.1 17.1\" stroke=\"#DCEFE2\" stroke-width=\"2\" stroke-linecap=\"round\" fill=\"none\"/>\n  </svg></g></svg>";
 
 return { SITE_URL, SITE_LABEL, QR_SVG };
+});
+__def("motion.js", function () {
+/* =====================================================================
+   MOUVEMENT — animations douces, inspirées des sites « premium »
+   ---------------------------------------------------------------------
+   - [data-reveal]      : l'élément apparaît en glissant quand on arrive dessus
+                          (variantes : "left", "right", "zoom", "fade")
+   - [data-stagger]     : les enfants apparaissent l'un après l'autre
+   - [data-parallax=".1"] : léger effet de profondeur pendant le défilement
+   - [data-countup="100"] : le nombre défile de 0 à la valeur
+   - en-tête transparent sur l'accueil, puis opaque dès qu'on défile
+   - barre de progression de lecture en haut de l'écran
+   Tout est désactivé si l'utilisateur a demandé « moins d'animations »
+   dans les réglages de son appareil (accessibilité).
+   Seules les propriétés transform et opacity sont animées : fluide même
+   sur un petit téléphone.
+   ===================================================================== */
+const { fmtNumber } = __req("i18n.js");
+
+const root = document.documentElement;
+let revealIO = null;
+let countIO = null;
+let parallaxEls = [];
+let ticking = false;
+let progressBar = null;
+
+const reducedMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
+function animateCount(el) {
+  const target = Number(el.dataset.countup);
+  if (!Number.isFinite(target)) return;
+  const duration = 1400;
+  const t0 = performance.now();
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / duration);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmtNumber(Math.round(target * eased));
+    if (p < 1) requestAnimationFrame(step);
+  };
+  el.textContent = fmtNumber(0);
+  requestAnimationFrame(step);
+}
+
+/** Cherche les éléments animés dans un bout de page (appelé aussi quand la page change). */
+function scan(node = document) {
+  if (!revealIO || !node.querySelectorAll) return;
+  const pick = (sel) => [...(node.matches?.(sel) ? [node] : []), ...node.querySelectorAll(sel)];
+  pick("[data-reveal], [data-stagger]").forEach((el) => {
+    if (el.dataset.stagger !== undefined) [...el.children].forEach((c, i) => c.style.setProperty("--i", String(Math.min(i, 10))));
+    if (!el.classList.contains("is-in")) revealIO.observe(el);
+  });
+  pick("[data-countup]").forEach((el) => { if (!el.dataset.counted) countIO.observe(el); });
+  const par = pick("[data-parallax]");
+  if (par.length) {
+    parallaxEls = [...parallaxEls.filter((el) => el.isConnected), ...par];
+    requestTick();
+  }
+}
+
+function onScroll() {
+  const y = window.scrollY;
+  root.classList.toggle("is-scrolled", y > 12);
+  if (progressBar) {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.transform = `scaleX(${max > 40 ? Math.min(1, y / max) : 0})`;
+  }
+  if (!reducedMotion()) {
+    const vh = window.innerHeight;
+    parallaxEls = parallaxEls.filter((el) => el.isConnected);
+    for (const el of parallaxEls) {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) continue;
+      const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.parallax || 0);
+      el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+    }
+  }
+  ticking = false;
+}
+
+function requestTick() {
+  if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+}
+
+function initMotion() {
+  progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progressBar);
+  window.addEventListener("scroll", requestTick, { passive: true });
+  window.addEventListener("resize", requestTick, { passive: true });
+
+  if (reducedMotion() || !("IntersectionObserver" in window)) {
+    root.classList.add("motion-off");
+    requestTick();
+    return;
+  }
+  root.classList.add("js-motion");
+  revealIO = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      e.target.classList.add("is-in");
+      revealIO.unobserve(e.target);
+    }
+  }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+  countIO = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      e.target.dataset.counted = "1";
+      animateCount(e.target);
+      countIO.unobserve(e.target);
+    }
+  }, { threshold: 0.4 });
+
+  // Les pages sont redessinées sans rechargement : on surveille les nouveaux éléments
+  const view = document.getElementById("view");
+  if (view && "MutationObserver" in window) {
+    new MutationObserver((muts) => {
+      for (const m of muts) for (const n of m.addedNodes) if (n.nodeType === 1) scan(n);
+    }).observe(view, { childList: true, subtree: true });
+  }
+  scan(document);
+  requestTick();
+}
+
+return { scan, initMotion, reducedMotion };
 });
 __def("map.js", function () {
 /* =====================================================================
@@ -5672,7 +5890,7 @@ function swissMapSvg(dots = []) {
     .join("");
   return raw(`<svg class="swiss-map" viewBox="0 0 ${VIEW_W} ${VIEW_H}" role="img" aria-hidden="true" focusable="false">
     <defs><linearGradient id="swiss-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="swiss-fill-a"/><stop offset="1" class="swiss-fill-b"/></linearGradient></defs>
-    <path class="swiss-shape" d="${outlinePath()}"/>
+    <path class="swiss-shape" pathLength="1" d="${outlinePath()}"/>
     <path class="swiss-lake" d="${lemanPath()}"/>
     <g class="swiss-dots">${circles}</g>
   </svg>`);
@@ -5757,76 +5975,106 @@ const __default = {
     const listings = allListings();
     const s = stats();
     const origin = getOrigin();
-    const seenTitles = new Set();
-    const recent = searchListings({ sort: origin ? "distance" : "recent" }, origin)
-      .filter(({ listing }) => { const k = JSON.stringify(listing.title || ""); if (seenTitles.has(k)) return false; seenTitles.add(k); return true; })
-      .slice(0, 8);
+    const recent = searchListings({ sort: origin ? "distance" : "recent" }, origin).slice(0, 8);
     const counts = {};
     listings.forEach((l) => { counts[l.category] = (counts[l.category] || 0) + 1; });
     const dots = listings.slice(0, 380).map((l) => ({ lat: l.lat, lng: l.lng, tone: getCategory(l.category).tone }));
+    const cities = POPULAR_CITIES.map((name, i) => {
+      const loc = findLocality(name);
+      return { name, i, n: listings.filter((l) => distanceKm(loc, l) <= 10).length };
+    });
+    const cityLink = (c, dup = false) => html`<a class="city-card tv-${c.i % 6}" href="#/explorer?ville=${encodeURIComponent(c.name)}" ${dup ? raw('tabindex="-1" aria-hidden="true"') : ""}>
+      <span class="city-dot">${icon("pin")}</span><span class="city-name">${c.name}</span><span class="city-count">${t("home.catCount", { count: c.n })}</span>${icon("arrowRight", "city-arrow")}</a>`;
+    const phoneCards = recent.slice(0, 3).map(({ listing }) => {
+      const cat = getCategory(listing.category);
+      return html`<span class="pc tv-${cat.tone}"><span class="pc-icon">${icon(cat.icon)}</span><span class="pc-text"><strong>${listingTitle(listing)}</strong><em>${listing.city} · ${priceLabel(listing)}</em></span></span>`;
+    });
 
     return html`
-    <section class="hero">
+    <section class="hero hero-cine">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="aurora a1"></span>
+        <span class="aurora a2"></span>
+        <span class="aurora a3"></span>
+        <span class="hero-lines"></span>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">${icon("leaf")}${t("home.eyebrow")}</span>
-          <h1 class="display"><span class="line"><span>${t("home.title1")}</span></span> <span class="line"><span>${t("home.title2")}</span></span> <span class="line"><em>${t("home.title3")}</em></span></h1>
-          <p class="lead">${t("home.lead")}</p>
-          <p class="lead-short">${t("home.leadShort")}</p>
+          <p class="eyebrow-line"><span aria-hidden="true"></span>${t("home.eyebrow")}</p>
+          <h1 class="display hero-title">
+            <span class="line"><span>${t("home.title1")}</span></span>
+            <span class="line"><span>${t("home.title2")}</span></span>
+            <span class="line"><em>${t("home.title3")}</em></span>
+          </h1>
+          <p class="lead hero-fade">${t("home.lead")}</p>
+          <p class="lead-short hero-fade">${t("home.leadShort")}</p>
 
-          <form class="hero-search" data-form="hero-search" role="search">
+          <form class="hero-search hero-fade" data-form="hero-search" role="search">
             <div class="field">
               <label class="sr-only" for="hero-q">${t("search.what")}</label>
               <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${t("search.whatPh")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
             </div>
             ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
-            <button class="btn btn-primary btn-lg hero-search-btn" type="submit" aria-label="${t("search.submit")}">${icon("search")}<span class="btn-label">${t("search.submit")}</span></button>
+            <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>
           </form>
-          <div class="hero-quick">
-            <button type="button" class="link-btn" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
-            <span class="hero-quick-sep" aria-hidden="true">·</span>
-            ${["shopping", "pets", "digital", "garden"].map((c) => html`<a class="pill" href="#/explorer?cat=${c}">${categoryName(c)}</a>`)}
+          <div class="hero-quick hero-fade">
+            <a class="btn btn-lime" href="#/decouvrir">${icon("play")}${t("home.heroDiscover")}</a>
+            <button type="button" class="btn btn-glass" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
           </div>
           ${stories()}
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-map">
+          <div class="hero-map" data-parallax="-0.06">
             ${swissMapSvg(dots)}
             ${heroCards(listings)}
           </div>
         </div>
       </div>
+      <button type="button" class="scroll-cue" data-action="scroll-next" aria-label="${t("home.scroll")}"><span>${t("home.scroll")}</span><i aria-hidden="true"></i></button>
     </section>
 
-    <section class="stats-band" aria-label="${t("home.statsLabel")}">
-      <div class="container stats-grid">
-        <div class="stat"><strong>${fmtNumber(s.active)}</strong><span>${t("home.statListings")}</span></div>
-        <div class="stat"><strong>26</strong><span>${t("home.statCantons")}</span></div>
-        <div class="stat"><strong>4</strong><span>${t("home.statLangs")}</span></div>
+    <section class="stats-band" id="home-stats" aria-label="${t("home.statsLabel")}">
+      <div class="container stats-grid" data-stagger>
+        <div class="stat"><strong data-countup="${s.active}">${fmtNumber(s.active)}</strong><span>${t("home.statListings")}</span></div>
+        <div class="stat"><strong data-countup="26">26</strong><span>${t("home.statCantons")}</span></div>
+        <div class="stat"><strong data-countup="4">4</strong><span>${t("home.statLangs")}</span></div>
         <div class="stat"><strong>0</strong><span>${t("home.statTrackers")}</span></div>
       </div>
     </section>
 
-    <section class="discover-promo-wrap">
-      <div class="container">
-        <a class="discover-promo" href="#/decouvrir">
-          <span class="discover-promo-phone" aria-hidden="true"><span class="dp-card tv-0"></span><span class="dp-card tv-3"></span><span class="dp-play">${icon("play")}</span></span>
-          <span class="discover-promo-text"><span class="kicker kicker-light">${t("discover.kicker")}</span><strong>${t("discover.promoTitle")}</strong><span>${t("discover.promoText")}</span></span>
-          <span class="btn btn-sun discover-promo-btn">${icon("play")}${t("discover.start")}</span>
+    <section class="section showcase" aria-labelledby="showcase-title">
+      <div class="container showcase-grid">
+        <div class="showcase-text" data-reveal="left">
+          <span class="kicker">${t("discover.kicker")}</span>
+          <h2 class="h2 showcase-title" id="showcase-title">${t("home.showcaseTitle1")} <em>${t("home.showcaseTitle2")}</em></h2>
+          <p class="lead">${t("discover.promoText")}</p>
+          <ul class="showcase-points" data-stagger>
+            <li>${icon("pointer")}<span>${t("home.showcase1")}</span></li>
+            <li>${icon("heart")}<span>${t("home.showcase2")}</span></li>
+            <li>${icon("pin")}<span>${t("home.showcase3")}</span></li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="#/decouvrir">${icon("play")}${t("discover.start")}</a>
+        </div>
+        <a class="showcase-phone" href="#/decouvrir" data-reveal="zoom" aria-label="${t("discover.title")}">
+          <span class="phone" aria-hidden="true">
+            <span class="phone-notch"></span>
+            <span class="phone-screen"><span class="phone-feed">${phoneCards}${phoneCards.slice(0, 1)}</span></span>
+            <span class="phone-hand">${icon("pointer")}</span>
+          </span>
         </a>
       </div>
     </section>
 
     ${recentlyViewedSection()}
 
-    <section class="section home-cats">
+    <section class="section home-cats section-alt">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
-        <div class="cat-grid">
+        <div class="cat-grid" data-stagger>
           ${CATEGORIES.map((c) => html`<a class="cat-tile tv-${c.tone}" href="#/explorer?cat=${c.id}">
             <span class="cat-icon">${icon(c.icon)}</span>
             <span class="cat-name">${categoryName(c.id)}</span>
@@ -5836,41 +6084,32 @@ const __default = {
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
-        <div class="listing-grid home-feed">
+        <div class="listing-grid home-feed" data-stagger>
           ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section cities-section section-alt" aria-labelledby="cities-title">
       <div class="container">
-        <div class="section-head">
-          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2">${t("home.citiesTitle")}</h2></div>
+        <div class="section-head" data-reveal>
+          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2></div>
         </div>
-        <div class="city-grid">
-          ${POPULAR_CITIES.map((name, i) => {
-            const loc = findLocality(name);
-            const n = listings.filter((l) => distanceKm(loc, l) <= 10).length;
-            return html`<a class="city-card tv-${i % 6}" href="#/explorer?ville=${encodeURIComponent(name)}">
-              <span class="city-dot">${icon("pin")}</span>
-              <span class="city-name">${name}</span>
-              <span class="city-count">${t("home.catCount", { count: n })}</span>
-              ${icon("arrowRight", "city-arrow")}
-            </a>`;
-          })}
-        </div>
+      </div>
+      <div class="marquee" data-reveal="fade">
+        <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
       </div>
     </section>
 
     <section class="section section-map" aria-labelledby="map-title">
       <div class="container map-showcase">
-        <div class="map-showcase-text">
+        <div class="map-showcase-text" data-reveal="left">
           <span class="kicker">${icon("map")}${t("home.mapKicker")}</span>
           <h2 class="h2" id="map-title">${t("home.mapTitle")}</h2>
           <p class="muted">${t("home.mapText")}</p>
@@ -5879,19 +6118,19 @@ const __default = {
           </ul>
           <a class="btn btn-primary" href="#/explorer?view=map">${icon("map")}${t("home.mapCta")}</a>
         </div>
-        <div class="map-showcase-map">
+        <div class="map-showcase-map" data-reveal="right">
           <div id="home-map" class="map map-home" role="region" aria-label="${t("explore.mapLabel")}"></div>
           <p class="map-note">${icon("shield")}${t("explore.mapPrivacy")}</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-warm" id="how">
+    <section class="section section-warm how" id="how">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center" data-reveal>
           <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
         </div>
-        <ol class="steps">
+        <ol class="steps timeline" data-stagger>
           ${[["pencil", 1], ["message", 2], ["hand", 3]].map(([ic, n]) => html`<li class="step">
             <span class="step-num">${n}</span>
             <span class="step-icon">${icon(ic)}</span>
@@ -5899,7 +6138,7 @@ const __default = {
             <p>${t(`home.step${n}Text`)}</p>
           </li>`)}
         </ol>
-        <div class="center-actions">
+        <div class="center-actions" data-reveal>
           <a class="btn btn-cta btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
           <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
         </div>
@@ -5908,13 +6147,13 @@ const __default = {
 
     <section class="section trust-section home-trust">
       <div class="container trust-grid">
-        <div class="trust-intro">
+        <div class="trust-intro" data-reveal="left">
           <span class="kicker kicker-light">${t("home.trustKicker")}</span>
           <h2 class="h2">${t("home.trustTitle")}</h2>
           <p>${t("home.trustText")}</p>
           <a class="btn btn-light" href="#/page/securite">${icon("shieldCheck")}${t("home.trustCta")}</a>
         </div>
-        <div class="trust-cards">
+        <div class="trust-cards" data-stagger>
           ${[["pin", "Loc"], ["lock", "Pwd"], ["flag", "Report"], ["eyeOff", "Track"]].map(([ic, k]) => html`<div class="trust-card">
             <span class="trust-icon">${icon(ic)}</span>
             <h3>${t(`home.trust${k}Title`)}</h3>
@@ -5926,20 +6165,21 @@ const __default = {
 
     <section class="section section-sky home-faq">
       <div class="container faq-wrap">
-        <div>
+        <div data-reveal="left">
           <span class="kicker">${t("home.faqKicker")}</span>
           <h2 class="h2">${t("home.faqTitle")}</h2>
           <p class="muted">${t("home.faqText")}</p>
           <a class="btn btn-ghost" href="#/page/aide">${t("home.faqMore")}${icon("arrowRight")}</a>
         </div>
-        <div class="faq">
+        <div class="faq" data-stagger>
           ${FAQ.map((k) => html`<details class="faq-item"><summary>${t(`faq.${k}.q`)}${icon("chevronDown")}</summary><p>${t(`faq.${k}.a`)}</p></details>`)}
         </div>
       </div>
     </section>
 
     <section class="section cta-band section-sky">
-      <div class="container cta-inner">
+      <div class="container cta-inner" data-reveal="zoom">
+        <span class="aurora a1" aria-hidden="true"></span><span class="aurora a3" aria-hidden="true"></span>
         <div>
           <h2 class="h2">${t("home.ctaTitle")}</h2>
           <p>${t("home.ctaText")}</p>
@@ -6002,6 +6242,7 @@ const __default = {
 
 const homeActions = {
   "clear-recent": () => clearRecentlyViewed(),
+  "scroll-next": () => document.getElementById("home-stats")?.scrollIntoView({ behavior: "smooth", block: "start" }),
 };
 
 
@@ -8720,7 +8961,7 @@ const PAGES = {
           "Compte : prénom, nom (seule l'initiale est publique), e-mail, localité, canton, empreinte du mot de passe.",
           "Profil facultatif : photo, présentation, langues, spécialités.",
           "Contenus : annonces, photos d'annonces, messages, favoris, signalements.",
-          "Préférences : langue, thème, taille du texte, style de carte, point de référence pour le calcul des distances, annonces consultées récemment (12 au maximum).",
+          "Préférences : langue, thème, taille du texte, style de carte, filtre de région du fil Découvrir, point de référence pour le calcul des distances, annonces consultées récemment (12 au maximum).",
         ] },
         { h: "Où sont stockées vos données ?", p: ["Dans ce prototype, toutes les données sont enregistrées dans le stockage local (localStorage) de votre navigateur, sur votre appareil. Elles ne sont pas partagées avec d'autres appareils. Vider les données du site dans votre navigateur les supprime définitivement."] },
         { h: "Services tiers", p: ["Pour fonctionner, le site fait appel aux services suivants, qui reçoivent techniquement votre adresse IP :"], list: [
@@ -8751,7 +8992,7 @@ const PAGES = {
           "Konto: Vorname, Nachname (nur die Initiale ist öffentlich), E-Mail, Ort, Kanton, Passwort-Fingerabdruck.",
           "Freiwilliges Profil: Foto, Beschreibung, Sprachen, Fähigkeiten.",
           "Inhalte: Anzeigen, Anzeigenfotos, Nachrichten, Favoriten, Meldungen.",
-          "Einstellungen: Sprache, Design, Textgrösse, Kartenstil, Referenzpunkt für Distanzen, kürzlich angesehene Anzeigen (höchstens 12).",
+          "Einstellungen: Sprache, Design, Textgrösse, Kartenstil, Regionsfilter des Entdecken-Feeds, Referenzpunkt für Distanzen, kürzlich angesehene Anzeigen (höchstens 12).",
         ] },
         { h: "Wo werden Ihre Daten gespeichert?", p: ["In diesem Prototyp werden alle Daten im lokalen Speicher (localStorage) Ihres Browsers auf Ihrem Gerät abgelegt. Sie werden nicht mit anderen Geräten geteilt. Wenn Sie die Websitedaten im Browser löschen, sind sie endgültig entfernt."] },
         { h: "Drittdienste", p: ["Für den Betrieb nutzt die Website folgende Dienste, die technisch Ihre IP-Adresse erhalten:"], list: [
@@ -8782,7 +9023,7 @@ const PAGES = {
           "Account: nome, cognome (è pubblica solo l'iniziale), e-mail, località, cantone, impronta della password.",
           "Profilo facoltativo: foto, presentazione, lingue, competenze.",
           "Contenuti: annunci, foto degli annunci, messaggi, preferiti, segnalazioni.",
-          "Preferenze: lingua, tema, dimensione del testo, stile della mappa, punto di riferimento per il calcolo delle distanze, annunci visti di recente (12 al massimo).",
+          "Preferenze: lingua, tema, dimensione del testo, stile della mappa, filtro regionale del flusso Scopri, punto di riferimento per il calcolo delle distanze, annunci visti di recente (12 al massimo).",
         ] },
         { h: "Dove sono salvati i dati?", p: ["In questo prototipo tutti i dati sono registrati nella memoria locale (localStorage) del browser, sul vostro dispositivo. Non sono condivisi con altri dispositivi. Cancellando i dati del sito nel browser vengono eliminati definitivamente."] },
         { h: "Servizi di terzi", p: ["Per funzionare, il sito utilizza i seguenti servizi, che ricevono tecnicamente il vostro indirizzo IP:"], list: [
@@ -8813,7 +9054,7 @@ const PAGES = {
           "Account: first name, last name (only the initial is public), email, town, canton, password fingerprint.",
           "Optional profile: photo, bio, languages, skills.",
           "Content: listings, listing photos, messages, favourites, reports.",
-          "Preferences: language, theme, text size, map style, reference point for distances, recently viewed listings (12 at most).",
+          "Preferences: language, theme, text size, map style, Discover feed region filter, reference point for distances, recently viewed listings (12 at most).",
         ] },
         { h: "Where is your data stored?", p: ["In this prototype, all data is saved in your browser's local storage (localStorage), on your device. It is not shared with other devices. Clearing the site data in your browser deletes it permanently."] },
         { h: "Third-party services", p: ["To work, the site uses the following services, which technically receive your IP address:"], list: [
@@ -9022,41 +9263,85 @@ return { default: __default };
 });
 __def("views/discover.js", function () {
 /* =====================================================================
-   DÉCOUVRIR — les annonces une par une, en plein écran
+   DÉCOUVRIR — les annonces une par une, en plein écran (façon Reels)
    ---------------------------------------------------------------------
-   Inspiré des applis que tout le monde sait utiliser (Reels, TikTok) :
-   une seule annonce à la fois, peu de texte, on glisse vers le haut pour
-   passer à la suivante, et les actions sont à portée de pouce à droite.
+   Pourquoi un moteur « maison » plutôt que le défilement du navigateur ?
+   Le défilement magnétique (scroll-snap) se comporte différemment selon
+   les téléphones (surtout les anciens iPhone). Ici, c'est nous qui suivons
+   le doigt (Pointer Events) : même comportement partout.
+   - Seules 3 cartes existent à la fois (précédente, actuelle, suivante) :
+     fluide même avec des centaines d'annonces.
+   - Glisser vers le haut / le bas, molette, flèches du clavier.
+   - Double-tap sur une annonce = J'aime (avec un cœur animé).
+   - Filtre en haut : région (autour de moi, Romandie, canton…), type, catégorie.
    ===================================================================== */
-const { html, raw, $, $$, safeImageSrc } = __req("util.js");
+const { html, raw, $, $$, mount, safeImageSrc, storage, clamp } = __req("util.js");
 const { icon } = __req("icons.js");
-const { t, categoryName, fmtDistance } = __req("i18n.js");
-const { getCategory, TYPES } = __req("data.js");
-const { searchListings, getOrigin, isFavorite, getPerson } = __req("store.js");
-const { avatar, priceLabel, typeLabel, listingTitle, listingDescription, scheduleLabel, coverStyle, sceneSvg } = __req("ui.js");
+const { t, categoryName, cantonName, fmtDistance } = __req("i18n.js");
+const { getCategory, TYPES, CATEGORIES, CANTONS, CANTON_CODES } = __req("data.js");
+const { searchListings, getOrigin, setOrigin, isFavorite, getPerson, toggleFavorite } = __req("store.js");
+const { avatar, priceLabel, typeLabel, listingTitle, listingDescription, scheduleLabel, coverStyle, openDialog, toast } = __req("ui.js");
 
-let type = "";
+/* ------------------------------ Filtres ------------------------------ */
+const REGIONS = {
+  all: null,
+  near: null,
+  romandie: CANTON_CODES.filter((c) => CANTONS[c].lang === "fr"),
+  deutsch: CANTON_CODES.filter((c) => CANTONS[c].lang === "de"),
+  ticino: CANTON_CODES.filter((c) => CANTONS[c].lang === "it"),
+};
+const NEAR_KM = "25";
 
-function reel(l, distance, index) {
+function readFilter() {
+  const f = storage.get("reelsFilter", {});
+  return {
+    region: Object.keys(REGIONS).includes(f.region) ? f.region : "all",
+    canton: CANTON_CODES.includes(f.canton) ? f.canton : "",
+    type: TYPES.includes(f.type) ? f.type : "",
+    cat: CATEGORIES.some((c) => c.id === f.cat) ? f.cat : "",
+  };
+}
+
+function results(f) {
+  const origin = getOrigin();
+  const near = f.region === "near" && origin && !f.canton;
+  let res = searchListings({ type: f.type, cat: f.cat, sort: origin ? "distance" : "recent", ...(near ? { radius: NEAR_KM } : {}) }, origin);
+  if (f.canton) res = res.filter((r) => r.listing.canton === f.canton);
+  else if (Array.isArray(REGIONS[f.region])) res = res.filter((r) => REGIONS[f.region].includes(r.listing.canton));
+  return res;
+}
+
+function regionLabel(f) {
+  if (f.canton) return cantonName(f.canton);
+  return t("reels.region." + f.region);
+}
+
+function extraFilters(f) {
+  return (f.type ? 1 : 0) + (f.cat ? 1 : 0);
+}
+
+/* ------------------------------ Une carte ---------------------------- */
+function slideHtml(item, index, total) {
+  const l = item.listing;
   const cat = getCategory(l.category);
   const photo = safeImageSrc(l.photos?.[0]);
   const { tone, pattern } = coverStyle(l);
   const author = getPerson(l.authorId);
   const fav = isFavorite(l.id);
-  return html`<article class="reel media-illu tv-${tone} pat-${pattern}${photo ? " has-photo" : ""}" aria-label="${listingTitle(l)}" data-id="${l.id}">
+  return html`<article class="reel media-illu tv-${tone} pat-${pattern}${photo ? " has-photo" : ""}" data-id="${l.id}" data-index="${index}" aria-roledescription="${t("reels.slide")}" aria-label="${listingTitle(l)} (${index + 1}/${total})">
     ${photo
-      ? html`<img class="reel-photo" src="${photo}" alt="" ${index > 1 ? raw('loading="lazy"') : ""}>`
-      : html`<span class="reel-art reel-scene" aria-hidden="true">${sceneSvg(cat.id, "meet")}</span>`}
+      ? html`<img class="reel-photo" src="${photo}" alt="" draggable="false">`
+      : html`<span class="reel-art" aria-hidden="true"><span class="reel-art-icon">${icon(cat.icon)}</span></span>`}
     <div class="reel-shade" aria-hidden="true"></div>
     <div class="reel-info">
-      <div class="reel-chips">
+      <div class="reel-chips reel-anim">
         <span class="chip chip-type type-${l.type}">${typeLabel(l.type)}</span>
         ${l.urgent ? html`<span class="chip chip-urgent">${icon("zap")}${t("listing.urgent")}</span>` : ""}
       </div>
-      <h2 class="reel-title"><a href="#/annonce/${l.id}">${listingTitle(l)}</a></h2>
-      <p class="reel-desc">${listingDescription(l)}</p>
-      <p class="reel-meta"><span>${icon("pin")}${l.city}${distance !== null ? ` · ${fmtDistance(distance)}` : ""}</span><span>${icon(cat.icon)}${categoryName(l.category)}</span></p>
-      <div class="reel-foot">
+      <h2 class="reel-title reel-anim"><a href="#/annonce/${l.id}" draggable="false">${listingTitle(l)}</a></h2>
+      <p class="reel-desc reel-anim">${listingDescription(l)}</p>
+      <p class="reel-meta reel-anim"><span>${icon("pin")}${l.city}${item.distance !== null ? ` · ${fmtDistance(item.distance)}` : ""}</span><span>${icon(cat.icon)}${categoryName(l.category)}</span></p>
+      <div class="reel-foot reel-anim">
         ${avatar(author, "sm")}<span class="reel-author">${author?.name || t("common.formerMember")}<small>${scheduleLabel(l)}</small></span>
         <strong class="reel-price">${priceLabel(l)}</strong>
       </div>
@@ -9065,84 +9350,430 @@ function reel(l, distance, index) {
       <button type="button" class="reel-btn reel-fav${fav ? " is-active" : ""}" data-action="fav" data-id="${l.id}" aria-pressed="${fav ? "true" : "false"}" aria-label="${fav ? t("fav.remove") : t("fav.add")}"><span class="reel-btn-icon">${icon("heart")}</span><span>${t("discover.like")}</span></button>
       <button type="button" class="reel-btn" data-action="contact" data-id="${l.id}" aria-label="${t("listing.contact")}"><span class="reel-btn-icon">${icon("message")}</span><span>${t("listing.contactShort")}</span></button>
       <button type="button" class="reel-btn" data-action="share" data-id="${l.id}" aria-label="${t("listing.share")}"><span class="reel-btn-icon">${icon("share")}</span><span>${t("listing.share")}</span></button>
-      <a class="reel-btn" href="#/annonce/${l.id}" aria-label="${t("discover.open")}"><span class="reel-btn-icon">${icon("arrowRight")}</span><span>${t("common.view")}</span></a>
+      <a class="reel-btn" href="#/annonce/${l.id}" draggable="false" aria-label="${t("discover.open")}"><span class="reel-btn-icon">${icon("arrowRight")}</span><span>${t("common.view")}</span></a>
     </div>
-    ${index === 0 ? html`<p class="reel-hint" aria-hidden="true">${icon("chevronUp")}${t("discover.hint")}</p>` : ""}
   </article>`;
 }
 
-function endCard() {
-  return html`<article class="reel reel-end media-illu tv-0 pat-confetti" aria-label="${t("discover.endTitle")}">
+function endSlideHtml(index, empty) {
+  return html`<article class="reel reel-end media-illu tv-0 pat-confetti" data-index="${index}" aria-label="${empty ? t("reels.emptyTitle") : t("discover.endTitle")}">
     <div class="reel-end-inner">
-      <span class="reel-art-icon">${icon("sparkles")}</span>
-      <h2 class="reel-title">${t("discover.endTitle")}</h2>
-      <p>${t("discover.endText")}</p>
-      <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
-      <button type="button" class="btn btn-light" data-action="discover-top">${icon("chevronUp")}${t("discover.again")}</button>
+      <span class="reel-art-icon">${icon(empty ? "search" : "sparkles")}</span>
+      <h2 class="reel-title">${empty ? t("reels.emptyTitle") : t("discover.endTitle")}</h2>
+      <p>${empty ? t("reels.emptyText") : t("discover.endText")}</p>
+      ${empty
+        ? html`<button type="button" class="btn btn-sun btn-lg" data-action="reels-filter">${icon("sliders")}${t("reels.change")}</button>`
+        : html`<a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <button type="button" class="btn btn-light" data-action="reel-first">${icon("chevronUp")}${t("discover.again")}</button>`}
     </div>
   </article>`;
+}
+
+function toElement(safe) {
+  const tmp = document.createElement("div");
+  mount(tmp, safe);
+  return tmp.firstElementChild;
+}
+
+/* ------------------------ Le moteur de glisser ------------------------ */
+let feed = null;
+
+function createFeed(stage, track, { count, render, onChange, onLike }) {
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const EASE = "transform 0.46s cubic-bezier(0.22, 0.8, 0.22, 1)";
+  const slides = new Map(); // index -> élément
+  const ac = new AbortController();
+  const on = (target, ev, fn, opts = {}) => target.addEventListener(ev, fn, { ...opts, signal: ac.signal });
+  let i = 0;
+  let H = stage.clientHeight || window.innerHeight;
+  let busy = false;
+  let start = null;
+  let dragging = false;
+  let suppressClick = false;
+  let lastTap = { t: 0, x: 0, y: 0 };
+  let wheelLock = 0;
+  let wheelAcc = 0;
+
+  function setTrack(y, animate) {
+    track.style.transition = animate && !reduced ? EASE : "none";
+    track.style.transform = `translate3d(0, ${y}px, 0)`;
+  }
+
+  function sync() {
+    for (const [k, el] of slides) {
+      if (k < i - 1 || k > i + 1) { el.remove(); slides.delete(k); }
+    }
+    for (let k = i - 1; k <= i + 1; k++) {
+      if (k >= 0 && k < count && !slides.has(k)) {
+        const el = render(k);
+        track.appendChild(el);
+        slides.set(k, el);
+      }
+    }
+    for (const [k, el] of slides) {
+      el.style.transform = `translate3d(0, ${(k - i) * 100}%, 0)`;
+      const active = k === i;
+      el.classList.toggle("is-active", active);
+      el.setAttribute("aria-hidden", active ? "false" : "true");
+      el.inert = !active;
+    }
+  }
+
+  function go(n, { instant = false } = {}) {
+    n = clamp(n, 0, count - 1);
+    if (busy) return;
+    if (n === i) { setTrack(0, true); return; }
+    // Saut de plusieurs cartes (ex. « Revoir depuis le début ») : directement, avec un fondu
+    if (Math.abs(n - i) > 1 || instant || reduced) {
+      i = n;
+      setTrack(0, false);
+      sync();
+      stage.classList.remove("is-fading");
+      void stage.offsetWidth;
+      stage.classList.add("is-fading");
+      onChange(i);
+      return;
+    }
+    busy = true;
+    const dir = n > i ? -1 : 1;
+    let timer = 0;
+    const done = (e) => {
+      if (e && (e.target !== track || e.propertyName !== "transform")) return;
+      track.removeEventListener("transitionend", done);
+      clearTimeout(timer);
+      i = n;
+      setTrack(0, false);
+      sync();
+      busy = false;
+      onChange(i);
+    };
+    track.addEventListener("transitionend", done);
+    timer = setTimeout(done, 700);
+    setTrack(dir * H, true);
+  }
+
+  function heartBurst(x, y) {
+    const r = stage.getBoundingClientRect();
+    const h = document.createElement("span");
+    h.className = "heart-burst";
+    h.style.left = `${x - r.left}px`;
+    h.style.top = `${y - r.top}px`;
+    mount(h, icon("heart"));
+    stage.appendChild(h);
+    setTimeout(() => h.remove(), 900);
+  }
+
+  function handleTap(e) {
+    if (e.target.closest("button, a, input, select, label, .reels-top")) return;
+    const now = performance.now();
+    if (now - lastTap.t < 320 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 40) {
+      lastTap = { t: 0, x: 0, y: 0 };
+      heartBurst(e.clientX, e.clientY);
+      onLike(i);
+    } else lastTap = { t: now, x: e.clientX, y: e.clientY };
+  }
+
+  // Doigt, souris ou stylet : on suit le mouvement vertical
+  on(stage, "pointerdown", (e) => {
+    if ((e.pointerType === "mouse" && e.button !== 0) || busy) return;
+    if (e.target.closest(".reels-top, .reels-nav")) return;
+    start = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId };
+    dragging = false;
+  });
+  on(stage, "pointermove", (e) => {
+    if (!start || e.pointerId !== start.id) return;
+    const dx = e.clientX - start.x;
+    let dy = e.clientY - start.y;
+    if (!dragging) {
+      if (Math.abs(dy) < 8 || Math.abs(dy) < Math.abs(dx)) return;
+      dragging = true;
+      try { stage.setPointerCapture(e.pointerId); } catch { /* ignoré */ }
+      stage.classList.add("is-dragging");
+    }
+    if ((i === 0 && dy > 0) || (i === count - 1 && dy < 0)) dy *= 0.3; // résistance aux extrémités
+    setTrack(dy, false);
+    if (e.cancelable) e.preventDefault();
+  });
+  const finish = (e, cancelled = false) => {
+    if (!start || e.pointerId !== start.id) return;
+    const dy = e.clientY - start.y;
+    const v = dy / Math.max(1, performance.now() - start.t);
+    const wasDragging = dragging;
+    start = null;
+    dragging = false;
+    stage.classList.remove("is-dragging");
+    if (!wasDragging) { if (!cancelled) handleTap(e); return; }
+    suppressClick = true;
+    setTimeout(() => { suppressClick = false; }, 80);
+    if (cancelled) { setTrack(0, true); return; }
+    if ((dy < -H * 0.16 || v < -0.45) && i < count - 1) go(i + 1);
+    else if ((dy > H * 0.16 || v > 0.45) && i > 0) go(i - 1);
+    else setTrack(0, true);
+  };
+  on(stage, "pointerup", (e) => finish(e));
+  on(stage, "pointercancel", (e) => finish(e, true));
+  // Après un glissement, le « clic » de fin de geste ne doit rien ouvrir
+  on(stage, "click", (e) => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); } }, { capture: true });
+  // Empêche le glisser-déposer natif des images et liens
+  on(stage, "dragstart", (e) => e.preventDefault());
+
+  // Molette et pavé tactile (ordinateur)
+  on(stage, "wheel", (e) => {
+    if (e.ctrlKey) return; // zoom du navigateur
+    e.preventDefault();
+    if (busy || performance.now() < wheelLock) return;
+    wheelAcc += e.deltaY;
+    if (Math.abs(wheelAcc) > 40) {
+      go(i + (wheelAcc > 0 ? 1 : -1));
+      wheelAcc = 0;
+      wheelLock = performance.now() + 700;
+    }
+  }, { passive: false });
+
+  // Clavier
+  on(window, "keydown", (e) => {
+    if (e.defaultPrevented || document.querySelector("#dialog[open]")) return;
+    if (e.target.closest?.("input, textarea, select")) return;
+    const keys = { ArrowDown: 1, PageDown: 1, j: 1, ArrowUp: -1, PageUp: -1, k: -1 };
+    if (e.key === " " && !e.target.closest?.("button, a")) keys[" "] = e.shiftKey ? -1 : 1;
+    if (!(e.key in keys)) return;
+    e.preventDefault();
+    go(i + keys[e.key]);
+  });
+
+  on(window, "resize", () => { H = stage.clientHeight || window.innerHeight; });
+
+  sync();
+  onChange(0);
+  return {
+    go,
+    next: () => go(i + 1),
+    prev: () => go(i - 1),
+    first: () => go(0),
+    get index() { return i; },
+    refresh() { for (const el of slides.values()) el.remove(); slides.clear(); sync(); },
+    destroy() { ac.abort(); },
+  };
+}
+
+/* ------------------------------ La page ------------------------------ */
+let items = [];
+let filter = readFilter();
+
+function updateTop() {
+  const btn = $("#reels-region");
+  if (btn) mount(btn, html`${icon("pin")}<span>${regionLabel(filter)}</span>${extraFilters(filter) ? html`<span class="reels-count">+${extraFilters(filter)}</span>` : ""}${icon("chevronDown")}`);
+}
+
+function openFilter() {
+  const draft = { ...filter };
+  const countFor = (f) => results(f).length;
+  const regionOpt = (id, ic) => html`<label class="region-opt"><input type="radio" name="region" value="${id}" ${!draft.canton && draft.region === id ? raw("checked") : ""}><span>${icon(ic)}${t("reels.region." + id)}</span></label>`;
+  openDialog({
+    title: t("reels.filterTitle"),
+    size: "dialog-sm dialog-sheet",
+    body: html`
+      <fieldset class="field">
+        <legend class="field-label">${t("reels.where")}</legend>
+        <div class="region-grid">
+          ${regionOpt("all", "globe")}${regionOpt("near", "locate")}${regionOpt("romandie", "map")}${regionOpt("deutsch", "map")}${regionOpt("ticino", "map")}
+        </div>
+        <label class="field-label small-label" for="f-reels-canton">${t("reels.orCanton")}</label>
+        <select id="f-reels-canton" class="select" name="canton">
+          <option value="">${t("filter.allCantons")}</option>
+          ${CANTON_CODES.map((c) => [c, cantonName(c)]).sort((a, b) => a[1].localeCompare(b[1])).map(([c, n]) => html`<option value="${c}" ${draft.canton === c ? raw("selected") : ""}>${n} (${c})</option>`)}
+        </select>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="field-label">${t("reels.what")}</legend>
+        <div class="segmented segmented-block">
+          ${[["", t("filter.all")], ...TYPES.map((ty) => [ty, t("type." + ty)])].map(([v, label]) => html`<label class="seg-radio"><input type="radio" name="type" value="${v}" ${draft.type === v ? raw("checked") : ""}><span>${label}</span></label>`)}
+        </div>
+      </fieldset>
+      <div class="field">
+        <label class="field-label" for="f-reels-cat">${t("filter.category")}</label>
+        <select id="f-reels-cat" class="select" name="cat">
+          <option value="">${t("filter.allCategories")}</option>
+          ${CATEGORIES.map((c) => html`<option value="${c.id}" ${draft.cat === c.id ? raw("selected") : ""}>${categoryName(c.id)}</option>`)}
+        </select>
+      </div>`,
+    footer: html`<button type="button" class="btn btn-ghost" data-action="reels-reset">${t("filter.resetShort")}</button>
+      <button type="submit" class="btn btn-primary" id="reels-apply">${t("filter.showResults")}</button>`,
+    onOpen(dlg) {
+      const form = $("form", dlg);
+      const read = () => {
+        const fd = new FormData(form);
+        const canton = fd.get("canton") || "";
+        return { region: canton ? "all" : fd.get("region") || "all", canton, type: fd.get("type") || "", cat: fd.get("cat") || "" };
+      };
+      const refresh = () => {
+        const f = read();
+        const n = f.region === "near" && !getOrigin() ? null : countFor(f);
+        $("#reels-apply", dlg).textContent = n === null ? t("reels.locateAndShow") : n ? t("filter.showN", { count: n, n }) : t("filter.showNone");
+      };
+      form.addEventListener("change", (e) => {
+        if (e.target.name === "canton" && e.target.value) form.querySelectorAll("input[name=region]").forEach((r) => { r.checked = false; });
+        if (e.target.name === "region") form.canton.value = "";
+        refresh();
+      });
+      form.addEventListener("click", (e) => {
+        if (!e.target.closest("[data-action='reels-reset']")) return;
+        form.querySelector("input[name=region][value=all]").checked = true;
+        form.canton.value = "";
+        form.querySelector("input[name=type][value='']").checked = true;
+        form.cat.value = "";
+        refresh();
+      });
+      refresh();
+    },
+    onSubmit: async (form) => {
+      const fd = new FormData(form);
+      const canton = fd.get("canton") || "";
+      const next = { region: canton ? "all" : fd.get("region") || "all", canton, type: fd.get("type") || "", cat: fd.get("cat") || "" };
+      if (next.region === "near" && !getOrigin()) {
+        const ok = await locate();
+        if (!ok) return false;
+      }
+      applyFilter(next);
+      return true;
+    },
+  });
+}
+
+function locate() {
+  return new Promise((resolve) => {
+    if (!navigator.geolocation) { toast(t("loc.unsupported"), "error"); resolve(false); return; }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude: lat, longitude: lng } = pos.coords;
+        if (lat < 45.7 || lat > 47.95 || lng < 5.8 || lng > 10.6) { toast(t("loc.outside"), "info"); resolve(false); return; }
+        setOrigin({ lat, lng, label: t("loc.myPosition") });
+        resolve(true);
+      },
+      () => { toast(t("loc.denied"), "error"); resolve(false); },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 }
+    );
+  });
+}
+
+function applyFilter(next) {
+  filter = next;
+  storage.set("reelsFilter", filter);
+  buildFeed();
+  updateTop();
+}
+
+function buildFeed() {
+  const stage = $("#reels-stage");
+  const track = $("#reels-track");
+  if (!stage || !track) return;
+  feed?.destroy();
+  track.replaceChildren();
+  items = results(filter);
+  const count = items.length + 1; // + la carte de fin
+  const live = $("#reels-live");
+  feed = createFeed(stage, track, {
+    count,
+    render: (k) => toElement(k < items.length ? slideHtml(items[k], k, items.length) : endSlideHtml(k, !items.length)),
+    onChange: (k) => {
+      if (k > 0) {
+        $("#reels-hint")?.remove();
+        storage.set("reelsHintSeen", true);
+      }
+      const prog = $("#reels-progress");
+      if (prog) prog.style.setProperty("--p", String(items.length ? Math.min(1, (k + 1) / items.length) : 1));
+      if (live) live.textContent = k < items.length ? `${listingTitle(items[k].listing)} — ${k + 1} / ${items.length}` : t("discover.endTitle");
+      $("#reels-up")?.toggleAttribute("disabled", k === 0);
+      $("#reels-down")?.toggleAttribute("disabled", k >= count - 1);
+    },
+    onLike: (k) => {
+      const item = items[k];
+      if (!item) return;
+      if (!isFavorite(item.listing.id)) toggleFavorite(item.listing.id);
+    },
+  });
 }
 
 const __default = {
   title: () => t("discover.title"),
-  refreshOn: ["listings", "block"],
+  refreshOn: ["block"],
 
-  render(ctx) {
-    type = TYPES.includes(ctx.query.get("type")) ? ctx.query.get("type") : "";
-    const cat = ctx.query.get("cat") || "";
-    const origin = getOrigin();
-    const results = searchListings({ type, cat, sort: origin ? "distance" : "recent" }, origin);
-    const tabs = [["", t("filter.all")], ...TYPES.map((ty) => [ty, t("type." + ty)])];
-    const qs = (ty) => { const p = new URLSearchParams(); if (ty) p.set("type", ty); if (cat) p.set("cat", cat); return p.toString() ? "?" + p : ""; };
+  render() {
+    filter = readFilter();
+    const showHint = !storage.get("reelsHintSeen", false);
     return html`
     <h1 class="sr-only">${t("discover.title")}</h1>
-    <div class="discover">
-      <nav class="discover-tabs" aria-label="${t("filter.type")}">
-        ${tabs.map(([v, label]) => html`<a class="discover-tab${v === type ? " is-active" : ""}" href="#/decouvrir${qs(v)}" ${v === type ? raw('aria-current="page"') : ""}>${label}</a>`)}
-      </nav>
-      <div class="reels" id="reels" tabindex="0" aria-label="${t("discover.feed")}">
-        ${results.length
-          ? html`${results.map(({ listing, distance }, i) => reel(listing, distance, i))}${endCard()}`
-          : html`<article class="reel reel-end media-illu tv-3 pat-waves"><div class="reel-end-inner"><h2 class="reel-title">${t("explore.emptyTitle")}</h2><a class="btn btn-light" href="#/decouvrir">${t("filter.reset")}</a></div></article>`}
+    <section class="reels-page">
+      <div class="reels-frame">
+        <div class="reels-stage" id="reels-stage" tabindex="0" aria-roledescription="${t("reels.feed")}" aria-label="${t("discover.feed")}">
+          <div class="reels-track" id="reels-track"></div>
+          <div class="reels-top">
+            <span class="reels-brand">${t("discover.title")}</span>
+            <button type="button" class="reels-region" id="reels-region" data-action="reels-filter" aria-haspopup="dialog" aria-label="${t("reels.filterTitle")}"></button>
+          </div>
+          <div class="reels-progress" id="reels-progress" aria-hidden="true"><span></span></div>
+          ${showHint ? html`<div class="reels-hint" id="reels-hint" aria-hidden="true"><span class="reels-hint-hand">${icon("pointer")}</span>${t("discover.hint")}</div>` : ""}
+        </div>
+        <div class="reels-nav">
+          <button type="button" class="icon-btn" id="reels-up" data-action="reel-prev" aria-label="${t("reels.prev")}">${icon("chevronUp")}</button>
+          <button type="button" class="icon-btn" id="reels-down" data-action="reel-next" aria-label="${t("reels.next")}">${icon("chevronDown")}</button>
+        </div>
       </div>
-    </div>`;
+      <p class="sr-only" id="reels-live" aria-live="polite"></p>
+      <p class="reels-keys muted small">${t("reels.keys")}</p>
+    </section>`;
   },
 
-  mount(root) {
-    const reels = $("#reels", root);
-    if (!reels) return;
-    reels.focus({ preventScroll: true });
-    // L'indication « glissez vers le haut » disparaît dès qu'on a fait défiler
-    reels.addEventListener("scroll", () => {
-      if (reels.scrollTop > 40) $(".reel-hint", reels)?.classList.add("is-hidden");
-    }, { passive: true });
-    // Touches du clavier : flèches / Page suivante = annonce suivante
-    reels.addEventListener("keydown", (e) => {
-      const keys = { ArrowDown: 1, PageDown: 1, j: 1, ArrowUp: -1, PageUp: -1, k: -1 };
-      if (!(e.key in keys) || e.target.closest("button, a") && !["ArrowDown", "ArrowUp"].includes(e.key)) return;
-      e.preventDefault();
-      const h = reels.clientHeight;
-      const i = Math.round(reels.scrollTop / h) + keys[e.key];
-      reels.scrollTo({ top: Math.max(0, i) * h, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-    });
+  mount() {
+    document.documentElement.classList.add("reels-lock");
+    updateTop();
+    buildFeed();
+    const stage = $("#reels-stage");
+    stage?.focus({ preventScroll: true });
+    // L'indication « Glissez vers le haut » s'efface au premier contact (ou toute seule après quelques secondes)
+    const hideHint = () => {
+      const hint = $("#reels-hint");
+      if (!hint) return;
+      hint.classList.add("is-gone");
+      storage.set("reelsHintSeen", true);
+      setTimeout(() => hint.remove(), 450);
+    };
+    stage?.addEventListener("pointerdown", hideHint, { once: true });
+    setTimeout(hideHint, 5000);
   },
 
   onData(kind) {
-    if (kind !== "favorites") return;
-    $$(".reel-fav[data-id]").forEach((b) => {
-      const on = isFavorite(b.dataset.id);
-      b.classList.toggle("is-active", on);
-      b.setAttribute("aria-pressed", on ? "true" : "false");
-      b.setAttribute("aria-label", on ? t("fav.remove") : t("fav.add"));
-    });
+    if (kind === "favorites") {
+      $$(".reel-fav[data-id]").forEach((b) => {
+        const on = isFavorite(b.dataset.id);
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        b.setAttribute("aria-label", on ? t("fav.remove") : t("fav.add"));
+      });
+    } else if (kind === "listings" || kind === "origin") {
+      const keep = feed?.index || 0;
+      items = results(filter);
+      buildFeed();
+      if (keep) feed?.go(Math.min(keep, items.length), { instant: true });
+    }
+  },
+
+  unmount() {
+    feed?.destroy();
+    feed = null;
+    document.documentElement.classList.remove("reels-lock");
   },
 };
 
 const discoverActions = {
-  "discover-top": () => $("#reels")?.scrollTo({ top: 0, behavior: "smooth" }),
+  "reel-next": () => feed?.next(),
+  "reel-prev": () => feed?.prev(),
+  "reel-first": () => feed?.first(),
+  "discover-top": () => feed?.first(),
+  "reels-filter": () => openFilter(),
 };
 
-return { discoverActions, default: __default };
+return { REGIONS, discoverActions, default: __default };
 });
 __def("app.js", function () {
 /* =====================================================================
@@ -9161,6 +9792,7 @@ const { LANGS } = __req("data.js");
 const store = __req("store.js");
 const { actions, registerActions, toast, initDialog, avatar, openDialog, confirmDialog } = __req("ui.js");
 const { QR_SVG, SITE_URL, SITE_LABEL } = __req("qr-site.js");
+const { initMotion } = __req("motion.js");
 
 const home = __req("views/home.js").default;
 const { homeActions } = __req("views/home.js");
@@ -9235,7 +9867,8 @@ function render({ keepScroll = false } = {}) {
   // Chaque page est rendue dans un nouvel élément : les écouteurs d'événements
   // de la page précédente disparaissent avec elle (pas d'accumulation).
   const root = document.createElement("div");
-  root.className = "page";
+  // Petite animation d'entrée quand on change de page (pas lors d'une simple mise à jour)
+  root.className = keepScroll || sameView ? "page" : "page page-enter";
   view$.replaceChildren(root);
   try {
     mount(root, view.render(currentCtx));
@@ -9251,125 +9884,14 @@ function render({ keepScroll = false } = {}) {
   else window.scrollTo(0, 0);
   if (!keepScroll && !sameView) $("#main").focus({ preventScroll: true });
   renderChrome();
-  centerActiveTabs(root);
-  motion.scan(root);
-}
-
-/* ======================= MOUVEMENT (v3.1) =======================
-   Apparitions au défilement (depuis la gauche, la droite ou le bas),
-   chiffres qui comptent, relief de la carte qui suit la souris,
-   lumière qui suit le curseur sur les annonces, barre de progression.
-   Tout est désactivé si l'appareil demande de réduire les animations. */
-const motion = (() => {
-  const reduced = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-  const finePointer = () => window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
-  let io = null;
-  // [sélecteur, sens, décalage en cascade]
-  const RULES = [
-    [".section-head, .page-head .container > *", "left", true],
-    [".cat-grid > *, .home-feed > *, .city-grid > *, .steps > *", "up", true],
-    [".listing-grid-explore > *", "up", true],
-    [".map-showcase-text", "left", false], [".map-showcase-map", "right", false],
-    [".trust-intro", "left", false], [".trust-cards > *", "right", true],
-    [".faq-wrap > :first-child", "left", false], [".faq-item", "right", true],
-    [".discover-promo", "right", false], [".cta-inner", "zoom", false],
-    [".stats-grid > .stat", "up", true], [".center-actions", "up", false],
-  ];
-  function count(el) {
-    const target = parseInt((el.textContent || "").replace(/[^0-9]/g, ""), 10);
-    if (!target) return;
-    const start = performance.now(), dur = 1400, fmt = (n) => (typeof fmtNumber === "function" ? fmtNumber(n) : String(n));
-    const tick = (now) => {
-      const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3);
-      el.textContent = fmt(Math.round(target * e));
-      if (k < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-  function onSeen(entries) {
-    entries.forEach((en) => {
-      if (!en.isIntersecting) return;
-      const el = en.target;
-      el.classList.add("is-in");
-      io.unobserve(el);
-      if (el.classList.contains("stat")) { const n = el.querySelector("strong"); if (n) count(n); }
-    });
-  }
-  function scan(root) {
-    if (reduced() || !("IntersectionObserver" in window)) return;
-    if (!io) io = new IntersectionObserver(onSeen, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
-    RULES.forEach(([sel, dir, cascade]) => {
-      root.querySelectorAll(sel).forEach((el) => {
-        if (el.classList.contains("rv")) return;
-        // Pas d'apparition dans une rangée qui défile à l'horizontale (sinon les cartes hors écran resteraient cachées)
-        const ox = getComputedStyle(el.parentElement).overflowX;
-        if (ox === "auto" || ox === "scroll") return;
-        const i = cascade ? [...el.parentElement.children].indexOf(el) : 0;
-        el.classList.add("rv", "rv-" + dir);
-        if (cascade) el.style.setProperty("--rd", `${Math.min(i % 8, 7) * 0.07}s`);
-        io.observe(el);
-      });
-    });
-    if (finePointer()) { tiltHero(root); spotlight(root); }
-  }
-  // Relief : les cartes flottantes bougent plus que la Suisse (effet de profondeur)
-  function tiltHero(root) {
-    const hero = root.querySelector(".hero");
-    const vis = hero?.querySelector(".hero-visual");
-    if (!vis) return;
-    hero.addEventListener("pointermove", (e) => {
-      const r = hero.getBoundingClientRect();
-      vis.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
-      vis.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
-    });
-    hero.addEventListener("pointerleave", () => { vis.style.setProperty("--px", 0); vis.style.setProperty("--py", 0); });
-  }
-  // Lumière verte qui suit le curseur sur les cartes
-  function spotlight(root) {
-    root.addEventListener("pointermove", (e) => {
-      const card = e.target.closest?.(".listing-card, .cat-tile, .step, .trust-card");
-      if (!card) return;
-      const r = card.getBoundingClientRect();
-      card.style.setProperty("--mx", `${e.clientX - r.left}px`);
-      card.style.setProperty("--my", `${e.clientY - r.top}px`);
-    });
-  }
-  // Barre de progression de lecture + en-tête qui se détache au défilement
-  function initScroll() {
-    const bar = document.createElement("div");
-    bar.className = "scroll-progress";
-    bar.setAttribute("aria-hidden", "true");
-    document.body.appendChild(bar);
-    let ticking = false;
-    const update = () => {
-      ticking = false;
-      const max = document.documentElement.scrollHeight - innerHeight;
-      bar.style.setProperty("--p", max > 0 ? (scrollY / max).toFixed(4) : 0);
-      document.body.classList.toggle("is-scrolled", scrollY > 8);
-    };
-    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-    addEventListener("hashchange", () => setTimeout(update, 50));
-    update();
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initScroll); else initScroll();
-  return { scan };
-})();
-
-/* Sur téléphone, les menus qui défilent horizontalement montrent l'élément actif
-   (sinon « À propos » ou « Mentions légales » restent cachés hors de l'écran). */
-function centerActiveTabs(root) {
-  root.querySelectorAll(".pages-nav-link.is-active, .account-nav-link.is-active").forEach((el) => {
-    const bar = el.parentElement;
-    if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = el.offsetLeft - (bar.clientWidth - el.offsetWidth) / 2;
-  });
 }
 
 /* ----------------------- En-tête et navigation ---------------------- */
 const NAV = [
   ["explorer", "search", "nav.explore"],
+  ["decouvrir", "play", "nav.discover"],
   ["planning", "calendar", "nav.planning"],
   ["messages", "message", "nav.messages"],
-  ["page/securite", "shield", "nav.safety"],
 ];
 
 function isActive(route) {
@@ -9404,6 +9926,7 @@ function renderHeader() {
           ${LANGS.map((l) => html`<button type="button" class="menu-item${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${t("lang." + l)}${l === getLang() ? icon("check") : ""}</button>`)}
         </div>
       </div>
+      <a class="icon-btn header-msg" href="#/messages" aria-label="${t("nav.messages")}${unread ? ` (${unread})` : ""}">${icon("message")}${unread ? html`<span class="dot-count">${unread}</span>` : ""}</a>
       <button type="button" class="icon-btn theme-btn" data-action="toggle-theme" aria-label="${dark ? t("theme.toLight") : t("theme.toDark")}" title="${dark ? t("theme.toLight") : t("theme.toDark")}">${icon(dark ? "sun" : "moon")}</button>
       ${me
         ? html`
@@ -9439,15 +9962,16 @@ function renderTabbar() {
   const me = store.currentUser();
   const unread = me ? store.totalUnread() : 0;
   const { path } = parseHash();
-  const tab = (route, ic, label, extra = "") => {
+  const tab = (route, ic, label, extra = "", cls = "") => {
     const active = route === "" ? path === "" : path === route || path.startsWith(route + "/");
-    return html`<a class="tab-link${active ? " is-active" : ""}" href="#/${route}" ${active ? raw('aria-current="page"') : ""}>${icon(ic)}<span>${label}</span>${extra}</a>`;
+    return html`<a class="tab-link${cls}${active ? " is-active" : ""}" href="#/${route}" ${active ? raw('aria-current="page"') : ""}>${icon(ic)}<span>${label}</span>${extra}</a>`;
   };
+  // Comme Instagram : Accueil · Explorer · Publier · Découvrir (le fil à glisser) · Profil
   mount($("#tabbar"), html`
     ${tab("", "home", t("nav.home"))}
     ${tab("explorer", "search", t("nav.explore"))}
     <a class="tab-publish" href="#/publier" aria-label="${t("nav.publish")}">${icon("plus")}</a>
-    ${tab("messages", "message", t("nav.messagesShort"), unread ? html`<span class="badge-count">${unread}</span>` : "")}
+    ${tab("decouvrir", "play", t("nav.discover"), "", " tab-discover")}
     ${tab(me ? "compte" : "connexion", "user", me ? t("nav.profile") : t("nav.login"))}`);
 }
 
@@ -9481,6 +10005,7 @@ function renderFooter() {
       <li><a href="#/page/mentions-legales">${t("footer.imprint")}</a></li>
     </ul></div>
   </div>
+  <div class="container footer-mark" aria-hidden="true">Voisina</div>
   <div class="container footer-bottom">
     <span>© 2026 Voisina · ${t("footer.project")}</span>
     <button type="button" class="link-btn footer-text" data-action="show-qr">${icon("qrCode")}${t("qr.footer")}</button>
@@ -9787,6 +10312,7 @@ function start() {
   renderBanner();
   renderFooter();
   render();
+  initMotion();
   document.body.classList.add("is-ready");
 
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
