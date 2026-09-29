@@ -5415,11 +5415,11 @@ __def("motion.js", function () {
    - [data-reveal]        : l'élément apparaît en glissant ("left", "right", "zoom", "fade")
    - [data-stagger]       : les enfants apparaissent l'un après l'autre
    - [data-countup="100"] : le nombre défile de 0 à la valeur
-   Effets liés au défilement (ils suivent le doigt ou la molette) :
-   - [data-slide="left|right|up"] : sur la page d'accueil, le texte arrive du côté
-                            où il se trouve (gauche, droite, ou il monte s'il est centré)
-                            pendant qu'on descend.
-   - [data-words]         : le texte « s'allume » mot par mot
+   - [data-slide="left|right|up"] : en haut de la page d'accueil, dès qu'il arrive à
+                            l'écran, le texte glisse tout seul jusqu'à sa place depuis le côté
+                            où il se trouve. Plus bas : un simple petit fondu (plus reposant).
+   - [data-words]         : le texte « s'allume » mot par mot, tout seul
+   Effet lié au défilement :
    - [data-parallax=".1"] : léger effet de profondeur
    Autres détails :
    - les cartes d'annonces de l'accueil apparaissent l'une après l'autre
@@ -5435,10 +5435,7 @@ const root = document.documentElement;
 let revealIO = null;
 let countIO = null;
 let parallaxEls = [];
-let slideEls = [];
-let wordEls = [];
 let ticking = false;
-let lastFrame = 0;
 let lastY = 0;
 let progressBar = null;
 let canSlide = false;
@@ -5451,17 +5448,15 @@ const reducedMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce
    - titre centré                    → il monte doucement
    (Les autres pages restent calmes : pas d'animation pendant la lecture.) */
 const HOME_SLIDE = [
-  [".section-head.center > div", "up"],
-  [".section-head:not(.center) > div", "left"],
-  [".section-head:not(.center) > .btn", "right"],
+  // Seulement le haut de la page : c'est là que l'effet a le plus de force
   [".showcase-text > .kicker, .showcase-text > h2, .showcase-text > .lead", "left"],
   [".showcase-text > .btn", "up"],
-  [".map-showcase-text > .kicker, .map-showcase-text > h2, .map-showcase-text > p", "left"],
-  [".trust-intro > *", "left"],
-  [".faq-wrap > div:first-child > *", "left"],
-  [".cta-inner > div:not(.cta-actions) > *", "left"],
-  [".cta-actions", "right"],
 ];
+/* Plus bas, on reste discret : les textes apparaissent une seule fois, avec un petit fondu qui monte. */
+const HOME_SOFT = [
+  ".section-head > div", ".section-head > .btn", ".map-showcase-text > *", ".map-showcase-map",
+  ".trust-intro > *", ".faq-wrap > div:first-child > *", ".cta-inner > div:not(.cta-actions) > *", ".cta-actions",
+].join(",");
 const inHome = (el) => !!el.closest?.('.page[data-route="home"]');
 
 function animateCount(el) {
@@ -5489,6 +5484,7 @@ function splitWords(el) {
   words.forEach((w, i) => {
     const s = document.createElement("span");
     s.className = "w";
+    s.style.setProperty("--wi", String(i));
     s.setAttribute("aria-hidden", "true");
     s.textContent = w;
     el.appendChild(s);
@@ -5514,8 +5510,22 @@ function scan(node = document) {
           if (el.dataset.slide === undefined && inHome(el) && !el.closest("[data-no-slide], [data-reveal], [data-stagger], dialog")) el.dataset.slide = dir;
         });
       }
-      const slides = pick("[data-slide]").filter(inHome);
-      if (slides.length) slideEls = [...slideEls.filter((el) => el.isConnected), ...slides];
+    }
+    // Dès qu'il arrive à l'écran, le texte glisse jusqu'à sa place tout seul (une seule fois)
+    if (revealIO) {
+      pick("[data-slide], [data-words]").forEach((el) => {
+        if (!inHome(el) || el.classList.contains("is-in")) return;
+        if (el.dataset.words !== undefined) splitWords(el);
+        revealIO.observe(el);
+      });
+    }
+    // Bas de l'accueil : apparition douce, une seule fois
+    if (revealIO) {
+      pick(HOME_SOFT).forEach((el) => {
+        if (!inHome(el) || el.dataset.slide !== undefined || el.closest("[data-stagger], [data-slide]")) return;
+        if (el.dataset.reveal === undefined || el.dataset.reveal === "right") el.dataset.reveal = "soft";
+        if (!el.classList.contains("is-in")) revealIO.observe(el);
+      });
     }
     // Cartes d'annonces de l'accueil : elles apparaissent l'une après l'autre (une seule fois)
     if (revealIO) {
@@ -5527,39 +5537,15 @@ function scan(node = document) {
         revealIO.observe(el);
       });
     }
-    const words = pick("[data-words]");
-    words.forEach(splitWords);
-    if (words.length) wordEls = [...wordEls.filter((el) => el.isConnected), ...words];
   }
   const par = pick("[data-parallax]");
   if (par.length) parallaxEls = [...parallaxEls.filter((el) => el.isConnected), ...par];
   requestTick();
 }
 
-const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
-const smooth = (p) => p * p * (3 - 2 * p); // démarre doucement, finit doucement
 
-/** Progression 0 → 1 d'un élément pendant le défilement :
-    0 quand son haut est à `startAt` de la hauteur de l'écran (0.94 = tout en bas, déjà visible),
-    1 quand il arrive à `endAt` (0.4 = un peu au-dessus du milieu).
-    Si la page est trop courte pour l'amener jusque-là, il finit quand même à 1 en bas de page. */
-function progressOf(r, vh, y, maxY, startAt = 0.94, endAt = 0.4) {
-  const top = r.top + y;
-  const start = top - vh * startAt;
-  const end = Math.min(top - vh * endAt, maxY);
-  if (end <= start) return 1;
-  return clamp((y - start) / (end - start));
-}
-
-/* Le texte suit le défilement avec un petit retard (amorti) : même si on descend vite,
-   on a le temps de le voir arriver. */
-const LAG = 0.085;
-
-function onScroll(now = performance.now()) {
+function onScroll() {
   ticking = false;
-  const dt = lastFrame ? Math.min(64, now - lastFrame) : 16.7;
-  lastFrame = now;
-  const k = 1 - Math.pow(1 - LAG, dt / 16.7);
   const y = window.scrollY;
   const vh = window.innerHeight;
   const maxY = Math.max(0, root.scrollHeight - vh);
@@ -5570,7 +5556,6 @@ function onScroll(now = performance.now()) {
   if (Math.abs(y - lastY) > 6 || y <= 160) lastY = y;
   if (progressBar) progressBar.style.transform = `scaleX(${maxY > 40 ? Math.min(1, y / maxY) : 0})`;
   if (reducedMotion()) return;
-  let moving = false;
 
   // Parallaxe
   parallaxEls = parallaxEls.filter((el) => el.isConnected);
@@ -5580,51 +5565,6 @@ function onScroll(now = performance.now()) {
     const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.parallax || 0);
     el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
   }
-
-  // Texte qui arrive de la droite, en suivant le défilement (avec un léger retard)
-  if (slideEls.length) {
-    const dist = Math.min(window.innerWidth * 0.26, 220);
-    const rise = Math.min(vh * 0.12, 90);
-    slideEls = slideEls.filter((el) => el.isConnected);
-    for (const el of slideEls) {
-      const r = el.getBoundingClientRect();
-      const target = smooth(progressOf(r, vh, y, maxY));
-      if (el._p === undefined) el._p = target >= 1 ? 1 : 0; // déjà en place au chargement, ou à faire venir
-      if (Math.abs(target - el._p) < 0.002) el._p = target;
-      else { el._p += (target - el._p) * k; moving = true; }
-      const p = el._p;
-      const side = el.dataset.slide;
-      if (p >= 0.999) {
-        if (el.dataset.slid !== "1") { el.dataset.slid = "1"; el.style.transform = ""; el.style.opacity = ""; }
-      } else {
-        if (r.top > vh + 60 && el.dataset.slid === "0" && p === 0) continue; // encore loin sous l'écran
-        el.dataset.slid = "0";
-        el.style.transform = side === "up"
-          ? `translate3d(0, ${((1 - p) * rise).toFixed(1)}px, 0)`
-          : `translate3d(${((1 - p) * dist * (side === "left" ? -1 : 1)).toFixed(1)}px, 0, 0)`;
-        el.style.opacity = Math.min(1, 0.08 + p * 1.9).toFixed(3);
-      }
-    }
-  }
-
-  // Mots qui s'allument un par un
-  wordEls = wordEls.filter((el) => el.isConnected);
-  for (const el of wordEls) {
-    const r = el.getBoundingClientRect();
-    if (r.bottom < -100 || r.top > vh + 100) continue;
-    const target = progressOf(r, vh, y, maxY, 0.9, 0.3);
-    if (el._p === undefined) el._p = target;
-    if (Math.abs(target - el._p) < 0.002) el._p = target;
-    else { el._p += (target - el._p) * k; moving = true; }
-    const spans = el.children;
-    const n = spans.length;
-    for (let i = 0; i < n; i++) {
-      const w = clamp(el._p * (n + 6) - i, 0, 6) / 6; // chaque mot s'allume progressivement
-      spans[i].style.opacity = (0.16 + 0.84 * w).toFixed(3);
-    }
-  }
-  if (moving) requestTick();
-  else lastFrame = 0;
 }
 
 function requestTick() {
@@ -5833,6 +5773,11 @@ function getMapStyle() {
   return MAP_STYLES.some((s) => s.id === id) ? id : DEFAULT_STYLE;
 }
 
+/** Mémorise le style choisi (utilisé par toutes les cartes du site). */
+function saveMapStyle(id) {
+  if (MAP_STYLES.some((s) => s.id === id)) storage.set("mapStyle", id);
+}
+
 /** Met en place le fond de carte et renvoie une fonction pour en changer. */
 function baseLayers(map, el) {
   const L = window.L;
@@ -5901,13 +5846,16 @@ function mapTools(map, el, layers, { onLocate = null } = {}) {
   tools.querySelectorAll(".map-style-thumb img").forEach((img) => img.addEventListener("error", () => img.remove(), { once: true }));
 
   // Les clics sur les boutons ne doivent pas déplacer ou zoomer la carte
+  // (méthode officielle de Leaflet, plus nos propres garde-fous)
+  window.L?.DomEvent?.disableClickPropagation?.(tools);
+  window.L?.DomEvent?.disableScrollPropagation?.(tools);
   ["mousedown", "touchstart", "pointerdown", "dblclick", "wheel", "click", "keydown", "contextmenu"].forEach((ev) =>
     tools.addEventListener(ev, (e) => e.stopPropagation(), { passive: ev === "touchstart" || ev === "wheel" }));
   tools.addEventListener("keydown", (e) => { if (e.key === "Escape") { open(false); toggle.focus(); } });
 
   tools.addEventListener("click", (e) => {
     const styleBtn = e.target.closest("[data-map-style]");
-    if (styleBtn) { layers.use(styleBtn.dataset.mapStyle); refresh(); open(false); return; }
+    if (styleBtn) { layers.use(styleBtn.dataset.mapStyle); open(false); el.dispatchEvent(new CustomEvent("map-style", { detail: styleBtn.dataset.mapStyle })); return; }
     if (e.target.closest("[data-map-layers]")) { open(panel.hidden); return; }
     const locate = e.target.closest("[data-map-locate]");
     if (locate && onLocate) onLocate(locate);
@@ -5965,6 +5913,8 @@ function createMap(el, { center = [46.8, 8.23], zoom = 8, interactive = true, gu
     map.attributionControl.setPrefix(false);
     const layers = baseLayers(map, el);
     if (interactive && tools) mapTools(map, el, layers, { onLocate });
+    // Permet de changer le style depuis l'extérieur de la carte (ex. pastilles sur l'accueil)
+    map.voisinaSetStyle = (id) => { layers.use(id); el.dispatchEvent(new CustomEvent("map-style", { detail: id })); };
     // Molette active seulement après un clic sur la carte (évite de "piéger" le défilement de la page).
     if (interactive) {
       map.once("focus", () => map.scrollWheelZoom.enable());
@@ -6093,7 +6043,7 @@ function fitSwitzerland(map) {
 
 
 
-return { mapUnavailable, getMapStyle, createMap, listingsLayer, detailMap, meMarker, fitSwitzerland, MAX_ZOOM, leafletReady, MAP_STYLES, esc };
+return { mapUnavailable, getMapStyle, saveMapStyle, createMap, listingsLayer, detailMap, meMarker, fitSwitzerland, MAX_ZOOM, leafletReady, MAP_STYLES, esc };
 });
 __def("switzerland.js", function () {
 /* Silhouette simplifiée de la Suisse (longitude, latitude) pour l'illustration
@@ -6162,7 +6112,7 @@ const { t, fmtNumber, categoryName } = __req("i18n.js");
 const { CATEGORIES, getCategory, findLocality } = __req("data.js");
 const { distanceKm } = __req("util.js");
 const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite, getRecentlyViewed, clearRecentlyViewed } = __req("store.js");
-const { createMap, listingsLayer, fitSwitzerland } = __req("map.js");
+const { createMap, listingsLayer, fitSwitzerland, getMapStyle, saveMapStyle } = __req("map.js");
 const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
 
@@ -6376,12 +6326,12 @@ const __default = {
           <span class="kicker">${icon("map")}${t("home.mapKicker")}</span>
           <h2 class="h2" id="map-title">${t("home.mapTitle")}</h2>
           <p class="muted">${t("home.mapText")}</p>
-          <ul class="map-styles-legend">
-            ${["color", "plan", "satellite", "grey"].map((id) => html`<li><span class="map-style-thumb thumb-${id}" aria-hidden="true"></span>${t("map.style." + id)}</li>`)}
-          </ul>
+          <div class="map-styles-legend" role="group" aria-label="${t("map.styleTitle")}">
+            ${["color", "plan", "satellite", "grey"].map((id) => html`<button type="button" class="map-style-chip${id === getMapStyle() ? " is-active" : ""}" data-action="home-map-style" data-style="${id}" aria-pressed="${id === getMapStyle() ? "true" : "false"}"><span class="map-style-thumb thumb-${id}" aria-hidden="true"></span>${t("map.style." + id)}</button>`)}
+          </div>
           <a class="btn btn-primary" href="#/explorer?view=map">${icon("map")}${t("home.mapCta")}</a>
         </div>
-        <div class="map-showcase-map" data-reveal="right">
+        <div class="map-showcase-map" data-reveal="soft">
           <div id="home-map" class="map map-home" role="region" aria-label="${t("explore.mapLabel")}"></div>
           <p class="map-note">${icon("shield")}${t("explore.mapPrivacy")}</p>
         </div>
@@ -6480,6 +6430,10 @@ const __default = {
         if (!homeMap) return;
         fitSwitzerland(homeMap);
         listingsLayer(homeMap).setItems(allListings());
+        mapEl.addEventListener("map-style", () => {
+          const id = getMapStyle();
+          root.querySelectorAll("[data-action='home-map-style']").forEach((b) => { const on = b.dataset.style === id; b.classList.toggle("is-active", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
+        });
       };
       if ("IntersectionObserver" in window) {
         mapObserver = new IntersectionObserver((entries) => {
@@ -6503,7 +6457,20 @@ const __default = {
   },
 };
 
+/** Pastilles sous « La carte » : elles changent vraiment le style de la carte d'à côté. */
+function setHomeMapStyle(id) {
+  saveMapStyle(id);
+  document.querySelectorAll("[data-action='home-map-style']").forEach((b) => {
+    const on = b.dataset.style === id;
+    b.classList.toggle("is-active", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  if (homeMap?.voisinaSetStyle) homeMap.voisinaSetStyle(id);
+  else document.getElementById("home-map")?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
 const homeActions = {
+  "home-map-style": (el) => setHomeMapStyle(el.dataset.style),
   "clear-recent": () => clearRecentlyViewed(),
   "scroll-next": () => document.getElementById("home-stats")?.scrollIntoView({ behavior: "smooth", block: "start" }),
 };
@@ -6711,8 +6678,8 @@ function applyView() {
     b.setAttribute("aria-pressed", on ? "true" : "false");
   });
   setTimeout(() => map?.invalidateSize(), 60);
-  // Sur téléphone, on amène la carte (ou le haut de la liste) sous l'en-tête
-  if (window.matchMedia("(max-width: 1180px)").matches && (state.f.view === "map" || layout.getBoundingClientRect().top < 0)) {
+  // On amène la carte (ou le haut de la liste) juste sous l'en-tête
+  if (state.f.view === "map" || (window.matchMedia("(max-width: 1180px)").matches && layout.getBoundingClientRect().top < 0)) {
     layout.scrollIntoView({ block: "start" });
   }
   writeUrl();
@@ -6860,6 +6827,8 @@ const __default = {
       map.on("moveend", () => { const b = $("#map-search-area"); if (userMoved && b) b.hidden = false; });
     } else layer = null;
     renderResults();
+    // Arrivée avec « Ouvrir la carte » : on montre directement la carte
+    if (state.f.view === "map") setTimeout(() => { map?.invalidateSize(); $("#explore-layout")?.scrollIntoView({ block: "start" }); }, 80);
 
     // Filtres (listes déroulantes et cases)
     root.addEventListener("change", (e) => {
