@@ -5421,6 +5421,11 @@ __def("motion.js", function () {
                             aux titres et textes de toutes les pages.
    - [data-words]         : le texte « s'allume » mot par mot
    - [data-parallax=".1"] : léger effet de profondeur
+   Autres détails :
+   - les titres des pages montent mot par mot à l'ouverture de la page
+   - les cartes d'annonces arrivent de la droite, l'une après l'autre
+   - sur téléphone, l'en-tête se cache quand on descend et revient quand on remonte
+   - sur ordinateur, les grands boutons sont « aimantés » par la souris
    + en-tête transparent sur l'accueil, barre de progression de lecture.
    Tout est désactivé si l'appareil demande « moins d'animations » (accessibilité).
    Seules transform et opacity sont animées : fluide même sur un petit téléphone.
@@ -5434,6 +5439,8 @@ let parallaxEls = [];
 let slideEls = [];
 let wordEls = [];
 let ticking = false;
+let lastFrame = 0;
+let lastY = 0;
 let progressBar = null;
 let canSlide = false;
 
@@ -5478,6 +5485,27 @@ function splitWords(el) {
   });
 }
 
+/** Titre découpé en mots qui montent l'un après l'autre (seulement les titres simples, sans balises). */
+function splitTitle(el) {
+  if (el.dataset.split || el.children.length) return;
+  const text = el.textContent.trim().replace(/\s+/g, " ");
+  if (!text || text.split(" ").length > 14) return;
+  el.dataset.split = "1";
+  el.setAttribute("aria-label", text);
+  el.textContent = "";
+  text.split(" ").forEach((w, i, all) => {
+    const outer = document.createElement("span");
+    outer.className = "wr";
+    outer.setAttribute("aria-hidden", "true");
+    const inner = document.createElement("span");
+    inner.textContent = w;
+    inner.style.setProperty("--wi", String(i));
+    outer.appendChild(inner);
+    el.appendChild(outer);
+    if (i < all.length - 1) el.appendChild(document.createTextNode(" "));
+  });
+}
+
 /** Cherche les éléments animés dans un bout de page (appelé aussi quand la page change). */
 function scan(node = document) {
   if (!node.querySelectorAll) return;
@@ -5497,6 +5525,18 @@ function scan(node = document) {
       const slides = pick("[data-slide]");
       if (slides.length) slideEls = [...slideEls.filter((el) => el.isConnected), ...slides];
     }
+    // Titres des pages : les mots montent un par un
+    pick(".page-head .h1, .detail-title").forEach(splitTitle);
+    // Cartes d'annonces : elles arrivent de la droite, l'une après l'autre (une seule fois)
+    if (revealIO) {
+      pick(".listing-card").forEach((el) => {
+        if (el.dataset.reveal !== undefined || el.closest("[data-stagger], [data-reveal]")) return;
+        el.dataset.reveal = "card";
+        const sibs = el.parentElement ? [...el.parentElement.children] : [];
+        el.style.setProperty("--i", String(Math.max(0, sibs.indexOf(el)) % 4));
+        revealIO.observe(el);
+      });
+    }
     const words = pick("[data-words]");
     words.forEach(splitWords);
     if (words.length) wordEls = [...wordEls.filter((el) => el.isConnected), ...words];
@@ -5507,26 +5547,40 @@ function scan(node = document) {
 }
 
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
-const easeOut = (p) => 1 - Math.pow(1 - p, 3);
+const smooth = (p) => p * p * (3 - 2 * p); // démarre doucement, finit doucement
 
-/** Progression 0 → 1 d'un élément : 0 quand il entre en bas de l'écran, 1 quand il arrive vers le milieu.
+/** Progression 0 → 1 d'un élément pendant le défilement :
+    0 quand son haut est à `startAt` de la hauteur de l'écran (0.94 = tout en bas, déjà visible),
+    1 quand il arrive à `endAt` (0.4 = un peu au-dessus du milieu).
     Si la page est trop courte pour l'amener jusque-là, il finit quand même à 1 en bas de page. */
-function progressOf(r, vh, y, maxY, endAt = 0.5) {
+function progressOf(r, vh, y, maxY, startAt = 0.94, endAt = 0.4) {
   const top = r.top + y;
-  const start = top - vh;
+  const start = top - vh * startAt;
   const end = Math.min(top - vh * endAt, maxY);
   if (end <= start) return 1;
   return clamp((y - start) / (end - start));
 }
 
-function onScroll() {
+/* Le texte suit le défilement avec un petit retard (amorti) : même si on descend vite,
+   on a le temps de le voir arriver. */
+const LAG = 0.085;
+
+function onScroll(now = performance.now()) {
   ticking = false;
+  const dt = lastFrame ? Math.min(64, now - lastFrame) : 16.7;
+  lastFrame = now;
+  const k = 1 - Math.pow(1 - LAG, dt / 16.7);
   const y = window.scrollY;
   const vh = window.innerHeight;
   const maxY = Math.max(0, root.scrollHeight - vh);
   root.classList.toggle("is-scrolled", y > 12);
+  // Téléphone : l'en-tête se cache quand on descend, revient dès qu'on remonte
+  if (y > 160 && y > lastY + 6) root.classList.add("hdr-hide");
+  else if (y < lastY - 6 || y <= 160) root.classList.remove("hdr-hide");
+  if (Math.abs(y - lastY) > 6 || y <= 160) lastY = y;
   if (progressBar) progressBar.style.transform = `scaleX(${maxY > 40 ? Math.min(1, y / maxY) : 0})`;
   if (reducedMotion()) return;
+  let moving = false;
 
   // Parallaxe
   parallaxEls = parallaxEls.filter((el) => el.isConnected);
@@ -5537,18 +5591,26 @@ function onScroll() {
     el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
   }
 
-  // Texte qui arrive de la droite, en suivant le défilement
+  // Texte qui arrive de la droite, en suivant le défilement (avec un léger retard)
   if (slideEls.length) {
-    const dist = Math.min(window.innerWidth * 0.22, 240);
+    const dist = Math.min(window.innerWidth * 0.28, 280);
     slideEls = slideEls.filter((el) => el.isConnected);
     for (const el of slideEls) {
       const r = el.getBoundingClientRect();
-      if (r.top > vh + 40 && el.dataset.slid === "0") continue; // encore loin sous l'écran : déjà en position de départ
-      const p = easeOut(progressOf(r, vh, y, maxY, 0.55));
+      const target = smooth(progressOf(r, vh, y, maxY));
+      if (el._p === undefined) el._p = target >= 1 ? 1 : 0; // déjà en place au chargement, ou à faire venir
+      if (Math.abs(target - el._p) < 0.002) el._p = target;
+      else { el._p += (target - el._p) * k; moving = true; }
+      const p = el._p;
       const dir = el.dataset.slide === "left" ? -1 : 1;
-      el.dataset.slid = p >= 1 ? "1" : "0";
-      el.style.transform = p >= 1 ? "" : `translate3d(${((1 - p) * dist * dir).toFixed(1)}px, 0, 0)`;
-      el.style.opacity = p >= 1 ? "" : (0.05 + 0.95 * p).toFixed(3);
+      if (p >= 0.999) {
+        if (el.dataset.slid !== "1") { el.dataset.slid = "1"; el.style.transform = ""; el.style.opacity = ""; }
+      } else {
+        if (r.top > vh + 60 && el.dataset.slid === "0" && p === 0) continue; // encore loin sous l'écran
+        el.dataset.slid = "0";
+        el.style.transform = `translate3d(${((1 - p) * dist * dir).toFixed(1)}px, 0, 0)`;
+        el.style.opacity = Math.min(1, 0.08 + p * 1.9).toFixed(3);
+      }
     }
   }
 
@@ -5557,14 +5619,19 @@ function onScroll() {
   for (const el of wordEls) {
     const r = el.getBoundingClientRect();
     if (r.bottom < -100 || r.top > vh + 100) continue;
-    const p = progressOf(r, vh, y, maxY, 0.35);
+    const target = progressOf(r, vh, y, maxY, 0.9, 0.3);
+    if (el._p === undefined) el._p = target;
+    if (Math.abs(target - el._p) < 0.002) el._p = target;
+    else { el._p += (target - el._p) * k; moving = true; }
     const spans = el.children;
     const n = spans.length;
     for (let i = 0; i < n; i++) {
-      const w = clamp(p * (n + 6) - i, 0, 6) / 6; // chaque mot s'allume progressivement
+      const w = clamp(el._p * (n + 6) - i, 0, 6) / 6; // chaque mot s'allume progressivement
       spans[i].style.opacity = (0.16 + 0.84 * w).toFixed(3);
     }
   }
+  if (moving) requestTick();
+  else lastFrame = 0;
 }
 
 function requestTick() {
@@ -5614,6 +5681,26 @@ function initMotion() {
   }
   scan(document);
   requestTick();
+  initMagnetic();
+}
+
+/* Grands boutons « aimantés » (ordinateur) : ils suivent un peu la souris, puis reviennent en place. */
+function initMagnetic() {
+  if (!window.matchMedia?.("(pointer: fine) and (hover: hover)").matches) return;
+  const SEL = ".btn-lg, .btn-cta, .btn-lime";
+  let current = null;
+  document.addEventListener("pointermove", (e) => {
+    const btn = e.target.closest?.(SEL);
+    if (current && current !== btn) { current.style.transform = ""; current.classList.remove("is-magnet"); current = null; }
+    if (!btn || btn.disabled || reducedMotion()) return;
+    const r = btn.getBoundingClientRect();
+    const dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+    const dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+    btn.classList.add("is-magnet");
+    btn.style.transform = `translate3d(${(dx * 6).toFixed(1)}px, ${(dy * 4).toFixed(1)}px, 0)`;
+    current = btn;
+  }, { passive: true });
+  document.addEventListener("pointerleave", () => { if (current) { current.style.transform = ""; current.classList.remove("is-magnet"); current = null; } });
 }
 
 return { scan, initMotion, reducedMotion };
@@ -6273,7 +6360,7 @@ const __default = {
           <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
           <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
         </div>
-        <div class="listing-grid home-feed" data-stagger>
+        <div class="listing-grid home-feed">
           ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
         </div>
       </div>
@@ -10034,6 +10121,17 @@ function parseHash() {
 }
 
 let firstRender = true;
+/* Ouverture d'une annonce depuis une carte : l'image de la carte « s'agrandit » jusqu'à devenir celle de l'annonce */
+let morphId = null;
+document.addEventListener("click", (e) => {
+  const a = e.target.closest?.('.listing-card a[href^="#/annonce/"]');
+  if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  if (typeof document.startViewTransition !== "function" || reducedMotion()) return;
+  const media = a.closest(".listing-card")?.querySelector(".listing-card-media");
+  if (!media) return;
+  media.style.viewTransitionName = "listing-media";
+  morphId = a.getAttribute("href").slice("#/annonce/".length);
+}, true);
 
 function render({ keepScroll = false } = {}) {
   const { path, query } = parseHash();
@@ -10069,6 +10167,11 @@ function render({ keepScroll = false } = {}) {
       console.error(e);
       mount(root, html`<section class="section"><div class="container narrow center"><h1 class="h2">${t("err.pageTitle")}</h1><p class="muted">${t("err.pageText")}</p><a class="btn btn-primary" href="#/">${t("notFound.home")}</a></div></section>`);
     }
+    if (morphId) {
+      const target = useVT && path === `annonce/${morphId}` ? root.querySelector("#gallery, .detail-media") : null;
+      if (target) target.style.viewTransitionName = "listing-media";
+      morphId = null;
+    }
     document.title = `${view.title ? view.title(currentCtx) + " · " : ""}Voisina`;
     // Nom de la page sur <body> : permet d'adapter la version mobile (ex. barre d'action sur une annonce)
     document.body.dataset.route = view === notFound ? "404" : path.split("/")[0] || "home";
@@ -10083,9 +10186,15 @@ function render({ keepScroll = false } = {}) {
     root.classList.add("vt-nav");
     try {
       const tr = document.startViewTransition(draw);
-      tr.finished.finally(() => root.classList.remove("vt-nav"));
+      tr.finished.finally(() => {
+        root.classList.remove("vt-nav");
+        document.querySelectorAll("#gallery, .detail-media, .listing-card-media").forEach((el) => { if (el.style.viewTransitionName) el.style.viewTransitionName = ""; });
+      });
     } catch (e) { root.classList.remove("vt-nav"); draw(); }
-  } else draw();
+  } else {
+    if (morphId) { document.querySelectorAll(".listing-card-media").forEach((el) => { el.style.viewTransitionName = ""; }); morphId = null; }
+    draw();
+  }
 }
 
 /* ----------------------- En-tête et navigation ---------------------- */
