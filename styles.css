@@ -2272,28 +2272,27 @@ h1, h2, h3, .h1, .h2, .h3 { overflow-wrap: break-word; }
 /* Changement de page : l'ancienne page s'efface vers la gauche, la nouvelle arrive de la droite
    (View Transitions : Chrome, Edge, Safari récents ; ailleurs, animation simple ci-dessous) */
 @media (prefers-reduced-motion: no-preference) {
-  ::view-transition-old(root) { animation: vtOut 0.3s cubic-bezier(0.4, 0, 1, 1) both; }
-  ::view-transition-new(root) { animation: vtIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  ::view-transition-old(root) { animation: vtOut 0.22s ease both; }
+  ::view-transition-new(root) { animation: vtIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
   .site-header { view-transition-name: site-header; }
   .tabbar { view-transition-name: tabbar; }
   #demo-banner { view-transition-name: demo-banner; }
 }
-@keyframes vtOut { to { opacity: 0; transform: translate3d(-40px, 0, 0); } }
-@keyframes vtIn { from { opacity: 0; transform: translate3d(70px, 0, 0); } }
-.page-enter .page-head .kicker, .page-enter .page-head .h1, .page-enter .page-head .lead, .page-enter .breadcrumb, .page-enter .detail-title { animation-name: revealRight; }
+@keyframes vtOut { to { opacity: 0; } }
+@keyframes vtIn { from { opacity: 0; transform: translate3d(0, 14px, 0); } }
+/* Pages intérieures (mentions légales, aide, annonces…) : pas d'animation de texte, juste un fondu discret */
+.page-enter .page-head .kicker, .page-enter .page-head .h1, .page-enter .page-head .lead, .page-enter .breadcrumb, .page-enter .detail-title { animation: none; }
 
 /* =====================================================================
    12. VERSION 3.4 — ENCORE PLUS DE MOUVEMENT (toujours doux)
    ===================================================================== */
-/* Titres des pages : les mots montent un par un à l'ouverture */
-.wr { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em; }
-.wr > span { display: inline-block; }
-.js-motion .wr > span { animation: lineUp 1s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: calc(0.08s + var(--wi, 0) * 65ms); }
-
-/* Cartes d'annonces : elles arrivent de la droite, l'une après l'autre */
+/* Cartes d'annonces de l'accueil : elles montent l'une après l'autre
+   (sur téléphone, la rangée défile de côté : elles arrivent donc de la droite) */
 .js-motion .listing-card[data-reveal="card"]:not(.is-in) { opacity: 0; }
-.js-motion .listing-card[data-reveal="card"].is-in { animation: cardIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: calc(var(--i, 0) * 80ms); }
+.js-motion .listing-card[data-reveal="card"].is-in { animation: cardUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: calc(var(--i, 0) * 90ms); }
+@keyframes cardUp { from { opacity: 0; transform: translate3d(0, 46px, 0); } }
 @keyframes cardIn { from { opacity: 0; transform: translate3d(70px, 0, 0) scale(0.98); } }
+@media (max-width: 640px) { .js-motion .listing-card[data-reveal="card"].is-in { animation-name: cardIn; } }
 
 /* Téléphone : l'en-tête se cache quand on descend, revient quand on remonte */
 @media (max-width: 980px) {
@@ -2314,6 +2313,6 @@ h1, h2, h3, .h1, .h2, .h3 { overflow-wrap: break-word; }
   ::view-transition-old(listing-media), ::view-transition-new(listing-media) { height: 100%; object-fit: cover; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .js-motion .wr > span, .js-motion .listing-card[data-reveal="card"].is-in { animation: none; }
+  .js-motion .listing-card[data-reveal="card"].is-in { animation: none; }
   .js-motion .listing-card[data-reveal="card"]:not(.is-in) { opacity: 1; }
 }

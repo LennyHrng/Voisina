@@ -5416,14 +5416,13 @@ __def("motion.js", function () {
    - [data-stagger]       : les enfants apparaissent l'un après l'autre
    - [data-countup="100"] : le nombre défile de 0 à la valeur
    Effets liés au défilement (ils suivent le doigt ou la molette) :
-   - [data-slide]         : le texte arrive DE LA DROITE pendant qu'on descend
-                            ("left" = depuis la gauche). Appliqué automatiquement
-                            aux titres et textes de toutes les pages.
+   - [data-slide="left|right|up"] : sur la page d'accueil, le texte arrive du côté
+                            où il se trouve (gauche, droite, ou il monte s'il est centré)
+                            pendant qu'on descend.
    - [data-words]         : le texte « s'allume » mot par mot
    - [data-parallax=".1"] : léger effet de profondeur
    Autres détails :
-   - les titres des pages montent mot par mot à l'ouverture de la page
-   - les cartes d'annonces arrivent de la droite, l'une après l'autre
+   - les cartes d'annonces de l'accueil apparaissent l'une après l'autre
    - sur téléphone, l'en-tête se cache quand on descend et revient quand on remonte
    - sur ordinateur, les grands boutons sont « aimantés » par la souris
    + en-tête transparent sur l'accueil, barre de progression de lecture.
@@ -5446,12 +5445,24 @@ let canSlide = false;
 
 const reducedMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
-/* Titres et textes qui arrivent de la droite sur TOUTES les pages (sans modifier chaque page). */
-const AUTO_SLIDE = [
-  ".section-head > div", ".section .kicker-row", ".showcase-text > .kicker", ".showcase-text > h2", ".showcase-text > .lead",
-  ".page-head .h1", ".page-head .lead", ".prose h2", ".detail-main h2", ".trust-intro > *", ".faq-wrap > div > .h2",
-  ".map-showcase-text > h2", ".map-showcase-text > p", ".cta-inner h2", ".cta-inner p",
-].join(",");
+/* Page d'accueil uniquement : chaque texte arrive du côté où il se trouve.
+   - texte dans la colonne de gauche → il arrive de la gauche
+   - bouton ou élément à droite      → il arrive de la droite
+   - titre centré                    → il monte doucement
+   (Les autres pages restent calmes : pas d'animation pendant la lecture.) */
+const HOME_SLIDE = [
+  [".section-head.center > div", "up"],
+  [".section-head:not(.center) > div", "left"],
+  [".section-head:not(.center) > .btn", "right"],
+  [".showcase-text > .kicker, .showcase-text > h2, .showcase-text > .lead", "left"],
+  [".showcase-text > .btn", "up"],
+  [".map-showcase-text > .kicker, .map-showcase-text > h2, .map-showcase-text > p", "left"],
+  [".trust-intro > *", "left"],
+  [".faq-wrap > div:first-child > *", "left"],
+  [".cta-inner > div:not(.cta-actions) > *", "left"],
+  [".cta-actions", "right"],
+];
+const inHome = (el) => !!el.closest?.('.page[data-route="home"]');
 
 function animateCount(el) {
   const target = Number(el.dataset.countup);
@@ -5485,27 +5496,6 @@ function splitWords(el) {
   });
 }
 
-/** Titre découpé en mots qui montent l'un après l'autre (seulement les titres simples, sans balises). */
-function splitTitle(el) {
-  if (el.dataset.split || el.children.length) return;
-  const text = el.textContent.trim().replace(/\s+/g, " ");
-  if (!text || text.split(" ").length > 14) return;
-  el.dataset.split = "1";
-  el.setAttribute("aria-label", text);
-  el.textContent = "";
-  text.split(" ").forEach((w, i, all) => {
-    const outer = document.createElement("span");
-    outer.className = "wr";
-    outer.setAttribute("aria-hidden", "true");
-    const inner = document.createElement("span");
-    inner.textContent = w;
-    inner.style.setProperty("--wi", String(i));
-    outer.appendChild(inner);
-    el.appendChild(outer);
-    if (i < all.length - 1) el.appendChild(document.createTextNode(" "));
-  });
-}
-
 /** Cherche les éléments animés dans un bout de page (appelé aussi quand la page change). */
 function scan(node = document) {
   if (!node.querySelectorAll) return;
@@ -5519,18 +5509,18 @@ function scan(node = document) {
   }
   if (!reducedMotion()) {
     if (canSlide) {
-      pick(AUTO_SLIDE).forEach((el) => {
-        if (el.dataset.slide === undefined && !el.closest("[data-no-slide], [data-reveal], [data-stagger], dialog, .reels-page")) el.dataset.slide = "";
-      });
-      const slides = pick("[data-slide]");
+      for (const [sel, dir] of HOME_SLIDE) {
+        pick(sel).forEach((el) => {
+          if (el.dataset.slide === undefined && inHome(el) && !el.closest("[data-no-slide], [data-reveal], [data-stagger], dialog")) el.dataset.slide = dir;
+        });
+      }
+      const slides = pick("[data-slide]").filter(inHome);
       if (slides.length) slideEls = [...slideEls.filter((el) => el.isConnected), ...slides];
     }
-    // Titres des pages : les mots montent un par un
-    pick(".page-head .h1, .detail-title").forEach(splitTitle);
-    // Cartes d'annonces : elles arrivent de la droite, l'une après l'autre (une seule fois)
+    // Cartes d'annonces de l'accueil : elles apparaissent l'une après l'autre (une seule fois)
     if (revealIO) {
       pick(".listing-card").forEach((el) => {
-        if (el.dataset.reveal !== undefined || el.closest("[data-stagger], [data-reveal]")) return;
+        if (!inHome(el) || el.dataset.reveal !== undefined || el.closest("[data-stagger], [data-reveal]")) return;
         el.dataset.reveal = "card";
         const sibs = el.parentElement ? [...el.parentElement.children] : [];
         el.style.setProperty("--i", String(Math.max(0, sibs.indexOf(el)) % 4));
@@ -5593,7 +5583,8 @@ function onScroll(now = performance.now()) {
 
   // Texte qui arrive de la droite, en suivant le défilement (avec un léger retard)
   if (slideEls.length) {
-    const dist = Math.min(window.innerWidth * 0.28, 280);
+    const dist = Math.min(window.innerWidth * 0.26, 220);
+    const rise = Math.min(vh * 0.12, 90);
     slideEls = slideEls.filter((el) => el.isConnected);
     for (const el of slideEls) {
       const r = el.getBoundingClientRect();
@@ -5602,13 +5593,15 @@ function onScroll(now = performance.now()) {
       if (Math.abs(target - el._p) < 0.002) el._p = target;
       else { el._p += (target - el._p) * k; moving = true; }
       const p = el._p;
-      const dir = el.dataset.slide === "left" ? -1 : 1;
+      const side = el.dataset.slide;
       if (p >= 0.999) {
         if (el.dataset.slid !== "1") { el.dataset.slid = "1"; el.style.transform = ""; el.style.opacity = ""; }
       } else {
         if (r.top > vh + 60 && el.dataset.slid === "0" && p === 0) continue; // encore loin sous l'écran
         el.dataset.slid = "0";
-        el.style.transform = `translate3d(${((1 - p) * dist * dir).toFixed(1)}px, 0, 0)`;
+        el.style.transform = side === "up"
+          ? `translate3d(0, ${((1 - p) * rise).toFixed(1)}px, 0)`
+          : `translate3d(${((1 - p) * dist * (side === "left" ? -1 : 1)).toFixed(1)}px, 0, 0)`;
         el.style.opacity = Math.min(1, 0.08 + p * 1.9).toFixed(3);
       }
     }
@@ -6308,8 +6301,8 @@ const __default = {
 
     <section class="section statement-section" aria-labelledby="statement-kicker">
       <div class="container statement-wrap">
-        <span class="kicker" id="statement-kicker" data-slide>${t("home.statementKicker")}</span>
-        <p class="statement" data-words data-slide>${t("home.statement")}</p>
+        <span class="kicker" id="statement-kicker" data-slide="left">${t("home.statementKicker")}</span>
+        <p class="statement" data-words data-slide="right">${t("home.statement")}</p>
       </div>
     </section>
 
@@ -6448,7 +6441,7 @@ const __default = {
     </section>
 
     <section class="section cta-band section-sky">
-      <div class="container cta-inner" data-reveal="zoom">
+      <div class="container cta-inner">
         <span class="aurora a1" aria-hidden="true"></span><span class="aurora a3" aria-hidden="true"></span>
         <div>
           <h2 class="h2">${t("home.ctaTitle")}</h2>
@@ -10159,6 +10152,7 @@ function render({ keepScroll = false } = {}) {
     const root = document.createElement("div");
     // Petite animation d'entrée quand on change de page (si la transition du navigateur n'est pas disponible)
     root.className = isNav && !useVT ? "page page-enter" : "page";
+    root.dataset.route = view === notFound ? "404" : path.split("/")[0] || "home"; // les animations de texte ne jouent que sur l'accueil
     view$.replaceChildren(root);
     try {
       mount(root, view.render(currentCtx));
