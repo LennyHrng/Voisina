@@ -1946,7 +1946,7 @@ html.reels-lock, html.reels-lock body { overflow: hidden; overscroll-behavior: n
   .cta-inner { padding: 32px 26px; }
 }
 @media (max-width: 640px) {
-  .hero-visual { display: none; }
+  .hero-visual { max-width: 460px; }
   .hero .hero-title { font-size: 2.6rem; }
   .section { padding-block: 44px; }
   .section-head { margin-bottom: 20px; }
@@ -2159,3 +2159,30 @@ html[data-text="large"] .cat-grid, html[data-text="xlarge"] .cat-grid, html.text
   .welcome-actions .btn { flex: 1 1 0; min-width: 0; font-size: 0.9rem; line-height: 1.15; }
   .welcome-actions .btn .icon { display: none; }
 }
+
+
+/* Ruban des villes : défile doucement, se fait glisser, s'arrête au toucher */
+.marquee {
+  overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; padding: 6px 0 14px; cursor: grab; touch-action: pan-x pan-y;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.marquee::-webkit-scrollbar { display: none; }
+.marquee.is-dragging { cursor: grabbing; user-select: none; }
+.marquee.is-dragging a { pointer-events: none; }
+.marquee-track { display: flex; width: max-content; gap: 14px; padding-inline: 7px; }
+.marquee-track > .city-card { flex: none; width: 250px; }
+.marquee-hint { margin-top: 4px; }
+.marquee-toggle .i-play, .marquee-toggle[aria-pressed="true"] .i-pause { display: none; }
+.marquee-toggle[aria-pressed="true"] .i-play { display: block; }
+@media (max-width: 640px) { .marquee-track > .city-card { width: 210px; } .marquee-toggle span { display: none; } }
+
+
+/* Carte de la Suisse : plus grande, le contour se dessine puis les annonces s'allument et pulsent */
+.hero-map { width: 112%; margin-left: -4%; }
+.hero .swiss-map .swiss-shape { stroke-width: 2.2; filter: drop-shadow(0 18px 26px rgba(36, 92, 58, 0.2)); animation-duration: 3s; }
+.hero .swiss-dots .dot { stroke-width: 1.6; }
+.hero .swiss-dots .dot:nth-child(11n + 4) { animation: dotIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 2.2s forwards, dotPulse 2.8s ease-in-out 3s infinite; }
+@keyframes dotPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(2); opacity: 0.6; } }
+@media (max-width: 980px) { .hero-map { width: 100%; margin-left: 0; } }
+html[data-motion="reduced"] .hero .swiss-dots .dot { animation: none !important; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .hero .swiss-dots .dot { animation: none !important; opacity: 1; } }

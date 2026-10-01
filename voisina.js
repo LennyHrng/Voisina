@@ -264,6 +264,7 @@ const { raw } = __req("util.js");
 const P = {
   search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
   volume: '<path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>',
+  pause: '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',
   textSize: '<path d="M3 20 8.5 5l5.5 15"/><path d="M5.2 15h6.6"/><path d="m15 20 3-8 3 8"/><path d="M16.1 17.2h3.8"/>',
   pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
   map: '<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15"/><path d="M15 6v15"/>',
@@ -380,6 +381,9 @@ __def("translations.js", function () {
 const fr = {
   // Langues
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Mettre le défilement en pause",
+  "home.citiesPlay": "Relancer le défilement",
+  "home.citiesHint": "Faites glisser pour choisir votre ville.",
   "listing.listen": "Écouter l'annonce",
   "listing.stopListening": "Arrêter la lecture",
   "home.allTitle": "Voisina, c'est pour tout le monde",
@@ -1180,6 +1184,9 @@ const fr = {
 
 const de = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Bewegung anhalten",
+  "home.citiesPlay": "Bewegung fortsetzen",
+  "home.citiesHint": "Wischen Sie, um Ihre Stadt zu wählen.",
   "listing.listen": "Anzeige vorlesen",
   "listing.stopListening": "Vorlesen beenden",
   "home.allTitle": "Voisina ist für alle da",
@@ -1929,6 +1936,9 @@ const de = {
 
 const it = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Metti in pausa lo scorrimento",
+  "home.citiesPlay": "Riprendi lo scorrimento",
+  "home.citiesHint": "Scorrete per scegliere la vostra città.",
   "listing.listen": "Ascolta l'annuncio",
   "listing.stopListening": "Interrompi la lettura",
   "home.allTitle": "Voisina è per tutti",
@@ -2678,6 +2688,9 @@ const it = {
 
 const en = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Pause scrolling",
+  "home.citiesPlay": "Resume scrolling",
+  "home.citiesHint": "Swipe to choose your city.",
   "listing.listen": "Listen to the listing",
   "listing.stopListening": "Stop reading",
   "home.allTitle": "Voisina is for everyone",
@@ -6038,6 +6051,7 @@ const { CATEGORIES, getCategory, findLocality } = __req("data.js");
 const { distanceKm } = __req("util.js");
 const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite, getRecentlyViewed, clearRecentlyViewed } = __req("store.js");
 const { createMap, listingsLayer, fitSwitzerland, getMapStyle, saveMapStyle } = __req("map.js");
+const { reducedMotion } = __req("motion.js");
 const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
 
@@ -6072,6 +6086,63 @@ function stories() {
   </nav>`;
 }
 let mapObserver = null;
+
+/* Ruban des villes : il défile tout seul (doucement), se fait glisser au doigt ou à la souris,
+   s'arrête dès qu'on le touche, et un bouton permet de le mettre en pause. */
+let marqueeStop = null;
+let marqueePaused = false;
+function initMarquee(root) {
+  const box = root.querySelector(".marquee");
+  const track = box?.querySelector(".marquee-track");
+  if (!box || !track) return;
+  const half = () => track.scrollWidth / 2;
+  let raf = 0, last = 0, hold = false, resumeAt = 0, drag = null;
+  const auto = () => !marqueePaused && !reducedMotion();
+  const wrap = () => { const h = half(); if (h > 0) { if (box.scrollLeft >= h) box.scrollLeft -= h; else if (box.scrollLeft <= 0) box.scrollLeft += h; } };
+  const frame = (now) => {
+    const dt = Math.min(64, now - (last || now)); last = now;
+    if (auto() && !hold && now > resumeAt) box.scrollLeft += dt * 0.035;
+    wrap();
+    raf = requestAnimationFrame(frame);
+  };
+  const pause = (ms = 2500) => { hold = true; resumeAt = performance.now() + ms; };
+  const release = () => { hold = false; resumeAt = performance.now() + 1500; };
+  box.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hold = true; });
+  box.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse" && !drag) release(); });
+  box.addEventListener("focusin", () => { hold = true; });
+  box.addEventListener("focusout", release);
+  box.addEventListener("touchstart", () => pause(4000), { passive: true });
+  box.addEventListener("wheel", () => pause(2500), { passive: true });
+  // Glisser avec la souris (le doigt fait déjà défiler tout seul)
+  box.addEventListener("pointerdown", (e) => {
+    if (e.pointerType !== "mouse" || e.button) return;
+    drag = { x: e.clientX, left: box.scrollLeft, moved: false };
+    box.classList.add("is-dragging");
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 4) drag.moved = true;
+    box.scrollLeft = drag.left - dx;
+  });
+  window.addEventListener("pointerup", () => {
+    if (!drag) return;
+    box.classList.remove("is-dragging");
+    const moved = drag.moved; drag = null;
+    if (moved) box.dataset.dragged = "1";
+    release();
+  });
+  box.addEventListener("click", (e) => { if (box.dataset.dragged) { e.preventDefault(); e.stopPropagation(); delete box.dataset.dragged; } }, true);
+  box.scrollLeft = 1;
+  raf = requestAnimationFrame(frame);
+  marqueeStop = () => { cancelAnimationFrame(raf); };
+}
+function syncMarqueeButton() {
+  const b = document.querySelector("[data-action='marquee-toggle']");
+  if (!b) return;
+  b.setAttribute("aria-pressed", marqueePaused ? "true" : "false");
+  b.querySelector("span").textContent = t(marqueePaused ? "home.citiesPlay" : "home.citiesPause");
+}
 
 /** « Vous avez consulté » : les dernières annonces vues sur cet appareil (défilement horizontal). */
 function recentlyViewedSection() {
@@ -6288,9 +6359,12 @@ const __default = {
     <section class="section cities-section" aria-labelledby="cities-title">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2>
+          <div><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2><p class="muted marquee-hint">${t("home.citiesHint")}</p></div>
+          <button type="button" class="btn btn-ghost btn-sm marquee-toggle" data-action="marquee-toggle" aria-pressed="false">${icon("pause", "i-pause")}${icon("play", "i-play")}<span>${t("home.citiesPause")}</span></button>
         </div>
-        <div class="city-grid">${cities.map((c) => cityLink(c))}</div>
+      </div>
+      <div class="marquee" role="region" aria-labelledby="cities-title">
+        <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
       </div>
     </section>
 
@@ -6377,6 +6451,8 @@ const __default = {
         mapObserver.observe(mapEl);
       } else init();
     }
+    marqueePaused = false;
+    initMarquee(root);
     // Positionne les cartes flottantes sur l'illustration de la Suisse
     root.querySelectorAll(".hero-float").forEach((el) => {
       el.style.setProperty("--x", el.dataset.x + "%");
@@ -6385,6 +6461,8 @@ const __default = {
   },
 
   unmount() {
+    marqueeStop?.();
+    marqueeStop = null;
     mapObserver?.disconnect();
     mapObserver = null;
     homeMap?.remove();
@@ -6407,6 +6485,7 @@ function setHomeMapStyle(id) {
 const homeActions = {
   "home-map-style": (el) => setHomeMapStyle(el.dataset.style),
   "clear-recent": () => clearRecentlyViewed(),
+  "marquee-toggle": () => { marqueePaused = !marqueePaused; syncMarqueeButton(); },
   "scroll-next": () => document.getElementById("home-stats")?.scrollIntoView({ behavior: "smooth", block: "start" }),
 };
 
