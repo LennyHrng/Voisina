@@ -27,8 +27,8 @@
 
   <title>Voisina — L’entraide locale en Suisse</title>
   <meta name="description" content="Voisina met en relation les habitants de Suisse qui souhaitent s’entraider : proposer ou demander un service, donner un objet, près de chez soi. Gratuit, sans publicité et respectueux de la vie privée.">
-  <meta name="theme-color" content="#F6F4EA" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0F1913" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#12372A" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1613" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
 
   <!-- Application installée sur téléphone (Android et iPhone) -->
@@ -57,21 +57,20 @@
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
 
-  <link rel="preload" href="atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="schibsted-grotesk-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Carte : Leaflet (version figée + empreinte SRI = le fichier ne peut pas être modifié par un tiers) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=4.0">
+  <link rel="stylesheet" href="styles.css?v=3.6">
 
   <!-- Applique le thème (clair/sombre) avant l'affichage pour éviter un flash -->
-  <script src="theme-boot.js?v=4.0"></script>
+  <script src="theme-boot.js?v=3.6"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-action="skip">Aller au contenu</a>
 
-  <aside id="demo-banner" class="demo-banner" aria-label="Information" hidden></aside>
+  <div id="demo-banner" class="demo-banner" hidden></div>
   <header id="site-header" class="site-header"></header>
 
   <main id="main" tabindex="-1">
@@ -92,6 +91,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="voisina.js?v=4.0" defer></script>
+  <script src="voisina.js?v=3.6" defer></script>
 </body>
 </html>
