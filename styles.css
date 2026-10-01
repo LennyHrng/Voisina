@@ -2174,7 +2174,7 @@ html[data-text="large"] .cat-grid, html[data-text="xlarge"] .cat-grid, html.text
 .marquee-hint { margin-top: 4px; }
 .marquee-toggle .i-play, .marquee-toggle[aria-pressed="true"] .i-pause { display: none; }
 .marquee-toggle[aria-pressed="true"] .i-play { display: block; }
-@media (max-width: 640px) { .marquee-track > .city-card { width: 210px; } .marquee-toggle span { display: none; } }
+@media (max-width: 640px) { .marquee-track > .city-card { width: 210px; } .marquee-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; } }
 
 
 /* Carte de la Suisse : plus grande, le contour se dessine puis les annonces s'allument et pulsent */

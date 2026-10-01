@@ -6356,14 +6356,14 @@ const __default = {
       </div>
     </section>
 
-    <section class="section cities-section" aria-labelledby="cities-title">
+    <section class="section cities-section">
       <div class="container">
         <div class="section-head">
           <div><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2><p class="muted marquee-hint">${t("home.citiesHint")}</p></div>
           <button type="button" class="btn btn-ghost btn-sm marquee-toggle" data-action="marquee-toggle" aria-pressed="false">${icon("pause", "i-pause")}${icon("play", "i-play")}<span>${t("home.citiesPause")}</span></button>
         </div>
       </div>
-      <div class="marquee" role="region" aria-labelledby="cities-title">
+      <div class="marquee" role="region" aria-label="${t("home.citiesTitle")}">
         <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
       </div>
     </section>
