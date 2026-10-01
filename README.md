@@ -25,12 +25,12 @@ une petite rémunération.
 | **Confiance** | Signalement (annonce, membre, conversation), blocage, conseils de sécurité, numéros d'urgence suisses |
 | **Administration** | Tableau de bord, file de modération des signalements, masquage d'annonces, statistiques par catégorie, réinitialisation de la démo |
 | **Langues** | Français, **allemand, italien** et anglais (détection automatique de la langue du navigateur) |
-| **Design & animations** | Accueil **cinématique** vert anglais (inspiration automobile de luxe) : titres qui se dévoilent ligne par ligne, **carte de la Suisse qui se dessine**, éléments qui apparaissent au défilement, compteurs animés, ruban des villes, téléphone de démonstration animé, en-tête transparent, transitions entre les pages. En haut de la **page d'accueil**, dès qu'un texte arrive à l'écran, il **glisse tout seul jusqu'à sa place** (depuis le côté où il se trouve) et le grand texte **s'allume mot par mot** ; plus bas, tout apparaît simplement avec un **petit fondu** (plus reposant pour la lecture). Les autres pages (annonces, aide, mentions légales…) restent **calmes pour la lecture**. Entre les pages : un fondu doux, l'image d'une carte **s'agrandit** quand on ouvre l'annonce, l'onglet actif **glisse** d'un onglet à l'autre ; sur téléphone l'en-tête **se cache** quand on descend ; **défilement doux** à la molette sur ordinateur. Tout se désactive si l'appareil demande « moins d'animations » (accessibilité) |
+| **Design** | Version 4 : un design **calme, clair et rassurant**, pensé pour tous les âges. Palette vert forêt / crème (le rouge suisse reste un accent rare), polices **Schibsted Grotesk** (titres) et **Atkinson Hyperlegible** (texte, dessinée pour être lisible même avec une vue fatiguée), grands boutons et champs faciles à toucher, une seule animation marquante (la carte de la Suisse qui se dessine). Aucun effet qui bouge pendant la lecture ; tout s'arrête avec « Animations réduites ». |
 | **Accueil** | Carte de la Suisse animée, catégories colorées, **villes populaires**, vraie carte interactive des annonces, étapes « comment ça marche », FAQ, carte de bienvenue à la première visite |
 | **Annonces d'exemple** | 100 annonces fictives variées (au lieu de centaines de copies), présentes dans les 26 cantons et autour d'Yverdon-les-Bains, clairement signalées « Exemple » |
 | **Téléphone** | Conçu **d'abord pour le téléphone**, barre du bas **comme Instagram** (Accueil · Explorer · Publier · Découvrir · Profil, messages en haut à droite) : accueil court avec une rangée de « bulles » (comme les stories), rangées d'annonces qu'on fait glisser, liste compacte avec petite image, peu de texte à la fois. Pensé comme une **vraie application** : barre d'onglets, filtres dans une feuille qui monte du bas, bouton flottant « Carte », photos à faire glisser au doigt (et à agrandir), barre « Contacter » toujours visible sur une annonce, messagerie plein écran, bouton retour, cartes qui ne bloquent pas le défilement, **installation sur l'écran d'accueil** (Android et iPhone, avec mode d'emploi), prise en charge des encoches |
-| **Confort** | Mode sombre, **texte plus grand** (pratique pour les aînés), annonces **vues récemment**, partage WhatsApp / e-mail, **QR code du site à montrer à l'écran**, fonctionne hors ligne (avec message « hors ligne ») |
-| **Accessibilité** | Audit fait sur téléphone : zones à toucher d'au moins **44 px** (recommandation WCAG 2.2), chaque champ a une étiquette lue par les lecteurs d'écran, contrastes du texte vérifiés en mode clair **et** sombre, réglage « moins d'animations » respecté |
+| **Confort d'affichage** | Un bouton « Aa » dans l'en-tête ouvre un panneau : **taille du texte** (normal, grand, très grand), **thème** (automatique, clair, sombre), **contraste renforcé**, **animations réduites**. Les choix sont mémorisés sur l'appareil. Aussi : annonces vues récemment, partage WhatsApp / e-mail, **QR code du site**, **lecture à voix haute d'une annonce** (voix de l'appareil), fonctionne hors ligne. |
+| **Accessibilité** | Contrôlée avec axe-core (aucune erreur) sur téléphone, tablette et ordinateur, en mode clair, sombre et contraste renforcé : zones à toucher d'au moins 44 px, chaque champ a une étiquette, contrastes AA, focus clavier bien visible, lien « Aller au contenu », repères de navigation, texte jusqu'à 130 % sans rien qui déborde. |
 | **Partage** | Belle **image d'aperçu** quand on envoie le lien sur WhatsApp, Teams ou Instagram (JPEG léger, 1200 × 630) |
 | **Légal** | Politique de confidentialité (nLPD), conditions d'utilisation, règles de la communauté, mentions légales, aide/FAQ |
 
@@ -58,9 +58,10 @@ Tous les fichiers sont à la racine (pratique pour les envoyer sur GitHub) :
 
 ```
 index.html        la page (Content Security Policy, balises SEO)
-styles.css        le design (couleurs, thème clair/sombre, version mobile)
+styles.css        le design (couleurs, thème clair/sombre, contraste renforcé, version mobile)
 voisina.js        tout le code JavaScript (routeur, pages, sécurité, traductions FR/DE/IT/EN)
-theme-boot.js     applique le thème et la taille du texte avant l'affichage
+theme-boot.js     applique thème, taille du texte, contraste et animations avant l'affichage
+*.woff2           polices Schibsted Grotesk et Atkinson Hyperlegible (licence OFL), hébergées sur le site
 sw.js             permet d'installer le site comme une application
 SECURITE.md       explications sur la sécurité
 ```
@@ -78,4 +79,4 @@ python3 -m http.server 8000
 > des visiteurs à Google — contraire à la promesse « sans traceur » du site. La carte officielle de la Confédération
 > (swisstopo) est gratuite, précise et hébergée en Suisse ; OpenStreetMap fournit le plan des rues.
 
-Fait avec soin en Suisse. Cartes © swisstopo · © contributeurs OpenStreetMap · Leaflet (BSD-2) · Police Fraunces (OFL).
+Fait avec soin en Suisse. Cartes © swisstopo · © contributeurs OpenStreetMap · Leaflet (BSD-2) · Polices Schibsted Grotesk et Atkinson Hyperlegible (OFL).
