@@ -216,7 +216,7 @@ strong, b { font-weight: 700; }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 10px 20px;
   border-radius: 12px; border: 2px solid transparent;
-  font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none; text-align: center;
+  font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none; text-align: center; white-space: nowrap;
   transition: background 0.15s, border-color 0.15s, transform 0.15s, color 0.15s;
 }
 .btn .icon { width: 19px; height: 19px; }
@@ -735,7 +735,7 @@ strong, b { font-weight: 700; }
 .filters-toggle { display: none; }
 .filter-bar { padding-bottom: 6px; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.filter-select .select { min-height: 42px; width: auto; max-width: 230px; font-size: 0.92rem; font-weight: 600; }
+.filter-select .select { min-height: 46px; width: auto; max-width: min(100%, 22rem); font-size: 1rem; font-weight: 700; }
 .filter-row .segmented { padding: 3px; }
 .filter-row .seg { padding: 7px 12px; }
 .explore-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, 42%); gap: 24px; align-items: start; padding-bottom: 40px; }
@@ -2142,3 +2142,20 @@ h1, h2, h3, .h1, .h2, .h3 { overflow-wrap: break-word; }
 /* Catégories : 7 colonnes seulement si le texte est à sa taille normale */
 @media (min-width: 1200px) { .cat-tile { padding: 16px 14px; } .cat-name { font-size: 1.02rem; } }
 html[data-text="large"] .cat-grid, html[data-text="xlarge"] .cat-grid, html.text-lg .cat-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+
+/* Boutons : le texte long passe à la ligne là où la place manque (allemand, texte très grand) */
+.audience-actions .btn, .welcome-actions .btn, .center-actions .btn, .cta-actions .btn, .dialog-foot .btn, .empty-actions .btn, .hero-quick .btn, .form-actions .btn, .side-actions .btn, .notice .btn { white-space: normal; }
+
+/* Carte de bienvenue sur téléphone : compacte, pour ne pas cacher la page */
+@media (max-width: 980px) {
+  .welcome-card { grid-template-columns: 1fr; padding: 12px 14px; gap: 6px; }
+  .welcome-card .welcome-logo, .welcome-card p { display: none; }
+  .welcome-card h2 { font-size: 1.05rem; padding-right: 44px; }
+  .welcome-actions { margin-top: 2px; }
+  .welcome-actions .btn { min-height: 44px; padding-inline: 10px; font-size: 0.95rem; }
+}
+@media (max-width: 980px) {
+  .welcome-actions { flex-wrap: nowrap; }
+  .welcome-actions .btn { flex: 1 1 0; min-width: 0; font-size: 0.9rem; line-height: 1.15; }
+  .welcome-actions .btn .icon { display: none; }
+}
