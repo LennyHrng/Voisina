@@ -263,6 +263,9 @@ const { raw } = __req("util.js");
 
 const P = {
   search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  volume: '<path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>',
+  pause: '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',
+  textSize: '<path d="M3 20 8.5 5l5.5 15"/><path d="M5.2 15h6.6"/><path d="m15 20 3-8 3 8"/><path d="M16.1 17.2h3.8"/>',
   pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
   map: '<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15"/><path d="M15 6v15"/>',
   heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
@@ -378,6 +381,38 @@ __def("translations.js", function () {
 const fr = {
   // Langues
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Mettre le défilement en pause",
+  "home.citiesPlay": "Relancer le défilement",
+  "home.citiesHint": "Faites glisser pour choisir votre ville.",
+  "listing.listen": "Écouter l'annonce",
+  "listing.stopListening": "Arrêter la lecture",
+  "home.allTitle": "Voisina, c'est pour tout le monde",
+  "home.allSeniorsTitle": "Pour les aînés",
+  "home.allSeniorsText": "Courses, accompagnement chez le médecin, visites, aide informatique. Le texte s'agrandit et le contraste se renforce en un geste.",
+  "home.allSeniorsCta": "Voir l'aide aux aînés",
+  "home.allDisplayCta": "Régler l'affichage",
+  "home.allFamiliesTitle": "Pour les familles",
+  "home.allFamiliesText": "Garde d'enfants, trajets vers l'école, vêtements et jeux à donner. Dès 16 ans, ou plus jeune avec l'accord des parents.",
+  "home.allFamiliesCta": "Voir les annonces pour les familles",
+  "home.allYouthTitle": "Pour les jeunes et les actifs",
+  "home.allYouthText": "Petits jobs, cours particuliers, aide informatique, déménagement : trouvez un coup de main rapide ou proposez vos talents.",
+  "home.allYouthCta": "Voir toutes les annonces",
+  "comfort.title": "Confort d'affichage",
+  "comfort.intro": "Adaptez Voisina à vos yeux et à vos habitudes. Vos choix restent sur cet appareil.",
+  "comfort.text": "Taille du texte",
+  "comfort.size.normal": "Normal",
+  "comfort.size.large": "Grand",
+  "comfort.size.xlarge": "Très grand",
+  "comfort.theme": "Apparence",
+  "comfort.contrast": "Contraste",
+  "comfort.contrast.normal": "Standard",
+  "comfort.contrast.high": "Renforcé",
+  "comfort.motion": "Animations",
+  "comfort.motion.auto": "Normales",
+  "comfort.motion.reduced": "Réduites",
+  "comfort.sample": "Voici un exemple de texte : vérifiez que vous le lisez sans effort.",
+  "comfort.reset": "Tout réinitialiser",
+  "comfort.done": "Terminé",
 
   // Méta
   "meta.homeTitle": "L'entraide locale en Suisse",
@@ -1149,6 +1184,38 @@ const fr = {
 
 const de = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Bewegung anhalten",
+  "home.citiesPlay": "Bewegung fortsetzen",
+  "home.citiesHint": "Wischen Sie, um Ihre Stadt zu wählen.",
+  "listing.listen": "Anzeige vorlesen",
+  "listing.stopListening": "Vorlesen beenden",
+  "home.allTitle": "Voisina ist für alle da",
+  "home.allSeniorsTitle": "Für Seniorinnen und Senioren",
+  "home.allSeniorsText": "Einkäufe, Begleitung zum Arzt, Besuche, Computerhilfe. Die Schrift wird grösser und der Kontrast stärker – mit einem Fingertipp.",
+  "home.allSeniorsCta": "Hilfe für Senioren ansehen",
+  "home.allDisplayCta": "Anzeige anpassen",
+  "home.allFamiliesTitle": "Für Familien",
+  "home.allFamiliesText": "Kinderbetreuung, Schulwege, Kleider und Spielsachen zum Verschenken. Ab 16 Jahren, jünger nur mit Einverständnis der Eltern.",
+  "home.allFamiliesCta": "Anzeigen für Familien ansehen",
+  "home.allYouthTitle": "Für Junge und Berufstätige",
+  "home.allYouthText": "Nebenjobs, Nachhilfe, Computerhilfe, Umzug: Finden Sie schnell eine helfende Hand oder bieten Sie Ihre Talente an.",
+  "home.allYouthCta": "Alle Anzeigen ansehen",
+  "comfort.title": "Anzeige-Komfort",
+  "comfort.intro": "Passen Sie Voisina an Ihre Augen und Gewohnheiten an. Ihre Auswahl bleibt auf diesem Gerät.",
+  "comfort.text": "Schriftgrösse",
+  "comfort.size.normal": "Normal",
+  "comfort.size.large": "Gross",
+  "comfort.size.xlarge": "Sehr gross",
+  "comfort.theme": "Erscheinungsbild",
+  "comfort.contrast": "Kontrast",
+  "comfort.contrast.normal": "Standard",
+  "comfort.contrast.high": "Verstärkt",
+  "comfort.motion": "Animationen",
+  "comfort.motion.auto": "Normal",
+  "comfort.motion.reduced": "Reduziert",
+  "comfort.sample": "Dies ist ein Beispieltext: Prüfen Sie, ob Sie ihn mühelos lesen können.",
+  "comfort.reset": "Alles zurücksetzen",
+  "comfort.done": "Fertig",
   "meta.homeTitle": "Nachbarschaftshilfe in der Schweiz",
   "meta.exploreTitle": "Anzeigen entdecken",
   "meta.messagesTitle": "Nachrichten",
@@ -1869,6 +1936,38 @@ const de = {
 
 const it = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Metti in pausa lo scorrimento",
+  "home.citiesPlay": "Riprendi lo scorrimento",
+  "home.citiesHint": "Scorrete per scegliere la vostra città.",
+  "listing.listen": "Ascolta l'annuncio",
+  "listing.stopListening": "Interrompi la lettura",
+  "home.allTitle": "Voisina è per tutti",
+  "home.allSeniorsTitle": "Per gli anziani",
+  "home.allSeniorsText": "Spesa, accompagnamento dal medico, visite, aiuto informatico. Il testo si ingrandisce e il contrasto aumenta con un tocco.",
+  "home.allSeniorsCta": "Vedi l'aiuto agli anziani",
+  "home.allDisplayCta": "Regola la visualizzazione",
+  "home.allFamiliesTitle": "Per le famiglie",
+  "home.allFamiliesText": "Cura dei bambini, tragitti scolastici, vestiti e giochi da regalare. Dai 16 anni, o prima con il consenso dei genitori.",
+  "home.allFamiliesCta": "Vedi gli annunci per le famiglie",
+  "home.allYouthTitle": "Per i giovani e chi lavora",
+  "home.allYouthText": "Lavoretti, ripetizioni, aiuto informatico, traslochi: trovate un aiuto rapido o offrite i vostri talenti.",
+  "home.allYouthCta": "Vedi tutti gli annunci",
+  "comfort.title": "Comfort di visualizzazione",
+  "comfort.intro": "Adattate Voisina ai vostri occhi e alle vostre abitudini. Le vostre scelte restano su questo dispositivo.",
+  "comfort.text": "Dimensione del testo",
+  "comfort.size.normal": "Normale",
+  "comfort.size.large": "Grande",
+  "comfort.size.xlarge": "Molto grande",
+  "comfort.theme": "Aspetto",
+  "comfort.contrast": "Contrasto",
+  "comfort.contrast.normal": "Standard",
+  "comfort.contrast.high": "Rafforzato",
+  "comfort.motion": "Animazioni",
+  "comfort.motion.auto": "Normali",
+  "comfort.motion.reduced": "Ridotte",
+  "comfort.sample": "Ecco un testo di esempio: verificate di leggerlo senza fatica.",
+  "comfort.reset": "Ripristina tutto",
+  "comfort.done": "Fatto",
   "meta.homeTitle": "L'aiuto tra vicini in Svizzera",
   "meta.exploreTitle": "Esplora gli annunci",
   "meta.messagesTitle": "Messaggi",
@@ -2589,6 +2688,38 @@ const it = {
 
 const en = {
   "lang.fr": "Français", "lang.de": "Deutsch", "lang.it": "Italiano", "lang.en": "English",
+  "home.citiesPause": "Pause scrolling",
+  "home.citiesPlay": "Resume scrolling",
+  "home.citiesHint": "Swipe to choose your city.",
+  "listing.listen": "Listen to the listing",
+  "listing.stopListening": "Stop reading",
+  "home.allTitle": "Voisina is for everyone",
+  "home.allSeniorsTitle": "For seniors",
+  "home.allSeniorsText": "Shopping, rides to the doctor, visits, tech help. Text gets bigger and contrast stronger with one tap.",
+  "home.allSeniorsCta": "See help for seniors",
+  "home.allDisplayCta": "Adjust the display",
+  "home.allFamiliesTitle": "For families",
+  "home.allFamiliesText": "Childcare, school runs, clothes and toys to give away. From age 16, or younger with a parent's consent.",
+  "home.allFamiliesCta": "See listings for families",
+  "home.allYouthTitle": "For young people and busy adults",
+  "home.allYouthText": "Odd jobs, tutoring, tech help, moving: find a quick hand or offer your talents.",
+  "home.allYouthCta": "See all listings",
+  "comfort.title": "Display comfort",
+  "comfort.intro": "Adapt Voisina to your eyes and habits. Your choices stay on this device.",
+  "comfort.text": "Text size",
+  "comfort.size.normal": "Normal",
+  "comfort.size.large": "Large",
+  "comfort.size.xlarge": "Extra large",
+  "comfort.theme": "Appearance",
+  "comfort.contrast": "Contrast",
+  "comfort.contrast.normal": "Standard",
+  "comfort.contrast.high": "High",
+  "comfort.motion": "Animations",
+  "comfort.motion.auto": "Normal",
+  "comfort.motion.reduced": "Reduced",
+  "comfort.sample": "Here is a sample of text: check that you can read it comfortably.",
+  "comfort.reset": "Reset everything",
+  "comfort.done": "Done",
   "meta.homeTitle": "Local mutual aid in Switzerland",
   "meta.exploreTitle": "Explore listings",
   "meta.messagesTitle": "Messages",
@@ -5018,7 +5149,7 @@ const { html, raw, esc, $, mount, initials, avatarTone, debounce, safeImageSrc, 
 const { icon } = __req("icons.js");
 const { t, pick, cantonName, categoryName, fmtCHF, fmtShortDate, fmtDistance, getLang } = __req("i18n.js");
 const { getCategory, searchLocalities, LOCALITIES, CANTON_CODES, COVER_PATTERNS, COVER_TONES } = __req("data.js");
-const { getPerson, isFavorite, REPORT_REASONS, createReport } = __req("store.js");
+const { getPerson, isFavorite, REPORT_REASONS, createReport, getPrefs, setPrefs } = __req("store.js");
 const { distanceKm } = __req("util.js");
 
 /* ------------------------------------------------------------------
@@ -5027,6 +5158,53 @@ const { distanceKm } = __req("util.js");
    ------------------------------------------------------------------ */
 const actions = {};
 function registerActions(map) { Object.assign(actions, map); }
+
+/* ------------------------------------------------------------------
+   CONFORT D'AFFICHAGE (taille du texte, thème, contraste, animations)
+   Les choix sont gardés dans les préférences de l'appareil et appliqués
+   sur <html> (voir aussi theme-boot.js, qui les applique avant l'affichage).
+   ------------------------------------------------------------------ */
+function applyComfort(prefs = getPrefs()) {
+  const r = document.documentElement;
+  r.classList.remove("text-lg");
+  const set = (k, v) => { if (v) r.dataset[k] = v; else delete r.dataset[k]; };
+  set("text", prefs.textSize === "large" || prefs.textSize === "xlarge" ? prefs.textSize : null);
+  set("contrast", prefs.contrast === "high" ? "high" : null);
+  set("motion", prefs.motion === "reduced" || prefs.motion === "full" ? prefs.motion : null);
+  if (prefs.theme === "dark" || prefs.theme === "light") r.setAttribute("data-theme", prefs.theme);
+  else r.removeAttribute("data-theme");
+}
+
+/** Les 4 réglages, sous forme de boutons à choix (identiques dans la fenêtre « Confort » et dans « Mon compte »). */
+function comfortFields(prefs = getPrefs()) {
+  const theme = prefs.theme === "dark" || prefs.theme === "light" ? prefs.theme : "system";
+  const size = prefs.textSize === "large" || prefs.textSize === "xlarge" ? prefs.textSize : "normal";
+  const contrast = prefs.contrast === "high" ? "high" : "normal";
+  const motion = prefs.motion === "reduced" ? "reduced" : "auto";
+  const group = (name, legend, current, options) => html`<fieldset class="field comfort-field"><legend class="field-label">${legend}</legend>
+    <div class="segmented segmented-block comfort-seg comfort-seg-${options.length}">
+      ${options.map(([value, label, extra]) => html`<label class="seg-radio"><input type="radio" name="${name}" value="${value}" ${current === value ? raw("checked") : ""}><span>${extra || ""}${label}</span></label>`)}
+    </div></fieldset>`;
+  return html`
+    ${group("textSize", t("comfort.text"), size, [["normal", t("comfort.size.normal"), html`<b class="cs cs-1" aria-hidden="true">A</b>`], ["large", t("comfort.size.large"), html`<b class="cs cs-2" aria-hidden="true">A</b>`], ["xlarge", t("comfort.size.xlarge"), html`<b class="cs cs-3" aria-hidden="true">A</b>`]])}
+    ${group("theme", t("comfort.theme"), theme, [["system", t("theme.system"), icon("laptop")], ["light", t("theme.light"), icon("sun")], ["dark", t("theme.dark"), icon("moon")]])}
+    ${group("contrast", t("comfort.contrast"), contrast, [["normal", t("comfort.contrast.normal")], ["high", t("comfort.contrast.high")]])}
+    ${group("motion", t("comfort.motion"), motion, [["auto", t("comfort.motion.auto")], ["reduced", t("comfort.motion.reduced")]])}`;
+}
+
+/** À appeler quand un de ces réglages change. Renvoie vrai si le champ en faisait partie. */
+function handleComfortChange(el) {
+  const k = el?.name;
+  if (!["textSize", "theme", "contrast", "motion"].includes(k)) return false;
+  const v = el.value;
+  const patch = {};
+  if (k === "theme") patch.theme = v === "system" ? null : v;
+  else patch[k] = v;
+  setPrefs(patch);
+  applyComfort();
+  window.dispatchEvent(new Event("voisina:theme"));
+  return true;
+}
 
 /* ----------------------------- Toasts ----------------------------- */
 function toast(message, kind = "info") {
@@ -5087,7 +5265,7 @@ function listingTitle(l) { return pick(l.title); }
 function listingDescription(l) { return pick(l.description); }
 
 /** Carte d'annonce utilisée partout (accueil, recherche, favoris…). */
-function listingCard(l, { distance = null, origin = null } = {}) {
+function listingCard(l, { distance = null, origin = null, level = 3 } = {}) {
   const author = getPerson(l.authorId);
   const fav = isFavorite(l.id);
   const d = distance ?? (origin ? distanceKm(origin, l) : null);
@@ -5105,7 +5283,7 @@ function listingCard(l, { distance = null, origin = null } = {}) {
     <div class="listing-card-body">
       <span class="card-type chip chip-type type-${l.type}">${typeLabel(l.type)}</span>
       <div class="listing-card-cat">${icon(getCategory(l.category).icon)}${categoryName(l.category)}</div>
-      <h3 class="listing-card-title"><a href="#/annonce/${l.id}" class="stretched">${title}</a></h3>
+      <h3 class="listing-card-title" aria-level="${level}"><a href="#/annonce/${l.id}" class="stretched">${title}</a></h3>
       <div class="listing-card-meta">
         <span>${icon("pin")}${l.city} · ${l.canton}</span>
         ${d !== null ? html`<span class="distance">${fmtDistance(d)}</span>` : ""}
@@ -5122,7 +5300,7 @@ function listingCard(l, { distance = null, origin = null } = {}) {
 function emptyState({ iconName = "inbox", title, text = "", action = "" }) {
   return html`<div class="empty-state">
     <div class="empty-icon">${icon(iconName)}</div>
-    <h3>${title}</h3>
+    <h2 class="h3">${title}</h2>
     ${text ? html`<p>${text}</p>` : ""}
     ${action}
   </div>`;
@@ -5396,7 +5574,7 @@ function langChips(name, selected = []) {
 
 
 
-return { registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
+return { applyComfort, comfortFields, handleComfortChange, registerActions, toast, avatar, priceLabel, scheduleLabel, coverStyle, categoryThumb, listingTitle, listingDescription, listingCard, emptyState, stars, openDialog, closeDialog, initDialog, confirmDialog, reportDialog, shareLink, initLocalityFields, localityField, langChips, actions, typeLabel, esc, getLang };
 });
 __def("qr-site.js", function () {
 /* QR code du site (généré une fois à partir de l'adresse officielle, avec correction d'erreurs élevée).
@@ -5409,60 +5587,27 @@ return { SITE_URL, SITE_LABEL, QR_SVG };
 });
 __def("motion.js", function () {
 /* =====================================================================
-   MOUVEMENT — animations douces, inspirées des sites « premium »
+   MOUVEMENT — sobre et reposant
    ---------------------------------------------------------------------
-   Apparitions (une seule fois, quand on arrive dessus) :
-   - [data-reveal]        : l'élément apparaît en glissant ("left", "right", "zoom", "fade")
-   - [data-stagger]       : les enfants apparaissent l'un après l'autre
-   - [data-countup="100"] : le nombre défile de 0 à la valeur
-   - [data-slide="left|right|up"] : en haut de la page d'accueil, dès qu'il arrive à
-                            l'écran, le texte glisse tout seul jusqu'à sa place depuis le côté
-                            où il se trouve. Plus bas : un simple petit fondu (plus reposant).
-   - [data-words]         : le texte « s'allume » mot par mot, tout seul
-   Effet lié au défilement :
-   - [data-parallax=".1"] : léger effet de profondeur
-   Autres détails :
-   - les cartes d'annonces de l'accueil apparaissent l'une après l'autre
-   - sur téléphone, l'en-tête se cache quand on descend et revient quand on remonte
-   - sur ordinateur, les grands boutons sont « aimantés » par la souris
-   + en-tête transparent sur l'accueil, barre de progression de lecture.
-   Tout est désactivé si l'appareil demande « moins d'animations » (accessibilité).
-   Seules transform et opacity sont animées : fluide même sur un petit téléphone.
+   Voisina s'adresse à tous les âges : pas d'effets qui bougent pendant la
+   lecture. Il ne reste que deux détails utiles :
+   - [data-countup="100"] : le nombre défile de 0 à la valeur (une seule fois)
+   - [data-parallax] n'est plus utilisé
+   Tout est coupé si l'appareil demande « moins d'animations » ou si la
+   personne l'a choisi dans « Confort d'affichage » (html[data-motion="reduced"]).
    ===================================================================== */
 const { fmtNumber } = __req("i18n.js");
 
 const root = document.documentElement;
-let revealIO = null;
 let countIO = null;
-let parallaxEls = [];
-let ticking = false;
-let lastY = 0;
-let progressBar = null;
-let canSlide = false;
 
-const reducedMotion = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-
-/* Page d'accueil uniquement : chaque texte arrive du côté où il se trouve.
-   - texte dans la colonne de gauche → il arrive de la gauche
-   - bouton ou élément à droite      → il arrive de la droite
-   - titre centré                    → il monte doucement
-   (Les autres pages restent calmes : pas d'animation pendant la lecture.) */
-const HOME_SLIDE = [
-  // Seulement le haut de la page : c'est là que l'effet a le plus de force
-  [".showcase-text > .kicker, .showcase-text > h2, .showcase-text > .lead", "left"],
-  [".showcase-text > .btn", "up"],
-];
-/* Plus bas, on reste discret : les textes apparaissent une seule fois, avec un petit fondu qui monte. */
-const HOME_SOFT = [
-  ".section-head > div", ".section-head > .btn", ".map-showcase-text > *", ".map-showcase-map",
-  ".trust-intro > *", ".faq-wrap > div:first-child > *", ".cta-inner > div:not(.cta-actions) > *", ".cta-actions",
-].join(",");
-const inHome = (el) => !!el.closest?.('.page[data-route="home"]');
+const reducedMotion = () => root.dataset.motion === "reduced" || (root.dataset.motion !== "full" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
 
 function animateCount(el) {
   const target = Number(el.dataset.countup);
   if (!Number.isFinite(target)) return;
-  const duration = 1400;
+  if (reducedMotion()) { el.textContent = fmtNumber(target); return; }
+  const duration = 1100;
   const t0 = performance.now();
   const step = (now) => {
     const p = Math.min(1, (now - t0) / duration);
@@ -5474,128 +5619,15 @@ function animateCount(el) {
   requestAnimationFrame(step);
 }
 
-/** Découpe un paragraphe en mots (pour l'effet « le texte s'allume »). Le texte reste lisible par les lecteurs d'écran. */
-function splitWords(el) {
-  if (el.dataset.split) return;
-  el.dataset.split = "1";
-  const words = el.textContent.trim().split(/\s+/);
-  el.setAttribute("aria-label", el.textContent.trim().replace(/\s+/g, " "));
-  el.textContent = "";
-  words.forEach((w, i) => {
-    const s = document.createElement("span");
-    s.className = "w";
-    s.style.setProperty("--wi", String(i));
-    s.setAttribute("aria-hidden", "true");
-    s.textContent = w;
-    el.appendChild(s);
-    if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
-  });
-}
-
-/** Cherche les éléments animés dans un bout de page (appelé aussi quand la page change). */
+/** Cherche les compteurs dans un bout de page (appelé aussi quand la page change). */
 function scan(node = document) {
-  if (!node.querySelectorAll) return;
-  const pick = (sel) => [...(node.matches?.(sel) ? [node] : []), ...node.querySelectorAll(sel)];
-  if (revealIO) {
-    pick("[data-reveal], [data-stagger]").forEach((el) => {
-      if (el.dataset.stagger !== undefined) [...el.children].forEach((c, i) => c.style.setProperty("--i", String(Math.min(i, 10))));
-      if (!el.classList.contains("is-in")) revealIO.observe(el);
-    });
-    pick("[data-countup]").forEach((el) => { if (!el.dataset.counted) countIO.observe(el); });
-  }
-  if (!reducedMotion()) {
-    if (canSlide) {
-      for (const [sel, dir] of HOME_SLIDE) {
-        pick(sel).forEach((el) => {
-          if (el.dataset.slide === undefined && inHome(el) && !el.closest("[data-no-slide], [data-reveal], [data-stagger], dialog")) el.dataset.slide = dir;
-        });
-      }
-    }
-    // Dès qu'il arrive à l'écran, le texte glisse jusqu'à sa place tout seul (une seule fois)
-    if (revealIO) {
-      pick("[data-slide], [data-words]").forEach((el) => {
-        if (!inHome(el) || el.classList.contains("is-in")) return;
-        if (el.dataset.words !== undefined) splitWords(el);
-        revealIO.observe(el);
-      });
-    }
-    // Bas de l'accueil : apparition douce, une seule fois
-    if (revealIO) {
-      pick(HOME_SOFT).forEach((el) => {
-        if (!inHome(el) || el.dataset.slide !== undefined || el.closest("[data-stagger], [data-slide]")) return;
-        if (el.dataset.reveal === undefined || el.dataset.reveal === "right") el.dataset.reveal = "soft";
-        if (!el.classList.contains("is-in")) revealIO.observe(el);
-      });
-    }
-    // Cartes d'annonces de l'accueil : elles apparaissent l'une après l'autre (une seule fois)
-    if (revealIO) {
-      pick(".listing-card").forEach((el) => {
-        if (!inHome(el) || el.dataset.reveal !== undefined || el.closest("[data-stagger], [data-reveal]")) return;
-        el.dataset.reveal = "card";
-        const sibs = el.parentElement ? [...el.parentElement.children] : [];
-        el.style.setProperty("--i", String(Math.max(0, sibs.indexOf(el)) % 4));
-        revealIO.observe(el);
-      });
-    }
-  }
-  const par = pick("[data-parallax]");
-  if (par.length) parallaxEls = [...parallaxEls.filter((el) => el.isConnected), ...par];
-  requestTick();
-}
-
-
-function onScroll() {
-  ticking = false;
-  const y = window.scrollY;
-  const vh = window.innerHeight;
-  const maxY = Math.max(0, root.scrollHeight - vh);
-  root.classList.toggle("is-scrolled", y > 12);
-  // Téléphone : l'en-tête se cache quand on descend, revient dès qu'on remonte
-  if (y > 160 && y > lastY + 6) root.classList.add("hdr-hide");
-  else if (y < lastY - 6 || y <= 160) root.classList.remove("hdr-hide");
-  if (Math.abs(y - lastY) > 6 || y <= 160) lastY = y;
-  if (progressBar) progressBar.style.transform = `scaleX(${maxY > 40 ? Math.min(1, y / maxY) : 0})`;
-  if (reducedMotion()) return;
-
-  // Parallaxe
-  parallaxEls = parallaxEls.filter((el) => el.isConnected);
-  for (const el of parallaxEls) {
-    const r = el.getBoundingClientRect();
-    if (r.bottom < -200 || r.top > vh + 200) continue;
-    const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.parallax || 0);
-    el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
-  }
-}
-
-function requestTick() {
-  if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  if (!countIO || !node.querySelectorAll) return;
+  const els = [...(node.matches?.("[data-countup]") ? [node] : []), ...node.querySelectorAll("[data-countup]")];
+  els.forEach((el) => { if (!el.dataset.counted) countIO.observe(el); });
 }
 
 function initMotion() {
-  progressBar = document.createElement("div");
-  progressBar.className = "scroll-progress";
-  progressBar.setAttribute("aria-hidden", "true");
-  document.body.appendChild(progressBar);
-  window.addEventListener("scroll", requestTick, { passive: true });
-  window.addEventListener("resize", requestTick, { passive: true });
-  window.addEventListener("load", requestTick);
-  // Le glissement horizontal a besoin de « overflow: clip » (sinon la page pourrait déborder sur le côté)
-  canSlide = !!window.CSS?.supports?.("overflow", "clip");
-  root.classList.toggle("can-slide", canSlide);
-
-  if (reducedMotion() || !("IntersectionObserver" in window)) {
-    root.classList.add("motion-off");
-    requestTick();
-    return;
-  }
-  root.classList.add("js-motion");
-  revealIO = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (!e.isIntersecting) continue;
-      e.target.classList.add("is-in");
-      revealIO.unobserve(e.target);
-    }
-  }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+  if (!("IntersectionObserver" in window)) return;
   countIO = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (!e.isIntersecting) continue;
@@ -5604,7 +5636,6 @@ function initMotion() {
       countIO.unobserve(e.target);
     }
   }, { threshold: 0.4 });
-
   // Les pages sont redessinées sans rechargement : on surveille les nouveaux éléments
   const view = document.getElementById("view");
   if (view && "MutationObserver" in window) {
@@ -5613,107 +5644,14 @@ function initMotion() {
     }).observe(view, { childList: true, subtree: true });
   }
   scan(document);
-  requestTick();
-  initMagnetic();
-}
-
-/* Grands boutons « aimantés » (ordinateur) : ils suivent un peu la souris, puis reviennent en place. */
-function initMagnetic() {
-  if (!window.matchMedia?.("(pointer: fine) and (hover: hover)").matches) return;
-  const SEL = ".btn-lg, .btn-cta, .btn-lime";
-  let current = null;
-  document.addEventListener("pointermove", (e) => {
-    const btn = e.target.closest?.(SEL);
-    if (current && current !== btn) { current.style.transform = ""; current.classList.remove("is-magnet"); current = null; }
-    if (!btn || btn.disabled || reducedMotion()) return;
-    const r = btn.getBoundingClientRect();
-    const dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
-    const dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
-    btn.classList.add("is-magnet");
-    btn.style.transform = `translate3d(${(dx * 6).toFixed(1)}px, ${(dy * 4).toFixed(1)}px, 0)`;
-    current = btn;
-  }, { passive: true });
-  document.addEventListener("pointerleave", () => { if (current) { current.style.transform = ""; current.classList.remove("is-magnet"); current = null; } });
 }
 
 return { scan, initMotion, reducedMotion };
 });
 __def("smooth.js", function () {
-/* =====================================================================
-   DÉFILEMENT DOUX (ordinateur uniquement)
-   ---------------------------------------------------------------------
-   Avec une souris, chaque cran de molette fait un petit saut. Ici, la page
-   glisse jusqu'à la bonne position avec un léger amorti, comme sur les
-   sites « premium ». Le défilement reste celui du navigateur (clavier,
-   barre de défilement, liens…), on ne fait que lisser la molette.
-   Désactivé : sur écran tactile, si l'appareil demande « moins d'animations »,
-   au-dessus d'une carte, d'une fenêtre ou d'une zone qui défile toute seule.
-   ===================================================================== */
-const EASE = 0.12;
-let target = 0;
-let current = 0;
-let running = false;
-let last = 0;
-let ours = false;
-
-const maxScroll = () => Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-
-/** Vrai si la molette doit faire défiler un élément intérieur (liste, carte, fenêtre…) plutôt que la page. */
-function insideScrollable(el, dy) {
-  for (let e = el; e && e !== document.body && e !== document.documentElement; e = e.parentElement) {
-    if (e.matches?.(".leaflet-container, .map, dialog, [data-no-smooth], .reels-stage, .chat-messages")) return true;
-    const s = getComputedStyle(e);
-    if (/(auto|scroll)/.test(s.overflowY) && e.scrollHeight > e.clientHeight + 1) {
-      if ((dy < 0 && e.scrollTop > 0) || (dy > 0 && e.scrollTop + e.clientHeight < e.scrollHeight - 1)) return true;
-    }
-  }
-  return false;
-}
-
-function frame(now) {
-  const dt = Math.min(64, now - (last || now)) || 16.7;
-  last = now;
-  const k = 1 - Math.pow(1 - EASE, dt / 16.7);
-  current += (target - current) * k;
-  if (Math.abs(target - current) < 0.4) current = target;
-  ours = true;
-  window.scrollTo({ top: current, behavior: "instant" });
-  if (current !== target) requestAnimationFrame(frame);
-  else { running = false; last = 0; }
-}
-
-function stop() { running = false; target = current = window.scrollY; }
-
-function initSmoothScroll() {
-  const fine = window.matchMedia?.("(pointer: fine) and (hover: hover)");
-  const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  if (!fine?.matches || reduce?.matches) return;
-  target = current = window.scrollY;
-
-  window.addEventListener("wheel", (e) => {
-    if (e.defaultPrevented || e.ctrlKey || e.metaKey || !fine.matches || reduce.matches) return;
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // défilement horizontal : on laisse faire
-    if (document.documentElement.classList.contains("reels-lock") || document.querySelector("dialog[open]")) return;
-    let dy = e.deltaY;
-    if (e.deltaMode === 1) dy *= 32;
-    else if (e.deltaMode === 2) dy *= window.innerHeight;
-    if (insideScrollable(e.target, dy)) return;
-    e.preventDefault();
-    if (!running) { target = current = window.scrollY; }
-    target = Math.max(0, Math.min(maxScroll(), target + dy));
-    if (!running) { running = true; requestAnimationFrame(frame); }
-  }, { passive: false });
-
-  // Défilement venu d'ailleurs (clavier, barre, lien, changement de page) : on se recale
-  window.addEventListener("scroll", () => {
-    if (ours) { ours = false; return; }
-    if (!running) target = current = window.scrollY;
-  }, { passive: true });
-  window.addEventListener("hashchange", stop);
-  window.addEventListener("keydown", (e) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) stop(); });
-  window.addEventListener("pointerdown", () => { if (running) stop(); });
-}
-
+/* Défilement : on garde celui du navigateur (clavier, barre, tactile), plus prévisible
+   pour tout le monde. Le « défilement lissé » à la molette a été retiré. */
+function initSmoothScroll() {}
 return { initSmoothScroll };
 });
 __def("map.js", function () {
@@ -6113,6 +6051,7 @@ const { CATEGORIES, getCategory, findLocality } = __req("data.js");
 const { distanceKm } = __req("util.js");
 const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite, getRecentlyViewed, clearRecentlyViewed } = __req("store.js");
 const { createMap, listingsLayer, fitSwitzerland, getMapStyle, saveMapStyle } = __req("map.js");
+const { reducedMotion } = __req("motion.js");
 const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
 
@@ -6127,7 +6066,7 @@ function heroCards(listings) {
       if (!l) return "";
       const [x, y] = project(l.lng, l.lat);
       const cat = getCategory(l.category);
-      return html`<a class="hero-float hero-float-${i} side-${side}" href="#/annonce/${l.id}" data-x="${((x / VIEW_W) * 100).toFixed(1)}" data-y="${((y / VIEW_H) * 100).toFixed(1)}">
+      return html`<a class="hero-float hero-float-${i} side-${side}" href="#/annonce/${l.id}" tabindex="-1" data-x="${((x / VIEW_W) * 100).toFixed(1)}" data-y="${((y / VIEW_H) * 100).toFixed(1)}">
         <span class="hero-float-icon tone-${cat.tone}">${icon(cat.icon)}</span>
         <span class="hero-float-text"><strong>${listingTitle(l)}</strong><span>${l.city} · ${priceLabel(l)}</span></span>
       </a>`;
@@ -6144,10 +6083,66 @@ function stories() {
     <a class="story story-discover" href="#/decouvrir"><span class="story-ring"><span class="story-bubble">${icon("play")}</span></span><span class="story-label">${t("discover.title")}</span></a>
     <button type="button" class="story story-near" data-action="locate"><span class="story-ring"><span class="story-bubble">${icon("locate")}</span></span><span class="story-label">${t("home.storyNear")}</span></button>
     <a class="story story-map" href="#/explorer?view=map"><span class="story-ring"><span class="story-bubble">${icon("map")}</span></span><span class="story-label">${t("explore.map")}</span></a>
-    ${CATEGORIES.map((c) => html`<a class="story tv-${c.tone}" href="#/explorer?cat=${c.id}"><span class="story-ring"><span class="story-bubble">${icon(c.icon)}</span></span><span class="story-label">${categoryName(c.id)}</span></a>`)}
   </nav>`;
 }
 let mapObserver = null;
+
+/* Ruban des villes : il défile tout seul (doucement), se fait glisser au doigt ou à la souris,
+   s'arrête dès qu'on le touche, et un bouton permet de le mettre en pause. */
+let marqueeStop = null;
+let marqueePaused = false;
+function initMarquee(root) {
+  const box = root.querySelector(".marquee");
+  const track = box?.querySelector(".marquee-track");
+  if (!box || !track) return;
+  const half = () => track.scrollWidth / 2;
+  let raf = 0, last = 0, hold = false, resumeAt = 0, drag = null;
+  const auto = () => !marqueePaused && !reducedMotion();
+  const wrap = () => { const h = half(); if (h > 0) { if (box.scrollLeft >= h) box.scrollLeft -= h; else if (box.scrollLeft <= 0) box.scrollLeft += h; } };
+  const frame = (now) => {
+    const dt = Math.min(64, now - (last || now)); last = now;
+    if (auto() && !hold && now > resumeAt) box.scrollLeft += dt * 0.035;
+    wrap();
+    raf = requestAnimationFrame(frame);
+  };
+  const pause = (ms = 2500) => { hold = true; resumeAt = performance.now() + ms; };
+  const release = () => { hold = false; resumeAt = performance.now() + 1500; };
+  box.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hold = true; });
+  box.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse" && !drag) release(); });
+  box.addEventListener("focusin", () => { hold = true; });
+  box.addEventListener("focusout", release);
+  box.addEventListener("touchstart", () => pause(4000), { passive: true });
+  box.addEventListener("wheel", () => pause(2500), { passive: true });
+  // Glisser avec la souris (le doigt fait déjà défiler tout seul)
+  box.addEventListener("pointerdown", (e) => {
+    if (e.pointerType !== "mouse" || e.button) return;
+    drag = { x: e.clientX, left: box.scrollLeft, moved: false };
+    box.classList.add("is-dragging");
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 4) drag.moved = true;
+    box.scrollLeft = drag.left - dx;
+  });
+  window.addEventListener("pointerup", () => {
+    if (!drag) return;
+    box.classList.remove("is-dragging");
+    const moved = drag.moved; drag = null;
+    if (moved) box.dataset.dragged = "1";
+    release();
+  });
+  box.addEventListener("click", (e) => { if (box.dataset.dragged) { e.preventDefault(); e.stopPropagation(); delete box.dataset.dragged; } }, true);
+  box.scrollLeft = 1;
+  raf = requestAnimationFrame(frame);
+  marqueeStop = () => { cancelAnimationFrame(raf); };
+}
+function syncMarqueeButton() {
+  const b = document.querySelector("[data-action='marquee-toggle']");
+  if (!b) return;
+  b.setAttribute("aria-pressed", marqueePaused ? "true" : "false");
+  b.querySelector("span").textContent = t(marqueePaused ? "home.citiesPlay" : "home.citiesPause");
+}
 
 /** « Vous avez consulté » : les dernières annonces vues sur cet appareil (défilement horizontal). */
 function recentlyViewedSection() {
@@ -6197,25 +6192,18 @@ const __default = {
     });
 
     return html`
-    <section class="hero hero-cine">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="aurora a1"></span>
-        <span class="aurora a2"></span>
-        <span class="aurora a3"></span>
-        <span class="hero-lines"></span>
-      </div>
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow-line"><span aria-hidden="true"></span>${t("home.eyebrow")}</p>
-          <h1 class="display hero-title">
-            <span class="line"><span>${t("home.title1")}</span></span>
-            <span class="line"><span>${t("home.title2")}</span></span>
-            <span class="line"><em>${t("home.title3")}</em></span>
+          <h1 class="display hero-title" id="hero-title">
+            <span class="line">${t("home.title1")}</span>
+            <span class="line">${t("home.title2")}</span>
+            <span class="line">${t("home.title3")}</span>
           </h1>
-          <p class="lead hero-fade">${t("home.lead")}</p>
-          <p class="lead-short hero-fade">${t("home.leadShort")}</p>
+          <p class="lead">${t("home.lead")}</p>
+          <p class="lead-short">${t("home.leadShort")}</p>
 
-          <form class="hero-search hero-fade" data-form="hero-search" role="search">
+          <form class="hero-search" data-form="hero-search" role="search">
             <div class="field">
               <label class="sr-only" for="hero-q">${t("search.what")}</label>
               <div class="input-icon">${icon("search")}<input id="hero-q" class="input" type="search" name="q" placeholder="${t("search.whatPhShort")}" maxlength="80" enterkeyhint="search" autocomplete="off"></div>
@@ -6223,25 +6211,24 @@ const __default = {
             ${localityField({ name: "where", placeholder: origin?.label || t("search.wherePh") })}
             <button class="btn btn-primary btn-lg" type="submit">${t("search.submit")}</button>
           </form>
-          <div class="hero-quick hero-fade">
-            <a class="btn btn-lime" href="#/decouvrir">${icon("play")}${t("home.heroDiscover")}</a>
-            <button type="button" class="btn btn-glass" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
+          <div class="hero-quick">
+            <a class="btn btn-ghost" href="#/decouvrir">${icon("play")}${t("home.heroDiscover")}</a>
+            <button type="button" class="btn btn-ghost" data-action="locate">${icon("locate")}${t("search.nearMe")}</button>
           </div>
           ${stories()}
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-map" data-parallax="-0.06">
+          <div class="hero-map">
             ${swissMapSvg(dots)}
             ${heroCards(listings)}
           </div>
         </div>
       </div>
-      <button type="button" class="scroll-cue" data-action="scroll-next" aria-label="${t("home.scroll")}"><span>${t("home.scroll")}</span><i aria-hidden="true"></i></button>
     </section>
 
     <section class="stats-band" id="home-stats" aria-label="${t("home.statsLabel")}">
-      <div class="container stats-grid" data-stagger>
+      <div class="container stats-grid">
         <div class="stat"><strong data-countup="${s.active}">${fmtNumber(s.active)}</strong><span>${t("home.statListings")}</span></div>
         <div class="stat"><strong data-countup="26">26</strong><span>${t("home.statCantons")}</span></div>
         <div class="stat"><strong data-countup="4">4</strong><span>${t("home.statLangs")}</span></div>
@@ -6249,45 +6236,15 @@ const __default = {
       </div>
     </section>
 
-    <section class="section statement-section" aria-labelledby="statement-kicker">
-      <div class="container statement-wrap">
-        <span class="kicker" id="statement-kicker" data-slide="left">${t("home.statementKicker")}</span>
-        <p class="statement" data-words data-slide="right">${t("home.statement")}</p>
-      </div>
-    </section>
-
-    <section class="section showcase" aria-labelledby="showcase-title">
-      <div class="container showcase-grid">
-        <div class="showcase-text">
-          <span class="kicker">${t("discover.kicker")}</span>
-          <h2 class="h2 showcase-title" id="showcase-title">${t("home.showcaseTitle1")} <em>${t("home.showcaseTitle2")}</em></h2>
-          <p class="lead">${t("discover.promoText")}</p>
-          <ul class="showcase-points" data-stagger>
-            <li>${icon("pointer")}<span>${t("home.showcase1")}</span></li>
-            <li>${icon("heart")}<span>${t("home.showcase2")}</span></li>
-            <li>${icon("pin")}<span>${t("home.showcase3")}</span></li>
-          </ul>
-          <a class="btn btn-primary btn-lg" href="#/decouvrir">${icon("play")}${t("discover.start")}</a>
-        </div>
-        <a class="showcase-phone" href="#/decouvrir" data-reveal="zoom" aria-label="${t("discover.title")}">
-          <span class="phone" aria-hidden="true">
-            <span class="phone-notch"></span>
-            <span class="phone-screen"><span class="phone-feed">${phoneCards}${phoneCards.slice(0, 1)}</span></span>
-            <span class="phone-hand">${icon("pointer")}</span>
-          </span>
-        </a>
-      </div>
-    </section>
-
     ${recentlyViewedSection()}
 
-    <section class="section home-cats section-alt">
+    <section class="section home-cats" aria-labelledby="cats-title">
       <div class="container">
         <div class="section-head">
-          <div><span class="kicker">${t("home.catKicker")}</span><h2 class="h2">${t("home.catTitle")}</h2></div>
-          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
+          <h2 class="h2" id="cats-title">${t("home.catTitle")}</h2>
+          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}</a>
         </div>
-        <div class="cat-grid" data-stagger>
+        <div class="cat-grid">
           ${CATEGORIES.map((c) => html`<a class="cat-tile tv-${c.tone}" href="#/explorer?cat=${c.id}">
             <span class="cat-icon">${icon(c.icon)}</span>
             <span class="cat-name">${categoryName(c.id)}</span>
@@ -6297,11 +6254,11 @@ const __default = {
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt" aria-labelledby="recent-title">
       <div class="container">
         <div class="section-head">
-          <div><span class="kicker">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentKicker")}</span><h2 class="h2">${t("home.recentTitle")}</h2></div>
-          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}${icon("arrowRight")}</a>
+          <h2 class="h2" id="recent-title">${origin ? t("home.nearKicker", { place: origin.label }) : t("home.recentTitle")}</h2>
+          <a class="btn btn-ghost" href="#/explorer">${t("home.seeAll")}</a>
         </div>
         <div class="listing-grid home-feed">
           ${recent.map(({ listing, distance }) => listingCard(listing, { distance }))}
@@ -6309,21 +6266,82 @@ const __default = {
       </div>
     </section>
 
-    <section class="section cities-section section-alt" aria-labelledby="cities-title">
+    <section class="section how" id="how" aria-labelledby="how-title">
       <div class="container">
-        <div class="section-head">
-          <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2></div>
+        <div class="section-head center">
+          <h2 class="h2" id="how-title">${t("home.howTitle")}</h2>
         </div>
-      </div>
-      <div class="marquee" data-reveal="fade">
-        <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
+        <ol class="steps">
+          ${[["pencil", 1], ["message", 2], ["hand", 3]].map(([ic, n]) => html`<li class="step">
+            <span class="step-num" aria-hidden="true">${n}</span>
+            <span class="step-icon">${icon(ic)}</span>
+            <h3>${t(`home.step${n}Title`)}</h3>
+            <p>${t(`home.step${n}Text`)}</p>
+          </li>`)}
+        </ol>
+        <div class="center-actions">
+          <a class="btn btn-primary btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+          <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
+        </div>
       </div>
     </section>
 
-    <section class="section section-map" aria-labelledby="map-title">
+    <section class="section section-alt audiences" aria-labelledby="all-title">
+      <div class="container">
+        <div class="section-head center">
+          <h2 class="h2" id="all-title">${t("home.allTitle")}</h2>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card tv-2">
+            <span class="audience-icon">${icon("armchair")}</span>
+            <h3>${t("home.allSeniorsTitle")}</h3>
+            <p>${t("home.allSeniorsText")}</p>
+            <div class="audience-actions">
+              <a class="btn btn-ghost btn-sm" href="#/explorer?cat=seniors">${t("home.allSeniorsCta")}</a>
+              <button type="button" class="link-btn" data-action="open-comfort">${icon("textSize")}${t("home.allDisplayCta")}</button>
+            </div>
+          </article>
+          <article class="audience-card tv-3">
+            <span class="audience-icon">${icon("smile")}</span>
+            <h3>${t("home.allFamiliesTitle")}</h3>
+            <p>${t("home.allFamiliesText")}</p>
+            <div class="audience-actions"><a class="btn btn-ghost btn-sm" href="#/explorer?cat=family">${t("home.allFamiliesCta")}</a></div>
+          </article>
+          <article class="audience-card tv-5">
+            <span class="audience-icon">${icon("zap")}</span>
+            <h3>${t("home.allYouthTitle")}</h3>
+            <p>${t("home.allYouthText")}</p>
+            <div class="audience-actions"><a class="btn btn-ghost btn-sm" href="#/explorer">${t("home.allYouthCta")}</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section showcase" aria-labelledby="showcase-title">
+      <div class="container showcase-grid">
+        <div class="showcase-text">
+          <h2 class="h2 showcase-title" id="showcase-title">${t("home.showcaseTitle1")} ${t("home.showcaseTitle2")}</h2>
+          <p class="lead">${t("discover.promoText")}</p>
+          <ul class="showcase-points">
+            <li>${icon("pointer")}<span>${t("home.showcase1")}</span></li>
+            <li>${icon("heart")}<span>${t("home.showcase2")}</span></li>
+            <li>${icon("pin")}<span>${t("home.showcase3")}</span></li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="#/decouvrir">${icon("play")}${t("discover.start")}</a>
+        </div>
+        <a class="showcase-phone" href="#/decouvrir" aria-label="${t("discover.title")}">
+          <span class="phone" aria-hidden="true">
+            <span class="phone-notch"></span>
+            <span class="phone-screen"><span class="phone-feed">${phoneCards}${phoneCards.slice(0, 1)}</span></span>
+            <span class="phone-hand">${icon("pointer")}</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-alt section-map" aria-labelledby="map-title">
       <div class="container map-showcase">
         <div class="map-showcase-text">
-          <span class="kicker">${icon("map")}${t("home.mapKicker")}</span>
           <h2 class="h2" id="map-title">${t("home.mapTitle")}</h2>
           <p class="muted">${t("home.mapText")}</p>
           <div class="map-styles-legend" role="group" aria-label="${t("map.styleTitle")}">
@@ -6331,42 +6349,33 @@ const __default = {
           </div>
           <a class="btn btn-primary" href="#/explorer?view=map">${icon("map")}${t("home.mapCta")}</a>
         </div>
-        <div class="map-showcase-map" data-reveal="soft">
+        <div class="map-showcase-map">
           <div id="home-map" class="map map-home" role="region" aria-label="${t("explore.mapLabel")}"></div>
           <p class="map-note">${icon("shield")}${t("explore.mapPrivacy")}</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-warm how" id="how">
+    <section class="section cities-section">
       <div class="container">
-        <div class="section-head center">
-          <div><span class="kicker">${t("home.howKicker")}</span><h2 class="h2">${t("home.howTitle")}</h2></div>
+        <div class="section-head">
+          <div><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2><p class="muted marquee-hint">${t("home.citiesHint")}</p></div>
+          <button type="button" class="btn btn-ghost btn-sm marquee-toggle" data-action="marquee-toggle" aria-pressed="false">${icon("pause", "i-pause")}${icon("play", "i-play")}<span>${t("home.citiesPause")}</span></button>
         </div>
-        <ol class="steps timeline" data-stagger>
-          ${[["pencil", 1], ["message", 2], ["hand", 3]].map(([ic, n]) => html`<li class="step">
-            <span class="step-num">${n}</span>
-            <span class="step-icon">${icon(ic)}</span>
-            <h3>${t(`home.step${n}Title`)}</h3>
-            <p>${t(`home.step${n}Text`)}</p>
-          </li>`)}
-        </ol>
-        <div class="center-actions" data-reveal>
-          <a class="btn btn-cta btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
-          <a class="btn btn-ghost btn-lg" href="#/explorer">${t("home.ctaExplore")}</a>
-        </div>
+      </div>
+      <div class="marquee" role="region" aria-label="${t("home.citiesTitle")}">
+        <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
       </div>
     </section>
 
-    <section class="section trust-section home-trust">
+    <section class="section trust-section home-trust" aria-labelledby="trust-title">
       <div class="container trust-grid">
         <div class="trust-intro">
-          <span class="kicker kicker-light">${t("home.trustKicker")}</span>
-          <h2 class="h2">${t("home.trustTitle")}</h2>
+          <h2 class="h2" id="trust-title">${t("home.trustTitle")}</h2>
           <p>${t("home.trustText")}</p>
           <a class="btn btn-light" href="#/page/securite">${icon("shieldCheck")}${t("home.trustCta")}</a>
         </div>
-        <div class="trust-cards" data-stagger>
+        <div class="trust-cards">
           ${[["pin", "Loc"], ["lock", "Pwd"], ["flag", "Report"], ["eyeOff", "Track"]].map(([ic, k]) => html`<div class="trust-card">
             <span class="trust-icon">${icon(ic)}</span>
             <h3>${t(`home.trust${k}Title`)}</h3>
@@ -6376,30 +6385,30 @@ const __default = {
       </div>
     </section>
 
-    <section class="section section-sky home-faq">
+    <section class="section home-faq" aria-labelledby="faq-title">
       <div class="container faq-wrap">
         <div>
-          <span class="kicker">${t("home.faqKicker")}</span>
-          <h2 class="h2">${t("home.faqTitle")}</h2>
+          <h2 class="h2" id="faq-title">${t("home.faqTitle")}</h2>
           <p class="muted">${t("home.faqText")}</p>
-          <a class="btn btn-ghost" href="#/page/aide">${t("home.faqMore")}${icon("arrowRight")}</a>
+          <a class="btn btn-ghost" href="#/page/aide">${t("home.faqMore")}</a>
         </div>
-        <div class="faq" data-stagger>
+        <div class="faq">
           ${FAQ.map((k) => html`<details class="faq-item"><summary>${t(`faq.${k}.q`)}${icon("chevronDown")}</summary><p>${t(`faq.${k}.a`)}</p></details>`)}
         </div>
       </div>
     </section>
 
-    <section class="section cta-band section-sky">
-      <div class="container cta-inner">
-        <span class="aurora a1" aria-hidden="true"></span><span class="aurora a3" aria-hidden="true"></span>
-        <div>
-          <h2 class="h2">${t("home.ctaTitle")}</h2>
-          <p>${t("home.ctaText")}</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-sun btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
-          <button type="button" class="btn btn-light btn-lg" data-action="show-qr">${icon("qrCode")}${t("home.qrCta")}</button>
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2 class="h2">${t("home.ctaTitle")}</h2>
+            <p>${t("home.ctaText")}</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light btn-lg" href="#/publier">${icon("plus")}${t("home.ctaPublish")}</a>
+            <button type="button" class="btn btn-outline-light btn-lg" data-action="show-qr">${icon("qrCode")}${t("home.qrCta")}</button>
+          </div>
         </div>
       </div>
     </section>`;
@@ -6442,6 +6451,8 @@ const __default = {
         mapObserver.observe(mapEl);
       } else init();
     }
+    marqueePaused = false;
+    initMarquee(root);
     // Positionne les cartes flottantes sur l'illustration de la Suisse
     root.querySelectorAll(".hero-float").forEach((el) => {
       el.style.setProperty("--x", el.dataset.x + "%");
@@ -6450,6 +6461,8 @@ const __default = {
   },
 
   unmount() {
+    marqueeStop?.();
+    marqueeStop = null;
     mapObserver?.disconnect();
     mapObserver = null;
     homeMap?.remove();
@@ -6472,6 +6485,7 @@ function setHomeMapStyle(id) {
 const homeActions = {
   "home-map-style": (el) => setHomeMapStyle(el.dataset.style),
   "clear-recent": () => clearRecentlyViewed(),
+  "marquee-toggle": () => { marqueePaused = !marqueePaused; syncMarqueeButton(); },
   "scroll-next": () => document.getElementById("home-stats")?.scrollIntoView({ behavior: "smooth", block: "start" }),
 };
 
@@ -6603,7 +6617,7 @@ function renderResults() {
   mount(
     $("#results-grid"),
     pageItems.length
-      ? html`${pageItems.map(({ listing, distance }) => listingCard(listing, { distance }))}`
+      ? html`${pageItems.map(({ listing, distance }) => listingCard(listing, { distance, level: 2 }))}`
       : emptyState({ iconName: "search", title: t("explore.emptyTitle"), text: t("explore.emptyText"), action: html`<div class="empty-actions"><button class="btn btn-ghost" data-action="reset-filters">${t("filter.reset")}</button><a class="btn btn-primary" href="#/publier">${icon("plus")}${t("explore.emptyPublish")}</a></div>` })
   );
   mount($("#pagination"), pagination(f.page, pages));
@@ -6986,7 +7000,7 @@ function notFound() {
 }
 
 function fact(iconName, label, value) {
-  return html`<div class="fact"><span class="fact-icon">${icon(iconName)}</span><div><dt>${label}</dt><dd>${value}</dd></div></div>`;
+  return html`<div class="fact"><span class="fact-icon" aria-hidden="true">${icon(iconName)}</span><dl><dt>${label}</dt><dd>${value}</dd></dl></div>`;
 }
 
 /** Galerie : on fait glisser les photos au doigt (téléphone) ou avec les flèches / vignettes (ordinateur).
@@ -7094,13 +7108,13 @@ const __default = {
           <h1 class="h1 detail-title">${listingTitle(l)}</h1>
           <p class="detail-sub">${icon("pin")}${l.npa ? `${l.npa} ` : ""}${l.city}, ${cantonName(l.canton)}${dist !== null ? html` · <strong>${fmtDistance(dist)}</strong>` : ""} · ${t("listing.published", { when: fmtRelative(l.created) })}</p>
 
-          <dl class="facts">
+          <div class="facts">
             ${fact("calendar", t("listing.date"), l.date ? fmtDate(l.date + "T12:00:00", { weekday: "long", day: "numeric", month: "long" }) : t("listing.flexibleDate"))}
             ${fact("clock", t("listing.time"), l.time ? `${l.time} · ${fmtDuration(l.duration)}` : fmtDuration(l.duration))}
             ${fact("repeat", t("listing.recurrence"), t("recurrence." + (l.recurrence || "once")))}
             ${fact("coins", t("listing.payment"), priceLabel(l))}
             ${l.languages?.length ? fact("languages", t("listing.languages"), l.languages.map(languageName).join(", ")) : ""}
-          </dl>
+          </div>
 
           <section class="detail-section">
             <h2 class="h3">${t("listing.description")}</h2>
@@ -7140,6 +7154,7 @@ const __default = {
                 <button type="button" class="btn btn-ghost" data-action="share" data-id="${l.id}">${icon("share")}<span>${t("listing.share")}</span></button>
               </div>
               ${l.date ? html`<button type="button" class="btn btn-ghost btn-block" data-action="ics" data-id="${l.id}">${icon("calendar")}${t("listing.addToCalendar")}</button>` : ""}
+              ${"speechSynthesis" in window ? html`<button type="button" class="btn btn-ghost btn-block" data-action="listen" data-id="${l.id}" aria-pressed="false">${icon("volume")}<span>${t("listing.listen")}</span></button>` : ""}
             </div>
           </div>
 
@@ -7225,7 +7240,26 @@ const __default = {
 };
 
 /* Actions propres à cette page */
+/** Lecture à voix haute (voix de l'appareil, rien n'est envoyé sur Internet) : utile pour les personnes qui lisent difficilement. */
+function toggleListen(el) {
+  const synth = window.speechSynthesis;
+  if (!synth) return;
+  const label = el.querySelector("span");
+  const reset = () => { el.setAttribute("aria-pressed", "false"); if (label) label.textContent = t("listing.listen"); };
+  if (synth.speaking) { synth.cancel(); reset(); return; }
+  const l = getListing(el.dataset.id);
+  if (!l) return;
+  const text = `${listingTitle(l)}. ${l.city}. ${priceLabel(l)}. ${listingDescription(l)}`;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" }[getLang()] || "fr-CH";
+  u.onend = u.onerror = reset;
+  el.setAttribute("aria-pressed", "true");
+  if (label) label.textContent = t("listing.stopListening");
+  synth.speak(u);
+}
+
 const listingActions = {
+  listen: (el) => toggleListen(el),
   contact: (el) => {
     const me = currentUser();
     if (!me) {
@@ -7380,7 +7414,7 @@ function coverPicker(v) {
     <p class="help" id="cover-note">${icon("info")}<span>${photos.length ? t("publish.coverNoteWithPhoto") : t("publish.coverNote")}</span></p>
     <div class="swatches" role="radiogroup" aria-label="${t("publish.coverColor")}">
       <label class="swatch"><input type="radio" name="coverTone" value="auto" ${tone === "auto" ? raw("checked") : ""}><span class="swatch-auto">${icon("sparkles")}${t("publish.coverAuto")}</span></label>
-      ${COVER_TONES.map((n) => html`<label class="swatch"><input type="radio" name="coverTone" value="${n}" ${tone === n ? raw("checked") : ""}><span class="swatch-color tv-${n}" aria-label="${t("publish.coverColorN", { n: n + 1 })}"></span></label>`)}
+      ${COVER_TONES.map((n) => html`<label class="swatch"><input type="radio" name="coverTone" value="${n}" ${tone === n ? raw("checked") : ""}><span class="swatch-color tv-${n}"><span class="sr-only">${t("publish.coverColorN", { n: n + 1 })}</span></span></label>`)}
     </div>
     <div class="patterns" role="radiogroup" aria-label="${t("publish.coverPattern")}">
       ${COVER_PATTERNS.map((pat) => html`<label class="pattern-opt"><input type="radio" name="coverPattern" value="${pat}" ${pattern === pat ? raw("checked") : ""}><span class="pattern-thumb media-illu tv-${shownTone} pat-${pat}"></span><small>${t("pattern." + pat)}</small></label>`)}
@@ -7543,7 +7577,7 @@ const __default = {
     const updatePreview = () => {
       if (!form.isConnected) return; // la page a changé entre-temps
       const data = readForm(form);
-      mount($("#preview-card"), listingCard(previewListing(data)));
+      mount($("#preview-card"), listingCard(previewListing(data), { level: 2 }));
       // Les vignettes de motifs prennent la couleur choisie (ou celle de la catégorie)
       const toneValue = form.elements.coverTone?.value;
       const tone = toneValue && toneValue !== "auto" ? toneValue : getCategory(data.category).tone;
@@ -7947,8 +7981,8 @@ function calendar() {
       <button type="button" class="icon-btn" data-action="cal-move" data-delta="1" aria-label="${t("planning.nextMonth")}">${icon("chevronRight")}</button>
     </div>
   </div>
-  <div class="cal-grid" role="grid">
-    ${weekdays.map((w) => html`<div class="cal-weekday" role="columnheader">${w}</div>`)}
+  <div class="cal-grid">
+    ${weekdays.map((w) => html`<div class="cal-weekday" aria-hidden="true">${w}</div>`)}
     ${cells}
   </div>
   <div class="agenda">
@@ -8257,7 +8291,7 @@ const { icon } = __req("icons.js");
 const { t, fmtDate, cantonName, categoryName, getLang, setLang, fmtRelative } = __req("i18n.js");
 const { currentUser, updateProfile, changePassword, deleteAccount, exportMyData, listingsByAuthor, getFavorites, getConversations, getPerson, logout, getPrefs, setPrefs, isAdmin, getAlerts, deleteAlert } = __req("store.js");
 const { passwordStrength } = __req("auth.js");
-const { avatar, listingCard, emptyState, localityField, initLocalityFields, langChips, toast, confirmDialog, openDialog, priceLabel, listingTitle, categoryThumb } = __req("ui.js");
+const { avatar, listingCard, emptyState, localityField, initLocalityFields, langChips, toast, confirmDialog, openDialog, priceLabel, listingTitle, categoryThumb, comfortFields, handleComfortChange } = __req("ui.js");
 
 const TABS = ["profile", "listings", "alerts", "security", "data", "prefs"];
 const TAB_ICONS = { profile: "user", listings: "file", alerts: "bell", security: "lock", data: "download", prefs: "sliders" };
@@ -8285,7 +8319,7 @@ function completenessCard(me) {
       <strong>${t("account.completeTitle", { percent: c.percent })}</strong>
       <span class="muted small">${c.percent === 100 ? t("account.completeDone") : t("account.completeHint")}</span>
     </div>
-    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${c.percent}"><span data-w="${c.percent}"></span></div>
+    <div class="progress" role="progressbar" aria-label="${t("account.completeTitle", { percent: c.percent })}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${c.percent}"><span data-w="${c.percent}"></span></div>
     ${c.missing.length ? html`<ul class="completeness-todo">${c.missing.map((k) => html`<li>${icon("plus")}${t("account.todo." + k)}</li>`)}</ul>` : ""}
   </div>`;
 }
@@ -8430,16 +8464,10 @@ function dataTab(me) {
 
 function prefsTab() {
   const prefs = getPrefs();
-  const theme = prefs.theme || "system";
   return html`<form id="prefs-form" class="card form-card">
     <div class="field"><label class="field-label" for="f-lang">${t("account.language")}</label>
       <select id="f-lang" class="select" name="lang">${["fr", "de", "it", "en"].map((l) => html`<option value="${l}" ${getLang() === l ? raw("selected") : ""}>${t("lang." + l)}</option>`)}</select></div>
-    <fieldset class="field"><legend class="field-label">${t("account.theme")}</legend>
-      <div class="segmented">${["system", "light", "dark"].map((th) => html`<label class="seg-radio"><input type="radio" name="theme" value="${th}" ${theme === th ? raw("checked") : ""}><span>${icon(th === "dark" ? "moon" : th === "light" ? "sun" : "laptop")}${t("theme." + th)}</span></label>`)}</div>
-    </fieldset>
-    <fieldset class="field"><legend class="field-label">${t("account.textSize")}</legend>
-      <div class="segmented">${["normal", "large"].map((sz) => html`<label class="seg-radio"><input type="radio" name="textSize" value="${sz}" ${(prefs.textSize || "normal") === sz ? raw("checked") : ""}><span>${sz === "large" ? html`<strong>A+</strong>` : "A"} ${t("account.text." + sz)}</span></label>`)}</div>
-    </fieldset>
+    ${comfortFields(prefs)}
     <label class="check"><input type="checkbox" name="banner" value="1" ${!prefs.bannerDismissed ? raw("checked") : ""}><span>${t("account.showDemoBanner")}</span></label>
   </form>`;
 }
@@ -8541,8 +8569,7 @@ const __default = {
     prefs?.addEventListener("change", (e) => {
       const el = e.target;
       if (el.name === "lang") { setLang(el.value); window.dispatchEvent(new Event("voisina:lang")); }
-      if (el.name === "theme") { setPrefs({ theme: el.value === "system" ? null : el.value }); window.dispatchEvent(new Event("voisina:theme")); }
-      if (el.name === "textSize") { setPrefs({ textSize: el.value }); document.documentElement.classList.toggle("text-lg", el.value === "large"); }
+      handleComfortChange(el);
       if (el.name === "banner") { setPrefs({ bannerDismissed: !el.checked }); window.dispatchEvent(new Event("voisina:banner")); }
       toast(t("account.saved"), "success");
     });
@@ -9311,7 +9338,7 @@ const PAGES = {
         { h: "Éditeur du site", p: ["Voisina — projet TPA / PAE réalisé seul par Lenny H., CPNV (Centre professionnel du Nord vaudois), Suisse.", "Ce site est un prototype pédagogique non commercial. Les annonces et les membres d'exemple sont fictifs ; toute ressemblance avec des personnes réelles serait fortuite."] },
         { h: "Hébergement", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."] },
         { h: "Cartes et données géographiques", p: ["Fonds de carte © swisstopo (Office fédéral de topographie). Photos aériennes SWISSIMAGE © swisstopo. Style « Plan » © contributeurs OpenStreetMap. Recherche de localités : service geo.admin.ch de la Confédération suisse."] },
-        { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Police de titres : Fraunces (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC)."] },
+        { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Polices : Schibsted Grotesk et Atkinson Hyperlegible (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC)."] },
         { h: "Propriété intellectuelle", p: ["Les textes, le logo et la conception du site sont la propriété de leur auteur. Les contenus publiés par les membres restent leur propriété."] },
       ],
     },
@@ -9321,7 +9348,7 @@ const PAGES = {
         { h: "Herausgeber", p: ["Voisina — TPA-/PAE-Projekt, allein realisiert von Lenny H., CPNV (Centre professionnel du Nord vaudois), Schweiz.", "Diese Website ist ein nicht kommerzieller Lernprototyp. Beispielanzeigen und -mitglieder sind fiktiv; Ähnlichkeiten mit realen Personen wären zufällig."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Karten und Geodaten", p: ["Kartenhintergrund © swisstopo (Bundesamt für Landestopografie). Luftbilder SWISSIMAGE © swisstopo. Stil «Strassen» © OpenStreetMap-Mitwirkende. Ortssuche: Dienst geo.admin.ch der Schweizerischen Eidgenossenschaft."] },
-        { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Titelschrift: Fraunces (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz)."] },
+        { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Schriften: Schibsted Grotesk und Atkinson Hyperlegible (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz)."] },
         { h: "Geistiges Eigentum", p: ["Texte, Logo und Gestaltung der Website gehören ihrem Autor. Von Mitgliedern veröffentlichte Inhalte bleiben deren Eigentum."] },
       ],
     },
@@ -9331,7 +9358,7 @@ const PAGES = {
         { h: "Editore del sito", p: ["Voisina — progetto TPA / PAE realizzato da solo da Lenny H., CPNV (Centre professionnel du Nord vaudois), Svizzera.", "Questo sito è un prototipo didattico non commerciale. Gli annunci e i membri d'esempio sono fittizi; ogni somiglianza con persone reali è casuale."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Stati Uniti."] },
         { h: "Carte e dati geografici", p: ["Sfondi cartografici © swisstopo (Ufficio federale di topografia). Foto aeree SWISSIMAGE © swisstopo. Stile «Stradale» © contributori OpenStreetMap. Ricerca delle località: servizio geo.admin.ch della Confederazione Svizzera."] },
-        { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Carattere dei titoli: Fraunces (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC)."] },
+        { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Caratteri: Schibsted Grotesk e Atkinson Hyperlegible (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC)."] },
         { h: "Proprietà intellettuale", p: ["Testi, logo e concezione del sito appartengono al loro autore. I contenuti pubblicati dai membri restano di loro proprietà."] },
       ],
     },
@@ -9341,7 +9368,7 @@ const PAGES = {
         { h: "Publisher", p: ["Voisina — TPA / PAE project built single-handedly by Lenny H., CPNV (Centre professionnel du Nord vaudois), Switzerland.", "This site is a non-commercial educational prototype. Sample listings and members are fictional; any resemblance to real people is coincidental."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Maps and geodata", p: ["Base maps © swisstopo (Federal Office of Topography). SWISSIMAGE aerial photos © swisstopo. “Streets” style © OpenStreetMap contributors. Place search: geo.admin.ch service of the Swiss Confederation."] },
-        { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Heading font: Fraunces (SIL Open Font License).", "Icons inspired by Lucide (ISC licence)."] },
+        { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Fonts: Schibsted Grotesk and Atkinson Hyperlegible (SIL Open Font License).", "Icons inspired by Lucide (ISC licence)."] },
         { h: "Intellectual property", p: ["The texts, logo and design of the site belong to their author. Content posted by members remains their property."] },
       ],
     },
@@ -10022,7 +10049,7 @@ const { icon, logo } = __req("icons.js");
 const { t, getLang, setLang, fmtRelative } = __req("i18n.js");
 const { LANGS } = __req("data.js");
 const store = __req("store.js");
-const { actions, registerActions, toast, initDialog, avatar, openDialog, confirmDialog } = __req("ui.js");
+const { actions, registerActions, toast, initDialog, avatar, openDialog, closeDialog, confirmDialog, applyComfort, comfortFields, handleComfortChange } = __req("ui.js");
 const { QR_SVG, SITE_URL, SITE_LABEL } = __req("qr-site.js");
 const { initMotion, reducedMotion } = __req("motion.js");
 const { initSmoothScroll } = __req("smooth.js");
@@ -10183,8 +10210,6 @@ function renderHeader() {
   const unread = me ? store.totalUnread() : 0;
   const notifs = store.getNotifications();
   const unreadNotifs = notifs.filter((n) => !n.read).length;
-  const theme = document.documentElement.getAttribute("data-theme");
-  const dark = theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   mount($("#site-header"), html`
   <div class="container header-inner">
@@ -10201,7 +10226,7 @@ function renderHeader() {
         </div>
       </div>
       <a class="icon-btn header-msg" href="#/messages" aria-label="${t("nav.messages")}${unread ? ` (${unread})` : ""}">${icon("message")}${unread ? html`<span class="dot-count">${unread}</span>` : ""}</a>
-      <button type="button" class="icon-btn theme-btn" data-action="toggle-theme" aria-label="${dark ? t("theme.toLight") : t("theme.toDark")}" title="${dark ? t("theme.toLight") : t("theme.toDark")}">${icon(dark ? "sun" : "moon")}</button>
+      <button type="button" class="icon-btn comfort-btn" data-action="open-comfort" aria-haspopup="dialog" aria-label="${t("comfort.title")}" title="${t("comfort.title")}">${icon("textSize")}</button>
       ${me
         ? html`
         <div class="menu-wrap">
@@ -10284,7 +10309,7 @@ function renderFooter() {
     <span>© 2026 Voisina · ${t("footer.project")}</span>
     <button type="button" class="link-btn footer-text" data-action="show-qr">${icon("qrCode")}${t("qr.footer")}</button>
     ${!isStandalone() ? html`<button type="button" class="link-btn footer-text" data-action="install-app">${icon("smartphone")}${t("install.footer")}</button>` : ""}
-    <button type="button" class="link-btn footer-text" data-action="toggle-text">${icon("sparkles")}${document.documentElement.classList.contains("text-lg") ? t("footer.textNormal") : t("footer.textLarge")}</button>
+    <button type="button" class="link-btn footer-text" data-action="open-comfort">${icon("textSize")}${t("comfort.title")}</button>
     <span class="footer-langs">${LANGS.map((l) => html`<button type="button" class="link-btn${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${l.toUpperCase()}</button>`)}</span>
     <span>${t("footer.madeIn")}</span>
   </div>`);
@@ -10427,9 +10452,23 @@ function closeMenus(except = null) {
 }
 
 /* ------------------------- Actions globales ------------------------ */
-function applyTheme(theme) {
-  if (theme === "dark" || theme === "light") document.documentElement.setAttribute("data-theme", theme);
-  else document.documentElement.removeAttribute("data-theme");
+function applyTheme() { applyComfort(); }
+
+/** Fenêtre « Confort d'affichage » : les réglages s'appliquent tout de suite, sans bouton « Valider ». */
+function openComfort() {
+  openDialog({
+    title: t("comfort.title"),
+    size: "dialog-comfort",
+    body: html`<p class="dialog-text">${t("comfort.intro")}</p>
+      <div class="comfort-form">${comfortFields(store.getPrefs())}</div>
+      <p class="comfort-sample">${t("comfort.sample")}</p>`,
+    footer: html`<button type="button" class="btn btn-ghost" data-action="comfort-reset">${t("comfort.reset")}</button>
+      <button type="submit" class="btn btn-primary">${t("comfort.done")}</button>`,
+    onSubmit: () => true,
+    onOpen: (dlg) => {
+      dlg.querySelector(".comfort-form")?.addEventListener("change", (e) => { handleComfortChange(e.target); });
+    },
+  });
 }
 
 registerActions({
@@ -10449,13 +10488,12 @@ registerActions({
     renderAll();
     toast(t("toast.langChanged"), "success");
   },
-  "toggle-theme": () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const dark = current === "dark" || (!current && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    const next = dark ? "light" : "dark";
-    store.setPrefs({ theme: next });
-    applyTheme(next);
-    renderHeader();
+  "open-comfort": () => openComfort(),
+  "comfort-reset": () => {
+    store.setPrefs({ theme: null, textSize: "normal", contrast: "normal", motion: "auto" });
+    applyComfort();
+    closeDialog();
+    openComfort();
   },
   fav: (el) => {
     const id = el.dataset.id;
@@ -10464,12 +10502,6 @@ registerActions({
     toast(added ? t("fav.added") : t("fav.removed"), "success");
   },
   "notif-read": () => { store.markNotificationsRead(); },
-  "toggle-text": () => {
-    const large = !document.documentElement.classList.contains("text-lg");
-    document.documentElement.classList.toggle("text-lg", large);
-    store.setPrefs({ textSize: large ? "large" : "normal" });
-    renderFooter();
-  },
   skip: () => { $("#main").focus(); $("#main").scrollIntoView(); },
   "go-back": () => {
     // Dans l'application installée il n'y a pas de bouton « retour » du navigateur
@@ -10586,6 +10618,7 @@ function start() {
   renderBanner();
   renderFooter();
   render();
+  applyComfort();
   initMotion();
   initSmoothScroll();
   document.body.classList.add("is-ready");

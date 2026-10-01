@@ -8,7 +8,7 @@ l'utilisent réellement en Suisse, voici les étapes recommandées.
 Objectif : que les annonces et les messages soient partagés entre tous les appareils.
 
 - Option simple : **Supabase** (base PostgreSQL + comptes + stockage de photos), région **Zurich / Francfort**.
-- Seul le fichier `assets/js/store.js` doit être réécrit : toutes les pages passent déjà par lui.
+- Seul le module `store.js` (dans `voisina.js`) doit être réécrit : toutes les pages passent déjà par lui.
 - Règles d'accès côté serveur (Row Level Security) : chacun ne peut modifier que ses propres annonces ; seuls les admins voient les signalements.
 - Vérification de l'adresse e-mail, réinitialisation du mot de passe, double authentification (option).
 
