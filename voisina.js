@@ -234,6 +234,14 @@ async function processImage(file, maxSize = 1200, quality = 0.82) {
 }
 
 /** N'accepte que des images que NOUS avons produites (data:image/jpeg;base64). */
+/** Photo d'illustration des annonces d'exemple : une vraie photo libre de droits (licence Unsplash),
+ *  choisie pour correspondre à l'annonce (un chien pour « promener un chien »…).
+ *  Seul un identifiant Unsplash bien formé est accepté : jamais une adresse quelconque. */
+function demoPhotoUrl(l, w = 800) {
+  const id = l?.demo && typeof l.demoPhoto === "string" && /^\d{9,13}-[0-9a-f]{12}$/.test(l.demoPhoto) ? l.demoPhoto : "";
+  return id ? `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70` : "";
+}
+
 function safeImageSrc(value) {
   return typeof value === "string" && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value) ? value : "";
 }
@@ -251,7 +259,7 @@ function downloadFile(filename, content, type = "application/octet-stream") {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-return { esc, html, mount, uid, debounce, distanceKm, seededRandom, hashString, dateKey, parseDateKey, todayKey, initials, avatarTone, detectSensitive, prefersReducedMotion, processImage, safeImageSrc, downloadFile, raw, $, $$, storage, clamp };
+return { esc, html, mount, uid, debounce, distanceKm, seededRandom, hashString, dateKey, parseDateKey, todayKey, initials, avatarTone, detectSensitive, prefersReducedMotion, processImage, demoPhotoUrl, safeImageSrc, downloadFile, raw, $, $$, storage, clamp };
 });
 __def("icons.js", function () {
 /* =====================================================================
@@ -1117,6 +1125,18 @@ const fr = {
   "home.leadShort": "Proposez ou demandez un coup de main près de chez vous. Gratuit, sans pub.",
   "home.storiesLabel": "Accès rapides",
   "home.storyNear": "Près de moi",
+  "home.mSearchPh": "Que cherchez-vous ?",
+  "home.mNear": "Près de chez vous",
+  "home.mNew": "Nouvelles annonces",
+  "home.mAll": "Dernières annonces",
+  "home.mSeeAll": "Voir toutes les annonces",
+  "home.mCities": "Grandes villes",
+  "home.mHow": "Comment ça marche ?",
+  "home.mSafety": "Sécurité",
+  "home.mHelp": "Aide",
+  "home.citiesPrev": "Villes précédentes",
+  "home.citiesNext": "Villes suivantes",
+  "home.photoCredit": "Photo d'illustration : Unsplash",
   "reels.region.all": "Toute la Suisse",
   "reels.region.near": "Autour de moi",
   "reels.region.romandie": "Suisse romande",
@@ -1837,6 +1857,18 @@ const de = {
   "home.leadShort": "Hilfe anbieten oder suchen, ganz in Ihrer Nähe. Gratis, ohne Werbung.",
   "home.storiesLabel": "Schnellzugriff",
   "home.storyNear": "In der Nähe",
+  "home.mSearchPh": "Was suchen Sie?",
+  "home.mNear": "In Ihrer Nähe",
+  "home.mNew": "Neue Inserate",
+  "home.mAll": "Neueste Inserate",
+  "home.mSeeAll": "Alle Inserate ansehen",
+  "home.mCities": "Grosse Städte",
+  "home.mHow": "Wie funktioniert's?",
+  "home.mSafety": "Sicherheit",
+  "home.mHelp": "Hilfe",
+  "home.citiesPrev": "Vorherige Städte",
+  "home.citiesNext": "Nächste Städte",
+  "home.photoCredit": "Symbolbild: Unsplash",
   "reels.region.all": "Ganze Schweiz",
   "reels.region.near": "In meiner Nähe",
   "reels.region.romandie": "Westschweiz",
@@ -2557,6 +2589,18 @@ const it = {
   "home.leadShort": "Offri o chiedi una mano vicino a casa. Gratis, senza pubblicità.",
   "home.storiesLabel": "Accesso rapido",
   "home.storyNear": "Vicino a me",
+  "home.mSearchPh": "Cosa cercate?",
+  "home.mNear": "Vicino a voi",
+  "home.mNew": "Nuovi annunci",
+  "home.mAll": "Ultimi annunci",
+  "home.mSeeAll": "Vedi tutti gli annunci",
+  "home.mCities": "Grandi città",
+  "home.mHow": "Come funziona?",
+  "home.mSafety": "Sicurezza",
+  "home.mHelp": "Aiuto",
+  "home.citiesPrev": "Città precedenti",
+  "home.citiesNext": "Città successive",
+  "home.photoCredit": "Foto illustrativa: Unsplash",
   "reels.region.all": "Tutta la Svizzera",
   "reels.region.near": "Vicino a me",
   "reels.region.romandie": "Svizzera romanda",
@@ -3277,6 +3321,18 @@ const en = {
   "home.leadShort": "Offer or ask for a hand near you. Free, no ads.",
   "home.storiesLabel": "Quick access",
   "home.storyNear": "Near me",
+  "home.mSearchPh": "What are you looking for?",
+  "home.mNear": "Near you",
+  "home.mNew": "New listings",
+  "home.mAll": "Latest listings",
+  "home.mSeeAll": "See all listings",
+  "home.mCities": "Big cities",
+  "home.mHow": "How does it work?",
+  "home.mSafety": "Safety",
+  "home.mHelp": "Help",
+  "home.citiesPrev": "Previous cities",
+  "home.citiesNext": "Next cities",
+  "home.photoCredit": "Illustrative photo: Unsplash",
   "reels.region.all": "All of Switzerland",
   "reels.region.near": "Near me",
   "reels.region.romandie": "French-speaking Switzerland",
@@ -3463,193 +3519,193 @@ const COVER_TONES = [0, 1, 2, 3, 4, 5];
    unit = unité, dur = durée (min), rec = récurrence
    --------------------------------------------------------------------- */
 const TEMPLATES = [
-  { c: "shopping", ty: "offer", pay: "paid", amt: 15, unit: "visit", dur: 60,
+  { c: "shopping", ty: "offer", pay: "paid", amt: 15, unit: "visit", dur: 60, ph: "1588964895597-cfccd6e2dbf9",
     t: { fr: "Je fais vos courses de la semaine", de: "Ich erledige Ihren Wocheneinkauf", it: "Faccio la vostra spesa settimanale", en: "I'll do your weekly grocery run" },
     d: { fr: "Je passe à la Migros ou à la Coop pour vous et je livre à domicile. Idéal si vous avez peu de temps ou du mal à vous déplacer. Vous me donnez la liste, je m'occupe du reste.",
          de: "Ich gehe für Sie in die Migros oder den Coop und bringe alles nach Hause. Ideal, wenn Sie wenig Zeit haben oder nicht gut zu Fuss sind. Sie geben mir die Liste, ich kümmere mich um den Rest.",
          it: "Vado alla Migros o alla Coop per voi e consegno a domicilio. Ideale se avete poco tempo o difficoltà a spostarvi. Voi mi date la lista, io penso al resto.",
          en: "I'll go to Migros or Coop for you and deliver to your door. Perfect if you're short on time or have trouble getting around. Just give me the list and I'll take care of the rest." } },
-  { c: "shopping", ty: "request", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "shopping", ty: "request", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1580281657527-47f249e8f4df",
     t: { fr: "Quelqu'un pour passer à la pharmacie ?", de: "Wer holt mir Medikamente in der Apotheke?", it: "Qualcuno può passare in farmacia per me?", en: "Could someone pick up my prescription?" },
     d: { fr: "Je suis alitée quelques jours après une opération et j'aurais besoin qu'on passe chercher mes médicaments à la pharmacie du quartier. L'ordonnance est déjà transmise.",
          de: "Ich bin nach einer Operation ein paar Tage ans Bett gebunden und bräuchte jemanden, der meine Medikamente in der Quartierapotheke abholt. Das Rezept ist bereits dort.",
          it: "Dopo un'operazione devo restare a letto qualche giorno e avrei bisogno che qualcuno ritiri i miei medicinali nella farmacia del quartiere. La ricetta è già stata inviata.",
          en: "I'm stuck in bed for a few days after surgery and need someone to collect my medication from the local pharmacy. The prescription has already been sent." } },
-  { c: "pets", ty: "offer", pay: "paid", amt: 15, unit: "visit", dur: 60,
+  { c: "pets", ty: "offer", pay: "paid", amt: 15, unit: "visit", dur: 60, ph: "1530700131180-d43d9b8cc41f",
     t: { fr: "Promenade de chiens en semaine", de: "Hundespaziergänge unter der Woche", it: "Passeggiate con il cane in settimana", en: "Weekday dog walking" },
     d: { fr: "Amoureuse des animaux, je promène votre chien pendant que vous travaillez. Balades de 45 minutes par tous les temps, avec des photos envoyées par la messagerie.",
          de: "Als Tierfreundin führe ich Ihren Hund aus, während Sie arbeiten. Spaziergänge von 45 Minuten bei jedem Wetter – mit Fotos über den Chat.",
          it: "Amante degli animali, porto a spasso il vostro cane mentre lavorate. Passeggiate di 45 minuti con qualsiasi tempo, con foto inviate in chat.",
          en: "Animal lover here: I'll walk your dog while you're at work. 45-minute walks in any weather, with photos sent through the chat." } },
-  { c: "pets", ty: "request", pay: "negotiable", amt: 0, unit: "visit", dur: 30,
+  { c: "pets", ty: "request", pay: "negotiable", amt: 0, unit: "visit", dur: 30, ph: "1596854331442-3cf47265cefb",
     t: { fr: "Garde de chat pendant les vacances", de: "Katzensitting während der Ferien", it: "Cercasi cat sitter per le vacanze", en: "Cat sitting during the holidays" },
     d: { fr: "Nous partons deux semaines. Nous cherchons une personne de confiance pour nourrir notre chat et changer sa litière une fois par jour.",
          de: "Wir sind zwei Wochen weg und suchen eine vertrauenswürdige Person, die unsere Katze einmal täglich füttert und das Katzenklo reinigt.",
          it: "Partiamo per due settimane. Cerchiamo una persona di fiducia che dia da mangiare al nostro gatto e pulisca la lettiera una volta al giorno.",
          en: "We're away for two weeks and are looking for someone trustworthy to feed our cat and clean the litter box once a day." } },
-  { c: "seniors", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 90,
+  { c: "seniors", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 90, ph: "1758691031152-2a727e97e6b6",
     t: { fr: "Visites et compagnie pour personnes âgées", de: "Besuche und Gesellschaft für Senioren", it: "Visite e compagnia per persone anziane", en: "Visits and company for older people" },
     d: { fr: "Retraité, j'ai du temps libre et j'aime la conversation. Je propose de rendre visite, jouer aux cartes, faire une promenade ou simplement boire un café ensemble.",
          de: "Ich bin pensioniert, habe Zeit und unterhalte mich gerne. Ich biete Besuche, Kartenspiele, Spaziergänge oder einfach einen gemeinsamen Kaffee an.",
          it: "Sono in pensione, ho tempo libero e amo chiacchierare. Propongo visite, partite a carte, passeggiate o semplicemente un caffè insieme.",
          en: "I'm retired, have free time and love a good chat. I can drop by for cards, a walk or simply a coffee together." } },
-  { c: "seniors", ty: "request", pay: "free", amt: 0, unit: "total", dur: 120,
+  { c: "seniors", ty: "request", pay: "free", amt: 0, unit: "total", dur: 120, ph: "1559234938-b60fff04894d",
     t: { fr: "Accompagner ma mère chez le médecin", de: "Begleitung zum Arzttermin gesucht", it: "Accompagnare mia madre dal medico", en: "Someone to take my mother to the doctor" },
     d: { fr: "Ma mère de 84 ans a un rendez-vous chez son médecin et ne conduit plus. Je cherche quelqu'un pour l'accompagner en transports publics, car je travaille ce jour-là.",
          de: "Meine 84-jährige Mutter hat einen Arzttermin und fährt nicht mehr Auto. Ich suche jemanden, der sie mit dem ÖV begleitet – ich muss an diesem Tag arbeiten.",
          it: "Mia madre di 84 anni ha un appuntamento dal medico e non guida più. Cerco qualcuno che la accompagni con i mezzi pubblici, perché quel giorno lavoro.",
          en: "My 84-year-old mother has a doctor's appointment and no longer drives. I'm looking for someone to go with her on public transport, as I'm working that day." } },
-  { c: "family", ty: "offer", pay: "paid", amt: 20, unit: "hour", dur: 180,
+  { c: "family", ty: "offer", pay: "paid", amt: 20, unit: "hour", dur: 180, ph: "1484820540004-14229fe36ca4",
     t: { fr: "Baby-sitting les soirs et week-ends", de: "Babysitting abends und am Wochenende", it: "Baby-sitting la sera e nel weekend", en: "Evening and weekend babysitting" },
     d: { fr: "Étudiante de 21 ans, j'ai suivi le cours de baby-sitting de la Croix-Rouge. Disponible les soirs et les week-ends pour garder vos enfants de 2 à 10 ans.",
          de: "Studentin, 21, mit dem Babysitting-Kurs des SRK. Abends und am Wochenende verfügbar für Kinder von 2 bis 10 Jahren.",
          it: "Studentessa di 21 anni, ho seguito il corso di baby-sitting della Croce Rossa. Disponibile la sera e nel fine settimana per bambini dai 2 ai 10 anni.",
          en: "21-year-old student with the Red Cross babysitting course. Available evenings and weekends for children aged 2 to 10." } },
-  { c: "family", ty: "request", pay: "paid", amt: 20, unit: "hour", dur: 180, rec: "weekly",
+  { c: "family", ty: "request", pay: "paid", amt: 20, unit: "hour", dur: 180, rec: "weekly", ph: "1761266158207-26a70892763d",
     t: { fr: "Récupérer les enfants à l'école", de: "Kinder von der Schule abholen", it: "Prendere i bambini a scuola", en: "School pick-up for two kids" },
     d: { fr: "Deux après-midi par semaine, j'ai besoin de quelqu'un pour aller chercher mes deux enfants (6 et 8 ans) à l'école et les garder jusqu'à 18 h.",
          de: "An zwei Nachmittagen pro Woche brauche ich jemanden, der meine zwei Kinder (6 und 8) von der Schule abholt und bis 18 Uhr betreut.",
          it: "Due pomeriggi a settimana ho bisogno di qualcuno che vada a prendere i miei due figli (6 e 8 anni) a scuola e li tenga fino alle 18.",
          en: "Two afternoons a week I need someone to pick up my two children (6 and 8) from school and look after them until 6 pm." } },
-  { c: "language", ty: "offer", pay: "paid", amt: 30, unit: "hour", dur: 60,
+  { c: "language", ty: "offer", pay: "paid", amt: 30, unit: "hour", dur: 60, ph: "1560785496-3c9d27877182",
     t: { fr: "Aide aux devoirs – maths et français", de: "Nachhilfe in Mathe und Deutsch", it: "Aiuto compiti – matematica e italiano", en: "Homework help – maths and languages" },
     d: { fr: "Enseignant à la retraite, j'aide les élèves de la 5P à la 11H en mathématiques et en français. Méthode douce et beaucoup de patience.",
          de: "Als pensionierter Lehrer helfe ich Schülerinnen und Schülern der 3. bis 9. Klasse in Mathematik und Deutsch. Ruhige Art, viel Geduld.",
          it: "Insegnante in pensione, aiuto gli allievi delle elementari e delle medie in matematica e italiano. Metodo tranquillo e tanta pazienza.",
          en: "Retired teacher helping primary and secondary pupils with maths and languages. Calm approach and lots of patience." } },
-  { c: "language", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly",
+  { c: "language", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly", ph: "1604881991405-b273c7a4386a",
     t: { fr: "Tandem de conversation français–allemand", de: "Sprachtandem Deutsch–Französisch", it: "Tandem linguistico italiano–tedesco", en: "Language exchange over coffee" },
     d: { fr: "Je parle français et j'aimerais améliorer mon allemand. On se retrouve autour d'un café : une demi-heure dans chaque langue.",
          de: "Ich spreche Deutsch und möchte mein Französisch verbessern. Treffen wir uns bei einem Kaffee: eine halbe Stunde pro Sprache.",
          it: "Parlo italiano e vorrei migliorare il mio tedesco. Ci vediamo per un caffè: mezz'ora in ogni lingua.",
          en: "Let's meet for coffee and practise languages together: half an hour in each language. All levels welcome." } },
-  { c: "digital", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60,
+  { c: "digital", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, ph: "1758686253992-62c9c69dfe61",
     t: { fr: "Aide smartphone et ordinateur pour débutants", de: "Handy- und Computerhilfe für Einsteiger", it: "Aiuto smartphone e computer per principianti", en: "Smartphone and computer help for beginners" },
     d: { fr: "Je vous aide à configurer votre téléphone, utiliser WhatsApp, faire des appels vidéo, gérer vos e-mails ou acheter un billet CFF en ligne.",
          de: "Ich helfe Ihnen beim Einrichten des Handys, bei WhatsApp, Videoanrufen, E-Mails oder beim Kauf eines SBB-Billetts online.",
          it: "Vi aiuto a configurare il telefono, usare WhatsApp, fare videochiamate, gestire le e-mail o comprare un biglietto FFS online.",
          en: "I'll help you set up your phone, use WhatsApp, make video calls, manage emails or buy an SBB train ticket online." } },
-  { c: "digital", ty: "request", pay: "negotiable", amt: 0, unit: "visit", dur: 60,
+  { c: "digital", ty: "request", pay: "negotiable", amt: 0, unit: "visit", dur: 60, ph: "1612815154858-60aa4c59eaa6",
     t: { fr: "Mon imprimante ne fonctionne plus", de: "Mein Drucker funktioniert nicht mehr", it: "La mia stampante non funziona più", en: "My printer stopped working" },
     d: { fr: "Depuis une mise à jour, mon ordinateur ne trouve plus l'imprimante. Quelqu'un de patient pourrait-il passer jeter un œil ?",
          de: "Seit einem Update findet mein Computer den Drucker nicht mehr. Könnte jemand mit Geduld vorbeikommen und nachschauen?",
          it: "Dopo un aggiornamento il computer non trova più la stampante. Qualcuno di paziente potrebbe passare a dare un'occhiata?",
          en: "Since an update, my computer can't find the printer anymore. Could someone patient come by and take a look?" } },
-  { c: "digital", ty: "offer", pay: "paid", amt: 25, unit: "hour", dur: 120,
+  { c: "digital", ty: "offer", pay: "paid", amt: 25, unit: "hour", dur: 120, ph: "1528569937393-ee892b976859",
     t: { fr: "Numérisation de photos et diapositives", de: "Digitalisierung von Fotos und Dias", it: "Digitalizzazione di foto e diapositive", en: "Digitising photos and slides" },
     d: { fr: "Je numérise vos anciennes photos, diapositives et cassettes vidéo pour les conserver et les partager en famille.",
          de: "Ich digitalisiere Ihre alten Fotos, Dias und Videokassetten, damit Sie sie aufbewahren und mit der Familie teilen können.",
          it: "Digitalizzo vecchie foto, diapositive e videocassette per conservarle e condividerle in famiglia.",
          en: "I'll digitise your old photos, slides and video tapes so you can keep them and share them with family." } },
-  { c: "transport", ty: "offer", pay: "paid", amt: 30, unit: "total", dur: 90,
+  { c: "transport", ty: "offer", pay: "paid", amt: 30, unit: "total", dur: 90, ph: "1620455800201-7f00aeef12ed",
     t: { fr: "Transport pour objets encombrants", de: "Transport für sperrige Sachen", it: "Trasporto per oggetti ingombranti", en: "Van for bulky items" },
     d: { fr: "J'ai une camionnette et je peux transporter un meuble, des achats encombrants ou des objets pour la déchetterie.",
          de: "Ich habe einen Lieferwagen und transportiere Möbel, sperrige Einkäufe oder Sachen für die Entsorgungsstelle.",
          it: "Ho un furgoncino e posso trasportare un mobile, acquisti ingombranti o oggetti da portare all'ecocentro.",
          en: "I have a small van and can move a piece of furniture, bulky shopping or items for the recycling centre." } },
-  { c: "transport", ty: "request", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly",
+  { c: "transport", ty: "request", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly", ph: "1591586116988-62fe65164f8d",
     t: { fr: "Covoiturage pour le marché du samedi", de: "Mitfahrgelegenheit zum Samstagsmarkt", it: "Passaggio per il mercato del sabato", en: "Lift to the Saturday market" },
     d: { fr: "Je n'ai pas de voiture et le marché est mal desservi le samedi matin. Quelqu'un y va régulièrement et aurait une place ?",
          de: "Ich habe kein Auto und der Markt ist am Samstagmorgen schlecht erreichbar. Fährt jemand regelmässig hin und hätte einen Platz frei?",
          it: "Non ho l'auto e il sabato mattina il mercato è mal servito. Qualcuno ci va regolarmente e ha un posto libero?",
          en: "I don't have a car and the market is poorly served on Saturday mornings. Does anyone go regularly and have a free seat?" } },
-  { c: "repair", ty: "offer", pay: "negotiable", amt: 0, unit: "visit", dur: 120,
+  { c: "repair", ty: "offer", pay: "negotiable", amt: 0, unit: "visit", dur: 120, ph: "1504148455328-c376907d081c",
     t: { fr: "Petits travaux de bricolage à domicile", de: "Kleine Handwerksarbeiten zu Hause", it: "Piccoli lavori di bricolage a domicilio", en: "Small DIY jobs at home" },
     d: { fr: "Monter un meuble, fixer une étagère, changer une ampoule difficile d'accès ou réparer un robinet qui goutte : j'ai l'outillage et l'expérience.",
          de: "Möbel aufbauen, ein Regal montieren, schwer erreichbare Lampen wechseln oder einen tropfenden Wasserhahn reparieren: Werkzeug und Erfahrung sind vorhanden.",
          it: "Montare un mobile, fissare una mensola, cambiare una lampadina difficile da raggiungere o riparare un rubinetto che gocciola: ho gli attrezzi e l'esperienza.",
          en: "Assembling furniture, putting up a shelf, changing a hard-to-reach bulb or fixing a dripping tap: I have the tools and the experience." } },
-  { c: "repair", ty: "request", pay: "paid", amt: 40, unit: "total", dur: 60,
+  { c: "repair", ty: "request", pay: "paid", amt: 40, unit: "total", dur: 60, ph: "1676531356064-0a527118baf4",
     t: { fr: "Réparer mon vélo (freins et vitesses)", de: "Velo reparieren (Bremsen und Schaltung)", it: "Riparare la mia bici (freni e cambio)", en: "Bike repair (brakes and gears)" },
     d: { fr: "Mon vélo a besoin d'un réglage des freins et du dérailleur. Les pièces sont à ma charge, merci d'avance pour votre aide !",
          de: "Mein Velo braucht eine Einstellung der Bremsen und der Schaltung. Ersatzteile zahle ich – danke für die Hilfe!",
          it: "La mia bici ha bisogno di una regolazione dei freni e del cambio. I pezzi li pago io, grazie in anticipo!",
          en: "My bike needs its brakes and gears adjusted. I'll pay for any parts — thanks in advance for your help!" } },
-  { c: "garden", ty: "request", pay: "paid", amt: 25, unit: "hour", dur: 180,
+  { c: "garden", ty: "request", pay: "paid", amt: 25, unit: "hour", dur: 180, ph: "1543309959-4d45288d1629",
     t: { fr: "Aide pour tailler la haie", de: "Hilfe beim Heckenschneiden", it: "Aiuto per potare la siepe", en: "Help trimming the hedge" },
     d: { fr: "Notre haie a bien poussé. Nous cherchons un coup de main pour la tailler et évacuer les branches. Taille-haie et échelle fournis.",
          de: "Unsere Hecke ist stark gewachsen. Wir suchen Hilfe beim Schneiden und Wegbringen der Äste. Heckenschere und Leiter sind vorhanden.",
          it: "La nostra siepe è cresciuta parecchio. Cerchiamo aiuto per potarla e portare via i rami. Tagliasiepi e scala a disposizione.",
          en: "Our hedge has grown a lot. We need a hand trimming it and clearing the branches. Hedge trimmer and ladder provided." } },
-  { c: "garden", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "garden", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1466692476868-aef1dfb1e735",
     t: { fr: "Plantons de tomates à donner", de: "Tomatensetzlinge zu verschenken", it: "Piantine di pomodoro da regalare", en: "Tomato seedlings to give away" },
     d: { fr: "J'ai trop de plantons cette année : tomates, courgettes et basilic. Venez les chercher, je vous donne aussi quelques conseils de culture.",
          de: "Ich habe dieses Jahr zu viele Setzlinge: Tomaten, Zucchetti und Basilikum. Holen Sie sie ab – Tipps zum Anbau gibt es gratis dazu.",
          it: "Quest'anno ho troppe piantine: pomodori, zucchine e basilico. Venite a prenderle, vi do anche qualche consiglio.",
          en: "I have too many seedlings this year: tomatoes, courgettes and basil. Come and pick them up — gardening tips included." } },
-  { c: "home", ty: "offer", pay: "paid", amt: 28, unit: "hour", dur: 180,
+  { c: "home", ty: "offer", pay: "paid", amt: 28, unit: "hour", dur: 180, ph: "1740684589228-54b6fba08985",
     t: { fr: "Aide au ménage et au repassage", de: "Hilfe bei Haushalt und Bügeln", it: "Aiuto per pulizie e stiro", en: "Cleaning and ironing help" },
     d: { fr: "Soigneuse et discrète, je vous aide pour le ménage, le repassage ou un grand nettoyage de printemps.",
          de: "Sorgfältig und diskret helfe ich Ihnen beim Putzen, Bügeln oder beim grossen Frühlingsputz.",
          it: "Precisa e discreta, vi aiuto con le pulizie, lo stiro o le grandi pulizie di primavera.",
          en: "Careful and discreet, I can help with cleaning, ironing or a big spring clean." } },
-  { c: "home", ty: "request", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "home", ty: "request", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1528467279403-46af96c37ab3",
     t: { fr: "Arroser mes plantes pendant mon absence", de: "Pflanzen giessen während meiner Abwesenheit", it: "Innaffiare le piante durante la mia assenza", en: "Water my plants while I'm away" },
     d: { fr: "Je m'absente une semaine. Qui pourrait passer deux fois pour arroser mes plantes ? Je rendrai volontiers la pareille.",
          de: "Ich bin eine Woche weg. Wer könnte zweimal vorbeikommen und meine Pflanzen giessen? Ich revanchiere mich gern.",
          it: "Sarò via una settimana. Chi potrebbe passare due volte ad annaffiare le mie piante? Ricambierò volentieri.",
          en: "I'm away for a week. Could someone drop by twice to water my plants? Happy to return the favour." } },
-  { c: "moving", ty: "request", pay: "paid", amt: 25, unit: "hour", dur: 240,
+  { c: "moving", ty: "request", pay: "paid", amt: 25, unit: "hour", dur: 240, ph: "1714647211902-bb711d643a17",
     t: { fr: "Besoin de bras pour un déménagement", de: "Helfer für einen Umzug gesucht", it: "Cercasi braccia per un trasloco", en: "Extra hands for a move" },
     d: { fr: "Je déménage d'un 3e étage sans ascenseur. Je cherche deux personnes motivées pour porter les cartons. Pizza et boissons offertes !",
          de: "Ich ziehe aus dem 3. Stock ohne Lift aus und suche zwei motivierte Personen zum Kistentragen. Pizza und Getränke offeriert!",
          it: "Trasloco da un terzo piano senza ascensore. Cerco due persone motivate per portare gli scatoloni. Pizza e bibite offerte!",
          en: "I'm moving out of a 3rd-floor flat with no lift and need two motivated people to carry boxes. Pizza and drinks on me!" } },
-  { c: "moving", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "moving", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1609143739217-01b60dad1c67",
     t: { fr: "Cartons de déménagement à donner", de: "Umzugskartons zu verschenken", it: "Scatoloni da trasloco da regalare", en: "Moving boxes to give away" },
     d: { fr: "Une trentaine de cartons solides, déjà pliés, et du papier bulle. À venir chercher rapidement.",
          de: "Rund dreissig stabile, zusammengefaltete Kartons und Luftpolsterfolie. Bitte bald abholen.",
          it: "Una trentina di scatoloni robusti già piegati e del pluriball. Da ritirare al più presto.",
          en: "About thirty sturdy flat-packed boxes plus bubble wrap. Please pick them up soon." } },
-  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1583845112239-97ef1341b271",
     t: { fr: "Table en bois et quatre chaises", de: "Holztisch mit vier Stühlen", it: "Tavolo in legno e quattro sedie", en: "Wooden table and four chairs" },
     d: { fr: "Table en chêne massif (160 × 90 cm) et quatre chaises en bon état. À donner contre un petit coup de main pour la descente.",
          de: "Massiver Eichentisch (160 × 90 cm) und vier Stühle in gutem Zustand. Gratis gegen etwas Hilfe beim Heruntertragen.",
          it: "Tavolo in rovere massiccio (160 × 90 cm) e quattro sedie in buono stato. In regalo, basta un aiuto a portarli giù.",
          en: "Solid oak table (160 × 90 cm) and four chairs in good condition. Free — just help me carry them downstairs." } },
-  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1768693602418-260d828b878d",
     t: { fr: "Vêtements d'enfant 2–4 ans", de: "Kinderkleider 2–4 Jahre", it: "Vestiti per bambini 2–4 anni", en: "Children's clothes, ages 2–4" },
     d: { fr: "Deux sacs de vêtements d'enfant propres et en bon état, pour garçon et fille. Idéal pour une famille qui s'agrandit.",
          de: "Zwei Säcke saubere Kinderkleider in gutem Zustand, für Buben und Mädchen. Ideal für eine wachsende Familie.",
          it: "Due sacchi di vestiti per bambini puliti e in buono stato, per maschi e femmine. Ideali per una famiglia che cresce.",
          en: "Two bags of clean children's clothes in good condition, for boys and girls. Ideal for a growing family." } },
-  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30,
+  { c: "donation", ty: "donation", pay: "free", amt: 0, unit: "total", dur: 30, ph: "1497633762265-9d179a990aa6",
     t: { fr: "Livres et bandes dessinées", de: "Bücher und Comics", it: "Libri e fumetti", en: "Books and comics" },
     d: { fr: "Je vide ma bibliothèque : romans, livres de cuisine et une belle collection de BD. Servez-vous !",
          de: "Ich räume mein Büchergestell: Romane, Kochbücher und eine schöne Comic-Sammlung. Bedienen Sie sich!",
          it: "Svuoto la mia libreria: romanzi, libri di cucina e una bella collezione di fumetti. Servitevi pure!",
          en: "Clearing my bookshelves: novels, cookbooks and a nice comic collection. Help yourself!" } },
-  { c: "community", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 180, rec: "monthly",
+  { c: "community", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 180, rec: "monthly", ph: "1721332154191-ba5f1534266e",
     t: { fr: "Repair Café du quartier", de: "Repair Café im Quartier", it: "Repair Café di quartiere", en: "Neighbourhood Repair Café" },
     d: { fr: "Chaque mois, des bénévoles réparent gratuitement petits appareils, vêtements et vélos. Apportez vos objets cassés, on les répare ensemble !",
          de: "Jeden Monat reparieren Freiwillige kostenlos Kleingeräte, Kleider und Velos. Bringen Sie Ihre kaputten Sachen mit – wir flicken sie gemeinsam!",
          it: "Ogni mese dei volontari riparano gratuitamente piccoli elettrodomestici, vestiti e bici. Portate i vostri oggetti rotti, li ripariamo insieme!",
          en: "Every month, volunteers repair small appliances, clothes and bikes for free. Bring your broken items and we'll fix them together!" } },
-  { c: "community", ty: "request", pay: "free", amt: 0, unit: "total", dur: 180,
+  { c: "community", ty: "request", pay: "free", amt: 0, unit: "total", dur: 180, ph: "1537111355507-1f73d87ecadf",
     t: { fr: "Bénévoles pour la fête des voisins", de: "Freiwillige für das Nachbarschaftsfest", it: "Volontari per la festa dei vicini", en: "Volunteers for the neighbours' party" },
     d: { fr: "Nous organisons la fête des voisins de l'immeuble. Qui peut aider à installer les tables, préparer un gâteau ou animer un jeu pour les enfants ?",
          de: "Wir organisieren ein Fest für die Nachbarschaft. Wer hilft beim Aufstellen der Tische, backt einen Kuchen oder leitet ein Spiel für Kinder?",
          it: "Organizziamo la festa dei vicini del palazzo. Chi può aiutare a montare i tavoli, preparare una torta o animare un gioco per i bambini?",
          en: "We're organising a party for our building. Who can help set up tables, bake a cake or run a game for the kids?" } },
-  { c: "community", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly",
+  { c: "community", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly", ph: "1660314002642-77bbfe3e9b48",
     t: { fr: "Balade du dimanche en groupe", de: "Gemeinsamer Sonntagsspaziergang", it: "Passeggiata domenicale in gruppo", en: "Sunday group walk" },
     d: { fr: "Chaque semaine, une balade tranquille d'une heure pour découvrir la région et faire connaissance. Ouvert à toutes et à tous, rythme doux.",
          de: "Jede Woche ein gemütlicher, einstündiger Spaziergang, um die Gegend zu entdecken und sich kennenzulernen. Offen für alle, gemächliches Tempo.",
          it: "Ogni settimana una passeggiata tranquilla di un'ora per scoprire la zona e conoscersi. Aperta a tutti, ritmo lento.",
          en: "A relaxed one-hour walk every week to explore the area and meet people. Open to everyone, gentle pace." } },
-  { c: "other", ty: "request", pay: "negotiable", amt: 0, unit: "total", dur: 60,
+  { c: "other", ty: "request", pay: "negotiable", amt: 0, unit: "total", dur: 60, ph: "1554224155-6726b3ff858f",
     t: { fr: "Aide pour ma déclaration d'impôts", de: "Hilfe bei der Steuererklärung", it: "Aiuto per la dichiarazione d'imposta", en: "Help with my tax return" },
     d: { fr: "Je viens d'arriver dans le canton et je ne comprends pas bien le formulaire de déclaration d'impôts. Quelqu'un d'expérimenté pourrait-il m'expliquer ?",
          de: "Ich bin neu im Kanton und verstehe das Formular der Steuererklärung nicht ganz. Könnte mir jemand mit Erfahrung helfen?",
          it: "Sono appena arrivato nel cantone e non capisco bene il modulo della dichiarazione d'imposta. Qualcuno con esperienza potrebbe spiegarmelo?",
          en: "I've just moved to the canton and don't quite understand the tax return form. Could someone experienced walk me through it?" } },
-  { c: "other", ty: "offer", pay: "paid", amt: 20, unit: "hour", dur: 120,
+  { c: "other", ty: "offer", pay: "paid", amt: 20, unit: "hour", dur: 120, ph: "1447279506476-3faec8071eee",
     t: { fr: "Cours de cuisine italienne à domicile", de: "Italienischer Kochkurs bei Ihnen zu Hause", it: "Corso di cucina italiana a domicilio", en: "Italian cooking class at your home" },
     d: { fr: "Pâtes fraîches, risotto, tiramisu : je vous apprends les recettes de ma nonna dans votre cuisine. Pour 1 à 4 personnes.",
          de: "Frische Pasta, Risotto, Tiramisu: Ich zeige Ihnen die Rezepte meiner Nonna in Ihrer Küche. Für 1 bis 4 Personen.",
          it: "Pasta fresca, risotto, tiramisù: vi insegno le ricette della nonna nella vostra cucina. Da 1 a 4 persone.",
          en: "Fresh pasta, risotto, tiramisu: I'll teach you my nonna's recipes in your own kitchen. For 1 to 4 people." } },
-  { c: "seniors", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly",
+  { c: "seniors", ty: "offer", pay: "free", amt: 0, unit: "total", dur: 60, rec: "weekly", ph: "1758691030771-9dadc2a828d4",
     t: { fr: "Lecture à voix haute", de: "Vorlesen für Seniorinnen und Senioren", it: "Lettura ad alta voce", en: "Reading aloud" },
     d: { fr: "J'aime lire et je propose de faire la lecture du journal ou d'un roman aux personnes malvoyantes ou qui apprécient simplement la compagnie.",
          de: "Ich lese gerne und biete an, Zeitung oder Romane für sehbehinderte Menschen oder alle, die Gesellschaft schätzen, vorzulesen.",
@@ -3757,6 +3813,14 @@ const cantonName = (code) => (CANTONS[code] ? CANTONS[code][current] : code || "
 const categoryName = (id) => getCategory(id)[current];
 
 const languageName = (code) => t(`lang.${code}`);
+/** Nom d'une langue parlée, écrit dans la langue du site (« Italien » et non « Italiano » sur le site en français). */
+function spokenLanguageName(code, capitalize = true) {
+  try {
+    const name = new Intl.DisplayNames([LOCALES[current] || current], { type: "language" }).of(code);
+    if (name && name !== code) return !capitalize ? name : name.charAt(0).toLocaleUpperCase(LOCALES[current]) + name.slice(1);
+  } catch { /* navigateur ancien */ }
+  return languageName(code);
+}
 
 /* ----------------------------- FORMATS ----------------------------- */
 
@@ -3815,7 +3879,7 @@ function fmtDistance(km) {
   return `${km < 10 ? km.toFixed(1) : Math.round(km)} km`;
 }
 
-return { setLang, t, pick, fmtDate, fmtShortDate, fmtTime, fmtRelative, fmtNumber, fmtCHF, fmtDuration, fmtDistance, getLang, locale, cantonName, categoryName, languageName };
+return { setLang, t, pick, spokenLanguageName, fmtDate, fmtShortDate, fmtTime, fmtRelative, fmtNumber, fmtCHF, fmtDuration, fmtDistance, getLang, locale, cantonName, categoryName, languageName };
 });
 __def("seed.js", function () {
 /* =====================================================================
@@ -3847,7 +3911,21 @@ const BIOS = {
   fr: ["J'habite le quartier depuis {n} ans et j'aime rendre service.", "Toujours partant·e pour un coup de main entre voisins !", "Parent de deux enfants, je crois beaucoup à l'entraide locale.", "Retraité·e actif·ve, j'ai du temps à partager."],
   de: ["Ich wohne seit {n} Jahren im Quartier und helfe gerne.", "Immer bereit für Nachbarschaftshilfe!", "Mutter/Vater von zwei Kindern – ich glaube an lokale Solidarität.", "Aktiv pensioniert, ich habe Zeit zu teilen."],
   it: ["Abito nel quartiere da {n} anni e mi piace dare una mano.", "Sempre pronto/a ad aiutare i vicini!", "Genitore di due figli, credo molto nell'aiuto reciproco.", "Pensionato/a attivo/a, ho tempo da condividere."],
+  en: ["I've lived in the neighbourhood for {n} years and I like to help out.", "Always up for helping a neighbour!", "Parent of two children, I really believe in local mutual aid.", "Active retiree with time to share."],
 };
+
+/** Texte « À propos » d'un membre d'exemple, dans la langue choisie sur le site
+ *  (avant, il restait dans la langue du membre : un Tessinois était affiché en italien). */
+function demoBio(p, lang) {
+  if (!p?.demo || p.bioIdx == null) return p?.bio || "";
+  return (BIOS[lang] || BIOS.fr)[p.bioIdx].replace("{n}", String(p.bioN));
+}
+/** Savoir-faire d'un membre d'exemple, traduits dans la langue du site. */
+function demoSpecialties(p, lang) {
+  if (!p?.demo || !Array.isArray(p.specialtyCats)) return p?.specialties || [];
+  const i = Math.max(0, LANGS.indexOf(lang));
+  return [...new Set(p.specialtyCats.map((c) => SPECIALTY_POOL[c]?.[i]).filter(Boolean))];
+}
 
 let cache = null;
 
@@ -3884,8 +3962,14 @@ function getDemoData() {
       created: since.toISOString(),
       specialties,
       languages: lang === "fr" ? ["fr", r() > 0.6 ? "de" : "en"] : lang === "de" ? ["de", r() > 0.5 ? "fr" : "en"] : ["it", r() > 0.5 ? "fr" : "de"],
-      bio: pick(BIOS[lang]).replace("{n}", String(2 + Math.floor(r() * 20))),
+      bio: "",
     };
+    // Même tirage qu'avant (les annonces restent identiques), mais on garde le numéro du texte pour le traduire
+    const bioIdx = Math.floor(r() * BIOS[lang].length);
+    author.bioIdx = bioIdx;
+    author.bioN = 2 + Math.floor(r() * 20);
+    author.bio = BIOS[lang][bioIdx].replace("{n}", String(author.bioN));
+    author.specialtyCats = cats;
     authors.push(author);
     if (!byLocality.has(loc.name)) byLocality.set(loc.name, []);
     byLocality.get(loc.name).push(author);
@@ -3957,6 +4041,7 @@ function getDemoData() {
       lng: Math.round((loc.lng + (r() - 0.5) * 0.04) * 10000) / 10000,
       languages: author.languages,
       photos: [],
+      demoPhoto: tpl.ph || null,
       created: created.toISOString(),
       status: "active",
       views: 5 + Math.floor(r() * 180),
@@ -3967,7 +4052,7 @@ function getDemoData() {
   return cache;
 }
 
-return { getDemoData, DEMO_VERSION };
+return { demoBio, demoSpecialties, getDemoData, DEMO_VERSION };
 });
 __def("auth.js", function () {
 /* =====================================================================
@@ -4201,6 +4286,7 @@ function getPerson(id) {
     specialties: user.specialties || [],
     languages: user.languages || [],
     bio: user.bio || "",
+    lang: user.lang || (user.languages || [])[0] || null,
     photo: safeImageSrc(user.photo),
   };
 }
@@ -5014,7 +5100,7 @@ __def("ui.js", function () {
    COMPOSANTS D'INTERFACE RÉUTILISABLES
    (cartes d'annonce, avatars, boîtes de dialogue, notifications, etc.)
    ===================================================================== */
-const { html, raw, esc, $, mount, initials, avatarTone, debounce, safeImageSrc, hashString } = __req("util.js");
+const { html, raw, esc, $, mount, initials, avatarTone, debounce, safeImageSrc, hashString, demoPhotoUrl } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, pick, cantonName, categoryName, fmtCHF, fmtShortDate, fmtDistance, getLang } = __req("i18n.js");
 const { getCategory, searchLocalities, LOCALITIES, CANTON_CODES, COVER_PATTERNS, COVER_TONES } = __req("data.js");
@@ -5080,7 +5166,11 @@ function categoryThumb(l, cls = "") {
   const photo = safeImageSrc(l.photos?.[0]);
   if (photo) return html`<div class="media ${cls}"><img src="${photo}" alt="" loading="lazy"></div>`;
   const { tone, pattern } = coverStyle(l);
-  return html`<div class="media media-illu tv-${tone} pat-${pattern} ${cls}"><span class="media-icon">${icon(cat.icon)}</span><span class="media-deco" aria-hidden="true">${icon(cat.icon)}</span></div>`;
+  // Annonce d'exemple : vraie photo par-dessus l'illustration (si la photo ne charge pas, l'illustration reste visible)
+  const demo = demoPhotoUrl(l, 600);
+  const big = cls.includes("detail-media");
+  const img = demo ? html`<img class="media-photo" src="${big ? demoPhotoUrl(l, 1200) : demo}" ${raw(big ? "" : `srcset="${demoPhotoUrl(l, 400)} 400w, ${demo} 600w, ${demoPhotoUrl(l, 900)} 900w" sizes="(max-width: 640px) 50vw, 320px"`)} alt="" loading="${big ? "eager" : "lazy"}" decoding="async">` : "";
+  return html`<div class="media media-illu tv-${tone} pat-${pattern}${demo ? " has-photo" : ""} ${cls}"><span class="media-icon">${icon(cat.icon)}</span><span class="media-deco" aria-hidden="true">${icon(cat.icon)}</span>${img}</div>`;
 }
 
 function listingTitle(l) { return pick(l.title); }
@@ -5433,6 +5523,8 @@ const { fmtNumber } = __req("i18n.js");
 
 const root = document.documentElement;
 let revealIO = null;
+let slideIO = null;
+const pending = new Set();
 let countIO = null;
 let parallaxEls = [];
 let ticking = false;
@@ -5511,12 +5603,16 @@ function scan(node = document) {
         });
       }
     }
-    // Dès qu'il arrive à l'écran, le texte glisse jusqu'à sa place tout seul (une seule fois)
-    if (revealIO) {
+    // Quand le texte est bien visible (un quart de l'écran au-dessus du bas),
+    // il glisse jusqu'à sa place tout seul (une seule fois).
+    // On attend un peu plus qu'avant : sinon, sur certains téléphones, l'animation
+    // se jouait tout en bas de l'écran, avant même qu'on la regarde.
+    if (slideIO) {
       pick("[data-slide], [data-words]").forEach((el) => {
         if (!inHome(el) || el.classList.contains("is-in")) return;
         if (el.dataset.words !== undefined) splitWords(el);
-        revealIO.observe(el);
+        pending.add(el);
+        slideIO.observe(el);
       });
     }
     // Bas de l'accueil : apparition douce, une seule fois
@@ -5555,6 +5651,13 @@ function onScroll() {
   else if (y < lastY - 6 || y <= 160) root.classList.remove("hdr-hide");
   if (Math.abs(y - lastY) > 6 || y <= 160) lastY = y;
   if (progressBar) progressBar.style.transform = `scaleX(${maxY > 40 ? Math.min(1, y / maxY) : 0})`;
+  // Tout en bas de la page : on montre ce qui attend encore (sinon un texte pourrait rester caché)
+  if (pending.size && y >= maxY - 40) {
+    pending.forEach((el) => {
+      if (!el.isConnected) { pending.delete(el); return; }
+      if (el.getBoundingClientRect().top < vh) { el.classList.add("is-in"); slideIO?.unobserve(el); pending.delete(el); }
+    });
+  }
   if (reducedMotion()) return;
 
   // Parallaxe
@@ -5596,6 +5699,14 @@ function initMotion() {
       revealIO.unobserve(e.target);
     }
   }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+  slideIO = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      e.target.classList.add("is-in");
+      pending.delete(e.target);
+      slideIO.unobserve(e.target);
+    }
+  }, { rootMargin: "0px 0px -24% 0px", threshold: 0 });
   countIO = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (!e.isIntersecting) continue;
@@ -6113,26 +6224,11 @@ const { CATEGORIES, getCategory, findLocality } = __req("data.js");
 const { distanceKm } = __req("util.js");
 const { allListings, searchListings, getOrigin, setOrigin, stats, isFavorite, getRecentlyViewed, clearRecentlyViewed } = __req("store.js");
 const { createMap, listingsLayer, fitSwitzerland, getMapStyle, saveMapStyle } = __req("map.js");
-const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields } = __req("ui.js");
+const { listingCard, priceLabel, listingTitle, localityField, initLocalityFields, categoryThumb } = __req("ui.js");
 const { swissMapSvg, project, VIEW_W, VIEW_H } = __req("switzerland.js");
 
 /** Villes mises en avant sur la page d'accueil (annonces dans un rayon de 10 km). */
 const POPULAR_CITIES = ["Zürich", "Genève", "Basel", "Lausanne", "Bern", "Yverdon-les-Bains", "Luzern", "Lugano", "St. Gallen", "Fribourg", "Neuchâtel", "Sion"];
-
-function heroCards(listings) {
-  const wanted = [["Lausanne", "right"], ["Zürich", "left"], ["Lugano", "left"]];
-  return wanted
-    .map(([city, side], i) => {
-      const l = listings.find((x) => x.city === city && x.demo && x.type === (i === 1 ? "request" : "offer")) || listings.find((x) => x.city === city);
-      if (!l) return "";
-      const [x, y] = project(l.lng, l.lat);
-      const cat = getCategory(l.category);
-      return html`<a class="hero-float hero-float-${i} side-${side}" href="#/annonce/${l.id}" data-x="${((x / VIEW_W) * 100).toFixed(1)}" data-y="${((y / VIEW_H) * 100).toFixed(1)}">
-        <span class="hero-float-icon tone-${cat.tone}">${icon(cat.icon)}</span>
-        <span class="hero-float-text"><strong>${listingTitle(l)}</strong><span>${l.city} · ${priceLabel(l)}</span></span>
-      </a>`;
-    });
-}
 
 const FAQ = ["cost", "safety", "payment", "location", "languages", "data"];
 
@@ -6148,6 +6244,7 @@ function stories() {
   </nav>`;
 }
 let mapObserver = null;
+let stopCities = null;
 
 /** « Vous avez consulté » : les dernières annonces vues sur cet appareil (défilement horizontal). */
 function recentlyViewedSection() {
@@ -6197,6 +6294,8 @@ const __default = {
     });
 
     return html`
+    ${mobileHome({ listings, recent, origin, cities })}
+    <div class="d-home">
     <section class="hero hero-cine">
       <div class="hero-bg" aria-hidden="true">
         <span class="aurora a1"></span>
@@ -6233,7 +6332,6 @@ const __default = {
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-map" data-parallax="-0.06">
             ${swissMapSvg(dots)}
-            ${heroCards(listings)}
           </div>
         </div>
       </div>
@@ -6313,9 +6411,13 @@ const __default = {
       <div class="container">
         <div class="section-head">
           <div><span class="kicker">${t("home.citiesKicker")}</span><h2 class="h2" id="cities-title">${t("home.citiesTitle")}</h2></div>
+          <div class="cities-nav">
+            <button type="button" class="icon-btn" data-action="cities-step" data-delta="-1" aria-label="${t("home.citiesPrev")}">${icon("chevronLeft")}</button>
+            <button type="button" class="icon-btn" data-action="cities-step" data-delta="1" aria-label="${t("home.citiesNext")}">${icon("chevronRight")}</button>
+          </div>
         </div>
       </div>
-      <div class="marquee" data-reveal="fade">
+      <div class="marquee" data-reveal="fade" tabindex="-1">
         <div class="marquee-track">${cities.map((c) => cityLink(c))}${cities.map((c) => cityLink(c, true))}</div>
       </div>
     </section>
@@ -6402,7 +6504,8 @@ const __default = {
           <button type="button" class="btn btn-light btn-lg" data-action="show-qr">${icon("qrCode")}${t("home.qrCta")}</button>
         </div>
       </div>
-    </section>`;
+    </section>
+    </div>`;
   },
 
   mount(root) {
@@ -6412,6 +6515,11 @@ const __default = {
       const loc = e.detail;
       setOrigin({ lat: loc.lat, lng: loc.lng, label: loc.name });
       placeChosen = true;
+    });
+    root.querySelector("[data-form='m-search']")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = e.target.q.value.trim();
+      location.hash = `#/explorer${q ? "?q=" + encodeURIComponent(q) : ""}`;
     });
     root.querySelector("[data-form='hero-search']")?.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -6442,20 +6550,144 @@ const __default = {
         mapObserver.observe(mapEl);
       } else init();
     }
-    // Positionne les cartes flottantes sur l'illustration de la Suisse
-    root.querySelectorAll(".hero-float").forEach((el) => {
-      el.style.setProperty("--x", el.dataset.x + "%");
-      el.style.setProperty("--y", el.dataset.y + "%");
-    });
+    // Villes : défilement automatique ET au doigt / à la souris
+    const strip = root.querySelector(".marquee");
+    if (strip) stopCities = initCityStrip(strip);
   },
 
   unmount() {
+    stopCities?.();
+    stopCities = null;
     mapObserver?.disconnect();
     mapObserver = null;
     homeMap?.remove();
     homeMap = null;
   },
 };
+
+/* ------------------------------------------------------------------
+   ACCUEIL SUR TÉLÉPHONE (v3.7) — simple, comme anibis :
+   une recherche, les catégories, puis directement les annonces.
+   Les longues explications restent sur ordinateur / tablette,
+   et sont accessibles par les liens « Comment ça marche ? », « Sécurité », « Aide ».
+   ------------------------------------------------------------------ */
+function mCard(l) {
+  return html`<article class="m-card">
+    <div class="m-card-media">${categoryThumb(l)}</div>
+    <button class="fav-btn${isFavorite(l.id) ? " is-active" : ""}" type="button" data-action="fav" data-id="${l.id}" aria-pressed="${isFavorite(l.id) ? "true" : "false"}" aria-label="${isFavorite(l.id) ? t("fav.remove") : t("fav.add")}">${icon("heart")}</button>
+    <h3 class="m-card-title"><a href="#/annonce/${l.id}" class="stretched">${listingTitle(l)}</a></h3>
+    <p class="m-card-place">${l.city}</p>
+    <p class="m-card-price">${priceLabel(l)}</p>
+  </article>`;
+}
+
+function mobileHome({ listings, recent, origin, cities }) {
+  const seen = getRecentlyViewed().slice(0, 8);
+  // Pas de doublon avec la rangée du haut : on montre les annonces suivantes
+  const shown = new Set(recent.map((x) => x.listing.id));
+  const latest = searchListings({ sort: "recent" }, null).map((x) => x.listing).filter((l) => !shown.has(l.id)).slice(0, 12);
+  const head = (title, href) => html`<div class="m-head"><h2 class="m-title">${title}</h2>${href ? html`<a class="m-more" href="${href}">${t("home.seeAll")}</a>` : ""}</div>`;
+  return html`<div class="m-home">
+    <div class="container">
+      <form class="m-search" data-form="m-search" role="search">
+        <label class="sr-only" for="m-q">${t("search.what")}</label>
+        ${icon("search")}<input id="m-q" class="input" type="search" name="q" placeholder="${t("home.mSearchPh")}" maxlength="80" enterkeyhint="search" autocomplete="off">
+      </form>
+      ${stories()}
+
+      ${seen.length ? html`<section class="m-sec"><div class="m-head"><h2 class="m-title">${t("home.seenTitle")}</h2><button type="button" class="link-btn m-more" data-action="clear-recent">${t("home.seenClear")}</button></div><div class="m-row">${seen.map(mCard)}</div></section>` : ""}
+
+      <section class="m-sec">
+        ${head(origin ? t("home.mNear") : t("home.mNew"), origin ? "#/explorer?sort=distance" : "#/explorer")}
+        <div class="m-row">${recent.map(({ listing }) => mCard(listing))}</div>
+      </section>
+
+      <section class="m-sec">
+        ${head(t("home.mCities"))}
+        <div class="m-chips">${cities.map((c) => html`<a class="m-chip" href="#/explorer?ville=${encodeURIComponent(c.name)}">${icon("pin")}${c.name}<span>${c.n}</span></a>`)}</div>
+      </section>
+
+      <section class="m-sec">
+        ${head(t("home.mAll"), "#/explorer")}
+        <div class="m-grid">${latest.map(mCard)}</div>
+        <a class="btn btn-primary btn-block m-all" href="#/explorer">${t("home.mSeeAll")}</a>
+      </section>
+
+      <p class="m-links"><a href="#/page/aide">${t("home.mHow")}</a><a href="#/page/securite">${t("home.mSafety")}</a><a href="#/page/aide">${t("home.mHelp")}</a></p>
+    </div>
+  </div>`;
+}
+
+/* ------------------------------------------------------------------
+   VILLES : le ruban avance tout seul, mais on peut aussi le faire glisser
+   au doigt, à la souris (cliquer-glisser) ou avec les flèches.
+   Il s'arrête quand on le touche, puis repart après quelques secondes.
+   ------------------------------------------------------------------ */
+function initCityStrip(strip) {
+  const track = strip.querySelector(".marquee-track");
+  if (!track) return null;
+  strip.classList.add("is-js");
+  const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const SPEED = 32; // pixels par seconde
+  let pos = 0, last = 0, raf = 0, pausedUntil = 0, hover = false, self = false, alive = true;
+  const half = () => track.scrollWidth / 2;
+  const pause = (ms = 3500) => { pausedUntil = performance.now() + ms; };
+  const wrap = () => {
+    const h = half();
+    if (h <= 0) return;
+    if (strip.scrollLeft >= h) { self = true; strip.scrollLeft -= h; }
+    else if (strip.scrollLeft <= 0) { self = true; strip.scrollLeft += h; }
+    pos = strip.scrollLeft;
+  };
+  const tick = (now) => {
+    if (!alive) return;
+    const dt = last ? Math.min(64, now - last) : 16;
+    last = now;
+    if (!hover && !dragging && now > pausedUntil && !document.hidden) {
+      pos += (SPEED * dt) / 1000;
+      if (pos >= half()) pos -= half();
+      self = true;
+      strip.scrollLeft = pos;
+    }
+    raf = requestAnimationFrame(tick);
+  };
+  strip.addEventListener("scroll", () => {
+    if (self) { self = false; return; }
+    pause();
+    wrap();
+  }, { passive: true });
+  ["touchstart", "wheel", "focusin", "keydown"].forEach((ev) => strip.addEventListener(ev, () => pause(), { passive: true }));
+  strip.addEventListener("mouseenter", () => { hover = true; });
+  strip.addEventListener("mouseleave", () => { hover = false; pause(1200); });
+
+  // Souris : cliquer-glisser
+  let dragging = false, startX = 0, startLeft = 0, moved = false;
+  strip.addEventListener("pointerdown", (e) => {
+    if (e.pointerType !== "mouse" || e.button !== 0) return;
+    dragging = true; moved = false; startX = e.clientX; startLeft = strip.scrollLeft;
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 5) { moved = true; strip.classList.add("is-dragging"); }
+    if (moved) { strip.scrollLeft = startLeft - dx; e.preventDefault(); }
+  });
+  const end = () => { if (!dragging) return; dragging = false; strip.classList.remove("is-dragging"); pause(2500); wrap(); };
+  window.addEventListener("pointerup", end);
+  window.addEventListener("pointercancel", end);
+  strip.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  strip.addEventListener("dragstart", (e) => e.preventDefault());
+
+  requestAnimationFrame(() => { self = true; strip.scrollLeft = 1; pos = 1; });
+  if (!reduce) raf = requestAnimationFrame(tick);
+  strip.voisinaStep = (dir) => {
+    pause(4000);
+    const card = track.firstElementChild;
+    const w = card ? card.getBoundingClientRect().width + 14 : 220;
+    strip.scrollBy({ left: dir * w * 2, behavior: reduce ? "auto" : "smooth" });
+  };
+  return () => { alive = false; cancelAnimationFrame(raf); window.removeEventListener("pointerup", end); window.removeEventListener("pointercancel", end); };
+}
 
 /** Pastilles sous « La carte » : elles changent vraiment le style de la carte d'à côté. */
 function setHomeMapStyle(id) {
@@ -6472,6 +6704,7 @@ function setHomeMapStyle(id) {
 const homeActions = {
   "home-map-style": (el) => setHomeMapStyle(el.dataset.style),
   "clear-recent": () => clearRecentlyViewed(),
+  "cities-step": (el) => document.querySelector(".marquee")?.voisinaStep?.(Number(el.dataset.delta) || 1),
   "scroll-next": () => document.getElementById("home-stats")?.scrollIntoView({ behavior: "smooth", block: "start" }),
 };
 
@@ -6968,7 +7201,7 @@ __def("views/listing.js", function () {
 /* Page de détail d'une annonce */
 const { html, raw, $, safeImageSrc } = __req("util.js");
 const { icon } = __req("icons.js");
-const { t, pick, getLang, cantonName, categoryName, fmtDate, fmtRelative, fmtDuration, fmtDistance, languageName } = __req("i18n.js");
+const { t, pick, getLang, cantonName, categoryName, fmtDate, fmtRelative, fmtDuration, fmtDistance, languageName, spokenLanguageName } = __req("i18n.js");
 const { getCategory } = __req("data.js");
 const { getListing, getPerson, currentUser, isFavorite, searchListings, getOrigin, startConversation, setListingStatus, deleteListing, setListingHidden, isAdmin, toggleBlock, isBlocked, addRecentlyViewed } = __req("store.js");
 const { listingCard, avatar, priceLabel, typeLabel, emptyState, stars, confirmDialog, reportDialog, shareLink, toast, listingTitle, listingDescription, categoryThumb, openDialog } = __req("ui.js");
@@ -7085,6 +7318,7 @@ const __default = {
       <div class="detail-layout">
         <article class="detail-main">
           ${gallery(l)}
+          ${!safeImageSrc(l.photos?.[0]) && l.demoPhoto ? html`<p class="photo-credit">${t("home.photoCredit")}</p>` : ""}
           <div class="detail-chips">
             <span class="chip chip-type type-${l.type}">${typeLabel(l.type)}</span>
             <span class="chip">${icon(cat.icon)}${categoryName(l.category)}</span>
@@ -7099,13 +7333,13 @@ const __default = {
             ${fact("clock", t("listing.time"), l.time ? `${l.time} · ${fmtDuration(l.duration)}` : fmtDuration(l.duration))}
             ${fact("repeat", t("listing.recurrence"), t("recurrence." + (l.recurrence || "once")))}
             ${fact("coins", t("listing.payment"), priceLabel(l))}
-            ${l.languages?.length ? fact("languages", t("listing.languages"), l.languages.map(languageName).join(", ")) : ""}
+            ${l.languages?.length ? fact("languages", t("listing.languages"), l.languages.map((c) => spokenLanguageName(c)).join(", ")) : ""}
           </dl>
 
           <section class="detail-section">
             <h2 class="h3">${t("listing.description")}</h2>
             <p class="prose-text">${text}</p>
-            ${showTranslate ? html`<p class="translate-note">${icon("languages")}${t("listing.writtenIn", { lang: languageName(sourceLang) })} · <a href="${deeplUrl}" target="_blank" rel="noopener noreferrer">${t("listing.translate")}</a></p>` : ""}
+            ${showTranslate ? html`<p class="translate-note">${icon("languages")}${t("listing.writtenIn", { lang: spokenLanguageName(sourceLang, false) })} · <a href="${deeplUrl}" target="_blank" rel="noopener noreferrer">${t("listing.translate")}</a></p>` : ""}
           </section>
 
           <section class="detail-section">
@@ -8604,7 +8838,8 @@ __def("views/profile.js", function () {
 /* Profil public d'un membre */
 const { html } = __req("util.js");
 const { icon } = __req("icons.js");
-const { t, fmtDate, cantonName, languageName } = __req("i18n.js");
+const { t, fmtDate, cantonName, languageName, spokenLanguageName, getLang } = __req("i18n.js");
+const { demoBio, demoSpecialties } = __req("seed.js");
 const { getPerson, listingsByAuthor, currentUser, isBlocked } = __req("store.js");
 const { avatar, listingCard, emptyState, stars } = __req("ui.js");
 
@@ -8622,6 +8857,11 @@ const __default = {
     const listings = listingsByAuthor(id);
     const isMe = me?.id === id;
     const blocked = isBlocked(id);
+    // Membres d'exemple : texte et savoir-faire affichés dans la langue du site.
+    // Vrais membres : on ne peut pas traduire leur texte ici, on propose un lien « Traduire avec DeepL ».
+    const bio = demoBio(p, getLang());
+    const skills = demoSpecialties(p, getLang());
+    const bioLang = !p.demo && p.lang && p.lang !== getLang() && ["fr", "de", "it", "en"].includes(p.lang) ? p.lang : null;
     return html`
     <section class="page-head profile-head">
       <div class="container profile-hero">
@@ -8652,9 +8892,10 @@ const __default = {
             <div><dt>${t("profile.activeListings")}</dt><dd>${listings.length}</dd></div>
           </dl>
         </div>
-        ${p.bio ? html`<div class="card"><h2 class="h4">${t("profile.about")}</h2><p class="prose-text">${p.bio}</p></div>` : ""}
-        ${p.languages?.length ? html`<div class="card"><h2 class="h4">${icon("languages")}${t("account.languages")}</h2><div class="tag-list">${p.languages.map((l) => html`<span class="tag">${languageName(l)}</span>`)}</div></div>` : ""}
-        ${p.specialties?.length ? html`<div class="card"><h2 class="h4">${icon("sparkles")}${t("account.specialties")}</h2><div class="tag-list">${p.specialties.map((s) => html`<span class="tag">${s}</span>`)}</div></div>` : ""}
+        ${bio ? html`<div class="card"><h2 class="h4">${t("profile.about")}</h2><p class="prose-text">${bio}</p>
+          ${bioLang ? html`<p class="translate-note">${icon("languages")}${t("listing.writtenIn", { lang: spokenLanguageName(bioLang, false) })} · <a href="https://www.deepl.com/translator#${bioLang}/${getLang()}/${encodeURIComponent(bio.slice(0, 1500))}" target="_blank" rel="noopener noreferrer">${t("listing.translate")}</a></p>` : ""}</div>` : ""}
+        ${p.languages?.length ? html`<div class="card"><h2 class="h4">${icon("languages")}${t("account.languages")}</h2><div class="tag-list">${p.languages.map((l) => html`<span class="tag">${spokenLanguageName(l)}</span>`)}</div></div>` : ""}
+        ${skills.length ? html`<div class="card"><h2 class="h4">${icon("sparkles")}${t("account.specialties")}</h2><div class="tag-list">${skills.map((s) => html`<span class="tag">${s}</span>`)}</div></div>` : ""}
         <p class="help">${icon("shield")}${t("profile.privacy")}</p>
       </aside>
       <section>
@@ -9202,6 +9443,7 @@ const PAGES = {
           "swisstopo (Office fédéral de topographie, Suisse) : fonds de carte « Suisse », « Satellite » et « Gris » ; OpenStreetMap (Royaume-Uni) : style « Plan » et secours.",
           "geo.admin.ch (Confédération suisse) : recherche de localités — seul le texte saisi dans le champ « localité » est transmis.",
           "DeepL (Allemagne) : uniquement si vous cliquez sur « Traduire », le texte de l'annonce est ouvert sur deepl.com.",
+          "Unsplash (images.unsplash.com) : photos d'illustration libres de droits des annonces d'exemple.",
         ] },
         { h: "Vos droits", p: ["Vous pouvez à tout moment consulter, corriger, exporter (fichier JSON) ou supprimer vos données depuis « Mon compte ». Vous pouvez également adresser une réclamation au Préposé fédéral à la protection des données et à la transparence (PFPDT)."] },
         { h: "Sécurité", p: ["Politique de sécurité du contenu (CSP) stricte, échappement systématique des contenus, empreintes de mots de passe PBKDF2 avec 600 000 itérations, limitation des tentatives de connexion, suppression des métadonnées GPS des photos, position floutée sur la carte."] },
@@ -9295,6 +9537,7 @@ const PAGES = {
           "swisstopo (Federal Office of Topography, Switzerland): “Swiss map”, “Satellite” and “Grey” styles; OpenStreetMap (United Kingdom): “Streets” style and fallback.",
           "geo.admin.ch (Swiss Confederation): place search — only the text typed in the “town” field is sent.",
           "DeepL (Germany): only if you click “Translate”, the listing text is opened on deepl.com.",
+          "Unsplash (images.unsplash.com): free illustrative photos for the example listings.",
         ] },
         { h: "Your rights", p: ["You can view, correct, export (JSON file) or delete your data at any time from “My account”. You may also lodge a complaint with the Federal Data Protection and Information Commissioner (FDPIC)."] },
         { h: "Security", p: ["Strict Content Security Policy (CSP), systematic output escaping, PBKDF2 password fingerprints with 600,000 iterations, login attempt limiting, removal of GPS metadata from photos, blurred map positions."] },
@@ -9311,7 +9554,7 @@ const PAGES = {
         { h: "Éditeur du site", p: ["Voisina — projet TPA / PAE réalisé seul par Lenny H., CPNV (Centre professionnel du Nord vaudois), Suisse.", "Ce site est un prototype pédagogique non commercial. Les annonces et les membres d'exemple sont fictifs ; toute ressemblance avec des personnes réelles serait fortuite."] },
         { h: "Hébergement", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."] },
         { h: "Cartes et données géographiques", p: ["Fonds de carte © swisstopo (Office fédéral de topographie). Photos aériennes SWISSIMAGE © swisstopo. Style « Plan » © contributeurs OpenStreetMap. Recherche de localités : service geo.admin.ch de la Confédération suisse."] },
-        { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Police de titres : Fraunces (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC)."] },
+        { h: "Crédits", list: ["Bibliothèque de cartes : Leaflet (licence BSD-2).", "Police de titres : Fraunces (SIL Open Font License).", "Icônes inspirées de Lucide (licence ISC).", "Photos des annonces d'exemple : Unsplash (licence Unsplash, utilisation libre)."] },
         { h: "Propriété intellectuelle", p: ["Les textes, le logo et la conception du site sont la propriété de leur auteur. Les contenus publiés par les membres restent leur propriété."] },
       ],
     },
@@ -9321,7 +9564,7 @@ const PAGES = {
         { h: "Herausgeber", p: ["Voisina — TPA-/PAE-Projekt, allein realisiert von Lenny H., CPNV (Centre professionnel du Nord vaudois), Schweiz.", "Diese Website ist ein nicht kommerzieller Lernprototyp. Beispielanzeigen und -mitglieder sind fiktiv; Ähnlichkeiten mit realen Personen wären zufällig."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Karten und Geodaten", p: ["Kartenhintergrund © swisstopo (Bundesamt für Landestopografie). Luftbilder SWISSIMAGE © swisstopo. Stil «Strassen» © OpenStreetMap-Mitwirkende. Ortssuche: Dienst geo.admin.ch der Schweizerischen Eidgenossenschaft."] },
-        { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Titelschrift: Fraunces (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz)."] },
+        { h: "Credits", list: ["Kartenbibliothek: Leaflet (BSD-2-Lizenz).", "Titelschrift: Fraunces (SIL Open Font License).", "Icons inspiriert von Lucide (ISC-Lizenz).", "Fotos der Beispielinserate: Unsplash (Unsplash-Lizenz, frei nutzbar)."] },
         { h: "Geistiges Eigentum", p: ["Texte, Logo und Gestaltung der Website gehören ihrem Autor. Von Mitgliedern veröffentlichte Inhalte bleiben deren Eigentum."] },
       ],
     },
@@ -9331,7 +9574,7 @@ const PAGES = {
         { h: "Editore del sito", p: ["Voisina — progetto TPA / PAE realizzato da solo da Lenny H., CPNV (Centre professionnel du Nord vaudois), Svizzera.", "Questo sito è un prototipo didattico non commerciale. Gli annunci e i membri d'esempio sono fittizi; ogni somiglianza con persone reali è casuale."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Stati Uniti."] },
         { h: "Carte e dati geografici", p: ["Sfondi cartografici © swisstopo (Ufficio federale di topografia). Foto aeree SWISSIMAGE © swisstopo. Stile «Stradale» © contributori OpenStreetMap. Ricerca delle località: servizio geo.admin.ch della Confederazione Svizzera."] },
-        { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Carattere dei titoli: Fraunces (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC)."] },
+        { h: "Crediti", list: ["Libreria cartografica: Leaflet (licenza BSD-2).", "Carattere dei titoli: Fraunces (SIL Open Font License).", "Icone ispirate a Lucide (licenza ISC).", "Foto degli annunci d'esempio: Unsplash (licenza Unsplash, uso libero)."] },
         { h: "Proprietà intellettuale", p: ["Testi, logo e concezione del sito appartengono al loro autore. I contenuti pubblicati dai membri restano di loro proprietà."] },
       ],
     },
@@ -9341,7 +9584,7 @@ const PAGES = {
         { h: "Publisher", p: ["Voisina — TPA / PAE project built single-handedly by Lenny H., CPNV (Centre professionnel du Nord vaudois), Switzerland.", "This site is a non-commercial educational prototype. Sample listings and members are fictional; any resemblance to real people is coincidental."] },
         { h: "Hosting", p: ["GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA."] },
         { h: "Maps and geodata", p: ["Base maps © swisstopo (Federal Office of Topography). SWISSIMAGE aerial photos © swisstopo. “Streets” style © OpenStreetMap contributors. Place search: geo.admin.ch service of the Swiss Confederation."] },
-        { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Heading font: Fraunces (SIL Open Font License).", "Icons inspired by Lucide (ISC licence)."] },
+        { h: "Credits", list: ["Map library: Leaflet (BSD-2 licence).", "Heading font: Fraunces (SIL Open Font License).", "Icons inspired by Lucide (ISC licence).", "Example listing photos: Unsplash (Unsplash License, free to use)."] },
         { h: "Intellectual property", p: ["The texts, logo and design of the site belong to their author. Content posted by members remains their property."] },
       ],
     },
@@ -9507,7 +9750,7 @@ __def("views/discover.js", function () {
    - Double-tap sur une annonce = J'aime (avec un cœur animé).
    - Filtre en haut : région (autour de moi, Romandie, canton…), type, catégorie.
    ===================================================================== */
-const { html, raw, $, $$, mount, safeImageSrc, storage, clamp } = __req("util.js");
+const { html, raw, $, $$, mount, safeImageSrc, demoPhotoUrl, storage, clamp } = __req("util.js");
 const { icon } = __req("icons.js");
 const { t, categoryName, cantonName, fmtDistance } = __req("i18n.js");
 const { getCategory, TYPES, CATEGORIES, CANTONS, CANTON_CODES } = __req("data.js");
@@ -9557,13 +9800,14 @@ function slideHtml(item, index, total) {
   const l = item.listing;
   const cat = getCategory(l.category);
   const photo = safeImageSrc(l.photos?.[0]);
+  const demo = photo ? "" : demoPhotoUrl(l, 1000);
   const { tone, pattern } = coverStyle(l);
   const author = getPerson(l.authorId);
   const fav = isFavorite(l.id);
-  return html`<article class="reel media-illu tv-${tone} pat-${pattern}${photo ? " has-photo" : ""}" data-id="${l.id}" data-index="${index}" aria-roledescription="${t("reels.slide")}" aria-label="${listingTitle(l)} (${index + 1}/${total})">
+  return html`<article class="reel media-illu tv-${tone} pat-${pattern}${photo || demo ? " has-photo" : ""}" data-id="${l.id}" data-index="${index}" aria-roledescription="${t("reels.slide")}" aria-label="${listingTitle(l)} (${index + 1}/${total})">
     ${photo
       ? html`<img class="reel-photo" src="${photo}" alt="" draggable="false">`
-      : html`<span class="reel-art" aria-hidden="true"><span class="reel-art-icon">${icon(cat.icon)}</span></span>`}
+      : html`<span class="reel-art" aria-hidden="true"><span class="reel-art-icon">${icon(cat.icon)}</span></span>${demo ? html`<img class="reel-photo" src="${demo}" alt="" draggable="false" decoding="async" loading="${index < 2 ? "eager" : "lazy"}">` : ""}`}
     <div class="reel-shade" aria-hidden="true"></div>
     <div class="reel-info">
       <div class="reel-chips reel-anim">
@@ -9612,7 +9856,7 @@ let feed = null;
 
 function createFeed(stage, track, { count, render, onChange, onLike }) {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const EASE = "transform 0.46s cubic-bezier(0.22, 0.8, 0.22, 1)";
+  const EASE = "transform 0.2s cubic-bezier(0.25, 0.9, 0.3, 1)"; // v3.7 : rapide, on n'attend plus
   const slides = new Map(); // index -> élément
   const ac = new AbortController();
   const on = (target, ev, fn, opts = {}) => target.addEventListener(ev, fn, { ...opts, signal: ac.signal });
@@ -9680,7 +9924,7 @@ function createFeed(stage, track, { count, render, onChange, onLike }) {
       onChange(i);
     };
     track.addEventListener("transitionend", done);
-    timer = setTimeout(done, 700);
+    timer = setTimeout(done, 320);
     setTrack(dir * H, true);
   }
 
@@ -10082,7 +10326,19 @@ function parseHash() {
   return { path: decodeURIComponent(path).replace(/\/$/, ""), query: new URLSearchParams(qs) };
 }
 
+/** Numéro de version, écrit en bas de page : permet de vérifier que GitHub a bien la dernière version. */
+const APP_VERSION = "3.7";
 let firstRender = true;
+
+/* Photo d'exemple qui ne se charge pas (hors ligne, site bloqué…) : on l'enlève,
+   l'illustration colorée en dessous reste visible. */
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img?.tagName === "IMG" && img.matches(".media-photo, .reel-photo")) {
+    img.closest(".has-photo")?.classList.remove("has-photo");
+    img.remove();
+  }
+}, true);
 /* Ouverture d'une annonce depuis une carte : l'image de la carte « s'agrandit » jusqu'à devenir celle de l'annonce */
 let morphId = null;
 document.addEventListener("click", (e) => {
@@ -10287,6 +10543,7 @@ function renderFooter() {
     <button type="button" class="link-btn footer-text" data-action="toggle-text">${icon("sparkles")}${document.documentElement.classList.contains("text-lg") ? t("footer.textNormal") : t("footer.textLarge")}</button>
     <span class="footer-langs">${LANGS.map((l) => html`<button type="button" class="link-btn${l === getLang() ? " is-active" : ""}" data-action="set-lang" data-lang="${l}" lang="${l}">${l.toUpperCase()}</button>`)}</span>
     <span>${t("footer.madeIn")}</span>
+    <span class="footer-version">v${APP_VERSION}</span>
   </div>`);
 }
 
@@ -10310,7 +10567,9 @@ function renderChrome() {
    l'essai en 1 clic (idéal pour les personnes qui scannent le flyer). */
 function renderWelcome() {
   let el = $("#welcome-card");
-  const show = !storage.get("welcome", false) && document.body.dataset.route === "home";
+  // Sur téléphone, l'accueil reste simple (v3.7) : pas de carte de bienvenue par-dessus les annonces
+  const phone = window.matchMedia?.("(max-width: 720px)").matches;
+  const show = !phone && !storage.get("welcome", false) && document.body.dataset.route === "home";
   if (!show) { if (el) el.hidden = true; return; }
   if (!el) {
     el = document.createElement("aside");

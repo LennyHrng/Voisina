@@ -14,7 +14,7 @@
     default-src 'self';
     script-src 'self' https://unpkg.com;
     style-src 'self' https://unpkg.com;
-    img-src 'self' data: blob: https://wmts.geo.admin.ch https://tile.openstreetmap.org;
+    img-src 'self' data: blob: https://wmts.geo.admin.ch https://tile.openstreetmap.org https://images.unsplash.com;
     font-src 'self';
     connect-src 'self' https://api3.geo.admin.ch;
     manifest-src 'self';
@@ -62,10 +62,11 @@
   <!-- Carte : Leaflet (version figée + empreinte SRI = le fichier ne peut pas être modifié par un tiers) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=3.6">
+  <link rel="stylesheet" href="styles.css?v=3.7">
 
   <!-- Applique le thème (clair/sombre) avant l'affichage pour éviter un flash -->
-  <script src="theme-boot.js?v=3.6"></script>
+  <script src="theme-boot.js?v=3.7"></script>
+  <link rel="preconnect" href="https://images.unsplash.com">
 </head>
 <body>
   <a class="skip-link" href="#main" data-action="skip">Aller au contenu</a>
@@ -91,6 +92,6 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="voisina.js?v=3.6" defer></script>
+  <script src="voisina.js?v=3.7" defer></script>
 </body>
 </html>

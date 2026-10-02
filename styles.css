@@ -2009,6 +2009,8 @@ body[data-route="decouvrir"] .scroll-progress { display: none; }
 /* --- En-tête transparent au-dessus du héro, opaque dès qu'on défile --- */
 .site-header { transition: background 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease; }
 html.is-scrolled .site-header { box-shadow: 0 10px 30px rgba(8, 30, 20, 0.06); }
+/* v3.7 : sur téléphone, l'accueil est clair (façon anibis) → en-tête normal */
+@media (min-width: 721px) {
 html:not(.is-scrolled) body[data-route="home"] .site-header { background: transparent; border-bottom-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
 html:not(.is-scrolled) body[data-route="home"] .site-header .brand,
 html:not(.is-scrolled) body[data-route="home"] .site-header .brand:hover { color: #fff; }
@@ -2018,6 +2020,7 @@ html:not(.is-scrolled) body[data-route="home"] .site-header .icon-btn,
 html:not(.is-scrolled) body[data-route="home"] .site-header .btn-login,
 html:not(.is-scrolled) body[data-route="home"] .site-header .avatar-btn { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.2); color: #fff; }
 html:not(.is-scrolled) body[data-route="home"] .site-header .logo-mark { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25); }
+}
 
 /* --- Titres de sections : plus grands, avec un filet --- */
 .section-head .h2, .showcase-title, .trust-intro .h2, .cta-inner .h2 { font-size: clamp(1.9rem, 3.4vw, 2.9rem); letter-spacing: -0.022em; line-height: 1.08; }
@@ -2368,3 +2371,98 @@ h1, h2, h3, .h1, .h2, .h3 { overflow-wrap: break-word; }
   .explore-layout.show-map .map-back-list { display: inline-flex; }
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .map-styles-legend .map-style-chip.is-active { color: var(--accent-text); } }
+
+/* =====================================================================
+   14. VERSION 3.7 — corrections demandées par Lenny
+   ===================================================================== */
+
+/* 1) Propositions de villes : texte foncé lisible, même dans le héro (avant : blanc sur blanc en mode clair) */
+.suggest { color: var(--text); }
+.suggest-item small, .suggest-item .muted { color: var(--text-muted); }
+
+/* 7) Vraies photos d'exemple : posées par-dessus l'illustration colorée (qui reste en secours) */
+.media-illu > .media-photo, .media-illu > img.media-photo {
+  position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; object-fit: cover;
+}
+.media-illu.has-photo .media-deco { display: none; }
+.photo-credit { margin: 6px 2px 0; font-size: 0.75rem; color: var(--text-muted); }
+
+/* 4) Bandeau « Un coup de main change une journée » : plus sobre */
+.cta-inner {
+  background: #1f4d34; color: #e8f1eb; padding: 40px 44px; box-shadow: none;
+}
+.cta-inner::before, .cta-inner::after, .cta-inner .aurora { display: none; }
+.cta-inner .h2 { color: #fff; }
+.cta-inner p { color: #cfe0d5; }
+.cta-inner .btn-sun { background: #fff; color: #17452d; box-shadow: none; }
+.cta-inner .btn-sun:hover { background: #eef5f0; color: #17452d; }
+.cta-inner .btn-sun::after { display: none; }
+.cta-inner .btn-light { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: none; }
+.cta-inner .btn-light:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+@media (max-width: 640px) { .cta-inner { padding: 26px 22px; } }
+
+/* 5) Découvrir : l'annonce s'affiche tout de suite, sans attendre une animation */
+.reel-anim, .reel.is-active .reel-anim { opacity: 1; transform: none; transition: none; }
+.reel-art-icon, .reel.is-active .reel-art-icon { opacity: 1; transform: none; transition: none; }
+.reel-photo, .reel.is-active .reel-photo { transform: none; transition: none; }
+.reels-stage.is-fading .reels-track { animation: none; }
+
+/* 8) Carte de la Suisse du héro : sans les 3 annonces posées dessus (gardée comme un logo) */
+.hero-float { display: none !important; }
+
+/* 3) Villes : on peut faire glisser le ruban au doigt ou à la souris (il avance aussi tout seul) */
+.cities-section .section-head { align-items: flex-end; }
+.cities-nav { display: flex; gap: 8px; }
+.marquee.is-js { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; cursor: grab; }
+.marquee.is-js::-webkit-scrollbar { display: none; }
+.marquee.is-js .marquee-track { animation: none !important; transform: none !important; flex-wrap: nowrap !important; width: max-content !important; justify-content: flex-start !important; padding-inline: 0; }
+.marquee.is-js .marquee-track > [aria-hidden="true"] { display: flex !important; }
+.marquee.is-js.is-dragging { cursor: grabbing; user-select: none; }
+.marquee.is-js.is-dragging a { pointer-events: none; }
+@media (hover: none) { .cities-nav { display: none; } }
+
+/* Numéro de version en bas de page */
+.footer-version { opacity: 0.6; font-size: 0.78rem; }
+
+/* Animations du haut de l'accueil : si le navigateur ne connaît pas « overflow: clip »,
+   le texte monte doucement au lieu de glisser sur le côté (il reste animé) */
+.js-motion:not(.can-slide) [data-slide]:not(.is-in) { opacity: 0; }
+.js-motion:not(.can-slide) [data-slide].is-in { animation: softUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+
+/* 6) ACCUEIL SUR TÉLÉPHONE — simple, façon anibis : recherche, catégories, annonces */
+.m-home { display: none; }
+@media (max-width: 720px) {
+  .d-home { display: none !important; }
+  .m-home { display: block; padding: 14px 0 28px; }
+  .m-home .container { padding-inline: 16px; }
+  .m-search { position: relative; display: block; }
+  .m-search > .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 19px; height: 19px; color: var(--text-muted); pointer-events: none; }
+  .m-search .input { width: 100%; min-height: 48px; padding-left: 44px; border-radius: 14px; background: var(--surface-2); border-color: transparent; font-size: 1rem; }
+  .m-home .stories { margin: 16px -16px 4px; padding-inline: 16px; }
+  .m-sec { margin-top: 22px; }
+  .m-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .m-title { font-size: 1.18rem; line-height: 1.25; margin: 0; }
+  .m-more { flex: none; font-size: 0.9rem; font-weight: 700; color: var(--accent-text, #17452d); text-decoration: none; padding: 8px 0; }
+  .m-row { display: grid; grid-auto-flow: column; grid-auto-columns: 42%; gap: 12px; overflow-x: auto; scroll-snap-type: x proximity; margin-inline: -16px; padding: 2px 16px 6px; scroll-padding-inline: 16px; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .m-row::-webkit-scrollbar { display: none; }
+  .m-row > * { scroll-snap-align: start; }
+  .m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px; }
+  .m-card { position: relative; min-width: 0; }
+  .m-card-media { position: relative; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden; background: var(--surface-2); }
+  .m-card-media .media-icon { width: 44px; height: 44px; border-radius: 14px; }
+  .m-card-media .media-icon .icon { width: 22px; height: 22px; }
+  .m-card-media .media-deco .icon { width: 90px; height: 90px; }
+  .m-card .fav-btn { right: 8px; top: 8px; width: 34px; height: 34px; }
+  .m-card-title { margin: 8px 0 2px; font-size: 0.92rem; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .m-card-title a { color: var(--text); text-decoration: none; }
+  .m-card-place { margin: 0; font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .m-card-price { margin: 2px 0 0; font-size: 0.92rem; font-weight: 800; }
+  .m-chips { display: flex; gap: 8px; overflow-x: auto; margin-inline: -16px; padding: 2px 16px 6px; scrollbar-width: none; }
+  .m-chips::-webkit-scrollbar { display: none; }
+  .m-chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+  .m-chip .icon { width: 16px; height: 16px; color: var(--text-muted); }
+  .m-chip span { color: var(--text-muted); font-weight: 500; font-size: 0.8rem; }
+  .m-all { margin-top: 18px; width: 100%; justify-content: center; }
+  .m-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin: 26px 0 0; font-size: 0.88rem; }
+  .m-links a { color: var(--text-muted); padding: 10px 0; }
+}
